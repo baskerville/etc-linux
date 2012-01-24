@@ -16,7 +16,6 @@ export XDG_AUR_HOME=~/src/aur
 
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER='news.orange.fr'
-export SLRNPULL_ROOT=~/.slrnpull
 export PYTHONIOENCODING=utf-8
 export OWL_MAX_URL=21
 export STDERRED_ESC_CODE=$(echo -e "\e[38;5;210m")

@@ -82,9 +82,9 @@ set organization "Ultimate Insanity"
 % The following variables are only meaningful when using spool mode:
 
 % Basic directory settings
-set spool_inn_root	"/home/ice/.slrnpull"
-set spool_root		"/home/ice/.slrnpull/news"
-set spool_nov_root	"/home/ice/.slrnpull/news"
+set spool_inn_root	".slrnpull"
+set spool_root		".slrnpull/news"
+set spool_nov_root	".slrnpull/news"
 
 % These are relative to spool_inn_root unless they start with "/".
 %set spool_active_file "data/active"
