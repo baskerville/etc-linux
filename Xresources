@@ -1,4 +1,4 @@
-#include ".colors/frosty_bites"
+#include "termcolors"
 
 URxvt.modifier:             alt
 URxvt.font:                 -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*
