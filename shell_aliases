@@ -72,7 +72,8 @@ alias clipo='xsel -bo'
 
 alias ivz='iv -Z'
 alias ivr='ivz -tfr .'
-alias p="primo | editor -"
+alias p="clipo | editor -"
+alias gp="primo | editor -"
 alias h="xxd -l 256"
 alias mplayer='mplayer -softvol'
 alias vpnz='mplayer -vo x11 -nozoom'
