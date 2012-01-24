@@ -1,0 +1,12 @@
+gtk-theme-name = "Zukitwo"
+gtk-key-theme-name = "Emacs"
+gtk-can-change-accels = 1
+#gtk-auto-mnemonics = 1
+gtk-cursor-blink = 1
+gtk-menu-popup-delay = 0
+gtk-entry-select-on-focus = 0
+gtk-label-select-on-focus = 0
+gtk-button-images = 0
+gtk-menu-images = 0
+gtk-enable-event-sounds = 0
+gtk-enable-input-feedback-sounds = 0

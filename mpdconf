@@ -1,0 +1,17 @@
+bind_to_address     "::"
+port                "6600"
+
+music_directory     "~/media/music"
+playlist_directory  "~/.mpd/playlists"
+db_file             "~/.mpd/mpd.db"
+log_file            "~/.mpd/mpd.log"
+pid_file            "~/.mpd/pid"
+state_file          "~/.mpd/state"
+
+audio_output { 
+    type            "alsa"
+    name            "MPD ALSA"
+    mixer_control   "Master"
+}
+
+# vim: set ft=conf:

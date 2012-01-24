@@ -1,0 +1,120 @@
+set realname = "Bastien Dejean"
+set from = "nihilhill@gmail.com"
+
+set mbox_type = Maildir
+set folder = ~/.maildir
+set spoolfile = +/inbox
+set postponed = +/drafts
+set record = +/sent
+set header_cache = ~/.hcache
+
+set sendmail = /usr/bin/msmtp
+set sendmail_wait = -1
+set copy
+
+unset move
+set auto_tag
+set autoedit
+set fast_reply
+set include
+set delete
+set quit
+set edit_headers
+unset confirmappend
+unset confirmcreate
+set postpone = ask-yes
+set weed
+
+set alias_file = ~/.mutt/aliases
+set sort_alias = alias
+set reverse_alias
+source $alias_file
+
+hdr_order From To Cc Subject
+# hdr_order Date From To Cc
+alternative_order text/plain text/enriched text/html
+
+ignore *
+unignore from subject to cc
+
+set sort = threads
+set sort_aux = last-date-received
+
+set charset = "utf-8"
+set send_charset = "utf-8"
+set mail_check = 60
+set attribution = "%n:"
+
+set editor = "vim"
+unset pipe_decode
+
+set pager_index_lines = 10
+set pager_context = 5
+set menu_scroll
+set smart_wrap
+set tilde
+unset markers
+set status_on_top
+
+set date_format    = "%Y/%m/%d %H:%M"
+set index_format   = "%3C  %Z  %-21.21n  %s %> %D  %4c"
+set pager_format   = "Message %C of %m %> [%P]"
+set folder_format  = "%2C %t %N %8s %d %f"
+set status_format  = "%f %?n? %n ? (%?o?%o/?%m)  [%l]  %V %> (%s/%S)  %P"
+set forward_format = "Fwd: %s"
+
+bind editor <space>   noop
+bind index,pager \#   noop
+bind index i          noop
+bind attach,compose ? noop
+bind index,pager,attach,compose \Cs noop
+bind index,pager,attach,compose \Cq noop
+
+bind attach <return>  view-mailcap 
+bind index,pager <tab> next-unread
+bind index,pager <backtab> previous-unread
+bind pager <up>       previous-line
+bind pager <down>     next-line
+bind pager <          previous-line
+bind pager >          next-line
+bind pager gg         top
+bind pager G          bottom
+bind index gg         first-entry
+bind index G          last-entry
+bind index,pager \Cf  next-page
+bind index,pager \Cb  previous-page
+bind index,pager,attach,compose <F3> help
+bind index,pager ? search-reverse
+
+macro compose a "<attach-file><kill-line>~/incoming/"
+macro index,pager A "|munpack -C ~/incoming\n"
+macro attach S "<save-entry><kill-line>~/incoming/\na"
+macro index,pager,attach,compose Q <exit>
+macro pager b "<previous-page>"
+macro pager B "<bounce-message>"
+macro index ( "<search-reverse>~P\n"
+macro index ) "<search>~P\n"
+macro index,attach { "<first-entry>"
+macro index,attach } "<last-entry>"
+
+macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
+macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
+macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
+macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
+macro index,pager gh "<change-folder>=arch\n" "Go to Arch"
+macro index,pager gv "<change-folder>=vim\n" "Go to Vim"
+macro index,pager gu "<change-folder>=univ\n" "Go to Vim"
+macro index,pager gc "<change-folder>=price\n" "Go to Price"
+macro index,pager gy "<change-folder>=paypal\n" "Go to Paypal"
+macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
+macro index,pager go "<change-folder>=apo\n" "Go to APO"
+macro index,pager gx "<change-folder>=xd\n" "Go to XD"
+macro index,pager gr "<change-folder>=starred\n" "Go to Starred"
+macro index,pager gt "<change-folder>=typo\n" "Go to Typo"
+macro index,pager ga "<change-folder>=topics\n" "Go to Topics"
+macro index,pager * "<save-message>=starred\n" "Move to Starred"
+macro index,pager _ "<save-message>=topics\n" "Move to Topics"
+
+source ~/.mutt/colors
+
+mailboxes =inbox =univ =lists =arch =vim =price =paypal =fai =apo =xd =typo

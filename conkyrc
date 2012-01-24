@@ -1,0 +1,32 @@
+background no
+total_run_times 0
+update_interval 1
+double_buffer yes
+
+draw_borders no
+draw_outline no
+draw_shades no
+
+alignment top_right
+gap_x 20
+gap_y 20
+
+own_window yes
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_type desktop
+own_window_hints undecorated, below, sticky, skip_taskbar, skip_pager
+
+use_xft yes
+uppercase yes
+
+color1 FFF7BC
+color2 D66749
+color3 F8E1B5
+
+TEXT
+${font FS Gritta:pixelsize=90}${alignc}${color1}${time %H}${color2}+${color1}${time %M}${font}
+${voffset 3}${font Dotrice:pixelsize=30}${alignc}${color3}${time %a}${font}
+${voffset 3}${font Dotrice:pixelsize=30}${alignc}${color3}${time %d}${font}
+
+# vim: set ft=conf:

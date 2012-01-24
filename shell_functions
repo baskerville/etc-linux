@@ -1,0 +1,240 @@
+man() {
+    title "man $@"
+    /usr/bin/man "$@"
+}
+
+lkg() {
+    grep -i "$@" $(pacman -Qlq luakit-git)
+}
+
+dbs() {
+    grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /' 
+}
+
+fu() {
+    curl -s "http://www.commandlinefu.com/commands/matching/$@/$(echo -n $@ | openssl base64)/plaintext" | grep -v "^# commandlinefu" 
+}
+
+bnd() {
+    pattern=.
+    [ $# -gt 0 ] && pattern=$@
+    bind -P | grep -i "$pattern" | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g'
+}
+
+b64() {
+    echo "$@" | openssl base64 
+}
+
+f() {
+    find . -maxdepth 1 -iname "*$@*" 
+}
+
+F() {
+    find . -iname "*$@*" 
+}
+
+ff() {
+    find . -type f -iname "*$@*" 
+}
+
+fd() {
+    find . -type d -iname "*$@*" 
+}
+
+fxo() {
+    find . -iname "*$@*" -print -exec open "{}" \; 
+}
+
+L() {
+    ls *."$@" 
+}
+
+L1() {
+    ls -1 *."$@" 
+}
+
+N() {
+    n *."$@" 
+}
+
+N1() {
+    n -1 *."$@" 
+}
+
+R() {
+    rm -v *."$@" 
+}
+
+tl() {
+    aria2c -S "$@" | grep '\./' 
+}
+
+dud() {
+    du -h -d 1 "$@" | sort -h 
+}
+
+dua() {
+    du -ha "$@" | sort -h 
+}
+
+rcd() {
+    find $PWD/ -maxdepth 1 -type d ! -samefile $PWD/ -exec urxvtc -cd "{}" \; 
+}
+
+lsbin() {
+    ls $@ $XDG_BIN_DIR 
+}
+
+lsshare() {
+    ls $@ $XDG_DATA_HOME 
+}
+
+count() {
+    l1 $@ | wc -l 
+}
+
+weather_location() {
+    wget -qO - "http://xoap.weather.com/search/search?where=$@" | grep 'loc id' 
+}
+
+spell() {
+    echo $@ | hunspell -d en_US | grep '^&' 
+}
+
+frspell() {
+    echo $@ | hunspell -d fr_FR | grep '^&' 
+}
+
+pb() {
+    wget -U Mozilla -qO - "http://thepiratebay.org/search/'$@'/0/7/0" | grep -o 'http\:\/\/torrents\.thepiratebay\.org\/.*\.torrent' 
+}
+
+pbg() {
+    pb "$@" | head -1 | xargs wget 
+}
+
+ngfind() {
+    grep -E $@ $XDG_DATA_HOME/nglist.txt | tr -dC '[a-z].\n' 
+}
+
+show() {
+    find $XDG_DATA_HOME -iname \*$@\* -exec cat {} \; 
+}
+
+prune() {
+    rm -iv $XDG_BIN_DIR/$@ 
+}
+
+cplacie() {
+    sudo -u nmt cp  -r "$@" $LACIE/ 
+}
+
+lslacie() {
+    ls "$@" $LACIE/ 
+}
+
+cphexagon() {
+    cp  -r "$@" $HEXAGON/ 
+}
+
+lshexagon() {
+    ls "$@" $HEXAGON/ 
+}
+
+cpdata() {
+    cp  -r "$@" $DATA/ 
+}
+
+lsdata() {
+    ls "$@" $DATA/ 
+}
+
+cpmicro() {
+    cp  -r "$@" $MICRO/ 
+}
+
+lsmicro() {
+    ls "$@" $MICRO/ 
+}
+
+mm() {
+    local output="$XDG_TMP_DIR/.mailcheck"
+    mpop -a | tee $output
+    local messages_count=$(grep -m 1 -Ech "^retrieving" $output)
+    [ "$messages_count" -gt 0 ] && m
+}
+
+mkmaildir() {
+    local maildir=~/.maildir
+    mkdir -p $maildir/$@/{cur,new,tmp}
+}
+
+wiktionary() {
+    curl -s "http://en.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')" 
+}
+
+wiktionary_fr() {
+    curl -s "http://fr.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')" 
+}
+
+def() {
+    wiktionary $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^{|]+ of)\|([^|}]+)[^}]*\}\}/*\U$1\E* $2/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//' 
+}
+
+def1() {
+    def $@ | head -n 1 
+}
+
+defr() {
+    wiktionary_fr $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//' 
+}
+
+defr1() {
+    defr $@ | head -n 1 
+}
+
+conj() {
+    elinks "http://www.les-verbes.com/conjuguer.php?verbe=$@" 
+}
+
+#swc() {
+ #compc -include-sources . -output $@.swc 
+#}
+
+#airc() {
+    #if [ -d lib ] ; then
+        #amxmlc -library-path+=lib $@ 2>&1
+    #else
+        #amxmlc $@ 2>&1
+    #fi
+#}
+
+#airr() {
+ #airc $@ && adl ${@%.*}-app.xml 
+#}
+
+#asr() {
+ #asc $@ && web_browser ${@%.*}.swf 
+#}
+
+#clinst() {
+ #cp -r "$@" "$SBCL_SITE/$@" 
+#}
+
+#clrefresh() {
+ #find "$SBCL_SITE" -name "*.asd" | xargs -I % ln -sf "%" "$SBCL_SYSTEMS" 
+#}
+
+#cllist() {
+ #ls $@ "$SBCL_SYSTEMS" 
+#}
+
+#clclean() {
+ #rm $SBCL_SYSTEMS/*.asd 
+#}
+
+#ecllink() {
+ #find . -name \*.asd -exec ln -s {} . \; 
+#}
+
+# vim: ft=sh

@@ -1,0 +1,5 @@
+text/html; web_browser %s; description="HTML Text"; nametemplate=%s.html; needsterminal
+application/pdf; document_reader %s
+image/*; image_viewer %s
+video/*; video_player %s
+application/msword; catdoc -s cp1252 %s; copiousoutput
