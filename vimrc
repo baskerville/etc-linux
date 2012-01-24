@@ -85,8 +85,8 @@ nmap <leader>d :bd<cr>
 " nmap <return> zA
 nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
-nmap <silent> <leader>. :call Yank(expand("%"))<cr>
-nmap <silent> <leader>/ :call Yank(expand("%:p"))<cr>
+nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
+nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
 "nmap <silent> <leader>_ :call Yank(expand("%").":".line("."))<cr>
 nmap <silent> <F1>  :set number!<cr>
 nmap <silent> <F2>  :set hlsearch!<cr>
@@ -94,13 +94,13 @@ nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") .
 nmap <silent> <F5> :setlocal spell! spelllang=en<cr>
 nmap <silent> <F6> :setlocal spell! spelllang=fr<cr>
 nmap <silent> <F7> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
-vmap <silent> <leader>y y:call Yank()<cr>
-vmap <silent> <leader>gy y:call YankClip()<cr>
-nmap <silent> <leader>yy yy:call Yank()<cr>
-nmap <silent> <leader>p :call Paste('primary', 'after')<cr>
-nmap <silent> <leader>P :call Paste('primary', 'before')<cr>
-nmap <silent> <leader>gp :call Paste('clipboard', 'after')<cr>
-nmap <silent> <leader>gP :call Paste('clipboard', 'before')<cr>
+vmap <silent> <leader>y y:call YankClip()<cr>
+nmap <silent> <leader>yy yy:call YankClip()<cr>
+vmap <silent> <leader>gy y:call Yank()<cr>
+nmap <silent> <leader>gp :call Paste('primary', 'after')<cr>
+nmap <silent> <leader>gP :call Paste('primary', 'before')<cr>
+nmap <silent> <leader>p :call Paste('clipboard', 'after')<cr>
+nmap <silent> <leader>P :call Paste('clipboard', 'before')<cr>
 nmap <leader>r :source ~/.vimrc<cr>
 nmap <leader>e :e ~/.vimrc<cr>
 nmap <leader>w! :w ! sudo tee %<cr>
