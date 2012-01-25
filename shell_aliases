@@ -87,7 +87,7 @@ alias calc='bc -ql $HOME/.bc'
 alias mp4box='MP4Box'
 
 alias subscriptions='grep ":" ~/.jnewsrc | awk -F : "{print $1}"'
-alias nu='slrnpull'
+alias nu='slrnpull -d ~/.slrnpull'
 alias dfh='df -h'
 alias cdfh='cdf -h'
 
