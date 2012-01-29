@@ -70,7 +70,7 @@ bind attach,compose ? noop
 bind index,pager,attach,compose \Cs noop
 bind index,pager,attach,compose \Cq noop
 
-bind attach <return>  view-mailcap 
+bind attach <return>  view-mailcap
 bind index,pager <tab> next-unread
 bind index,pager <backtab> previous-unread
 bind pager <up>       previous-line
@@ -104,7 +104,8 @@ macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
 macro index,pager gh "<change-folder>=arch\n" "Go to Arch"
 macro index,pager gv "<change-folder>=vim\n" "Go to Vim"
 macro index,pager gu "<change-folder>=univ\n" "Go to Vim"
-macro index,pager gc "<change-folder>=price\n" "Go to Price"
+macro index,pager gc "<change-folder>=chicken\n" "Go to Chicken"
+macro index,pager gz "<change-folder>=price\n" "Go to Price"
 macro index,pager gy "<change-folder>=paypal\n" "Go to Paypal"
 macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
 macro index,pager go "<change-folder>=apo\n" "Go to APO"
@@ -117,4 +118,7 @@ macro index,pager _ "<save-message>=topics\n" "Move to Topics"
 
 source ~/.mutt/colors
 
-mailboxes =inbox =univ =lists =arch =vim =price =paypal =fai =apo =xd =typo
+folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %s %> %D  %4c"'
+folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %s %> %D  %4c"'
+
+mailboxes =inbox =univ =lists =arch =chicken =vim =price =paypal =fai =apo =xd =typo

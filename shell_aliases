@@ -83,7 +83,7 @@ alias prename='prename -v'
 alias octalrights='stat -c %a'
 alias irb='irb --simple-prompt'
 alias python='rlwrap python -q'
-alias calc='bc -ql $HOME/.bc'
+alias bcl='bc -ql $HOME/.bcrc'
 alias mp4box='MP4Box'
 
 alias subscriptions='grep ":" ~/.jnewsrc | awk -F : "{print $1}"'

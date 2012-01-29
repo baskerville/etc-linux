@@ -41,6 +41,10 @@ fd() {
     find . -type d -iname "*$@*" 
 }
 
+fl() {
+    find . -type l -iname "*$@*" 
+}
+
 fxo() {
     find . -iname "*$@*" -print -exec open "{}" \; 
 }
