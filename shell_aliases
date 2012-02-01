@@ -52,6 +52,10 @@ alias enfr='tw www.freetranslation.com.en-fr'
 alias phosphor='/usr/lib/xscreensaver/phosphor -program bash'
 alias apple2='/usr/lib/xscreensaver/apple2 -text -program bash'
 
+alias nzd='nzbget -D'
+alias nzl='nzbget -L'
+alias nzq='nzbget -Q'
+
 alias i='type -a'
 alias y='file -b'
 alias mt='file -b --mime-type'
