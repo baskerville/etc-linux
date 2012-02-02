@@ -82,6 +82,7 @@ nmap <leader>k :bp<cr>
 nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bd<cr>
+vmap <leader>t :!titlecase<cr>
 " nmap <return> zA
 nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>

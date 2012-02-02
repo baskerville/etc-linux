@@ -1,0 +1,19 @@
+map F follow
+map f toggle_fullscreen
+map q quit
+map Q quit
+map <S-Space> scroll full_up
+set font terminus
+
+set render-loading false
+
+set default-bg    '#303030'
+set default-fg    '#A8A8A8'
+set inputbar-bg   '#303030'
+set inputbar-fg   '#A8A8A8'
+set statusbar-bg  '#303030'
+set statusbar-fg  '#A8A8A8'
+set recolor-darkcolor  '#657B83'
+set recolor-lightcolor '#FDF6E3'
+
+# vim: set ft=conf:
