@@ -25,8 +25,8 @@ color2 D66749
 color3 FD989C
 
 TEXT
-${font FS Gritta:pixelsize=90}${alignc}${color1}${time %H}${color2}+${color1}${time %M}${font}
-${voffset 3}${font Dotrice:pixelsize=30}${alignc}${color3}${time %a}${font}
-${voffset 3}${font Dotrice:pixelsize=30}${alignc}${color3}${time %d}${font}
+${font FS Gritta:pixelsize=90}${alignc}${color1}${time %H}${color2}:${color1}${time %M}${font}
+${voffset 6}${font Dotrice:pixelsize=30}${alignc}${color3}${time %a}${font}
+${font Dotrice:pixelsize=30}${alignc}${color3}${time %d}${font}
 
 # vim: set ft=conf:
