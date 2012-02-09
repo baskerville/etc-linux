@@ -9,6 +9,9 @@ map <A-2> set "pages-per-row 2"
 set font terminus
 set render-loading false
 set page-padding   0
+set adjust-open    "width"
+set zoom-min       1
+set zoom-max       5000
 
 set default-bg         '#303030'
 set default-fg         '#A8A8A8'
