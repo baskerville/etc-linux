@@ -125,6 +125,7 @@ alias hap='hestia pause'
 alias har='hestia resume'
 alias hac='hestia cancel'
 alias hapr='hestia preview'
+alias hapi='hestia priority'
 alias hak='hestia kill'
 
 alias dal='diana list'
