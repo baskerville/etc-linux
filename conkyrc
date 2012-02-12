@@ -7,8 +7,9 @@ draw_borders no
 draw_outline no
 draw_shades no
 
-alignment top_middle
-gap_y 120
+alignment top_right
+gap_x 20
+gap_y 20
 
 own_window yes
 own_window_transparent yes
@@ -25,7 +26,7 @@ color3 FD989C
 
 TEXT
 ${font FS Gritta:pixelsize=90}${alignc}${color1}${time %H}${color2}:${color1}${time %M}${font}
-${voffset 12}${font Dotrice:pixelsize=20}${alignc}${color3}${time %a}${font}
-${font Dotrice:pixelsize=20}${alignc}${color3}${time %d}${font}
+${voffset 6}${font Dotrice:pixelsize=30}${alignc}${color3}${time %a}${font}
+${font Dotrice:pixelsize=30}${alignc}${color3}${time %d}${font}
 
 # vim: set ft=conf:

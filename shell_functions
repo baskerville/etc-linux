@@ -129,10 +129,6 @@ prune() {
     rm -iv $XDG_BIN_DIR/$@ 
 }
 
-cplacie() {
-    sudo -u nmt cp  -r "$@" $LACIE/ 
-}
-
 lslacie() {
     ls "$@" $LACIE/ 
 }
