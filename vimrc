@@ -54,6 +54,7 @@ if has("autocmd")
     autocmd FileType mail silent! call CleanMuttHeader()
     autocmd FileType mail setlocal completefunc=CompleteMuttAliases
     autocmd FileType mail setlocal commentstring=>%s
+    autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
     autocmd FileType xdefaults setlocal commentstring=!%s
     autocmd FileType slrnrc setlocal commentstring=%%s
 
