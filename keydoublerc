@@ -11,4 +11,6 @@ keycode 255 = Caps_Lock
 keycode 36 = Control_R
 keycode 254 = Return
 
+keycode 37 = Multi_key
+
 add Control = Control_L Control_R
