@@ -1,0 +1,14 @@
+! keydouble configuration file
+!
+! natart_pairs: 66:255 36:254
+
+clear Lock
+clear Control
+
+keycode 66 = Control_L
+keycode 255 = Caps_Lock
+
+keycode 36 = Control_R
+keycode 254 = Return
+
+add Control = Control_L Control_R

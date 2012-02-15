@@ -2,14 +2,14 @@
 ! Apple Compact Aluminium Keyboard
 ! 
 
-clear Lock
-clear Control
+! clear Lock
+! clear Control
 
 ! CapsLock becomes Control
-keycode 66 = Control_L
+! keycode 66 = Control_L
 
 ! Control becomes Compose
 ! Shift-Control becomes CapsLock
-keycode 37 = Multi_key Caps_Lock
+! keycode 37 = Multi_key Caps_Lock
 
-add Control = Control_L
+! add Control = Control_L
