@@ -30,6 +30,14 @@ export MICRO=/media/micro
 export HEXAGON=/media/hexagon
 export LACIE=/media/lacie
 
+export LESS_TERMCAP_mb=$'\e[1;35m'    # begin blinking
+export LESS_TERMCAP_md=$'\e[1;34m'    # begin bold
+export LESS_TERMCAP_me=$'\e[0m'       # end mode
+export LESS_TERMCAP_se=$'\e[0m'       # end standout-mode
+export LESS_TERMCAP_so=$'\e[1;40;33m' # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\e[0m'       # end underline
+export LESS_TERMCAP_us=$'\e[1;32m'    # begin underline
+
 [ -d "$XDG_BIN_DIR" ] && export PATH="$PATH:$XDG_BIN_DIR"
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then

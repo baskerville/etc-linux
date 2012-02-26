@@ -5,12 +5,13 @@ set show-all-if-unmodified     on
 set visible-stats              on
 set bind-tty-special-chars     off
 
-"\e[3~": delete-char
-
 C-w:     backward-kill-word
 C-n:     history-search-forward
 C-p:     history-search-backward
 C-u:     kill-whole-line
+"\e[3~": delete-char
+"\ei":   tab-insert
 "\e,":   shell-expand-line
+
 # "\ei":   character-search
 # "\eo":   character-search-backward

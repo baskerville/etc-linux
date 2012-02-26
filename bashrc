@@ -45,7 +45,7 @@ export PROMPT_COMMAND='_prompt_command'
 [ -r "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
 
 . /etc/profile.d/z.sh
-. "$XDG_CONFIG_HOME"/bash_completion.d/owl
+# . "$XDG_CONFIG_HOME"/bash_completion.d/owl
 . "$XDG_CONFIG_HOME"/bash_completion.d/eat
 
 eval $(dircolors -b ~/.dircolors)

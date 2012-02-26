@@ -85,6 +85,8 @@ nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bd<cr>
 vmap <leader>t :!titlecase<cr>
+nmap <Leader>w :set colorcolumn=80<cr>
+nmap <Leader>W :set colorcolumn=0<cr>
 " nmap <return> zA
 nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>

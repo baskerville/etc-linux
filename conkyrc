@@ -21,8 +21,8 @@ use_xft yes
 uppercase yes
 
 color1 FFF7BC
-color2 D66749
-color3 FD989C
+color2 444444
+color3 303030
 
 TEXT
 ${font FS Gritta:pixelsize=90}${alignc}${color1}${time %H}${color2}:${color1}${time %M}${font}
