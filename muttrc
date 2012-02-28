@@ -116,7 +116,7 @@ macro index,pager ga "<change-folder>=topics\n" "Go to Topics"
 macro index,pager * "<save-message>=starred\n" "Move to Starred"
 macro index,pager _ "<save-message>=topics\n" "Move to Topics"
 
-source ~/.mutt/colors
+source ~/.mutt/mutt_colors
 
 folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %s %> %D  %4c"'
