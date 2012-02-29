@@ -9,6 +9,7 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoreboth
 
 export XDG_DOWNLOAD_DIR=~/incoming
+export XDG_DOTFILES_DIR=~/.dotfiles
 export XDG_TRASH_DIR=~/.trash
 export XDG_BIN_DIR=~/bin
 export XDG_TMP_DIR=~/tmp

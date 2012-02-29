@@ -1,0 +1,51 @@
+#define   t_background    #FDF6E3
+#define   t_foreground    #657B83
+
+#define   t_dark_white    #586E75
+#define   t_light_white   #000000
+
+#define   t_dark_black    #EEE8D5
+#define   t_light_black   #93A1A1
+
+!MISC
+URxvt.background:  t_background
+URxvt.foreground:  t_foreground
+
+URxvt.colorBD:     t_dark_white
+URxvt.colorIT:     t_dark_white
+URxvt.colorUL:     t_dark_white
+
+!BLK
+URxvt.color0:      t_dark_black
+URxvt.color8:      t_light_black
+
+!WHT
+URxvt.color7:      t_dark_white
+URxvt.color15:     t_light_white
+
+URxvt.color1:  #FB5449
+URxvt.color9:  #BB031C
+
+URxvt.color2:  #7E9B00
+URxvt.color10: #496800
+
+URxvt.color3:  #B08B00
+URxvt.color11: #775900
+
+URxvt.color4:  #5895DF
+URxvt.color12: #0962A7
+
+URxvt.color5:  #F2549E
+URxvt.color13: #B5026B
+
+URxvt.color6:  #32A197
+URxvt.color14: #006D65
+
+! orange
+! #AA3200
+! #E86832
+! purple
+! #5D55A7
+! #9287DF
+
+! vim: set ft=xdefaults:
