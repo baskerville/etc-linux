@@ -2,6 +2,7 @@
 #include "colors/cursor"
 
 URxvt.modifier:             alt
+! URxvt.font:                 xft:DejaVu Sans Mono:pixelsize=32
 URxvt.font:                 -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*
 URxvt.boldFont:             -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*
 URxvt.italicFont:           -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*

@@ -1,9 +1,7 @@
 setxkbmap -option terminate:ctrl_alt_bksp
-# xmodmap ~/.xmodmaprc
 kdlaunch &
 xrdb -merge ~/.Xresources
-imlibsetroot -s a ~/image/wallpapers/paradise_found.jpg
-# xcompmgr -CcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o .666 &
+imlibsetroot -s a ~/image/wallpapers/raise.jpg
 compton -CcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o .666 &
 
 xset +fp /usr/share/fonts/local
@@ -17,6 +15,5 @@ urxvtd -q -o -f
 xscreensaver -no-splash &
 unclutter -noevents &
 ~/bin/checkmail &
-# ~/bin/lowbatterynotifier &
 
 exec openbox-session

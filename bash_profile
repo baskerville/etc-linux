@@ -19,7 +19,7 @@ export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER='news.orange.fr'
 export PYTHONIOENCODING=utf-8
 export OWL_MAX_URL=21
-export STDERRED_ESC_CODE=$(echo -e "\e[38;5;210m")
+export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
 
 export SHELL_CONFIG=~/.bashrc
 export SHELL_PROFILE=~/.bash_profile

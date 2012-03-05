@@ -20,9 +20,9 @@ own_window_hints undecorated, below, sticky, skip_taskbar, skip_pager
 use_xft yes
 uppercase yes
 
-color1 FFF7BC
-color2 444444
-color3 303030
+color1 E37868
+color2 C6B0EE
+color3 94C5FF
 
 TEXT
 ${font FS Gritta:pixelsize=90}${alignc}${color1}${time %H}${color2}:${color1}${time %M}${font}

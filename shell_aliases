@@ -42,7 +42,7 @@ alias on='open "$(nn)"'
 alias any='le1 | shuf -n 1'
 alias so='any | xargs open'
 alias ded='find . -type d -empty -print -delete'
-alias rmnn='rm "$(nn)"'
+alias rmnn='rm -v -- "$(nn)"'
 alias rmrfnn='rmrf "$(nn)"'
 
 alias allprops='xdotool search --class . | xargs -I % xprop -id %'
@@ -63,7 +63,6 @@ alias i='type -a'
 alias y='file -b'
 alias mt='file -b --mime-type'
 alias me='file -b --mime-encoding'
-alias mi='mediainfo'
 
 alias et='editor -p'
 alias vd='vimdiff'
@@ -116,6 +115,10 @@ alias dsstore_remove='find . -type f -name .DS_Store -print -exec rm {} \;'
 alias battery="acpi -b | grep -o '[0-9]*%'"
 alias lowerdir='find . -maxdepth 1 -type d ! -samefile . -exec prename -vl {} \;'
 alias wrp='wr FRXX0076'
+
+alias zlacie="cd "$LACIE""
+alias zdata="cd "$DATA""
+alias zmicro="cd "$MICRO""
 
 alias hal='hestia list'
 alias haa='hestia add'

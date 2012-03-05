@@ -40,7 +40,7 @@ syntax on
 filetype plugin on
 filetype indent on
 
-colorscheme bubblegum-cold_grey
+colorscheme bubblegum
 
 call pathogen#infect()
 
