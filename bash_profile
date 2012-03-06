@@ -15,11 +15,13 @@ export XDG_BIN_DIR=~/bin
 export XDG_TMP_DIR=~/tmp
 export XDG_AUR_HOME=~/src/aur
 
+export PYTHONIOENCODING=utf-8
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER='news.orange.fr'
-export PYTHONIOENCODING=utf-8
-export OWL_MAX_URL=21
 export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
+export RUBY_GEM_DIR="$HOME/.gem"
+export RUBY_BIN_DIR=$(find "$RUBY_GEM_DIR" -maxdepth 3 -type d -name bin | tail -1)
+export NOTIFICATIONS_FIFO=~/.notifications
 
 export SHELL_CONFIG=~/.bashrc
 export SHELL_PROFILE=~/.bash_profile
@@ -39,7 +41,7 @@ export LESS_TERMCAP_so=$'\e[1;40;33m' # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\e[0m'       # end underline
 export LESS_TERMCAP_us=$'\e[1;32m'    # begin underline
 
-[ -d "$XDG_BIN_DIR" ] && export PATH="$PATH:$XDG_BIN_DIR"
+[ -d "$XDG_BIN_DIR" ] && export PATH="$PATH:$XDG_BIN_DIR:$RUBY_BIN_DIR"
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
   startx >& ~/.Xlog

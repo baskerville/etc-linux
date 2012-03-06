@@ -49,6 +49,13 @@ export PROMPT_COMMAND='_prompt_command'
 
 eval $(dircolors -b ~/.dircolors)
 
+printf '\e]4;16;rgb:32/31/2E\a'
+printf '\e]4;59;rgb:40/40/3D\a'
+printf '\e]4;102;rgb:77/78/7B\a'
+printf '\e]4;145;rgb:B4/B5/B9\a'
+printf '\e]4;188;rgb:C6/C7/CB\a'
+printf '\e]4;231;rgb:FE/FF/FF\a'
+
 if [ -f "/usr/lib/stderred.so" ]; then
     export LD_PRELOAD="/usr/lib/stderred.so"
 fi

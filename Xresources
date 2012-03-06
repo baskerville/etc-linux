@@ -2,11 +2,10 @@
 #include "colors/cursor"
 
 URxvt.modifier:             alt
-! URxvt.font:                 xft:DejaVu Sans Mono:pixelsize=32
-URxvt.font:                 -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*
-URxvt.boldFont:             -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*
-URxvt.italicFont:           -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*
-URxvt.boldItalicFont:       -*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*
+URxvt.font:                 -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.boldFont:             -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.italicFont:           -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.boldItalicFont:       -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.geometry:             145x53 
 URxvt.internalBorder:       9
 URxvt.cursorBlink:          true
@@ -30,15 +29,15 @@ URxvt.keysym.M-C-0:         command:\033[?25h
 URxvt.keysym.S-Up:          command:\033]720;1\007
 URxvt.keysym.S-Down:        command:\033]721;1\007
 
-URxvt.keysym.C-1:           command:\033]710;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-2:           command:\033]710;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-3:           command:\033]710;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-4:           command:\033]710;-*-terminus-medium-r-normal-*-17-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-17-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-17-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-17-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-5:           command:\033]710;-*-terminus-medium-r-normal-*-20-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-20-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-20-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-20-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-6:           command:\033]710;-*-terminus-medium-r-normal-*-22-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-22-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-22-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-22-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-7:           command:\033]710;-*-terminus-medium-r-normal-*-24-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-24-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-24-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-24-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-8:           command:\033]710;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-9:           command:\033]710;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007
+URxvt.keysym.C-1:           command:\033]710;-*-fixed-*-*-*-*-9-*-*-*-*-*-*-*\007\033]711;-*-fixed-*-*-*-*-9-*-*-*-*-*-*-*\007\033]712;-*-fixed-*-*-*-*-9-*-*-*-*-*-*-*\007\033]713;-*-fixed-*-*-*-*-9-*-*-*-*-*-*-*\007
+URxvt.keysym.C-2:           command:\033]710;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-*\007
+URxvt.keysym.C-3:           command:\033]710;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-14-*-*-*-*-*-iso10646-*\007
+URxvt.keysym.C-4:           command:\033]710;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007
+URxvt.keysym.C-5:           command:\033]710;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007
+URxvt.keysym.C-6:           command:\033]710;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007
+URxvt.keysym.C-7:           command:\033]710;xft:Inconsolata:pixelsize=18\007\033]711;xft:Inconsolata:pixelsize=18\007\033]712;xft:Inconsolata:pixelsize=18\007\033]713;xft:Inconsolata:pixelsize=18\007
+URxvt.keysym.C-8:           command:\033]710;xft:Inconsolata:pixelsize=28\007\033]711;xft:Inconsolata:pixelsize=28\007\033]712;xft:Inconsolata:pixelsize=28\007\033]713;xft:Inconsolata:pixelsize=28\007
+URxvt.keysym.C-9:           command:\033]710;xft:Inconsolata:pixelsize=32\007\033]711;xft:Inconsolata:pixelsize=32\007\033]712;xft:Inconsolata:pixelsize=32\007\033]713;xft:Inconsolata:pixelsize=32\007
 
 Xcursor.theme:              dmz-aa
 
