@@ -15,15 +15,15 @@ URxvt.mouseWheelScrollPage: true
 URxvt.saveLines:            32767
 
 URxvt.urlLauncher:          web_browser
-URxvt.perl-ext:				default
-URxvt.perl-ext-common:		keyboard-select,url-select,clipboard,-option-popup,-selection-popup,-searchable-scrollback,autocomplete-ALL-the-things
+URxvt.perl-ext:             default
+URxvt.perl-ext-common:      keyboard-select,url-select,clipboard,-option-popup,-selection-popup,-searchable-scrollback,autocomplete-ALL-the-things
 URxvt.keysym.M-slash:       perl:aAtt:complete
-URxvt.keysym.M-Escape:		perl:keyboard-select:activate
-URxvt.keysym:M-s:			perl:keyboard-select:search
-URxvt.keysym.M-u:			perl:url-select:select_next
-URxvt.keysym.M-c:			perl:clipboard:copy
-URxvt.keysym.M-v:			perl:clipboard:paste
-URxvt.keysym.M-C-v:			perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym:M-s:           perl:keyboard-select:search
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-c:           perl:clipboard:copy
+URxvt.keysym.M-v:           perl:clipboard:paste
+URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
 URxvt.keysym.C-0:           command:\033[?25l
 URxvt.keysym.M-C-0:         command:\033[?25h
 URxvt.keysym.S-Up:          command:\033]720;1\007

@@ -45,7 +45,7 @@ set send_charset = "utf-8"
 set mail_check = 60
 set attribution = "%n:"
 
-set editor = "vim"
+set editor = "editor"
 unset pipe_decode
 
 set pager_index_lines = 10
@@ -104,8 +104,7 @@ macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
 macro index,pager gh "<change-folder>=arch\n" "Go to Arch"
 macro index,pager gv "<change-folder>=vim\n" "Go to Vim"
 macro index,pager gu "<change-folder>=univ\n" "Go to Vim"
-macro index,pager gc "<change-folder>=chicken\n" "Go to Chicken"
-macro index,pager gz "<change-folder>=price\n" "Go to Price"
+macro index,pager gc "<change-folder>=price\n" "Go to Price"
 macro index,pager gy "<change-folder>=paypal\n" "Go to Paypal"
 macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
 macro index,pager go "<change-folder>=apo\n" "Go to APO"

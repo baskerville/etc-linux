@@ -5,7 +5,6 @@ map Q quit
 map <S-Space> scroll full-up
 map <A-1> set "pages-per-row 1"
 map <A-2> set "pages-per-row 2"
-unmap 0
 
 set font terminus
 set render-loading false
