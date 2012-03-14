@@ -14,8 +14,8 @@ static const char * const BAR_FONT = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*
 /* colors:
  * (see X(7) section "COLOR NAMES" for valid values)
  */
-static const char * const WIN_FS_COLOR = "#262626";
-static const char * const WIN_BG_COLOR = "#262626";
+static const char * const WIN_FS_COLOR = "#121212";
+static const char * const WIN_BG_COLOR = "#121212";
 static const char * const SEL_COLOR    = "#A5DCA5";
 static const char * const BAR_BG_COLOR = "#262626";
 static const char * const BAR_FG_COLOR = "#A8A8A8";
@@ -138,7 +138,7 @@ static const keymap_t keys[] = {
             "catapult move \"$SXIV_IMG\"" },
 	{ true,   XK_r,			    it_shell_cmd,         (arg_t) \
             "catapult rename \"$SXIV_IMG\"" },
-	{ false,  XK_R,	            it_shell_cmd,         (arg_t) \
+	{ false,  XK_semicolon,     it_shell_cmd,         (arg_t) \
             "catapult repeat \"$SXIV_IMG\"" },
 	{ true,   XK_Insert,        it_shell_cmd,         (arg_t) \
             "printf \"%s\" \"$SXIV_IMG\" | xsel -bi" },

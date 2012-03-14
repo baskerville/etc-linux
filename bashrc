@@ -1,6 +1,3 @@
-# export LANG=en_US.UTF-8
-# export LC_CTYPE=en_US.UTF-8
-
 if tty -s; then
     stty -ixon
     stty -ixoff
@@ -37,9 +34,8 @@ _prompt_command() {
     tput ed
 }
 
-export PS1='\[\e[1;33m\]\$ \[\e[0m\]'
+export PS1='\[\e[1;33m\]\$\[\e[0m\] '
 export PROMPT_COMMAND='_prompt_command'
-# export LC_COLLATE="C"
 
 [ -r "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -r "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
@@ -54,11 +50,3 @@ overeight
 if [ -f "/usr/lib/stderred.so" ]; then
     export LD_PRELOAD="/usr/lib/stderred.so"
 fi
-
-complete -F _herbstclient_complete hlc
-# case "$TERM" in
-#     rxvt*|xterm*)
-#         set -o functrace
-#         trap '[ -z "$BASH_SOURCE" ] && printf "\e]0;%s\a" "${PWD//$HOME/~} $BASH_COMMAND" > /dev/tty' DEBUG
-#         ;;
-# esac

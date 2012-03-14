@@ -14,7 +14,7 @@ mpd
 urxvtd -q -o -f
 xscreensaver -no-splash &
 unclutter -noevents &
-# ~/bin/checkmail &
 
 exec openbox-session
+# exec monsterwm
 # exec herbstluftwm

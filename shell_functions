@@ -29,6 +29,10 @@ b64() {
     echo "$@" | openssl base64 
 }
 
+g() {
+    grep -r --color=auto "$@" .
+}
+
 f() {
     find . -maxdepth 1 -iname "*$@*" 
 }

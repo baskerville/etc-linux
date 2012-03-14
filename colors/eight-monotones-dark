@@ -1,0 +1,8 @@
+#! /bin/dash
+
+printf '\033]4;16;rgb:32/31/2E\a'
+printf '\033]4;59;rgb:40/40/3D\a'
+printf '\033]4;102;rgb:77/78/7B\a'
+printf '\033]4;145;rgb:B4/B5/B9\a'
+printf '\033]4;188;rgb:C6/C7/CB\a'
+printf '\033]4;231;rgb:FE/FF/FF\a'

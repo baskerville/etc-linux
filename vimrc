@@ -40,7 +40,12 @@ syntax on
 filetype plugin on
 filetype indent on
 
-set background=dark
+if $BACKGROUND == "light"
+    set background=light
+elseif $BACKGROUND == "dark"
+    set background=dark
+endif
+
 colorscheme bubblegum
 
 call pathogen#infect()

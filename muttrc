@@ -35,7 +35,7 @@ hdr_order From To Cc Subject
 alternative_order text/plain text/enriched text/html
 
 ignore *
-unignore from subject to cc
+unignore date from subject to cc
 
 set sort = threads
 set sort_aux = last-date-received
@@ -86,9 +86,9 @@ bind index,pager \Cb  previous-page
 bind index,pager,attach,compose <F3> help
 bind index,pager ? search-reverse
 
-macro compose a "<attach-file><kill-line>~/incoming/"
-macro index,pager A "|munpack -C ~/incoming\n"
-macro attach S "<save-entry><kill-line>~/incoming/\na"
+macro compose a "<attach-file><kill-line>$XDG_DOWNLOAD_DIR/"
+macro index,pager A "|view_attachments\n"
+macro attach S "<save-entry><kill-line>$XDG_DOWNLOAD_DIR/\na"
 macro index,pager,attach,compose Q <exit>
 macro pager b "<previous-page>"
 macro pager B "<bounce-message>"
@@ -120,4 +120,4 @@ source ~/.mutt/mutt_colors
 folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %s %> %D  %4c"'
 
-mailboxes =inbox =univ =lists =arch =chicken =vim =price =paypal =fai =apo =xd =typo
+mailboxes =inbox =univ =lists =arch =vim =price =paypal =fai =apo =xd =typo
