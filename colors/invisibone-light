@@ -7,6 +7,7 @@
 #define t_fg_highlight #5C646D
 #define t_fg_ceiling   #00020E
 
+
 URxvt.background:  t_background
 URxvt.foreground:  t_foreground
 
@@ -22,4 +23,23 @@ URxvt.color8:      t_fg_comment
 URxvt.color7:      t_fg_highlight
 URxvt.color15:     t_fg_ceiling
 
-! vim: set ft=xdefaults:
+
+
+! RED
+URxvt.color1: #E07298
+URxvt.color9: #A53C65
+! YEL
+URxvt.color3: #CA854E
+URxvt.color11: #90531E
+! GRN
+URxvt.color2: #7DA04A
+URxvt.color10: #4A6D17
+! CYN
+URxvt.color6: #00AB94
+URxvt.color14: #007562
+! BLU
+URxvt.color4: #00A4DD
+URxvt.color12: #0070A5
+! MAG
+URxvt.color5: #A289DE
+URxvt.color13: #6C57A6

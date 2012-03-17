@@ -1,1 +1,43 @@
-invisibone-cold_grey
+#define t_bg_floor     #010000
+#define t_bg_dip       #2B2A27
+#define t_background   #32312E
+#define t_bg_bump      #40403D
+#define t_fg_comment   #7F8084
+#define t_foreground   #A2A3A7
+#define t_fg_highlight #B4B5B9
+#define t_fg_ceiling   #FEFFFF
+
+
+URxvt.background:  t_background
+URxvt.foreground:  t_foreground
+
+URxvt.colorBD:     t_fg_highlight
+URxvt.colorIT:     t_fg_highlight
+URxvt.colorUL:     t_fg_highlight
+
+!BLK
+URxvt.color0:      t_bg_bump
+URxvt.color8:      t_fg_comment
+
+!WHT
+URxvt.color7:      t_fg_highlight
+URxvt.color15:     t_fg_ceiling
+
+! RED
+URxvt.color1: #B56982
+URxvt.color9: #EE9DB7
+! YEL
+URxvt.color3: #A6754F
+URxvt.color11: #DFA981
+! GRN
+URxvt.color2: #70884C
+URxvt.color10: #A5BD7E
+! CYN
+URxvt.color6: #29907F
+URxvt.color14: #65C6B4
+! BLU
+URxvt.color4: #348AB1
+URxvt.color12: #70C0E9
+! MAG
+URxvt.color5: #8977B2
+URxvt.color13: #C0ACEA

@@ -1,7 +1,7 @@
 # vim: filetype=muttrc
 color	normal	    default	        default
 color	status	    default	        black
-color	indicator	color231        color102
+color	indicator	default         color17
 color	markers	    brightred	    black	
 color	tilde	    brightblack	    default
 color	tree   	    brightblack     default

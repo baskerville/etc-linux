@@ -1,6 +1,7 @@
 setxkbmap -option terminate:ctrl_alt_bksp
 kdlaunch &
 xrdb -merge ~/.Xresources
+updatethm
 imlibsetroot -s a ~/.wallpaper
 compton -CcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o .666 &
 

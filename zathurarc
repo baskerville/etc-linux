@@ -19,7 +19,18 @@ set inputbar-bg        '#303030'
 set inputbar-fg        '#A8A8A8'
 set statusbar-bg       '#303030'
 set statusbar-fg       '#A8A8A8'
-set recolor-darkcolor  '#5C656D'
+# set recolor-darkcolor  '#5C656D'
+# set recolor-lightcolor '#FAF0E6'
+set recolor-darkcolor  '#6D757E'
 set recolor-lightcolor '#FAF0E6'
+
+#define t_bg_peak #FFFEF3
+#define t_bg_dip #FFFAEF
+#define t_background #FAF0E6
+#define t_bg_highlight #E6DDD3
+#define t_commentary #8F97A0
+#define t_foreground #6D757E
+#define t_fg_highlight #5C646D
+#define t_fg_peak #00020E
 
 # vim: set ft=conf:

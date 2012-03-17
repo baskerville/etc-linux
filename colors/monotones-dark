@@ -1,10 +1,11 @@
-#define t_background #32312E
-#define t_foreground #B4B5B9
-
-#define t_bg_highlight #40403D
-#define t_commentary #77787B
-#define t_fg_highlight #C6C7CB
-#define t_fg_peak #FEFFFF
+#define t_bg_floor     #010000
+#define t_bg_dip       #2B2A27
+#define t_background   #32312E
+#define t_bg_bump      #40403D
+#define t_fg_comment   #7F8084
+#define t_foreground   #A2A3A7
+#define t_fg_highlight #B4B5B9
+#define t_fg_ceiling   #FEFFFF
 
 URxvt.background:  t_background
 URxvt.foreground:  t_foreground
@@ -14,11 +15,11 @@ URxvt.colorIT:     t_fg_highlight
 URxvt.colorUL:     t_fg_highlight
 
 !BLK
-URxvt.color0:      t_bg_highlight
-URxvt.color8:      t_commentary
+URxvt.color0:      t_bg_bump
+URxvt.color8:      t_fg_comment
 
 !WHT
 URxvt.color7:      t_fg_highlight
-URxvt.color15:     t_fg_peak
+URxvt.color15:     t_fg_ceiling
 
 ! vim: set ft=xdefaults:

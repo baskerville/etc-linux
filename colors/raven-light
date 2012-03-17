@@ -1,0 +1,45 @@
+#include "monotones-light"
+
+#define t_blue_cm #8892FF
+#define t_blue_hl #1D48CE
+
+#define t_yellow_cm #B79D00
+#define t_yellow_hl #635200
+
+#define t_green_cm #5BB210
+#define t_green_hl #006300
+
+#define t_cyan_cm #00B6A4
+#define t_cyan_hl #006658
+
+#define t_magenta_cm #C08BD5
+#define t_magenta_hl #704084
+
+#define t_red_cm #FF642C
+#define t_red_hl #AC0000
+
+!RED
+URxvt.color1:  t_red_cm
+URxvt.color9:  t_red_hl
+
+!GRN
+URxvt.color2:  t_green_cm
+URxvt.color10: t_green_hl
+
+!YEL
+URxvt.color3:  t_yellow_cm
+URxvt.color11: t_yellow_hl
+
+!BLU
+URxvt.color4:  t_blue_cm
+URxvt.color12: t_blue_hl
+
+!MAG
+URxvt.color5:  t_magenta_cm
+URxvt.color13: t_magenta_hl
+
+!CYN
+URxvt.color6:  t_cyan_cm
+URxvt.color14: t_cyan_hl
+
+! vim: set ft=xdefaults:

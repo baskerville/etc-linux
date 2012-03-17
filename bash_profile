@@ -20,8 +20,8 @@ export PYTHONIOENCODING=utf-8
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER='news.orange.fr'
 export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
-export RUBY_GEM_DIR="$HOME/.gem"
-export RUBY_BIN_DIR=$(find "$RUBY_GEM_DIR" -maxdepth 3 -type d -name bin | tail -1)
+# export RUBY_GEM_DIR="$HOME/.gem"
+# export RUBY_BIN_DIR=$(find "$RUBY_GEM_DIR" -maxdepth 3 -type d -name bin | tail -1)
 export NOTIF_FIFO=~/.notifications
 export GREP_COLORS='ms=1;32:mc=1;32:sl=:cx=:fn=1;39:ln=1;34:bn=1;36:se=1;30'
 
@@ -43,7 +43,9 @@ export LESS_TERMCAP_se=$'\e[0m\e[?25l' # end standout
 export LESS_TERMCAP_us=$'\e[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\e[0m'        # end underline
 
-[ -d "$XDG_BIN_DIR" ] && export PATH="$PATH:$XDG_BIN_DIR:$RUBY_BIN_DIR"
+source ~/.coordinates
+
+[ -d "$XDG_BIN_DIR" ] && export PATH="$PATH:$XDG_BIN_DIR"
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
   startx >& ~/.Xlog

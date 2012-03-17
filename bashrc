@@ -45,8 +45,6 @@ export PROMPT_COMMAND='_prompt_command'
 
 eval $(dircolors -b ~/.dircolors)
 
-overeight
-
 if [ -f "/usr/lib/stderred.so" ]; then
     export LD_PRELOAD="/usr/lib/stderred.so"
 fi

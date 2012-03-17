@@ -1,6 +1,0 @@
-printf '\033]4;16;rgb:FA/F0/E6\a'
-printf '\033]4;59;rgb:E6/DD/D3\a'
-printf '\033]4;102;rgb:98/A0/A9\a'
-printf '\033]4;145;rgb:5D/64/6D\a'
-printf '\033]4;188;rgb:4D/54/5C\a'
-printf '\033]4;231;rgb:00/01/0E\a'

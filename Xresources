@@ -8,7 +8,7 @@ URxvt.italicFont:           -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.boldItalicFont:       -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.geometry:             145x53 
 URxvt.internalBorder:       9
-URxvt.cursorBlink:          true
+! URxvt.cursorBlink:          true
 URxvt.iso14755:             false
 URxvt.scrollBar:            false
 URxvt.mouseWheelScrollPage: true
@@ -35,7 +35,8 @@ URxvt.keysym.C-3:           command:\033]710;-*-terminus-medium-r-normal-*-14-*-
 URxvt.keysym.C-4:           command:\033]710;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*\007
 URxvt.keysym.C-5:           command:\033]710;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-28-*-*-*-*-*-iso10646-*\007
 URxvt.keysym.C-6:           command:\033]710;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]711;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]712;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007\033]713;-*-terminus-medium-r-normal-*-32-*-*-*-*-*-iso10646-*\007
-URxvt.keysym.C-7:           command:\033]710;xft:Inconsolata:pixelsize=18\007\033]711;xft:Inconsolata:pixelsize=18\007\033]712;xft:Inconsolata:pixelsize=18\007\033]713;xft:Inconsolata:pixelsize=18\007
+! URxvt.keysym.C-7:           command:\033]710;xft:Inconsolata:pixelsize=18\007\033]711;xft:Inconsolata:pixelsize=18\007\033]712;xft:Inconsolata:pixelsize=18\007\033]713;xft:Inconsolata:pixelsize=18\007
+URxvt.keysym.C-7:           command:\033]710;xft:Inconsolata:pixelsize=21\007\033]711;xft:Inconsolata:pixelsize=21\007\033]712;xft:Inconsolata:pixelsize=21\007\033]713;xft:Inconsolata:pixelsize=21\007
 URxvt.keysym.C-8:           command:\033]710;xft:Inconsolata:pixelsize=28\007\033]711;xft:Inconsolata:pixelsize=28\007\033]712;xft:Inconsolata:pixelsize=28\007\033]713;xft:Inconsolata:pixelsize=28\007
 URxvt.keysym.C-9:           command:\033]710;xft:Inconsolata:pixelsize=32\007\033]711;xft:Inconsolata:pixelsize=32\007\033]712;xft:Inconsolata:pixelsize=32\007\033]713;xft:Inconsolata:pixelsize=32\007
 
