@@ -57,7 +57,8 @@ unset markers
 set status_on_top
 
 set date_format    = "%Y/%m/%d %H:%M"
-set index_format   = "%3C  %Z  %-21.21n  %s %> %D  %4c"
+# set index_format   = "%3C  %Z  %-21.21n  %s %> %D  %4c"
+# set index_format   = "%3C  %Z  %-21.21n  %-70.70s %> %D  %4c"
 set pager_format   = "Message %C of %m %> [%P]"
 set folder_format  = "%2C %t %N %8s %d %f"
 set status_format  = "%f %?n? %n ? (%?o?%o/?%m)  [%l]  %V %> (%s/%S)  %P"
@@ -117,7 +118,9 @@ macro index,pager _ "<save-message>=topics\n" "Move to Topics"
 
 source ~/.mutt/mutt_colors
 
-folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %s %> %D  %4c"'
-folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %s %> %D  %4c"'
+folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %-70.70s %> %D  %4c"'
+folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %-70.70s %> %D  %4c"'
+# folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %s %> %D  %4c"'
+# folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %s %> %D  %4c"'
 
 mailboxes =inbox =univ =lists =arch =vim =price =paypal =fai =apo =xd =typo
