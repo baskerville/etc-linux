@@ -24,6 +24,7 @@ unset confirmappend
 unset confirmcreate
 set postpone = ask-yes
 set weed
+# set arrow_cursor
 
 set alias_file = ~/.mutt/aliases
 set sort_alias = alias
@@ -102,17 +103,16 @@ macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
 macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
 macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
-macro index,pager gh "<change-folder>=arch\n" "Go to Arch"
+macro index,pager ga "<change-folder>=arch\n" "Go to Arch"
 macro index,pager gv "<change-folder>=vim\n" "Go to Vim"
 macro index,pager gu "<change-folder>=univ\n" "Go to Vim"
-macro index,pager gc "<change-folder>=price\n" "Go to Price"
-macro index,pager gy "<change-folder>=paypal\n" "Go to Paypal"
+macro index,pager gc "<change-folder>=commandes\n" "Go to Commandes"
+macro index,pager gp "<change-folder>=paypal\n" "Go to Paypal"
 macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
 macro index,pager go "<change-folder>=apo\n" "Go to APO"
 macro index,pager gx "<change-folder>=xd\n" "Go to XD"
 macro index,pager gr "<change-folder>=starred\n" "Go to Starred"
-macro index,pager gt "<change-folder>=typo\n" "Go to Typo"
-macro index,pager ga "<change-folder>=topics\n" "Go to Topics"
+macro index,pager gt "<change-folder>=topics\n" "Go to Topics"
 macro index,pager * "<save-message>=starred\n" "Move to Starred"
 macro index,pager _ "<save-message>=topics\n" "Move to Topics"
 

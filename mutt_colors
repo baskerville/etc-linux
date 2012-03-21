@@ -6,12 +6,12 @@ color	markers	    brightred	    black
 color	tilde	    brightblack	    default
 color	tree   	    brightblack     default
 
-color	index	    brightmagenta   default	~P
-color	index	    brightgreen	    default	~N
-color	index	    green	        default	~O
-color	index	    red	            default	~D
-color	index	    brightyellow	default	~F
-color	index	    brightcyan      default	~T
+# color	index	    brightmagenta   default	~P
+# color	index	    brightgreen	    default	~N
+# color	index	    green	        default	~O
+# color	index	    red	            default	~D
+# color	index	    brightyellow	default	~F
+# color	index	    brightcyan      default	~T
 
 color	header   	white  	        default	"."
 color	header   	brightyellow	default	"^(From)"
