@@ -1,8 +1,0 @@
-printf '\033]4;16;rgb:01/00/00\007'
-printf '\033]4;17;rgb:2B/2A/27\007'
-printf '\033]4;18;rgb:32/31/2E\007'
-printf '\033]4;19;rgb:40/40/3D\007'
-printf '\033]4;20;rgb:7F/80/84\007'
-printf '\033]4;21;rgb:A2/A3/A7\007'
-printf '\033]4;22;rgb:B4/B5/B9\007'
-printf '\033]4;23;rgb:FE/FF/FF\007'
