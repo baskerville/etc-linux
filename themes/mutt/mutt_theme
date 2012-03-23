@@ -1,4 +1,3 @@
-# vim: filetype=muttrc
 color	normal	    default	        default
 color	status	    default	        black
 color	indicator	default         color17
@@ -13,9 +12,7 @@ color	tree   	    brightblack     default
 # color	index	    brightyellow	default	~F
 # color	index	    brightcyan      default	~T
 
-color	header   	white  	        default	"."
-color	header   	brightyellow	default	"^(From)"
-color	header   	brightblue	    default	"^(Subject)"
+color	header   	brightblack     default	"."
 
 color	body	    white	        default	"\`[^\` ]+\`"
 color	body	    white           default	"[*][^* ]+[*]"
@@ -33,3 +30,5 @@ color	quoted7	    brightblack	    default
 
 color	attachment	green	        default
 color	signature	brightblack	    default
+
+# vim: filetype=muttrc:

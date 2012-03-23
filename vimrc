@@ -40,7 +40,7 @@ syntax on
 filetype plugin on
 filetype indent on
 
-colorscheme current
+colorscheme theme
 
 call pathogen#infect()
 

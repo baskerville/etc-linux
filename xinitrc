@@ -23,6 +23,6 @@ xscreensaver -no-splash &
 unclutter -noevents &
 
 exec openbox-session
+# exec herbstluftwm
 # exec dwm
 # exec monsterwm
-# exec herbstluftwm

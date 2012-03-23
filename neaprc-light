@@ -8,7 +8,7 @@ padding = 0
 spacing = 1
 
 ;foreground color (inactive desktops)
-color_inactive = #8F98A1
+color_inactive = #AFB8C2
 
 ;highlight color (the active desktop)
 color_active = #69717A
