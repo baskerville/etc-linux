@@ -17,7 +17,6 @@ xset m 3/2 6
 xsetroot -cursor_name left_ptr
 
 mpd
-# dwmstatus &
 urxvtd -q -o -f
 xscreensaver -no-splash &
 unclutter -noevents &

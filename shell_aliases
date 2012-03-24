@@ -45,6 +45,7 @@ alias ded='find . -type d -empty -print -delete'
 alias rmnn='rm -v -- "$(nn)"'
 alias rmrfnn='rmrf "$(nn)"'
 alias mo='mosaic .'
+alias fq='fc-list | grep -i'
 
 alias allprops='xdotool search --class . | xargs -I % xprop -id %'
 alias yd='youtube-dl -t'
