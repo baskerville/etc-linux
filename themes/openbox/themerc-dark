@@ -94,7 +94,7 @@ window.client.padding.width: 0
 
 window.handle.width: 0
 
-window.inactive.border.color: #32312E
+window.inactive.border.color: #3F3E3B
 
 window.inactive.button.disabled.bg.border.color: #222222
 window.inactive.button.disabled.bg.color: #2D2D2D

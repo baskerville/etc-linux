@@ -1,8 +1,8 @@
 setxkbmap -option terminate:ctrl_alt_bksp
 kdlaunch &
 xrdb -merge ~/.Xresources
-compton -CcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o .666 &
-imlibsetroot -s a ~/.wallpaper
+# compton -CcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o .666 &
+# imlibsetroot -s a ~/.wallpaper
 
 # reload fonts
 xset +fp /usr/share/fonts/local
@@ -25,3 +25,5 @@ exec openbox-session
 # exec herbstluftwm
 # exec dwm
 # exec monsterwm
+
+# vim: set ft=conf:

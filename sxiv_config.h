@@ -17,8 +17,8 @@ static const char * const BAR_FONT = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*
 static const char * const WIN_FS_COLOR = "#121212";
 static const char * const WIN_BG_COLOR = "#121212";
 static const char * const SEL_COLOR    = "#A5DCA5";
-static const char * const BAR_BG_COLOR = "#262626";
-static const char * const BAR_FG_COLOR = "#A8A8A8";
+static const char * const BAR_BG_COLOR = "#32312E";
+static const char * const BAR_FG_COLOR = "#69717A";
 
 #endif
 #ifdef _IMAGE_CONFIG
@@ -140,8 +140,10 @@ static const keymap_t keys[] = {
             "catapult rename \"$SXIV_IMG\"" },
 	{ false,  XK_semicolon,     it_shell_cmd,         (arg_t) \
             "catapult repeat \"$SXIV_IMG\"" },
-	{ true,   XK_Insert,        it_shell_cmd,         (arg_t) \
-            "printf \"%s\" \"$SXIV_IMG\" | xsel -bi" },
+	{ true,   XK_period,         it_shell_cmd,         (arg_t) \
+            "copy_args \"$SXIV_IMG\"" },
+	{ true,   XK_slash,         it_shell_cmd,         (arg_t) \
+            "browse_parent \"$SXIV_IMG\"" },
 	{ true,   XK_s,             it_shell_cmd,         (arg_t) \
             "setwall \"$SXIV_IMG\"" },
 };

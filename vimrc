@@ -11,7 +11,7 @@ set wildmenu
 set backspace=indent,eol,start
 set linebreak
 set autoindent
-set smartindent
+" set smartindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4

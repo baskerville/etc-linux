@@ -2,10 +2,10 @@
 #include "colors/cursor"
 
 URxvt.modifier:             alt
-! URxvt.font:                 xft:Inconsolata:pixelsize=21
-! URxvt.boldFont:             xft:Inconsolata:pixelsize=21
-! URxvt.italicFont:           xft:Inconsolata:pixelsize=21
-! URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=21
+! URxvt.font:                 xft:Inconsolata:pixelsize=28,xft:Meslo LG M:pixelsize=28
+! URxvt.boldFont:             xft:Inconsolata:pixelsize=28,xft:Meslo LG M:pixelsize=28
+! URxvt.italicFont:           xft:Inconsolata:pixelsize=28,xft:Meslo LG M:pixelsize=28
+! URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=28,xft:Meslo LG M:pixelsize=28
 URxvt.font:                 -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.boldFont:             -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.italicFont:           -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
