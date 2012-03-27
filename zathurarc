@@ -14,12 +14,12 @@ set adjust-open    "width"
 set zoom-min       1
 set zoom-max       5000
 
-set default-bg         '#303030'
-set default-fg         '#A8A8A8'
-set inputbar-bg        '#303030'
-set inputbar-fg        '#A8A8A8'
-set statusbar-bg       '#303030'
-set statusbar-fg       '#A8A8A8'
+set default-bg         '#32312E'
+set default-fg         '#A6A7AA'
+set inputbar-bg        '#32312E'
+set inputbar-fg        '#A6A7AA'
+set statusbar-bg       '#32312E'
+set statusbar-fg       '#A6A7AA'
 set recolor-darkcolor  '#69717A'
 set recolor-lightcolor '#FAF0E6'
 
