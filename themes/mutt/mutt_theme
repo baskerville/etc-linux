@@ -17,7 +17,7 @@ color	header   	brightblack     default	"."
 color	body	    white	        default	"\`[^\` ]+\`"
 color	body	    white           default	"[*][^* ]+[*]"
 color	body	    cyan            default	"[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+"
-color	body	    brightcyan	    default	"(https?|ftp)://[^ ]+"
+color	body	    yellow	        default	"(https?|ftp)://[^ ]+"
 
 color	quoted	    brightblack	    default
 color	quoted2	    brightblack	    default

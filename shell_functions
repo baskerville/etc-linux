@@ -34,27 +34,27 @@ g() {
 }
 
 f() {
-    find . -maxdepth 1 -iname "*$@*" 
+    find . -maxdepth 1 -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
 F() {
-    find . -iname "*$@*" 
+    find . -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
-ff() {
-    find . -type f -iname "*$@*" 
+Fd() {
+    find . -type d -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
-fd() {
-    find . -type d -iname "*$@*" 
+Fl() {
+    find . -type l -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
-fl() {
-    find . -type l -iname "*$@*" 
+Ff() {
+    find . -type f -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
 fxo() {
-    find . -iname "*$@*" -print -exec open "{}" \; 
+    find . -iname "*$@*" -printf '%P\0' -exec open "{}" \; 
 }
 
 L() {
@@ -97,14 +97,6 @@ rcd() {
     find $PWD/ -maxdepth 1 -type d ! -samefile $PWD/ -exec urxvtc -cd "{}" \; 
 }
 
-lsbin() {
-    ls $@ $XDG_BIN_DIR 
-}
-
-lsshare() {
-    ls $@ $XDG_DATA_HOME 
-}
-
 count() {
     l1 $@ | wc -l 
 }
@@ -131,10 +123,6 @@ pbg() {
 
 ngfind() {
     grep -E $@ $XDG_DATA_HOME/nglist.txt | tr -dC '[a-z].\n' 
-}
-
-show() {
-    find $XDG_DATA_HOME -iname \*$@\* -exec cat {} \; 
 }
 
 prune() {

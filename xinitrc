@@ -21,8 +21,8 @@ urxvtd -q -o -f
 xscreensaver -no-splash &
 unclutter -noevents &
 
-exec openbox-session
-# exec herbstluftwm
+# exec openbox-session
+exec herbstluftwm
 # exec dwm
 # exec monsterwm
 

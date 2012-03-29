@@ -1,0 +1,170 @@
+#! /bin/dash
+
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+
+hc keyunbind --all
+
+Mod=Mod4
+hc keybind $Mod-Alt-Escape quit
+hc keybind $Mod-Escape reload
+hc keybind $Mod-w close
+hc keybind $Mod-space spawn dmenu_launch
+
+DEFAULT_TAG='one'
+TAG_NAMES="$DEFAULT_TAG two three four five six seven eight nine"
+tag_key=1
+
+hc rename default "$DEFAULT_TAG"
+
+for tag_name in $TAG_NAMES ; do
+    hc add "$tag_name"
+    hc keybind "$Mod-$tag_key" use "$tag_name"
+    hc keybind "$Mod-Shift-$tag_key" move "$tag_name"
+    tag_key=$(((tag_key + 1) % 10))
+    hc load "$tag_name" '(clients max:0)'
+done
+
+hc keybind $Mod-r remove
+hc keybind $Mod-u split vertical 0.5
+hc keybind $Mod-o split horizontal 0.5
+hc keybind $Mod-s floating toggle
+hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-p pseudotile toggle
+hc keybind $Mod-v set_layout vertical
+hc keybind $Mod-n set_layout horizontal
+hc keybind $Mod-m set_layout max
+hc keybind $Mod-g set_layout grid
+hc keybind $Mod-Shift-g cycle_value window_gap 0 4
+
+RESIZESTEP=0.05
+hc keybind $Mod-Control-h resize left  +$RESIZESTEP
+hc keybind $Mod-Control-j resize down  +$RESIZESTEP
+hc keybind $Mod-Control-k resize up    +$RESIZESTEP
+hc keybind $Mod-Control-l resize right +$RESIZESTEP
+
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 resize
+hc mousebind $Mod-Button3 zoom
+
+hc keybind $Mod-BackSpace   cycle_monitor
+hc keybind $Mod-Tab         cycle_all +1
+hc keybind $Mod-Shift-Tab   cycle_all -1
+hc keybind $Mod-c cycle
+hc keybind $Mod-h focus left
+hc keybind $Mod-j focus down
+hc keybind $Mod-k focus up
+hc keybind $Mod-l focus right
+hc keybind $Mod-Alt-h focus -e left
+hc keybind $Mod-Alt-j focus -e down
+hc keybind $Mod-Alt-k focus -e up
+hc keybind $Mod-Alt-l focus -e right
+hc keybind $Mod-Shift-h shift left
+hc keybind $Mod-Shift-j shift down
+hc keybind $Mod-Shift-k shift up
+hc keybind $Mod-Shift-l shift right
+hc keybind $Mod-Alt-Shift-h shift -e left
+hc keybind $Mod-Alt-Shift-j shift -e down
+hc keybind $Mod-Alt-Shift-k shift -e up
+hc keybind $Mod-Alt-Shift-l shift -e right
+
+hc keybind $Mod-Control-comma spawn raise_or_run dwb
+# hc keybind $Mod-Control-Shift-comma spawn raise_or_run dwb_restore
+hc keybind $Mod-Control-slash spawn urxvtc
+hc keybind $Mod-Control-Shift-slash spawn urxvtc -cd "$XDG_DOWNLOAD_DIR"
+hc keybind $Mod-Control-period spawn raise_or_run mutt
+hc keybind $Mod-Control-Shift-period spawn raise_or_run slrn
+
+hc keybind $Mod-apostrophe spawn lasso
+hc keybind $Mod-semicolon spawn glean_primary
+# hc keybind $Mod-b spawn toggle_panel
+hc keybind $Mod-Control-c spawn raise_or_run hlconf
+hc keybind $Mod-bracketleft use_index -1
+hc keybind $Mod-bracketright use_index +1
+hc keybind $Mod-braceleft cycle_monitor -1
+hc keybind $Mod-braceright cycle_monitor +1
+
+hc keybind XF86AudioLowerVolume spawn amixer -q set Master 1%- unmute
+hc keybind XF86AudioRaiseVolume spawn amixer -q set Master 1%+ unmute
+hc keybind $Mod-XF86AudioLowerVolume spawn amixer -q set Master 1- unmute
+hc keybind $Mod-XF86AudioRaiseVolume spawn amixer -q set Master 1+ unmute
+hc keybind XF86AudioMute spawn amixer -q set Master toggle
+hc keybind $Mod-Control-0 spawn mpc -q seek 0%
+hc keybind $Mod-Control-1 spawn mpc -q seek 10%
+hc keybind $Mod-Control-2 spawn mpc -q seek 20%
+hc keybind $Mod-Control-3 spawn mpc -q seek 30%
+hc keybind $Mod-Control-4 spawn mpc -q seek 40%
+hc keybind $Mod-Control-5 spawn mpc -q seek 50%
+hc keybind $Mod-Control-6 spawn mpc -q seek 60%
+hc keybind $Mod-Control-7 spawn mpc -q seek 70%
+hc keybind $Mod-Control-8 spawn mpc -q seek 80%
+hc keybind $Mod-Control-9 spawn mpc -q seek 90%
+hc keybind XF86AudioPrev spawn mpc -q prev
+hc keybind XF86AudioNext spawn mpc -q next
+hc keybind XF86AudioPlay spawn mpc -q toggle
+hc keybind $Mod-XF86AudioPlay spawn raise_or_run ncmpcpp
+hc keybind $Mod-Shift-XF86AudioPlay spawn copy_mpd_title
+hc keybind $Mod-XF86AudioPrev spawn mpc seek -1
+hc keybind $Mod-XF86AudioNext spawn mpc seek +1
+
+hc keybind $Mod-Insert spawn copy_primary_to_clipboard
+hc keybind $Mod-Shift-Insert spawn copy_clipboard_to_primary
+hc keybind $Mod-Control-p spawn dash -c 'printf $(pwgen -nc) | xsel -bi'
+
+hc keybind $Mod-equal spawn mosaic "$XDG_DOWNLOAD_DIR"
+hc keybind $Mod-Shift-equal spawn mosaic ~/image
+
+hc keybind $Mod-Control-a spawn raise_or_run accounts
+hc keybind $Mod-Control-Shift-a spawn raise_or_run boards
+hc keybind $Mod-Control-t spawn raise_or_run htop
+hc keybind $Mod-Control-i spawn raise_or_run notes
+hc keybind $Mod-Control-x spawn raise_or_run xlog
+hc keybind $Mod-Control-Shift-p spawn raise_or_run post_install
+
+hc keybind XF86MonBrightnessDown spawn sudo brightness -1
+hc keybind XF86MonBrightnessUp spawn sudo brightness +1
+hc keybind $Mod-Alt-XF86MonBrightnessDown spawn togglethm
+hc keybind $Mod-XF86LaunchA spawn scrot
+hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
+# hc keybind $Mod-XF86LaunchB spawn scrot -s
+hc keybind $Mod-Alt-XF86KbdBrightnessUp spawn edit_xprop
+hc keybind $Mod-XF86KbdBrightnessDown spawn kill_screensaver
+hc keybind $Mod-XF86KbdBrightnessUp spawn spawn_screensaver
+
+hc keybind $Mod-z spawn xkill
+hc keybind Shift-XF86Eject spawn wodim -eject
+hc keybind $Mod-XF86Eject spawn screen_standby
+hc keybind $Mod-Alt-XF86Eject spawn sudo pm-suspend
+hc keybind $Mod-Control-XF86Eject spawn sudo shutdown -r now
+hc keybind $Mod-Alt-Control-XF86Eject spawn sudo shutdown -h now
+
+hc set default_frame_layout 2
+hc set gapless_grid 1
+hc set frame_border_width         '0'
+hc set window_border_width        '3'
+hc set window_gap                 '0'
+
+hc unrule -F
+hc rule focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
+hc rule windowtype='_NET_WM_WINDOW_TYPE_UTILITY' focus=off
+hc rule class='Dwb' tag=two
+hc rule instance='mutt' tag=three
+hc rule instance='slrn' tag=four
+hc rule class='Gimp' tag=eight
+hc rule instance='ncmpcpp' fullscreen=on tag=nine
+hc rule class='fontforge' tag=seven
+hc rule class='fontforge' title='Layers' focus=off
+hc rule class='fontforge' title='Tools' focus=off
+hc rule class='MPlayer' pseudotile=on
+hc floating seven on
+hc floating eight on
+
+updatethm
+reloadpanel
+# imlibsetroot -s a ~/.wallpaper

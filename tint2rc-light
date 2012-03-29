@@ -18,10 +18,6 @@ wm_menu = 1
 
 # Panel Autohide
 autohide = 0
-# autohide_show_timeout = 0.3
-# autohide_hide_timeout = 2
-# autohide_height = 2
-strut_policy = follow_size
 
 # Taskbar
 taskbar_mode = single_desktop
@@ -40,14 +36,7 @@ task_urgent_background_id = 1
 task_iconified_background_id = 1
 task_tooltip = 0
 
-# Task Icons
-# task_icon_asb = 70 0 0
-# task_active_icon_asb = 100 0 0
-# task_urgent_icon_asb = 100 0 0
-# task_iconified_icon_asb = 70 0 0
-
 # Fonts
-# task_font = sans 7
 task_font = terminus 12px
 task_font_color = #8F98A1 100
 task_active_font_color = #69717A 100
@@ -56,7 +45,6 @@ task_iconified_font_color = #007981 100
 font_shadow = 0
 
 # System Tray
-systray = 0
 systray_padding = 1 1 1
 systray_sort = ascending
 systray_background_id = 0
@@ -64,7 +52,6 @@ systray_icon_size = 0
 systray_icon_asb = 100 0 0
 
 # Clock
-# time1_format = %b %d %a %H:%M
 time1_format = %H:%M
 time1_font = terminus 12px
 # time2_format = %A %d %B
@@ -74,27 +61,8 @@ clock_padding = 1 1
 clock_background_id = 0
 # clock_rclick_command = xclock
 
-# Tooltips
-tooltip_padding = 2 2
-tooltip_show_timeout = 0.7
-tooltip_hide_timeout = 0.3
-tooltip_background_id = 1
-tooltip_font = sans 10
-tooltip_font_color = #000000 80
-
 # Mouse
 mouse_middle = none
 mouse_right = none
 mouse_scroll_up = none
 mouse_scroll_down = none
-
-# Battery
-battery = 0
-# battery_low_status = 10
-# battery_low_cmd = notify-send "battery low"
-# battery_hide = 98
-# bat1_font = sans 8
-# bat2_font = sans 6
-# battery_font_color = #FFFFFF 74
-# battery_padding = 1 0
-# battery_background_id = 0
