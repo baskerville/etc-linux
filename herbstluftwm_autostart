@@ -73,7 +73,7 @@ hc keybind $Mod-Alt-Shift-k shift -e up
 hc keybind $Mod-Alt-Shift-l shift -e right
 
 hc keybind $Mod-Control-comma spawn raise_or_run dwb
-# hc keybind $Mod-Control-Shift-comma spawn raise_or_run dwb_restore
+hc keybind $Mod-Control-Shift-comma spawn raise_or_run dwb_restore
 hc keybind $Mod-Control-slash spawn urxvtc
 hc keybind $Mod-Control-Shift-slash spawn urxvtc -cd "$XDG_DOWNLOAD_DIR"
 hc keybind $Mod-Control-period spawn raise_or_run mutt
@@ -81,7 +81,7 @@ hc keybind $Mod-Control-Shift-period spawn raise_or_run slrn
 
 hc keybind $Mod-apostrophe spawn lasso
 hc keybind $Mod-semicolon spawn glean_primary
-hc keybind $Mod-colon spawn glean_clipboard
+hc keybind $Mod-Shift-semicolon spawn glean_clipboard
 # hc keybind $Mod-b spawn toggle_panel
 hc keybind $Mod-Control-c spawn raise_or_run hlconf
 hc keybind $Mod-bracketleft use_index -1
