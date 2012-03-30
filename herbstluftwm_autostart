@@ -80,6 +80,7 @@ hc keybind $Mod-Control-period spawn raise_or_run mutt
 hc keybind $Mod-Control-Shift-period spawn raise_or_run slrn
 
 hc keybind $Mod-apostrophe spawn lasso
+hc keybind $Mod-Shift-apostrophe spawn small_lasso
 hc keybind $Mod-semicolon spawn glean_primary
 hc keybind $Mod-Shift-semicolon spawn glean_clipboard
 # hc keybind $Mod-b spawn toggle_panel
@@ -144,30 +145,39 @@ hc keybind $Mod-Alt-XF86Eject spawn sudo pm-suspend
 hc keybind $Mod-Control-XF86Eject spawn sudo shutdown -r now
 hc keybind $Mod-Alt-Control-XF86Eject spawn sudo shutdown -h now
 
-hc set default_frame_layout 2
-hc set gapless_grid 1
-hc set frame_border_width         '0'
-hc set window_border_width        '3'
-hc set window_gap                 '0'
+hc set default_frame_layout  2
+hc set gapless_grid          1
+hc set frame_border_width    0
+hc set window_border_width   3
+hc set window_gap            0
 
 hc unrule -F
 hc rule focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
-hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
-hc rule windowtype='_NET_WM_WINDOW_TYPE_UTILITY' focus=off
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule class='Dwb' tag=two
 hc rule instance='mutt' tag=three
 hc rule instance='slrn' tag=four
-hc rule class='Gimp' tag=eight
 hc rule class='Xscreensaver-demo' pseudotile=on
 hc rule instance='ncmpcpp' fullscreen=on tag=nine
 hc rule class='fontforge' tag=seven
 hc rule class='fontforge' title='Layers' focus=off
 hc rule class='fontforge' title='Tools' focus=off
 hc rule class='MPlayer' pseudotile=on
+hc rule class='Gimp' tag=eight
 hc floating seven on
-hc floating eight on
+hc load eight '
+(split horizontal:0.850000:0
+  (split horizontal:0.200000:1
+    (clients vertical:0)
+    (clients grid:0))
+  (clients vertical:0))
+'
+hc rule class=Gimp tag=eight index=01 pseudotile=on
+hc rule class=Gimp windowrole~'gimp-(image-window|toolbox|dock)' pseudotile=off
+hc rule class=Gimp windowrole=gimp-toolbox focus=off index=00
+hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 
 updatethm
 reloadpanel

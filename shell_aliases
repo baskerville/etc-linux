@@ -6,6 +6,7 @@ alias cgrep='grep --color=auto'
 alias igrep='grep -i'
 alias rgrep='grep -r'
 alias chbin='chmod u+x'
+alias lines='wc -l'
 
 alias scf='. $SHELL_CONFIG'
 alias ecf='editor $SHELL_CONFIG'
