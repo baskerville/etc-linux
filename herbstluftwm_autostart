@@ -51,7 +51,6 @@ hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 resize
 hc mousebind $Mod-Button3 zoom
 
-hc keybind $Mod-BackSpace   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
@@ -138,11 +137,12 @@ hc keybind $Mod-Alt-XF86KbdBrightnessUp spawn edit_xprop
 hc keybind $Mod-XF86KbdBrightnessDown spawn kill_screensaver
 hc keybind $Mod-XF86KbdBrightnessUp spawn spawn_screensaver
 
-hc keybind $Mod-z spawn xkill
-hc keybind Shift-XF86Eject spawn wodim -eject
-hc keybind $Mod-XF86Eject spawn screen_standby
-hc keybind $Mod-Alt-XF86Eject spawn sudo pm-suspend
-hc keybind $Mod-Control-XF86Eject spawn sudo shutdown -r now
+# hc keybind $Mod-z spawn xkill
+hc keybind $Mod-BackSpace             spawn xkill
+hc keybind Shift-XF86Eject            spawn wodim -eject
+hc keybind $Mod-XF86Eject             spawn screen_standby
+hc keybind $Mod-Alt-XF86Eject         spawn sudo pm-suspend
+hc keybind $Mod-Control-XF86Eject     spawn sudo shutdown -r now
 hc keybind $Mod-Alt-Control-XF86Eject spawn sudo shutdown -h now
 
 hc set default_frame_layout  2
