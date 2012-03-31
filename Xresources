@@ -11,9 +11,7 @@ URxvt.boldFont:             -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.italicFont:           -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.boldItalicFont:       -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.geometry:             145x53 
-! URxvt.geometry:             126x41
 URxvt.internalBorder:       9
-! URxvt.cursorBlink:          true
 URxvt.iso14755:             false
 URxvt.scrollBar:            false
 URxvt.mouseWheelScrollPage: true
@@ -54,10 +52,3 @@ Xft.hinting:                1
 Xft.antialias:              1
 Xft.rgba:                   rgb
 Xft.dpi:                    96
-
-! Gdraw.Background:                      #B0B0B0
-! Gdraw.GGadget.Box.BorderBrightest:     #F7F7F7
-! Gdraw.GGadget.Box.BorderBrighter:      #DDDDDD
-! Gdraw.GGadget.Box.DisabledBackground:  #D0D0D0
-! Gdraw.GGadget.Box.PressedBackground:   #909090
-! fontforge.CharView.SelectedPointColor: #F5F5DC
