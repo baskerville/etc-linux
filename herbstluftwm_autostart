@@ -161,9 +161,9 @@ hc rule instance='mutt' tag=three
 hc rule instance='slrn' tag=four
 hc rule class='Xscreensaver-demo' pseudotile=on
 hc rule instance='ncmpcpp' fullscreen=on tag=nine
-hc rule class='fontforge' tag=seven
-hc rule class='fontforge' title='Layers' focus=off
-hc rule class='fontforge' title='Tools' focus=off
+# hc rule class='fontforge' tag=seven
+# hc rule class='fontforge' title='Layers' focus=off
+# hc rule class='fontforge' title='Tools' focus=off
 hc rule class='MPlayer' pseudotile=on
 hc rule class='Gimp' tag=eight
 hc floating seven on
