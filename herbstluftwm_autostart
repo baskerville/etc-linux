@@ -125,7 +125,7 @@ hc keybind $Mod-Control-Shift-a spawn raise_or_run boards
 hc keybind $Mod-Control-t spawn raise_or_run htop
 hc keybind $Mod-Control-i spawn raise_or_run notes
 hc keybind $Mod-Control-x spawn raise_or_run xlog
-hc keybind $Mod-Control-Shift-p spawn raise_or_run post_install
+hc keybind $Mod-Control-Shift-p spawn raise_or_run postinstall
 
 hc keybind XF86MonBrightnessDown spawn sudo brightness -1
 hc keybind XF86MonBrightnessUp spawn sudo brightness +1
