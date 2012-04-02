@@ -20,6 +20,7 @@ mpd
 urxvtd -q -o -f
 xscreensaver -no-splash &
 unclutter -noevents &
+civilised_screensaver &
 
 # exec openbox-session
 exec herbstluftwm

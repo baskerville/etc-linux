@@ -22,6 +22,7 @@ set quit
 set edit_headers
 unset confirmappend
 unset confirmcreate
+unset wait_key
 set postpone = ask-yes
 set weed
 # set arrow_cursor
@@ -87,13 +88,14 @@ bind index,pager \Cf  next-page
 bind index,pager \Cb  previous-page
 bind index,pager,attach,compose <F3> help
 bind index,pager ? search-reverse
+bind pager b previous-page
+bind pager B bounce-message
+bind index,pager,attach,compose Q exit
 
 macro compose a "<attach-file><kill-line>$XDG_DOWNLOAD_DIR/"
-macro index,pager A "|view_attachments\n"
+macro index,pager A "<pipe-message>view_attachments\n"
+macro index,pager , "<pipe-message>yank_from\n"
 macro attach S "<save-entry><kill-line>$XDG_DOWNLOAD_DIR/\na"
-macro index,pager,attach,compose Q <exit>
-macro pager b "<previous-page>"
-macro pager B "<bounce-message>"
 macro index ( "<search-reverse>~P\n"
 macro index ) "<search>~P\n"
 macro index,attach { "<first-entry>"
@@ -120,7 +122,5 @@ source ~/.mutt/theme
 
 folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %-70.70s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %-70.70s %> %D  %4c"'
-# folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %s %> %D  %4c"'
-# folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %s %> %D  %4c"'
 
-mailboxes =inbox =univ =lists =arch =vim =price =paypal =fai =apo =xd =typo
+mailboxes =inbox =univ =lists =arch =vim =commandes =paypal =apo =xd =typo =fai
