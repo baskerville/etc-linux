@@ -115,6 +115,7 @@ macro index,pager go "<change-folder>=apo\n" "Go to APO"
 macro index,pager gx "<change-folder>=xd\n" "Go to XD"
 macro index,pager gr "<change-folder>=starred\n" "Go to Starred"
 macro index,pager gt "<change-folder>=topics\n" "Go to Topics"
+macro index,pager gy "<change-folder>=typo\n" "Go to Typo"
 macro index,pager * "<save-message>=starred\n" "Move to Starred"
 macro index,pager _ "<save-message>=topics\n" "Move to Topics"
 

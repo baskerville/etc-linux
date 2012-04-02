@@ -130,6 +130,7 @@ hc keybind $Mod-Control-Shift-p spawn raise_or_run postinstall
 hc keybind XF86MonBrightnessDown spawn sudo brightness -1
 hc keybind XF86MonBrightnessUp spawn sudo brightness +1
 hc keybind $Mod-Alt-XF86MonBrightnessDown spawn togglethm
+hc keybind $Mod-Alt-XF86MonBrightnessUp spawn xscreensaver-command -activate
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
 # hc keybind $Mod-XF86LaunchB spawn scrot -s
