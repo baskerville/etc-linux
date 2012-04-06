@@ -14,6 +14,9 @@ URxvt.colorBD: t_fg_highlight
 URxvt.colorIT: t_fg_highlight
 URxvt.colorUL: t_fg_highlight
 
+! ORG
+URxvt.cursorColor: #AE9EDC
+
 ! BLK
 URxvt.color0: t_bg_bump
 URxvt.color8: t_fg_comment
@@ -23,28 +26,28 @@ URxvt.color7: t_fg_highlight
 URxvt.color15: t_fg_ceiling
 
 ! RED
-URxvt.color1: #B36A68
-URxvt.color9: #F0A29E
+URxvt.color1: #B36B65
+URxvt.color9: #EFA29B
 
 ! YEL
-URxvt.color3: #A4744E
-URxvt.color11: #E0AB82
+URxvt.color3: #8D7E45
+URxvt.color11: #C7B679
 
 ! GRN
-URxvt.color2: #4A8D65
-URxvt.color10: #81C69B
+URxvt.color2: #4F8C61
+URxvt.color10: #86C596
 
 ! CYN
-URxvt.color6: #158E8F
-URxvt.color14: #5FC8C7
+URxvt.color6: #0E8E9A
+URxvt.color14: #5EC7D4
 
 ! BLU
-URxvt.color4: #6480B8
-URxvt.color12: #9DB8F3
+URxvt.color4: #6181B8
+URxvt.color12: #9AB9F3
 
 ! MAG
-URxvt.color5: #B26987
-URxvt.color13: #EEA0BF
+URxvt.color5: #A46D9D
+URxvt.color13: #DFA4D7
 
 URxvt.color16: t_bg_floor
 URxvt.color17: t_bg_dip

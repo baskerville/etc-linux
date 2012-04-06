@@ -23,7 +23,7 @@ unclutter -noevents &
 civilised_screensaver &
 
 # exec openbox-session
-exec herbstluftwm
+exec herbstluftwm --locked
 # exec dwm
 # exec monsterwm
 

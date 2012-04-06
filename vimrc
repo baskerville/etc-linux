@@ -170,7 +170,7 @@ function! CompleteMuttAliases(findstart, base)
         " call mutt with the appropriate parameters
         let result = []
         if strlen(a:base)
-            let query_response = system("~/bin/mutt_alias_search " . a:base)
+            let query_response = system("~/bin/mutt_alias_query " . a:base)
             let result = split(query_response, '\n')
         endif
         return result

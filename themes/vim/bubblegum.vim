@@ -81,7 +81,6 @@ hi Todo            ctermfg=212    ctermbg=bg    cterm=none
 " minor groups
 "
 hi StatusLine      ctermfg=fg     ctermbg=19    cterm=none
-" hi StatusLine      ctermfg=106    ctermbg=19    cterm=none
 hi StatusLineNC    ctermfg=20    ctermbg=19    cterm=none
 
 hi TabLine         ctermfg=fg     ctermbg=19    cterm=none
@@ -95,7 +94,6 @@ hi WildMenu        ctermfg=114     ctermbg=19    cterm=none
 
 hi Visual          ctermfg=bg     ctermbg=180
 hi VisualNOS       ctermfg=bg     ctermbg=151
-" hi VertSplit       ctermfg=20    ctermbg=19    cterm=none
 hi VertSplit       ctermfg=bg     ctermbg=19    cterm=none
 hi LineNr          ctermfg=20    ctermbg=19
 
@@ -139,7 +137,6 @@ hi diffChanged     ctermfg=77
 
 hi diffAdd         ctermfg=16     ctermbg=101
 hi diffDelete      ctermfg=23    ctermbg=fg
-" hi diffText        ctermfg=16     ctermbg=255
 hi diffText        ctermfg=16     ctermbg=fg
 hi diffChange      ctermfg=16     ctermbg=38
 hi diffOldLine     ctermfg=214

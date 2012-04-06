@@ -4,7 +4,7 @@ F3 pausing_keep_force switch_ratio 1.85
 F4 pausing_keep_force switch_ratio 2.3
 F5 pausing_keep_force switch_ratio 0
 
-P pausing_keep_force osd_show_progression
+P pausing_keep osd_show_progression
 f pausing_keep_force vo_fullscreen
-I pausing_keep_force osd_show_property_text "${filename}"
+I pausing_keep osd_show_property_text "${filename}"
 m pausing_keep_force mute

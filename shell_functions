@@ -93,6 +93,14 @@ dua() {
     du -ha "$@" | sort -h 
 }
 
+OO() {
+    tail -$@ | xargs -I % open "%"
+}
+
+RR() {
+    tail -$@ | xargs -I % rm -v "%"
+}
+
 rcd() {
     find $PWD/ -maxdepth 1 -type d ! -samefile $PWD/ -exec urxvtc -cd "{}" \; 
 }

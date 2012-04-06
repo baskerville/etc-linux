@@ -37,6 +37,7 @@ hc keybind $Mod-p pseudotile toggle
 hc keybind $Mod-v set_layout vertical
 hc keybind $Mod-n set_layout horizontal
 hc keybind $Mod-m set_layout max
+hc keybind $Mod-Return set_layout max
 hc keybind $Mod-g set_layout grid
 hc keybind $Mod-Shift-g cycle_value window_gap 0 6
 hc keybind $Mod-b cycle_value window_border_width 0 3
@@ -183,3 +184,5 @@ hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 updatethm
 reloadpanel
 # imlibsetroot -s a ~/.wallpaper
+
+hc unlock

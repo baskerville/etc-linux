@@ -1,5 +1,4 @@
 #include "colors/current"
-#include "colors/cursor"
 
 URxvt.modifier:             alt
 ! URxvt.font:                 xft:Inconsolata:pixelsize=28,xft:Meslo LG M:pixelsize=28
