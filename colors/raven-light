@@ -15,7 +15,7 @@ URxvt.colorIT: t_fg_highlight
 URxvt.colorUL: t_fg_highlight
 
 ! ORG
-URxvt.cursorColor: #7560CF
+URxvt.cursorColor: #B144A8
 
 ! BLK
 URxvt.color0: t_bg_bump

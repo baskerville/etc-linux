@@ -16,7 +16,7 @@ export XDG_BIN_DIR=~/bin
 export XDG_TMP_DIR=~/tmp
 export XDG_AUR_HOME=~/src/aur
 
-export PYTHONIOENCODING=utf-8
+export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER='news.orange.fr'
 export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
