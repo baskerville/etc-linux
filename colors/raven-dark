@@ -14,7 +14,6 @@ URxvt.colorBD: t_fg_highlight
 URxvt.colorIT: t_fg_highlight
 URxvt.colorUL: t_fg_highlight
 
-! ORG
 URxvt.cursorColor: #CE94C6
 
 ! BLK

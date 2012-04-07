@@ -49,6 +49,10 @@ Fl() {
     find . -type l -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
+Fe() {
+    find . -type f -perm /u=x -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
+}
+
 Ff() {
     find . -type f -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }

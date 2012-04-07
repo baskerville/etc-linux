@@ -24,7 +24,5 @@ civilised_screensaver &
 
 # exec openbox-session
 exec herbstluftwm --locked
-# exec dwm
-# exec monsterwm
 
 # vim: set ft=conf:
