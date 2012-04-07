@@ -116,7 +116,7 @@ alias file_permissions_clear='find . -type f -print -perm -a+x -exec chmod 644 {
 alias dir_permissions_clear='find . -type d -print -exec chmod 755 {} \;'
 alias fatgarbage_remove='find . -name "._*" -print -exec rm {} \;'
 alias dsstore_remove='find . -type f -name .DS_Store -print -exec rm {} \;'
-alias battery="acpi -b | grep -o '[0-9]*%'"
+alias b="acpi -b | grep -o '[0-9]*%'"
 alias lowerdir='find . -maxdepth 1 -type d ! -samefile . -exec prename -vl {} \;'
 alias wrp='wr FRXX0076'
 
