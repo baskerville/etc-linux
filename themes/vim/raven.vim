@@ -1,3 +1,9 @@
+" Vim Color File
+" Name:       raven.vim
+" Version:    0.1
+" Maintainer: baskerville a lavabit o com
+"
+
 hi clear
 
 if exists("syntax on")

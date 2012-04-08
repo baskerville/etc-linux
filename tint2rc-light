@@ -40,8 +40,8 @@ task_tooltip = 0
 task_font = terminus 12px
 task_font_color = #8F98A1 100
 task_active_font_color = #69717A 100
-task_urgent_font_color = #BC1835 100
-task_iconified_font_color = #007981 100
+task_urgent_font_color = #C63D40 100
+task_iconified_font_color = #0087A3 100
 font_shadow = 0
 
 # System Tray

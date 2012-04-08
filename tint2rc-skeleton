@@ -2,7 +2,7 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #32312E 100
+background_color = {background} 100
 
 # Panel
 panel_items = STC
@@ -38,10 +38,10 @@ task_tooltip = 0
 
 # Fonts
 task_font = terminus 12px
-task_font_color = #7F7F83 100
-task_active_font_color = #A6A7AA 100
-task_urgent_font_color = #DE928B 100
-task_iconified_font_color = #4CB6C3 100
+task_font_color = {fg_comment} 100
+task_active_font_color = {foreground} 100
+task_urgent_font_color = {red} 100
+task_iconified_font_color = {cyan} 100
 font_shadow = 0
 
 # System Tray
@@ -56,7 +56,7 @@ time1_format = %H:%M
 time1_font = terminus 12px
 # time2_format = %A %d %B
 # time2_font = sans 6
-clock_font_color = #A6A7AA 100
+clock_font_color = {foreground} 100
 clock_padding = 1 1
 clock_background_id = 0
 # clock_rclick_command = xclock

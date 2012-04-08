@@ -1,6 +1,6 @@
 [neap]
 color_background = transparent
-color_inactive = #CEC6BC
-color_active = #69717A
+color_inactive = {bg_springboard}
+color_active = {foreground}
 padding = 0
 spacing = 1

@@ -1,26 +1,6 @@
-;neap v0.6.3 config file generated 2011-10-30 23:08:17
 [neap]
-
-;number of pixels between outer border and the actual grid
-padding = 0
-
-;number of pixels between grid boxes
-spacing = 1
-
-;foreground color (inactive desktops)
-color_inactive = #525356
-
-;highlight color (the active desktop)
-color_active = #A6A7AA
-
-;background color ("transparent" for transparent background)
 color_background = transparent
-
-;number of rows in desktop grid
-rows = 0
-
-;number of columns in desktop grid
-columns = 0
-
-;manual pager selection: virtual|viewport|auto
-;pager = auto
+color_inactive = #545350
+color_active = #A6A7AA
+padding = 0
+spacing = 1
