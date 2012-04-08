@@ -83,7 +83,7 @@ hi Directory       ctermfg=216
 hi ErrorMsg        ctermfg=43    ctermbg=bg
 hi WarningMsg      ctermfg=62
 hi MoreMsg         ctermfg=139
-hi ModeMsg         ctermfg=216
+hi ModeMsg         ctermfg=255
 
 hi Search          ctermfg=16     ctermbg=82     cterm=none
 hi IncSearch       ctermfg=16     ctermbg=236     cterm=none
