@@ -183,6 +183,7 @@ hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 
 updatethm
 reloadpanel
-imlibsetroot -s a ~/.wallpaper
 
 hc unlock
+
+imlibsetroot -s a ~/.wallpaper

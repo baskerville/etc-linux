@@ -99,7 +99,6 @@ alias gg='g -i'
 alias subscriptions='grep ":" ~/.jnewsrc | awk -F : "{print $1}"'
 alias nu='slrnpull -d ~/.slrnpull'
 alias dfh='df -h'
-alias cdfh='cdf -h'
 
 alias T='date "+%A"'
 alias M='date "+%B"'
