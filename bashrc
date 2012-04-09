@@ -12,20 +12,8 @@ shopt -s globstar
 complete -cf sudo
 complete -cf man
 
-history() {
-    _bash_history_sync
-    builtin history "$@"
-}
-
-_bash_history_sync() {
-    builtin history -a
-    HISTFILESIZE=$HISTFILESIZE
-    builtin history -c
-    builtin history -r
-}
-
 _prompt_command() {
-    _bash_history_sync
+    builtin history -a
 	case "$TERM" in
         rxvt* | xterm*)
             echo -en "\e]0;${PWD//$HOME/~}\a"

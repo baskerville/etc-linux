@@ -52,3 +52,5 @@ if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
   cp ~/.Xlog ~/.Xlog.bak
   logout
 fi
+
+# vim: set ft=sh:
