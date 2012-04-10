@@ -29,8 +29,9 @@ set incsearch
 set ignorecase
 set smartcase
 
-" let g:is_posix=1
-let xdefaults_no_if0 = 1
+" let g:is_posix = 1
+let g:xdefaults_no_if0 = 1
+" let g:vimsyn_novimhictermerror = 1
 set statusline=%F%m%r%h%w\ %=[%Y]\ \*%{&ff}\*\ %l,%v\ %p%%
 set laststatus=2
 set dictionary+=/usr/share/dict/words
