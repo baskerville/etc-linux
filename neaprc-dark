@@ -1,5 +1,5 @@
 [neap]
-color_background = transparent
+color_background = #32312E
 color_inactive = #545350
 color_active = #A6A7AA
 padding = 0
