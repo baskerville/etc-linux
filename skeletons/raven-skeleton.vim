@@ -58,7 +58,7 @@ hi Debug           ctermfg={pink}
 hi Underlined      ctermfg=fg
 hi Ignore          ctermfg=bg
 hi Error           ctermfg={bg_floor}    ctermbg={red}
-hi Todo            ctermfg={fg_highlight}  ctermbg=bg    cterm=none
+hi Todo            ctermfg={spring}  ctermbg=bg    cterm=none
 
 "
 " minor groups

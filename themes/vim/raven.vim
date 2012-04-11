@@ -58,7 +58,7 @@ hi Debug           ctermfg=255
 hi Underlined      ctermfg=fg
 hi Ignore          ctermfg=bg
 hi Error           ctermfg=16    ctermbg=43
-hi Todo            ctermfg=22  ctermbg=bg    cterm=none
+hi Todo            ctermfg=100  ctermbg=bg    cterm=none
 
 "
 " minor groups
