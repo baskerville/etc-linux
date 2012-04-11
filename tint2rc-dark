@@ -45,7 +45,7 @@ task_iconified_font_color = #4CB6C3 100
 font_shadow = 0
 
 # System Tray
-systray_padding = 1 1 1
+systray_padding = 0 0 1
 systray_sort = ascending
 systray_background_id = 0
 systray_icon_size = 0
