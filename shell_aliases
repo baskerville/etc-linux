@@ -95,6 +95,7 @@ alias gdb='rlwrap gdb -q'
 alias bcl='bc -ql $HOME/.bcrc'
 alias mp4box='MP4Box'
 alias gg='g -i'
+alias up='git commit -am update'
 
 alias subscriptions='grep ":" ~/.jnewsrc | awk -F : "{print $1}"'
 alias nu='slrnpull -d ~/.slrnpull'
