@@ -21,6 +21,12 @@ bnd() {
     bind -P | grep -i "$pattern" | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g'
 }
 
+tgz() {
+    local name=$1
+    shift
+    tar cvzf "${name}.tgz" "$@"
+}
+
 msa() {
     ms "$@" | ma
 }
