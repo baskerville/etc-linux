@@ -1,8 +1,8 @@
-if tty -s; then
-    stty -ixon
-    stty -ixoff
-    stty susp undef
-fi
+# if tty -s; then
+#     stty -ixon
+#     stty -ixoff
+#     stty susp undef
+# fi
 
 shopt -s checkwinsize
 shopt -s no_empty_cmd_completion
