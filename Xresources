@@ -26,8 +26,7 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-c:           perl:clipboard:copy
 URxvt.keysym.M-v:           perl:clipboard:paste
 URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
-URxvt.keysym.C-0:           command:\033[?25l
-URxvt.keysym.M-C-0:         command:\033[?25h
+URxvt.keysym.C-0:           command:\033[?25t
 URxvt.keysym.S-Up:          command:\033]720;1\007
 URxvt.keysym.S-Down:        command:\033]721;1\007
 URxvt.keysym.C-BackSpace:   command:\033[?47t
