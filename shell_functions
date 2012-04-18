@@ -212,7 +212,7 @@ defr1() {
 }
 
 conj() {
-    elinks "http://www.les-verbes.com/conjuguer.php?verbe=$@" 
+    w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@" 
 }
 
 #swc() {

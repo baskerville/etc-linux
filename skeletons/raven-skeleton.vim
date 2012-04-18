@@ -96,9 +96,9 @@ hi IncSearch       ctermfg={bg_floor}     ctermbg={magenta}     cterm=none
 hi Question        ctermfg={blue}
 
 hi Folded          ctermfg={fg_comment}     ctermbg=bg
-hi FoldColumn      ctermfg={teal}     ctermbg={bg_bump}
-hi SignColumn      ctermfg={teal}     ctermbg={bg_bump}
-hi ColorColumn     ctermfg={teal}     ctermbg={bg_bump}
+hi FoldColumn      ctermfg={fg_comment}     ctermbg={bg_bump}
+hi SignColumn      ctermfg={fg_comment}     ctermbg={bg_bump}
+hi ColorColumn     ctermfg={fg_comment}     ctermbg={bg_bump}
 
 hi CursorColumn    ctermbg={bg_dip}    cterm=none
 hi CursorLine      ctermbg={bg_dip}    cterm=none
@@ -119,9 +119,9 @@ hi diffRemoved     ctermfg={pink}
 hi diffChanged     ctermfg={orange}
 
 hi diffAdd         ctermfg={bg_floor}     ctermbg={green}
-hi diffDelete      ctermfg={fg_ceiling}    ctermbg=fg
-hi diffText        ctermfg={bg_floor}     ctermbg=fg
-hi diffChange      ctermfg={bg_floor}     ctermbg={red}
+hi diffDelete      ctermfg={bg_bump}   ctermbg={fg_comment}
+hi diffText        ctermfg={bg_floor}     ctermbg={red}
+hi diffChange      ctermfg={bg_floor}     ctermbg=fg
 hi diffOldLine     ctermfg={violet}
 
 hi SpellBad        ctermfg={red}    ctermbg=bg      cterm=underline

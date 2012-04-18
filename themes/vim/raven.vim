@@ -10,7 +10,7 @@ if exists("syntax on")
     syntax reset
 endif
 
-let g:colors_name="raven"
+let g:colors_name="colors"
 
 "
 " preferred groups
@@ -96,9 +96,9 @@ hi IncSearch       ctermfg=16     ctermbg=236     cterm=none
 hi Question        ctermfg=198
 
 hi Folded          ctermfg=20     ctermbg=bg
-hi FoldColumn      ctermfg=139     ctermbg=19
-hi SignColumn      ctermfg=139     ctermbg=19
-hi ColorColumn     ctermfg=139     ctermbg=19
+hi FoldColumn      ctermfg=20     ctermbg=19
+hi SignColumn      ctermfg=20     ctermbg=19
+hi ColorColumn     ctermfg=20     ctermbg=19
 
 hi CursorColumn    ctermbg=17    cterm=none
 hi CursorLine      ctermbg=17    cterm=none
@@ -119,9 +119,9 @@ hi diffRemoved     ctermfg=255
 hi diffChanged     ctermfg=62
 
 hi diffAdd         ctermfg=16     ctermbg=120
-hi diffDelete      ctermfg=23    ctermbg=fg
-hi diffText        ctermfg=16     ctermbg=fg
-hi diffChange      ctermfg=16     ctermbg=43
+hi diffDelete      ctermfg=19   ctermbg=20
+hi diffText        ctermfg=16     ctermbg=43
+hi diffChange      ctermfg=16     ctermbg=fg
 hi diffOldLine     ctermfg=216
 
 hi SpellBad        ctermfg=43    ctermbg=bg      cterm=underline

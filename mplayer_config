@@ -1,4 +1,4 @@
-# vo=fbdev
+vo=x11
 # vo=xv
 # heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
 subfont-osd-scale=2
