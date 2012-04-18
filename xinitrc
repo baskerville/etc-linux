@@ -19,7 +19,7 @@ xsetroot -cursor_name left_ptr
 mpd
 urxvtd -q -o -f
 xscreensaver -no-splash &
-unclutter -noevents &
+unclutter -reset -noevents &
 civilised_screensaver &
 
 # exec openbox-session
