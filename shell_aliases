@@ -56,7 +56,7 @@ alias fren='tw www.freetranslation.com.fr-en'
 alias enfr='tw www.freetranslation.com.en-fr'
 alias phosphor='/usr/lib/xscreensaver/phosphor -program bash'
 alias apple2='/usr/lib/xscreensaver/apple2 -text -program bash'
-# alias vub='vim_update_bundles'
+alias vub='vim_update_bundles'
 alias vpz='vp -zoom'
 
 alias nzd='nzbget -D'
