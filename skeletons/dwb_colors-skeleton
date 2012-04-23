@@ -1,6 +1,6 @@
 active-completion-bg-color={foreground}
 active-completion-fg-color={background}
-background-color={background}
+background-color={bg_bump}
 download-bg-color={foreground}
 download-fg-color={bg_floor}
 download-gradient-end={spring}

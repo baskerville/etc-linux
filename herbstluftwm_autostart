@@ -40,7 +40,7 @@ hc keybind $Mod-m set_layout max
 hc keybind $Mod-Return set_layout max
 hc keybind $Mod-g set_layout grid
 hc keybind $Mod-Shift-g cycle_value window_gap 0 6
-hc keybind $Mod-b cycle_value window_border_width 0 3
+# hc keybind $Mod-b cycle_value window_border_width 0 3
 
 RESIZESTEP=0.05
 hc keybind $Mod-Control-h resize left  +$RESIZESTEP
@@ -129,8 +129,10 @@ hc keybind $Mod-Control-x spawn raise_or_run xlog
 
 hc keybind XF86MonBrightnessDown spawn sudo brightness -1
 hc keybind XF86MonBrightnessUp spawn sudo brightness +1
-hc keybind $Mod-Alt-XF86MonBrightnessDown spawn togglethm
-hc keybind $Mod-Alt-XF86MonBrightnessUp spawn xscreensaver-command -activate
+hc keybind Shift-XF86MonBrightnessDown spawn sudo brightness -10
+hc keybind Shift-XF86MonBrightnessUp spawn sudo brightness +10
+hc keybind $Mod-Control-space spawn togglethm
+hc keybind $Mod-Alt-space spawn xscreensaver-command -activate
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
 # hc keybind $Mod-XF86LaunchB spawn scrot -s

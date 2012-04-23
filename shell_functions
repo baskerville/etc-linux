@@ -11,10 +11,6 @@ dbs() {
     grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /' 
 }
 
-fu() {
-    curl -s "http://www.commandlinefu.com/commands/matching/$@/$(echo -n $@ | openssl base64)/plaintext" | grep -v "^# commandlinefu" 
-}
-
 bnd() {
     pattern=.
     [ $# -gt 0 ] && pattern=$@

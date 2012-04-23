@@ -2,7 +2,7 @@
 [default]
 adblocker-filterlist=/home/ice/.config/dwb/adblock_default
 adblocker=true
-auto-completion=true
+auto-completion=false
 auto-insert-mode=false
 auto-load-images=true
 auto-resize-window=false
@@ -116,7 +116,7 @@ sync-files=0
 update-search-delay=200
 active-completion-bg-color=#69717A
 active-completion-fg-color=#FAF0E6
-background-color=#FAF0E6
+background-color=#E7DFD5
 download-bg-color=#69717A
 download-fg-color=#FFFEF3
 download-gradient-end=#4F7C00
