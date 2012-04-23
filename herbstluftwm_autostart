@@ -188,3 +188,5 @@ reloadpanel
 hc unlock
 
 imlibsetroot -s a ~/.wallpaper
+
+hc set frame_bg_transparent  1
