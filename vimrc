@@ -7,6 +7,7 @@ set hidden
 set showmode
 set showcmd
 set wildmenu
+set cursorline
 
 set backspace=indent,eol,start
 set linebreak

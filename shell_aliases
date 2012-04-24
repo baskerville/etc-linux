@@ -45,7 +45,7 @@ alias any='le1 | shuf -n 1'
 alias so='any | xargs open'
 alias ded='find . -type d -empty -print -delete'
 alias rmnn='rm -v -- "$(nn)"'
-alias rmrfnn='rmrf "$(nn)"'
+alias rmrfnn='rmrf -v "$(nn)"'
 alias mo='mosaic .'
 alias fq='fc-list | grep -i'
 
