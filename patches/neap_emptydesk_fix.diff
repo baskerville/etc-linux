@@ -1,0 +1,11 @@
+--- a/neap	2012-03-21 14:09:01.332943394 +0100
++++ b/neap	2012-03-21 14:09:57.097139058 +0100
+@@ -393,7 +393,7 @@
+         # notify about and handle workspace switches
+         screen = gtk.gdk.screen_get_default()
+         root = screen.get_root_window()
+-        root.set_events(gtk.gdk.SUBSTRUCTURE_MASK)
++        root.set_events(gtk.gdk.PROPERTY_CHANGE_MASK)
+         root.add_filter(self.event_filter)
+ 
+         # initialize data
