@@ -1,11 +1,11 @@
-fontforge.FontView.GlyphInfoColor: #8c8c8c
+fontforge.FontView.GlyphInfoColor: #7a7a7a
 fontforge.FontView.EmptySlotFgColor: #d08080
 fontforge.FontView.SelectedColor: #fff294
 fontforge.FontView.SelectedFgColor: #000000
 fontforge.FontView.ChangedColor: #cc1f8a
 fontforge.FontView.HintingNeededColor: #8c6bff
 fontforge.FontView.FontSize: 10
-fontforge.FontView.FontFamily: fontview,courier,monospace,clearlyu,unifont
+fontforge.FontView.FontFamily: terminus,courier,monospace,clearlyu,unifont
 fontforge.FontView.SerifFamily: dejavu serif,times,caslon,serif,clearlyu,unifont
 fontforge.FontView.ScriptFamily: script,formalscript,serif
 fontforge.FontView.FrakturFamily: fraktur,serif
@@ -75,12 +75,12 @@ Gdraw.Background: #dcdcdc
 Gdraw.Foreground: #2e2e2e
 Gdraw.ScreenWidthInches: 20
 
-Gdraw.GProgress.Font: 400 12pt courier,monospace,clearlyu,unifont
+Gdraw.GProgress.Font: 400 10pt dejavu sans
 Gdraw.GProgress.Foreground: #000000
 Gdraw.GProgress.FillColor: #e8ff6e
 Gdraw.GProgress.Background: #f2e0cf
 
-Gdraw.GGadget.Popup.Font: 400 8pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GGadget.Popup.Font: 400 10pt dejavu sans
 Gdraw.GGadget.Popup.Foreground: #000000
 Gdraw.GGadget.Popup.Background: #ffffc0
 Gdraw.GGadget.Popup.Delay: 1000
@@ -109,7 +109,7 @@ Gdraw.GGadget.Box.BorderShape: rect
 Gdraw.GGadget.Box.BorderWidth: 1
 Gdraw.GGadget.Box.Padding: 2
 Gdraw.GGadget.Box.Radius: 0
-Gdraw.GGadget.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GGadget.Font: 400 10pt dejavu sans
 Gdraw.GGadget.TextImageSkip: 4
 Gdraw.GGadget.ImagePath: =
 
@@ -120,7 +120,7 @@ Gdraw.GListMark.Width: 12
 Gdraw.GLabel.Box.BorderType: none
 Gdraw.GLabel.Box.BorderWidth: 0
 Gdraw.GLabel.Box.Padding: 2
-Gdraw.GLabel.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GLabel.Font: 400 10pt dejavu sans
 
 Gdraw.GButton.Box.BorderInner: False
 Gdraw.GButton.Box.BorderOuter: False
@@ -130,7 +130,7 @@ Gdraw.GButton.Box.NormalBackground: #cfcfcf
 Gdraw.GButton.Box.PressedBackground: #c9e873
 Gdraw.GButton.Box.BorderShape: roundrect
 Gdraw.GButton.Box.Padding: 2
-Gdraw.GButton.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GButton.Font: 400 10pt dejavu sans
 Gdraw.GButton.ShiftOnPress: False
 
 
@@ -139,7 +139,7 @@ Gdraw.GButton.ShiftOnPress: False
 
 Gdraw.GRadio.Box.BorderType: none
 Gdraw.GRadio.Box.Padding: 2
-Gdraw.GRadio.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GRadio.Font: 400 10pt dejavu sans
 
 Gdraw.GRadioOn.Box.DoDepressedBackground: True
 Gdraw.GRadioOn.Box.PressedBackground: #a67aff
@@ -155,7 +155,7 @@ Gdraw.GRadioOff.Box.Padding: 2
 
 Gdraw.GCheckBox.Box.BorderType: none
 Gdraw.GCheckBox.Box.Padding: 2
-Gdraw.GCheckBox.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GCheckBox.Font: 400 10pt dejavu sans
 
 Gdraw.GCheckBoxOn.Box.DoDepressedBackground: True
 Gdraw.GCheckBoxOn.Box.PressedBackground: #f0bf7d
@@ -170,7 +170,7 @@ Gdraw.GCheckBoxOff.Box.BorderShape: rect
 Gdraw.GTextField.Box.NormalBackground: #ffffff
 Gdraw.GTextField.Box.BorderShape: roundrect
 Gdraw.GTextField.Box.Padding: 2
-Gdraw.GTextField.Font: 400 10pt courier,monospace,clearlyu,unifont
+Gdraw.GTextField.Font: 400 10pt dejavu sans
 
 
 Gdraw.GComboBoxMenu.Box.Padding: 2
@@ -181,7 +181,7 @@ Gdraw.GNumericFieldSpinner.Box.BorderWidth: 0
 Gdraw.GNumericFieldSpinner.Box.Padding: 2
 
 Gdraw.GList.Box.BorderOuter: False
-Gdraw.GList.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GList.Font: 400 10pt dejavu sans
 
 Gdraw.GScrollBar.Box.BorderOuter: False
 Gdraw.GScrollBar.Box.NormalForeground: #d9d9d9
@@ -213,12 +213,12 @@ Gdraw.GHVGroupBox.Box.Padding: 2
 Gdraw.GMenuBar.Box.BorderOuter: False
 Gdraw.GMenuBar.Box.BorderShape: rect
 Gdraw.GMenuBar.Box.BorderWidth: 0
-Gdraw.GMenuBar.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GMenuBar.Font: 400 10pt dejavu sans
 
 Gdraw.GMenu.Box.BorderOuter: False
 Gdraw.GMenu.Box.BorderShape: rect
 Gdraw.GMenu.Box.Padding: 2
-Gdraw.GMenu.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GMenu.Font: 400 10pt dejavu sans
 Gdraw.GMenu.MacIcons: False
 
 Gdraw.GMatrixEdit.Box.NormalBackground: #ffffff
@@ -227,7 +227,7 @@ Gdraw.GMatrixEdit.Box.BorderType: none
 Gdraw.GMatrixEdit.Box.BorderShape: rect
 Gdraw.GMatrixEdit.Box.BorderWidth: 0
 Gdraw.GMatrixEdit.Box.Padding: 2
-Gdraw.GMatrixEdit.Font: 400 10pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GMatrixEdit.Font: 400 10pt dejavu sans
 
 Gdraw.GMatrixEdit.TitleBG: #9ed9a8
 Gdraw.GMatrixEdit.TitleFG: #000000
