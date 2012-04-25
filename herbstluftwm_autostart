@@ -131,19 +131,19 @@ hc keybind XF86MonBrightnessDown spawn sudo brightness -1
 hc keybind XF86MonBrightnessUp spawn sudo brightness +1
 hc keybind Shift-XF86MonBrightnessDown spawn sudo brightness -10
 hc keybind Shift-XF86MonBrightnessUp spawn sudo brightness +10
-hc keybind $Mod-Control-space spawn togglethm
-hc keybind $Mod-Alt-space spawn xscreensaver-command -activate
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
 # hc keybind $Mod-XF86LaunchB spawn scrot -s
 hc keybind $Mod-Alt-XF86KbdBrightnessUp spawn edit_xprop
+hc keybind XF86KbdBrightnessDown spawn togglethm dark
+hc keybind XF86KbdBrightnessUp spawn togglethm light
 hc keybind $Mod-XF86KbdBrightnessDown spawn kill_screensaver
 hc keybind $Mod-XF86KbdBrightnessUp spawn spawn_screensaver
 
 # hc keybind $Mod-z spawn xkill
 hc keybind $Mod-BackSpace             spawn xkill
 hc keybind Shift-XF86Eject            spawn wodim -eject
-hc keybind $Mod-XF86Eject             spawn screen_standby
+hc keybind $Mod-XF86Eject             spawn xscreensaver-command -activate
 hc keybind $Mod-Alt-XF86Eject         spawn sudo pm-suspend
 hc keybind $Mod-Control-XF86Eject     spawn sudo shutdown -r now
 hc keybind $Mod-Alt-Control-XF86Eject spawn sudo shutdown -h now
@@ -159,17 +159,14 @@ hc rule focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
-hc rule class='Dwb' tag=two
-hc rule instance='mutt' tag=three
-hc rule instance='slrn' tag=four
-hc rule class='Xscreensaver-demo' pseudotile=on
-hc rule instance='ncmpcpp' fullscreen=on tag=nine
-# hc rule class='fontforge' tag=seven
-# hc rule class='fontforge' title='Layers' focus=off
-# hc rule class='fontforge' title='Tools' focus=off
-# hc floating seven on
-hc rule class='MPlayer' pseudotile=on
-hc rule class='Gimp' tag=eight
+hc rule class=Dwb tag=two
+hc rule instance=mutt tag=three
+hc rule instance=slrn tag=four
+hc rule class=Xscreensaver-demo pseudotile=on
+hc rule instance=ncmpcpp fullscreen=on tag=nine
+hc rule class=Inkscape title~'Export Bitmap' pseudotile=on
+hc rule class=MPlayer pseudotile=on
+hc rule class=Gimp tag=eight
 hc load eight '
 (split horizontal:0.850000:0
   (split horizontal:0.200000:1
@@ -181,6 +178,7 @@ hc rule class=Gimp tag=eight index=01 pseudotile=on
 hc rule class=Gimp windowrole~'gimp-(image-window|toolbox|dock)' pseudotile=off
 hc rule class=Gimp windowrole=gimp-toolbox focus=off index=00
 hc rule class=Gimp windowrole=gimp-dock focus=off index=1
+
 
 updatethm
 reloadpanel

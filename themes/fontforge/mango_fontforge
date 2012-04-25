@@ -1,7 +1,10 @@
+fontforge.FontView.GlyphInfoColor: #8c8c8c
+fontforge.FontView.EmptySlotFgColor: #d08080
 fontforge.FontView.SelectedColor: #fff294
 fontforge.FontView.SelectedFgColor: #000000
-fontforge.FontView.ChangedColor: #b22414
-fontforge.FontView.FontSize: 11
+fontforge.FontView.ChangedColor: #cc1f8a
+fontforge.FontView.HintingNeededColor: #8c6bff
+fontforge.FontView.FontSize: 10
 fontforge.FontView.FontFamily: fontview,courier,monospace,clearlyu,unifont
 fontforge.FontView.SerifFamily: dejavu serif,times,caslon,serif,clearlyu,unifont
 fontforge.FontView.ScriptFamily: script,formalscript,serif
