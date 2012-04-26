@@ -143,7 +143,7 @@ hc keybind $Mod-XF86KbdBrightnessUp spawn xset +dmps
 # hc keybind $Mod-z spawn xkill
 hc keybind $Mod-BackSpace             spawn xkill
 hc keybind Shift-XF86Eject            spawn wodim -eject
-hc keybind $Mod-XF86Eject             spawn xset dpms force standby
+hc keybind $Mod-XF86Eject             spawn dpms_standby
 hc keybind $Mod-Alt-XF86Eject         spawn sudo pm-suspend
 hc keybind $Mod-Control-XF86Eject     spawn sudo shutdown -r now
 hc keybind $Mod-Alt-Control-XF86Eject spawn sudo shutdown -h now
