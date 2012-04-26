@@ -11,6 +11,7 @@ xset fp rehash
 xset r rate 320 30
 # mouse acceleration
 xset m 3/2 6
+xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF
 # fix the inverted left/right scroll wheel
 # xinput set-button-map 9 1 2 3 4 5 7 6
 # neutral mouse cursor
@@ -18,9 +19,9 @@ xsetroot -cursor_name left_ptr
 
 mpd
 urxvtd -q -o -f
-xscreensaver -no-splash &
+# xscreensaver -no-splash &
 unclutter -reset -noevents &
-civilised_screensaver &
+happy_fullscreen &
 
 # exec openbox-session
 exec herbstluftwm --locked

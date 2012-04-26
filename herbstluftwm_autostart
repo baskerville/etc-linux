@@ -137,13 +137,13 @@ hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%
 hc keybind $Mod-Alt-XF86KbdBrightnessUp spawn edit_xprop
 hc keybind XF86KbdBrightnessDown spawn togglethm dark
 hc keybind XF86KbdBrightnessUp spawn togglethm light
-hc keybind $Mod-XF86KbdBrightnessDown spawn kill_screensaver
-hc keybind $Mod-XF86KbdBrightnessUp spawn spawn_screensaver
+hc keybind $Mod-XF86KbdBrightnessDown spawn xset -dpms
+hc keybind $Mod-XF86KbdBrightnessUp spawn xset +dmps
 
 # hc keybind $Mod-z spawn xkill
 hc keybind $Mod-BackSpace             spawn xkill
 hc keybind Shift-XF86Eject            spawn wodim -eject
-hc keybind $Mod-XF86Eject             spawn xscreensaver-command -activate
+hc keybind $Mod-XF86Eject             spawn xset dpms force standby
 hc keybind $Mod-Alt-XF86Eject         spawn sudo pm-suspend
 hc keybind $Mod-Control-XF86Eject     spawn sudo shutdown -r now
 hc keybind $Mod-Alt-Control-XF86Eject spawn sudo shutdown -h now

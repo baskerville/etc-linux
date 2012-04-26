@@ -35,6 +35,10 @@ export MICRO=/media/micro
 export HEXAGON=/media/hexagon
 export LACIE=/media/lacie
 
+export DPMS_STANDBY=360
+export DPMS_SUSPEND=420
+export DPMS_OFF=480
+
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blinking
 export LESS_TERMCAP_md=$'\e[1;35m'     # begin bold
 export LESS_TERMCAP_me=$'\e[0m'        # end mode
