@@ -54,7 +54,8 @@ hc mousebind $Mod-Button3 zoom
 
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
-hc keybind $Mod-c cycle
+hc keybind $Mod-c cycle +1
+hc keybind $Mod-Shift-c cycle -1
 hc keybind $Mod-h focus left
 hc keybind $Mod-j focus down
 hc keybind $Mod-k focus up
