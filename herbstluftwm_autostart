@@ -182,9 +182,6 @@ hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 
 hc unlock
 
-imlibsetroot -s a ~/.wallpaper
+updatethm
 
 hc set frame_bg_transparent  1
-
-updatethm
-reloadpanel
