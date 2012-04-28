@@ -146,7 +146,7 @@ static const keymap_t keys[] = {
 	{ true,   XK_slash,         it_shell_cmd,         (arg_t) \
             "browse_parent \"$SXIV_IMG\"" },
 	{ true,   XK_s,             it_shell_cmd,         (arg_t) \
-            "setwall \"$SXIV_IMG\"" },
+            "setwallpaper \"$SXIV_IMG\"" },
 };
 
 /* mouse button mappings for image mode: */

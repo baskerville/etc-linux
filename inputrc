@@ -5,13 +5,16 @@ set show-all-if-unmodified     on
 set visible-stats              on
 set bind-tty-special-chars     off
 
-C-w:     backward-kill-word
-C-n:     history-search-forward
-C-p:     history-search-backward
-C-u:     kill-whole-line
-"\e[3~": delete-char
-"\ei":   tab-insert
-"\e,":   shell-expand-line
+"\C-w": backward-kill-word
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+"\C-\M-p": dynamic-complete-history
+"\C-u": kill-whole-line
 
-# "\ei":   character-search
-# "\eo":   character-search-backward
+"\ei": tab-insert
+"\e,": shell-expand-line
+
+"\e]": character-search
+"\e[": character-search-backward
+
+"\e[3~": delete-char
