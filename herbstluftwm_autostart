@@ -39,10 +39,9 @@ hc keybind $Mod-n set_layout horizontal
 hc keybind $Mod-m set_layout max
 hc keybind $Mod-Return set_layout max
 hc keybind $Mod-g set_layout grid
-hc keybind $Mod-Shift-g cycle_value window_gap 0 6
-# hc keybind $Mod-b cycle_value window_border_width 0 3
 
 RESIZESTEP=0.05
+
 hc keybind $Mod-Control-h resize left  +$RESIZESTEP
 hc keybind $Mod-Control-j resize down  +$RESIZESTEP
 hc keybind $Mod-Control-k resize up    +$RESIZESTEP
@@ -141,7 +140,6 @@ hc keybind XF86KbdBrightnessUp spawn togglethm light
 hc keybind $Mod-XF86KbdBrightnessDown spawn xset -dpms
 hc keybind $Mod-XF86KbdBrightnessUp spawn xset +dmps
 
-# hc keybind $Mod-z spawn xkill
 hc keybind $Mod-BackSpace             spawn xkill
 hc keybind Shift-XF86Eject            spawn wodim -eject
 hc keybind $Mod-XF86Eject             spawn dpms_standby
@@ -152,8 +150,8 @@ hc keybind $Mod-Alt-Control-XF86Eject spawn sudo shutdown -h now
 hc set default_frame_layout  2
 hc set gapless_grid          1
 hc set frame_border_width    0
-hc set frame_active_opacity  50
-hc set frame_normal_opacity  30
+hc set frame_active_opacity  25
+hc set frame_normal_opacity  25
 hc set window_border_width   2
 hc set window_gap            0
 
