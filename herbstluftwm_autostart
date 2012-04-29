@@ -167,6 +167,8 @@ hc rule class=Xscreensaver-demo pseudotile=on
 hc rule instance=ncmpcpp tag=nine
 hc rule class=Inkscape title~'Export Bitmap' pseudotile=on
 hc rule class=MPlayer pseudotile=on
+hc rule class=fontforge tag=seven
+hc floating seven on
 hc rule class=Gimp tag=eight
 hc load eight '
 (split horizontal:0.850000:0

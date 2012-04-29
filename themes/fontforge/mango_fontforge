@@ -192,10 +192,10 @@ Gdraw.GScrollBar.Box.BorderWidth: 0
 Gdraw.GScrollBar.Box.Padding: 2
 
 Gdraw.GScrollBarThumb.Box.NormalForeground: #cf96fa
-Gdraw.GScrollBarThumb.Box.NormalBackground: #cccccc
+Gdraw.GScrollBarThumb.Box.NormalBackground: #c2c2c2
 Gdraw.GScrollBarThumb.Box.DisabledBackground: #ededed
-Gdraw.GScrollBarThumb.Box.BorderBrightest: #cccccc
-Gdraw.GScrollBarThumb.Box.BorderDarkest: #cccccc
+Gdraw.GScrollBarThumb.Box.BorderBrightest: #c2c2c2
+Gdraw.GScrollBarThumb.Box.BorderDarkest: #c2c2c2
 Gdraw.GScrollBarThumb.Box.BorderShape: roundrect
 Gdraw.GScrollBarThumb.Box.BorderWidth: 1
 Gdraw.GScrollBarThumb.Box.Padding: 2

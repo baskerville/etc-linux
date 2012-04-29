@@ -9,7 +9,7 @@ URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=21,xft:Meslo LG M:pixelsiz
 ! URxvt.boldFont:             -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 ! URxvt.italicFont:           -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 ! URxvt.boldItalicFont:       -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
-URxvt.geometry:             145x53 
+URxvt.geometry:             80x32
 URxvt.internalBorder:       9
 URxvt.iso14755:             false
 URxvt.scrollBar:            false
