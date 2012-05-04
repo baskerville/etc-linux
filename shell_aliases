@@ -105,7 +105,7 @@ alias upu='up && pu'
 
 alias subscriptions='grep ":" ~/.jnewsrc | awk -F : "{print $1}"'
 alias nu='slrnpull -d ~/.slrnpull'
-alias dfh='df -h'
+alias dfc='dfc -d'
 
 alias T='date "+%A"'
 alias M='date "+%B"'
