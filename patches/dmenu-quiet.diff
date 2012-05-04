@@ -1,0 +1,99 @@
+diff -ur a/dmenu.1 b/dmenu.1
+--- a/dmenu.1	2012-04-07 17:38:03.847635892 +0200
++++ b/dmenu.1	2012-04-07 17:40:27.443741198 +0200
+@@ -42,6 +42,9 @@
+ .B \-f
+ dmenu grabs the keyboard before reading stdin.  This is faster, but will lock up
+ X until stdin reaches end\-of\-file.
++.TP
++.B \-q
++dmenu will not show any items if the search string is empty.
+ .TP
+ .B \-i
+ dmenu matches menu items case insensitively.
+diff -ur a/dmenu.c b/dmenu.c
+--- a/dmenu.c	2012-04-07 17:38:03.847635892 +0200
++++ b/dmenu.c	2012-04-07 17:46:07.682416106 +0200
+@@ -54,6 +54,7 @@
+ static unsigned long selcol[ColLast];
+ static Atom clip, utf8;
+ static Bool topbar = True;
++static Bool quiet = False;
+ static DC *dc;
+ static Item *items = NULL;
+ static Item *matches, *matchend;
+@@ -79,6 +80,8 @@
+ 			topbar = False;
+ 		else if(!strcmp(argv[i], "-f"))   /* grabs keyboard before reading stdin */
+ 			fast = True;
++		else if(!strcmp(argv[i], "-q"))   /* don't show any items if the search string is empty */
++			quiet = True;
+ 		else if(!strcmp(argv[i], "-i")) { /* case-insensitive item matching */
+ 			fstrncmp = strncasecmp;
+ 			fstrstr = cistrstr;
+@@ -180,30 +183,32 @@
+ 	if((curpos = textnw(dc, text, cursor) + dc->h/2 - 2) < dc->w)
+ 		drawrect(dc, curpos, 2, 1, dc->h - 4, True, FG(dc, normcol));
+ 
+-	if(lines > 0) {
+-		/* draw vertical list */
+-		dc->w = mw - dc->x;
+-		for(item = curr; item != next; item = item->right) {
+-			dc->y += dc->h;
+-			drawtext(dc, item->text, (item == sel) ? selcol : normcol);
+-		}
+-	}
+-	else if(matches) {
+-		/* draw horizontal list */
+-		dc->x += inputw;
+-		dc->w = textw(dc, "<");
+-		if(curr->left)
+-			drawtext(dc, "<", normcol);
+-		for(item = curr; item != next; item = item->right) {
+-			dc->x += dc->w;
+-			dc->w = MIN(textw(dc, item->text), mw - dc->x - textw(dc, ">"));
+-			drawtext(dc, item->text, (item == sel) ? selcol : normcol);
+-		}
+-		dc->w = textw(dc, ">");
+-		dc->x = mw - dc->w;
+-		if(next)
+-			drawtext(dc, ">", normcol);
+-	}
++    if(!quiet || strlen(text) > 0) {    
++        if(lines > 0) {
++            /* draw vertical list */
++            dc->w = mw - dc->x;
++            for(item = curr; item != next; item = item->right) {
++                dc->y += dc->h;
++                drawtext(dc, item->text, (item == sel) ? selcol : normcol);
++            }
++        }
++        else if(matches) {
++            /* draw horizontal list */
++            dc->x += inputw;
++            dc->w = textw(dc, "<");
++            if(curr->left)
++                drawtext(dc, "<", normcol);
++            for(item = curr; item != next; item = item->right) {
++                dc->x += dc->w;
++                dc->w = MIN(textw(dc, item->text), mw - dc->x - textw(dc, ">"));
++                drawtext(dc, item->text, (item == sel) ? selcol : normcol);
++            }
++            dc->w = textw(dc, ">");
++            dc->x = mw - dc->w;
++            if(next)
++                drawtext(dc, ">", normcol);
++        }
++    }
+ 	mapdc(dc, win, mw, mh);
+ }
+ 
+@@ -604,7 +609,7 @@
+ 
+ void
+ usage(void) {
+-	fputs("usage: dmenu [-b] [-f] [-i] [-l lines] [-p prompt] [-fn font]\n"
++	fputs("usage: dmenu [-b] [-f] [-q] [-i] [-l lines] [-p prompt] [-fn font]\n"
+ 	      "             [-nb color] [-nf color] [-sb color] [-sf color] [-v]\n", stderr);
+ 	exit(EXIT_FAILURE);
+ }
