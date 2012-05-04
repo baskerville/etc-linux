@@ -119,7 +119,7 @@ hc keybind $Mod-Shift-Insert spawn copy_clipboard_to_primary
 hc keybind $Mod-Control-p spawn dash -c 'printf $(pwgen -nc) | xsel -bi'
 
 hc keybind $Mod-equal spawn mosaic "$XDG_DOWNLOAD_DIR"
-hc keybind $Mod-Shift-equal spawn mosaic ~/image
+hc keybind $Mod-Shift-equal spawn mosaic "$HOME/image"
 
 hc keybind $Mod-Control-a spawn raise_or_run accounts
 hc keybind $Mod-Control-Shift-a spawn raise_or_run boards
