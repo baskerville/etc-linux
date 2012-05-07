@@ -65,6 +65,9 @@ alias nzd='nzbget -D'
 alias nzl='nzbget -L'
 alias nzq='nzbget -Q'
 
+alias cgl='castget -ln1'
+alias cgg='castget -vn1'
+
 alias i='type -a'
 alias y='file -b'
 alias mt='file -b --mime-type'

@@ -87,10 +87,6 @@ R() {
     rm -v -- *."$@" 
 }
 
-tl() {
-    aria2c -S "$@" | grep '\./' 
-}
-
 dud() {
     du -h -d 1 "$@" | sort -h 
 }
