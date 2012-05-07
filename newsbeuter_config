@@ -1,0 +1,15 @@
+browser web_browser
+
+bind-key j down
+bind-key k up
+bind-key h left
+bind-key l right
+bind-key m toggle-show-read-feeds
+
+color background default default
+color listnormal default default
+color listfocus default color17
+color info default color19
+color article default default
+
+highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold

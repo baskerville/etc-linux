@@ -1,0 +1,7 @@
+color background default default
+color listnormal default default
+color listfocus default color{bg_dip}
+color info default color{bg_bump}
+color article default default
+
+highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
