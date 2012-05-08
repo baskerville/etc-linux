@@ -65,6 +65,7 @@ static const keymap_t keys[] = {
 	{ false,  XK_b,             it_toggle_bar,        (arg_t) None },
 
 	{ false,  XK_r,             it_reload_image,      (arg_t) None },
+	{ false,  XK_R,             it_refresh_thumbs,    (arg_t) None },
 	{ false,  XK_D,             it_remove_image,      (arg_t) None },
 
 	{ false,  XK_n,             i_navigate,           (arg_t) +1 },
@@ -142,11 +143,11 @@ static const keymap_t keys[] = {
             "catapult move \"$SXIV_IMG\"" },
 	{ true,   XK_r,			    it_shell_cmd,         (arg_t) \
             "catapult rename \"$SXIV_IMG\"" },
-	{ true,  XK_semicolon,     it_shell_cmd,         (arg_t) \
+	{ true,   XK_semicolon,     it_shell_cmd,         (arg_t) \
             "catapult repeat \"$SXIV_IMG\"" },
-	{ true,   XK_period,         it_shell_cmd,         (arg_t) \
+	{ false,  XK_period,        it_shell_cmd,         (arg_t) \
             "copy_args \"$SXIV_IMG\"" },
-	{ true,   XK_slash,         it_shell_cmd,         (arg_t) \
+	{ false,  XK_slash,         it_shell_cmd,         (arg_t) \
             "browse_parent \"$SXIV_IMG\"" },
 	{ true,   XK_s,             it_shell_cmd,         (arg_t) \
             "setwallpaper \"$SXIV_IMG\"" },
