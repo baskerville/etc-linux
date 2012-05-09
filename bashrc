@@ -34,6 +34,6 @@ complete -F _herbstclient_complete hc
 
 eval $(dircolors -b ~/.dircolors)
 
-if [ -f "/usr/lib/stderred.so" ]; then
-    export LD_PRELOAD="/usr/lib/stderred.so"
+if [ -f "/usr/lib/libstderred.so" ]; then
+    export LD_PRELOAD="/usr/lib/libstderred.so"
 fi

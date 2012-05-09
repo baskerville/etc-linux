@@ -19,8 +19,9 @@ export XDG_AUR_HOME="$HOME/src/aur"
 export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER='news.orange.fr'
-export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
 export GREP_COLORS='ms=1;32:mc=1;32:sl=:cx=:fn=1;39:ln=1;34:bn=1;36:se=1;30'
+export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
+export STDERRED_BLACKLIST="^(had)$"
 
 export SHELL_CONFIG="$HOME/.bashrc"
 export SHELL_PROFILE="$HOME/.bash_profile"
