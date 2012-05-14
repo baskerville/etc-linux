@@ -18,8 +18,9 @@ xsetroot -cursor_name left_ptr
 
 mpd
 urxvtd -q -o -f
-# xscreensaver -no-splash &
-unclutter -reset -noevents &
+# unclutter -reset -noevents &
+hidcur 5 &
+
 happy_fullscreen &
 
 # exec openbox-session
