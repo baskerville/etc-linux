@@ -207,6 +207,11 @@ conj() {
     w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@" 
 }
 
+linuxchangelog() {
+    local uri="http://www.kernel.org/pub/linux/kernel/v${@%%.*}.0/ChangeLog-$@"
+    curl -s "$uri" | grep -A 2 '^Date:' | grep ' \+[^:]\+: ' | sed 's/^ \+//'
+}
+
 #swc() {
  #compc -include-sources . -output $@.swc 
 #}
