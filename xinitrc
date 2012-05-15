@@ -18,8 +18,7 @@ xsetroot -cursor_name left_ptr
 
 mpd
 urxvtd -q -o -f
-# unclutter -reset -noevents &
-hidcur 5 &
+unclutter &
 
 happy_fullscreen &
 
