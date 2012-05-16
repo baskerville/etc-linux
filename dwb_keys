@@ -237,6 +237,8 @@ hints_images_background= ;I
 
 hints_url_background= ;O
 
+sanitize= 
+
 [-p]
 save_search_field=gs
 add_view=ga

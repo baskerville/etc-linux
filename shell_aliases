@@ -60,6 +60,7 @@ alias phosphor='/usr/lib/xscreensaver/phosphor -program bash'
 alias apple2='/usr/lib/xscreensaver/apple2 -text -program bash'
 alias vub='vim_update_bundles'
 alias vpx='vp -vo x11'
+alias am='alsamixer -g'
 
 alias nzd='nzbget -D'
 alias nzl='nzbget -L'
