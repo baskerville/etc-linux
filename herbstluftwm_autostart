@@ -131,6 +131,8 @@ hc keybind XF86MonBrightnessDown spawn sudo brightness -1
 hc keybind XF86MonBrightnessUp spawn sudo brightness +1
 hc keybind Shift-XF86MonBrightnessDown spawn sudo brightness -10
 hc keybind Shift-XF86MonBrightnessUp spawn sudo brightness +10
+hc keybind $Mod-XF86MonBrightnessDown spawn killpanel
+hc keybind $Mod-XF86MonBrightnessUp spawn launchpanel
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
 # hc keybind $Mod-XF86LaunchB spawn scrot -s
