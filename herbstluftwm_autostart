@@ -167,7 +167,8 @@ hc rule instance=mutt tag=three
 hc rule instance=slrn tag=four
 hc rule class=Xscreensaver-demo pseudotile=on
 hc rule instance=ncmpcpp tag=nine
-hc rule class=Inkscape title~'Export Bitmap' pseudotile=on
+hc rule class=Inkscape title~'^Export Bitmap' pseudotile=on
+hc rule class=Audacity title='Frequency Analysis' pseudotile=off
 hc rule class=MPlayer pseudotile=on
 hc rule class=fontforge tag=seven
 hc floating seven on

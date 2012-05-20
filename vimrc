@@ -54,6 +54,7 @@ if has("autocmd")
     autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
     autocmd BufRead,BufEnter *.nfo set filetype=nfo
     autocmd BufRead,BufEnter *keydoublerc set filetype=xmodmap
+    autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
     autocmd FileType mail silent! call CleanMuttHeader()
     autocmd FileType mail setlocal completefunc=CompleteMuttAliases
     autocmd FileType mail setlocal commentstring=>%s
