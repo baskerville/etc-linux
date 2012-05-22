@@ -50,6 +50,7 @@ if has("autocmd")
     autocmd BufRead,BufEnter *.asd set filetype=lisp
     autocmd BufRead,BufEnter *.as set filetype=actionscript
     autocmd BufRead,BufEnter *.mxml set filetype=mxml
+    autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
     autocmd BufRead,BufEnter .xinitrc set filetype=sh
     autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
     autocmd BufRead,BufEnter *.nfo set filetype=nfo
