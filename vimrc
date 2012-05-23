@@ -2,7 +2,7 @@ set nocompatible
 set noerrorbells
 set shortmess+=I
 
-set enc=utf-8
+set encoding=utf-8
 set hidden
 set showmode
 set showcmd
@@ -36,6 +36,8 @@ let g:xdefaults_no_if0 = 1
 set statusline=%F%m%r%h%w\ %=[%Y]\ \*%{&ff}\*\ %l,%v\ %p%%
 set laststatus=2
 set dictionary+=/usr/share/dict/words
+set listchars=eol:¬,tab:▸\ ,trail:·,extends:»,precedes:«,conceal:†,nbsp:␣
+" set listchars=eol:a,tab:b\ ,trail:c,extends:d,precedes:e,conceal:f,nbsp:g
 
 set t_Co=256
 syntax on
@@ -96,10 +98,12 @@ nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
 nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
+nmap <silent> <leader>; :call TerminalAt(expand("%:p:h"))<cr>
 "nmap <silent> <leader>_ :call Yank(expand("%").":".line("."))<cr>
 nmap <silent> <F1>  :set number!<cr>
 nmap <silent> <F2>  :set hlsearch!<cr>
 nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " fg<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#") . ">" <cr>
+nmap <silent> <F4> :set list!<cr>
 nmap <silent> <F5> :setlocal spell! spelllang=en<cr>
 nmap <silent> <F6> :setlocal spell! spelllang=fr<cr>
 nmap <silent> <F7> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
@@ -127,6 +131,11 @@ endfunction
 
 function! Define(word)
     let response = system("wn " . a:word)
+    echo response
+endfunction
+
+function! TerminalAt(path)
+    let response = system("urxvtc -cd " . a:path)
     echo response
 endfunction
 
