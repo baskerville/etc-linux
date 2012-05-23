@@ -89,7 +89,8 @@ alias clipi='xsel -bi'
 alias clipo='xsel -bo'
 
 alias ivz='iv -Z'
-alias ivr='ivz -tfr .'
+alias ivzr='ivz -tfr .'
+alias ivr='iv -tfr .'
 alias p="clipo | editor -"
 alias gp="primo | editor -"
 alias h="xxd -l 256"
@@ -173,7 +174,9 @@ alias dak='diana kill'
 alias daf='diana files'
 alias dae='diana errors'
 
-alias lpm='lp -o fitplot -o MediaType=PhotopaperMatte -o Resolution=603x600dpi'
+alias lp='lp -o fitplot'
+alias lpm='lp -o MediaType=PhotopaperMatte -o Resolution=603x600dpi'
+alias lpp='lp -o MediaType=PhotopaperPlus -o Resolution=603x600dpi'
 alias dlp='lp -o Duplex=DuplexNoTumble'
 alias dlp6='lp -o Duplex=DuplexNoTumble -o Resolution=600dpi'
 alias lp6='lp -o Resolution=600dpi'
