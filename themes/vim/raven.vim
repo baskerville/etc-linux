@@ -10,7 +10,7 @@ if exists("syntax on")
     syntax reset
 endif
 
-let g:colors_name="colors"
+let g:colors_name="raven"
 
 "
 " preferred groups

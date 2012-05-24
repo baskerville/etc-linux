@@ -44,7 +44,7 @@ syntax on
 filetype plugin on
 filetype indent on
 
-colorscheme theme
+colorscheme raven
 
 call pathogen#infect()
 
