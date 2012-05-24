@@ -79,7 +79,7 @@ map Q <nop>
 map <C-z> <nop>
 nnoremap q: <nop>
 
-nmap <leader>s :%s/
+nmap <leader>s :%s/
 vmap <leader>s :s/
 nmap <leader>S :s/
 nmap <leader>o o<esc>k
