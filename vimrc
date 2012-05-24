@@ -36,7 +36,7 @@ let g:xdefaults_no_if0 = 1
 set statusline=%F%m%r%h%w\ %=[%Y]\ \*%{&ff}\*\ %l,%v\ %p%%
 set laststatus=2
 set dictionary+=/usr/share/dict/words
-set listchars=eol:¬,tab:▸\ ,trail:·,extends:»,precedes:«,conceal:†,nbsp:␣
+set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
 " set listchars=eol:a,tab:b\ ,trail:c,extends:d,precedes:e,conceal:f,nbsp:g
 
 set t_Co=256
@@ -79,7 +79,7 @@ map Q <nop>
 map <C-z> <nop>
 nnoremap q: <nop>
 
-nmap <leader>s :%s/
+nmap <leader>s :%s/
 vmap <leader>s :s/
 nmap <leader>S :s/
 nmap <leader>o o<esc>k
@@ -98,7 +98,8 @@ nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
 nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
-nmap <silent> <leader>; :call TerminalAt(expand("%:p:h"))<cr>
+nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
+nmap <silent> <leader>ga :call GetCharName()<cr>
 "nmap <silent> <leader>_ :call Yank(expand("%").":".line("."))<cr>
 nmap <silent> <F1>  :set number!<cr>
 nmap <silent> <F2>  :set hlsearch!<cr>
@@ -132,6 +133,14 @@ endfunction
 function! Define(word)
     let response = system("wn " . a:word)
     echo response
+endfunction
+
+function! GetCharName()
+    let clip = @"
+    normal! yl
+    let response = system("uniname", @")
+    echomsg response
+    let @" = clip
 endfunction
 
 function! TerminalAt(path)

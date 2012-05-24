@@ -14,7 +14,7 @@ complete -cf man
 
 _prompt_command() {
     builtin history -a
-	case "$TERM" in
+    case "$TERM" in
         rxvt* | xterm*)
             echo -en "\e]0;${PWD//$HOME/~}\a"
             ;;

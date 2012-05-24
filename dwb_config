@@ -145,3 +145,4 @@ tab-normal-fg-color-2=#69717A
 tab-number-color=#8F98A1
 tab-protected-color=#B144A8
 close-tab-focus-policy=right
+addressbar-dns-lookup=false
