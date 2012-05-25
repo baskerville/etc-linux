@@ -149,32 +149,20 @@ prune() {
     rm -iv $XDG_BIN_DIR/$@ 
 }
 
-lslacie() {
-    ls "$@" $LACIE/ 
-}
-
-cphexagon() {
-    cp  -r "$@" $HEXAGON/ 
-}
-
-lshexagon() {
-    ls "$@" $HEXAGON/ 
+cpmicro() {
+    cp  -Lr "$@" $MICRO/ 
 }
 
 cpdata() {
-    cp  -r "$@" $DATA/ 
+    cp  -Lr "$@" $DATA/ 
 }
 
-lsdata() {
-    ls "$@" $DATA/ 
+cptraveler() {
+    cp -Lr "$@" $TRAVELER/ 
 }
 
-cpmicro() {
-    cp  -r "$@" $MICRO/ 
-}
-
-lsmicro() {
-    ls "$@" $MICRO/ 
+cphexagon() {
+    cp  -Lr "$@" $HEXAGON/ 
 }
 
 mm() {

@@ -27,10 +27,10 @@ export SHELL_PROFILE="$HOME/.bash_profile"
 export SHELL_ALIASES="$HOME/.shell_aliases"
 export SHELL_FUNCTIONS="$HOME/.shell_functions"
 
-export DATA=/media/data
 export MICRO=/media/micro
+export DATA=/media/data
+export TRAVELER=/media/traveler
 export HEXAGON=/media/hexagon
-export LACIE=/media/lacie
 
 export WALLPAPER="$HOME/.wallpaper"
 

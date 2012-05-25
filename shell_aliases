@@ -88,6 +88,8 @@ alias primo='xsel -po'
 alias clipi='xsel -bi'
 alias clipo='xsel -bo'
 
+alias mduration="mediainfo '--Inform=General;%Duration/String%'"
+
 alias ivz='iv -Z'
 alias ivzr='ivz -tfr .'
 alias ivr='iv -tfr .'
@@ -106,7 +108,7 @@ alias nb='newsbeuter'
 alias gdb='rlwrap gdb -q'
 alias bcl='bc -ql $HOME/.bcrc'
 alias mp4box='MP4Box'
-alias gg='g -i'
+alias ig='g -i'
 alias gcn='g -nC 1'
 alias up='git commit -am update'
 alias pu='git push'
@@ -137,9 +139,11 @@ alias b="acpi -b | grep -o '[0-9]*%'"
 alias lowerdir='find . -maxdepth 1 -type d ! -samefile . -exec prename -vl {} \;'
 alias wrp='wr FRXX0076'
 
-alias zlacie="cd "$LACIE""
 alias zdata="cd "$DATA""
 alias zmicro="cd "$MICRO""
+alias ztraveler="cd "$TRAVELER""
+alias zhexagon="cd "$HEXAGON""
+alias zlacie="cd "$LACIE""
 
 alias hal='hestia list'
 alias haa='hestia add'
