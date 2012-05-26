@@ -108,6 +108,7 @@ nmap <silent> <F4> :set list!<cr>
 nmap <silent> <F5> :setlocal spell! spelllang=en<cr>
 nmap <silent> <F6> :setlocal spell! spelllang=fr<cr>
 nmap <silent> <F7> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
+nmap <silent> <F8> :call ToggleConceal()<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>
 nmap <silent> <leader>yy yy:call YankClip()<cr>
 vmap <silent> <leader>gy y:call Yank()<cr>
@@ -133,6 +134,16 @@ endfunction
 function! Define(word)
     let response = system("wn " . a:word)
     echo response
+endfunction
+
+function! ToggleConceal()
+    if &conceallevel
+        set conceallevel=0
+        echomsg "conceallevel disabled"
+    else
+        set conceallevel=2
+        echomsg "conceallevel enabled"
+    endif
 endfunction
 
 function! GetCharName()

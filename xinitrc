@@ -7,7 +7,7 @@ compton -CcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o 0 &
 xset +fp /usr/share/fonts/local
 xset fp rehash
 # key refresh rate
-xset r rate 320 30
+xset r rate 320 35
 # mouse acceleration
 xset m 3/2 6
 xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF

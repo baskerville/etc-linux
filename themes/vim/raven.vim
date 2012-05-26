@@ -82,6 +82,7 @@ hi LineNr          ctermfg=20    ctermbg=19
 
 hi Title           ctermfg=178
 hi SpecialKey      ctermfg=120
+hi Conceal         ctermfg=100       ctermbg=bg
 hi NonText         ctermfg=20
 hi MatchParen      ctermfg=16     ctermbg=139
 hi Directory       ctermfg=216

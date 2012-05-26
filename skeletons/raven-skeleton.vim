@@ -82,6 +82,7 @@ hi LineNr          ctermfg={fg_comment}    ctermbg={bg_bump}
 
 hi Title           ctermfg={azure}
 hi SpecialKey      ctermfg={green}
+hi Conceal         ctermfg={spring}       ctermbg=bg
 hi NonText         ctermfg={fg_comment}
 hi MatchParen      ctermfg={bg_floor}     ctermbg={teal}
 hi Directory       ctermfg={violet}
