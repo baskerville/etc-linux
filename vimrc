@@ -123,6 +123,9 @@ xmap <leader>c \\
 nmap <leader>c \\
 nmap <leader>cc \\\
 
+syntax match ThreePerEmSpace " " conceal cchar=⅓
+syntax match FourPerEmSpace " " conceal cchar=¼
+
 function! CleanMuttHeader()
     " remove signature
     exec '%s/^>\+ *-- \n\_.*//e'
