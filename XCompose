@@ -1,12 +1,14 @@
 include "%L"
 
-<Multi_key> <space> <n>: " " U2002   # EN SPACE
 <Multi_key> <space> <m>: " " U2003   # EM SPACE
+<Multi_key> <space> <n>: " " U2002   # EN SPACE
 <Multi_key> <space> <3>: " " U2004   # THREE-PER-EM SPACE
 <Multi_key> <space> <4>: " " U2005   # FOUR-PER-EM SPACE
 <Multi_key> <space> <6>: " " U2006   # SIX-PER-EM SPACE
 <Multi_key> <space> <t>: " " U2009   # THIN SPACE
 <Multi_key> <space> <h>: " " U200A   # HAIR SPACE
+<Multi_key> <space> <f>: " " U2007   # FIGURE SPACE
+<Multi_key> <space> <p>: " " U2008   # PUNCTUATION SPACE
 
 <Multi_key> <a> <asciitilde> : "∝" U221D
 <Multi_key> <minus> <plus> : "∓" U2213
