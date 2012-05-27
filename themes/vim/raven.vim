@@ -139,3 +139,5 @@ hi def link mailSignature Comment
 hi def link mailQuoted2 mailQuoted1
 hi def link perlSharpBang Comment
 hi def link javaScriptNumber Number
+hi def link markdownCode Comment
+hi def link markdownCodeBlock Comment
