@@ -1,0 +1,34 @@
+%%%
+%%% XeTeX Misc Quirks
+%%% baskerville a lavabit o com
+%%%
+
+\catcode`\@=11
+\catcode`\'=\active % apostrophe
+\catcode`\ =\active % no-break space
+\catcode`\ =\active % thin space
+\def'{\string’}
+\def'{\kern.05em\string’\kern.05em}
+\def {~}
+\def {\,}
+\catcode`\@=12
+
+\newenvironment{narrow}[2]
+  {\begin{list}{}
+    {\setlength\leftmargin{#1}
+    \setlength\rightmargin{#2}}
+    \item[]}
+  {\end{list}}
+
+\let\origdoublepage\cleardoublepage
+
+\newcommand{\clearemptydoublepage}
+    {\clearpage
+        {\pagestyle{empty}\origdoublepage}}
+
+\let\cleardoublepage\clearemptydoublepage
+
+\makeatletter
+\newcommand{\sidenote}[1]
+    {\marginpar{\footnotesize{\ifodd\c@page\flushleft{#1}\else\flushright{#1}\fi}}}
+\makeatother
