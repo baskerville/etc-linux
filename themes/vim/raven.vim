@@ -73,7 +73,7 @@ hi TabLineFill     ctermfg=fg     ctermbg=19    cterm=none
 hi Pmenu           ctermfg=fg     ctermbg=19
 hi PmenuSel        ctermfg=23    ctermbg=20
 hi PmenuSbar       ctermfg=23    ctermbg=20
-hi WildMenu        ctermfg=100     ctermbg=19    cterm=none
+hi WildMenu        ctermfg=23    ctermbg=20    cterm=none
 
 hi Visual          ctermfg=bg     ctermbg=159
 hi VisualNOS       ctermfg=bg     ctermbg=198

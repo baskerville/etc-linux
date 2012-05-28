@@ -73,7 +73,7 @@ hi TabLineFill     ctermfg=fg     ctermbg={bg_bump}    cterm=none
 hi Pmenu           ctermfg=fg     ctermbg={bg_bump}
 hi PmenuSel        ctermfg={fg_ceiling}    ctermbg={fg_comment}
 hi PmenuSbar       ctermfg={fg_ceiling}    ctermbg={fg_comment}
-hi WildMenu        ctermfg={spring}     ctermbg={bg_bump}    cterm=none
+hi WildMenu        ctermfg={fg_ceiling}    ctermbg={fg_comment}    cterm=none
 
 hi Visual          ctermfg=bg     ctermbg={cyan}
 hi VisualNOS       ctermfg=bg     ctermbg={blue}
@@ -139,3 +139,5 @@ hi def link mailSignature Comment
 hi def link mailQuoted2 mailQuoted1
 hi def link perlSharpBang Comment
 hi def link javaScriptNumber Number
+hi def link markdownCode Comment
+hi def link markdownCodeBlock Comment
