@@ -48,7 +48,7 @@ export LESS_TERMCAP_ue=$'\e[0m'        # end underline
 
 source "$HOME/.coordinates"
 
-[ -d "$XDG_BIN_DIR" ] && export PATH="$PATH:$XDG_BIN_DIR"
+[ -d "$XDG_BIN_DIR" ] && export PATH="$XDG_BIN_DIR:$PATH"
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
   startx >& "$HOME/.Xlog"

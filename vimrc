@@ -7,7 +7,7 @@ set hidden
 set showmode
 set showcmd
 set wildmenu
-set cursorline
+" set cursorline
 
 set backspace=indent,eol,start
 set linebreak
@@ -107,8 +107,12 @@ nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") .
 nmap <silent> <F4> :set list!<cr>
 nmap <silent> <F5> :setlocal spell! spelllang=en<cr>
 nmap <silent> <F6> :setlocal spell! spelllang=fr<cr>
-nmap <silent> <F7> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
+nmap <silent> <F7> :call ToggleSyntax()<cr>
 nmap <silent> <F8> :call ToggleConceal()<cr>
+nmap <silent> <F9> :call ToggleText()<cr>
+nmap <silent> <F10> :edit<cr>
+nmap <silent> <F11> :call EditSyntax()<cr>
+nmap <silent> <F12> :call EditColorScheme()<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>
 nmap <silent> <leader>yy yy:call YankClip()<cr>
 vmap <silent> <leader>gy y:call Yank()<cr>
@@ -134,6 +138,31 @@ endfunction
 function! Define(word)
     let response = system("wn " . a:word)
     echo response
+endfunction
+
+function! EditSyntax()
+    let filename = substitute(system("findvimsyntax " . &filetype), "\n$", "", "")
+    exec 'e ' . fnameescape(filename)
+endfunction
+
+function! EditColorScheme()
+    exec 'e ' . fnameescape($HOME . "/.vim/colors/" . g:colors_name . ".vim")
+endfunction
+
+function! ToggleSyntax()
+    if exists("g:syntax_on")
+        syntax off
+    else
+        syntax enable
+    endif
+endfunction
+
+function! ToggleText()
+    if &filetype == "text"
+        set filetype=
+    else
+        set filetype=text
+    endif
 endfunction
 
 function! ToggleConceal()
@@ -203,7 +232,7 @@ function! CompleteMuttAliases(findstart, base)
         " call mutt with the appropriate parameters
         let result = []
         if strlen(a:base)
-            let query_response = system("~/bin/mutt_alias_query " . a:base)
+            let query_response = system("mutt_alias_query " . a:base)
             let result = split(query_response, '\n')
         endif
         return result
