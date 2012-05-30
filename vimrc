@@ -84,15 +84,12 @@ vmap <leader>s :s/
 nmap <leader>S :s/
 nmap <leader>o o<esc>k
 nmap <leader>O O<esc>j
-nmap <leader>= gg=G 
 nmap <leader>j :bn<cr>
 nmap <leader>k :bp<cr>
 nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bd<cr>
 vmap <leader>t :!titlecase<cr>
-nmap <Leader>w :set colorcolumn=80<cr>
-nmap <Leader>W :set colorcolumn=0<cr>
 " nmap <return> zA
 nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
@@ -107,12 +104,12 @@ nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") .
 nmap <silent> <F4> :set list!<cr>
 nmap <silent> <F5> :setlocal spell! spelllang=en<cr>
 nmap <silent> <F6> :setlocal spell! spelllang=fr<cr>
-nmap <silent> <F7> :call ToggleSyntax()<cr>
-nmap <silent> <F8> :call ToggleConceal()<cr>
-nmap <silent> <F9> :call ToggleText()<cr>
-nmap <silent> <F10> :edit<cr>
-nmap <silent> <F11> :call EditSyntax()<cr>
-nmap <silent> <F12> :call EditColorScheme()<cr>
+nmap <silent> <F7> :call ToggleWrap()<cr>
+nmap <silent> <F8> :call ToggleSyntax()<cr>
+nmap <silent> <F9> :call ToggleConceal()<cr>
+nmap <silent> <F10> :call ToggleText()<cr>
+nmap <silent> <F11> :edit<cr>
+nmap <silent> <F12> :call EditSyntax()<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>
 nmap <silent> <leader>yy yy:call YankClip()<cr>
 vmap <silent> <leader>gy y:call Yank()<cr>
@@ -173,6 +170,19 @@ function! ToggleConceal()
         set conceallevel=2
         echomsg "conceallevel enabled"
     endif
+endfunction
+
+function! ToggleWrap()
+ if (&wrap == 1)
+   if (&linebreak == 0)
+     set linebreak
+   else
+     set nowrap
+   endif
+ else
+   set wrap
+   set nolinebreak
+ endif
 endfunction
 
 function! GetCharName()
