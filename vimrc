@@ -173,16 +173,24 @@ function! ToggleConceal()
 endfunction
 
 function! ToggleWrap()
- if (&wrap == 1)
-   if (&linebreak == 0)
-     set linebreak
-   else
-     set nowrap
-   endif
- else
-   set wrap
-   set nolinebreak
- endif
+    if (&wrap == 1)
+        if (&linebreak == 0)
+            set linebreak
+        else
+            set nowrap
+        endif
+    else
+        set wrap
+        set nolinebreak
+    endif
+endfunction
+
+function! ToggleBar()
+    if (&laststatus == 0)
+        set laststatus=2
+    else
+        set laststatus=0
+    endif
 endfunction
 
 function! GetCharName()

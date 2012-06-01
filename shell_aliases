@@ -129,7 +129,7 @@ alias D='date "+%Y_%m_%d_%H_%M"'
 alias zt='z -t'
 alias zr='z -r'
 
-alias nmt='sudo -u nmt'
+# alias nmt='sudo -u nmt'
 alias file_permissions_clear='find . -type f -print -perm -a+x -exec chmod 644 {} \;'
 alias dir_permissions_clear='find . -type d -print -exec chmod 755 {} \;'
 alias fatgarbage_remove='find . -name "._*" -print -exec rm {} \;'

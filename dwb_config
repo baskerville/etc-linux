@@ -2,7 +2,7 @@
 [default]
 adblocker-filterlist=/home/ice/.config/dwb/adblock_default
 adblocker=true
-auto-completion=false
+auto-completion=true
 auto-insert-mode=false
 auto-load-images=true
 auto-resize-window=false
