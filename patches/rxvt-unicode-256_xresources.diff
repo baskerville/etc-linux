@@ -1,12 +1,10 @@
-diff --git a/src/xdefaults.C b/src/xdefaults.C
-index 23b6822..382f3b1 100644
---- a/src/xdefaults.C
-+++ b/src/xdefaults.C
-@@ -155,6 +155,250 @@ optList[] = {
-               RSTRG (Rs_color + minCOLOR + 5, "color5", "color"),
-               RSTRG (Rs_color + minCOLOR + 6, "color6", "color"),
-               RSTRG (Rs_color + minCOLOR + 7, "color7", "color"),
-+              // 88 xterm colors
+--- a/src/xdefaults.C	2012-01-02 04:57:35.000000000 +0100
++++ b/src/xdefaults.C	2012-03-14 21:18:29.018014515 +0100
+@@ -169,6 +169,250 @@
+               RSTRG (Rs_color + minBrightCOLOR + 5, "color13", "color"),
+               RSTRG (Rs_color + minBrightCOLOR + 6, "color14", "color"),
+               RSTRG (Rs_color + minBrightCOLOR + 7, "color15", "color"),
++              /* 88 colors terminals */
 +              RSTRG (Rs_color + minCOLOR + 16, "color16", "color"),
 +              RSTRG (Rs_color + minCOLOR + 17, "color17", "color"),
 +              RSTRG (Rs_color + minCOLOR + 18, "color18", "color"),
@@ -80,7 +78,7 @@ index 23b6822..382f3b1 100644
 +              RSTRG (Rs_color + minCOLOR + 86, "color86", "color"),
 +              RSTRG (Rs_color + minCOLOR + 87, "color87", "color"),
 +#if USE_256_COLORS
-+              // 256 xterm colors
++              /* 256 colors terminals */
 +              RSTRG (Rs_color + minCOLOR + 88, "color88", "color"),
 +              RSTRG (Rs_color + minCOLOR + 89, "color89", "color"),
 +              RSTRG (Rs_color + minCOLOR + 90, "color90", "color"),
@@ -250,6 +248,6 @@ index 23b6822..382f3b1 100644
 +              RSTRG (Rs_color + minCOLOR + 254, "color254", "color"),
 +              RSTRG (Rs_color + minCOLOR + 255, "color255", "color"),
 +#endif
-               RSTRG (Rs_color + minBrightCOLOR + 0, "color8", "color"),
-               RSTRG (Rs_color + minBrightCOLOR + 1, "color9", "color"),
-               RSTRG (Rs_color + minBrightCOLOR + 2, "color10", "color"),
+ #ifndef NO_BOLD_UNDERLINE_REVERSE
+               RSTRG (Rs_color + Color_BD, "colorBD", "color"),
+               RSTRG (Rs_color + Color_IT, "colorIT", "color"),
