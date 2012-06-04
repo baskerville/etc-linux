@@ -94,7 +94,10 @@ N1() {
 }
 
 R() {
-    rm -v -- *."$@" 
+    while [ $# -gt 0 ] ; do
+        rm -v -- *."$1" 
+        shift
+    done
 }
 
 dud() {
