@@ -8,6 +8,7 @@ alias rgrep='grep -r'
 alias chbin='chmod u+x'
 alias chord='chmod 644'
 alias lines='wc -l'
+alias x='xargs -d "\n"'
 
 alias scf='. $SHELL_CONFIG'
 alias ecf='editor $SHELL_CONFIG'
