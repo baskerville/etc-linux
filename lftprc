@@ -1,0 +1,4 @@
+set bmk:save-passwords true
+alias ls "ls -h"
+alias la "ls -a"
+alias l ls
