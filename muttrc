@@ -101,7 +101,7 @@ macro index ) "<search>~P\n"
 macro index,attach { "<first-entry>"
 macro index,attach } "<last-entry>"
 
-# TODO: \'x intead of gx
+# TODO: \'x instead of gx
 macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
 macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
@@ -126,4 +126,4 @@ source ~/.mutt/theme
 folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %-70.70s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %-70.70s %> %D  %4c"'
 
-mailboxes =inbox =univ =lists =arch =vim =commandes =paypal =apo =xd =typo =fai
+mailboxes =inbox =univ =lists =arch =vim =mutt =commandes =paypal =apo =xd =typo =fai
