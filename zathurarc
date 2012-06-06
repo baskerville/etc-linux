@@ -22,5 +22,8 @@ set statusbar-bg       '#32312E'
 set statusbar-fg       '#A6A7AA'
 set recolor-darkcolor  '#69717A'
 set recolor-lightcolor '#FAF0E6'
+set highlight-color        '#FFFF00'
+set highlight-active-color '#00FFFF'
+set highlight-transparency 0.33
 
 # vim: set ft=conf:
