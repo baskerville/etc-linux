@@ -109,7 +109,7 @@ macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
 macro index,pager ga "<change-folder>=arch\n" "Go to Arch"
 macro index,pager gv "<change-folder>=vim\n" "Go to Vim"
 macro index,pager gm "<change-folder>=mutt\n" "Go to Mutt"
-macro index,pager gu "<change-folder>=univ\n" "Go to Vim"
+macro index,pager gu "<change-folder>=urxvt\n" "Go to URxvt"
 macro index,pager gc "<change-folder>=commandes\n" "Go to Commandes"
 macro index,pager gp "<change-folder>=paypal\n" "Go to Paypal"
 macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
@@ -126,4 +126,4 @@ source ~/.mutt/theme
 folder-hook !=sent 'set index_format = "%3C  %Z  %-21.21n  %-70.70s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %Z  %-21.21t  %-70.70s %> %D  %4c"'
 
-mailboxes =inbox =univ =lists =arch =vim =mutt =commandes =paypal =apo =xd =typo =fai
+mailboxes =inbox =lists =arch =vim =mutt =urxvt =commandes =paypal =apo =xd =typo =fai =univ
