@@ -14,7 +14,7 @@ URxvt.saveLines:            32767
 
 URxvt.urlLauncher:          web_browser
 URxvt.perl-ext:             default
-URxvt.perl-ext-common:      keyboard-select,url-select,clipboard,-option-popup,-selection-popup,-searchable-scrollback,autocomplete-ALL-the-things
+URxvt.perl-ext-common:      keyboard-select,url-select,clipboard,autocomplete-ALL-the-things,-option-popup,-selection-popup,-searchable-scrollback
 URxvt.keysym.M-slash:       perl:aAtt:complete
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym:M-s:           perl:keyboard-select:search

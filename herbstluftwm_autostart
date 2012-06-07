@@ -152,11 +152,11 @@ hc keybind $Mod-Alt-Control-XF86Eject spawn sudo systemctl poweroff
 
 hc set default_frame_layout  2
 hc set gapless_grid          1
+hc set window_gap            0
 hc set frame_border_width    0
 hc set frame_active_opacity  25
 hc set frame_normal_opacity  25
 hc set window_border_width   2
-hc set window_gap            0
 
 hc unrule -F
 hc rule focus=on
