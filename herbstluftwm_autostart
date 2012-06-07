@@ -41,7 +41,7 @@ hc keybind $Mod-Return set_layout max
 hc keybind $Mod-g set_layout grid
 hc keybind $Mod-0 load '(clients grid:0)'
 
-RESIZESTEP=0.05
+RESIZESTEP=0.03
 
 hc keybind $Mod-Control-h resize left  +$RESIZESTEP
 hc keybind $Mod-Control-j resize down  +$RESIZESTEP
