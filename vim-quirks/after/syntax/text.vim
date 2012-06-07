@@ -2,15 +2,15 @@ if !has('conceal')
     finish
 endif
 
-syn match emSpace " " conceal cchar=@
-syn match enSpace " " conceal cchar=&
-syn match threePerEmSpace " " conceal cchar=⅓
-syn match fourPerEmSpace " " conceal cchar=¼
-syn match sixPerEmSpace " " conceal cchar=⅙
-syn match thinSpace " " conceal cchar=,
-syn match hairSpace " " conceal cchar=ˇ
-syn match figureSpace " " conceal cchar=#
-syn match punctuationSpace " " conceal cchar=!
+syn match emSpace " " conceal cchar=@ containedin=ALL
+syn match enSpace " " conceal cchar=& containedin=ALL
+syn match threePerEmSpace " " conceal cchar=⅓ containedin=ALL
+syn match fourPerEmSpace " " conceal cchar=¼ containedin=ALL
+syn match sixPerEmSpace " " conceal cchar=⅙ containedin=ALL
+syn match thinSpace " " conceal cchar=, containedin=ALL
+syn match hairSpace " " conceal cchar=ˇ containedin=ALL
+syn match figureSpace " " conceal cchar=# containedin=ALL
+syn match punctuationSpace " " conceal cchar=! containedin=ALL
 
 hi link emSpace SpecialKey
 hi link enSpace SpecialKey
