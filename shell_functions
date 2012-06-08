@@ -66,7 +66,7 @@ Ff() {
 }
 
 fxo() {
-    find . -iname "*$@*" -printf '%P\n' -exec open "{}" \; 
+    find . -iname "*$@*" -printf "%P\n" -exec open "{}" \; 
 }
 
 L() {

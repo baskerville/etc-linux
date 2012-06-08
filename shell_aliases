@@ -79,7 +79,7 @@ alias me='file -b --mime-encoding'
 
 alias et='editor -p'
 alias vd='vimdiff'
-alias c='mpop -a'
+alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
 alias s='sr duckduckgo'
 alias cb='checkbashisms -f'
 alias ms='mpc search any'
