@@ -3,15 +3,20 @@
 rounded = 0
 border_width = 0
 background_color = #FAF0E6 100
+# ID 2
+rounded = 0
+border_width = 1
+border_color = #E7DFD5 100
+background_color = #FAF0E6 100
 
 # Panel
 panel_items = STC
 panel_monitor = all
 panel_position = top center horizontal
-panel_size = 100% 20
+panel_size = 100% 22
 panel_margin = 0 0
 panel_padding = 5 2 0
-panel_background_id = 1
+panel_background_id = 2
 panel_layer = bottom
 panel_dock = 0
 wm_menu = 1
