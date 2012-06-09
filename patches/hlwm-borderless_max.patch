@@ -1,15 +1,15 @@
-From d4aa0e62c0c7d171ea9bb5bc7e4db96cda43fcdc Mon Sep 17 00:00:00 2001
+From 94bcb21ce2e3168377bd364071673a26a3ebfb64 Mon Sep 17 00:00:00 2001
 From: baskerville <nihilhill@gmail.com>
-Date: Sat, 9 Jun 2012 13:32:46 +0200
+Date: Sat, 9 Jun 2012 18:52:42 +0200
 Subject: [PATCH] Added an option: 'borderless_max'
 
 ---
  doc/herbstluftwm.txt |    4 ++++
- src/clientlist.c     |   15 ++++++++++-----
+ src/clientlist.c     |   18 ++++++++++++------
  src/clientlist.h     |    1 +
- src/layout.c         |    8 ++++++++
+ src/layout.c         |    9 +++++++++
  src/settings.c       |    1 +
- 5 files changed, 24 insertions(+), 5 deletions(-)
+ 5 files changed, 27 insertions(+), 6 deletions(-)
 
 diff --git a/doc/herbstluftwm.txt b/doc/herbstluftwm.txt
 index e72d32b..ecdeff7 100644
@@ -27,7 +27,7 @@ index e72d32b..ecdeff7 100644
      If set, focus stays in the window, if window is shifted to another frame.
      If unset, focus stays in the frame.
 diff --git a/src/clientlist.c b/src/clientlist.c
-index 5a4204b..002c465 100644
+index 5a4204b..856a8f0 100644
 --- a/src/clientlist.c
 +++ b/src/clientlist.c
 @@ -52,6 +52,7 @@ static HSClient* create_client() {
@@ -38,10 +38,16 @@ index 5a4204b..002c465 100644
      return hc;
  }
  
-@@ -331,11 +332,15 @@ void client_resize(HSClient* client, XRectangle rect) {
+@@ -326,16 +327,21 @@ void client_resize(HSClient* client, XRectangle rect) {
+         rect.height = size.height;
+     }
+     if (RECTANGLE_EQUALS(client->last_size, rect)
++        && !client->borderless
+         && client->last_border_width == *g_window_border_width) {
+         return;
      }
      client->last_size = rect;
-     client->last_border_width = *g_window_border_width;
+-    client->last_border_width = *g_window_border_width;
 -
 -    // apply border width
 -    rect.width -= *g_window_border_width * 2;
@@ -55,6 +61,7 @@ index 5a4204b..002c465 100644
 +        rect.width -= *g_window_border_width * 2;
 +        rect.height -= *g_window_border_width * 2;
 +        XSetWindowBorderWidth(g_display, win, *g_window_border_width);
++        client->last_border_width = *g_window_border_width;
 +    }
      XMoveResizeWindow(g_display, win, rect.x, rect.y, rect.width, rect.height);
      //// send new size to client
@@ -72,7 +79,7 @@ index 1a66f07..2006725 100644
  } HSClient;
  
 diff --git a/src/layout.c b/src/layout.c
-index 522535f..7c325c3 100644
+index 522535f..136fa0b 100644
 --- a/src/layout.c
 +++ b/src/layout.c
 @@ -34,6 +34,7 @@ int* g_focus_follows_shift;
@@ -99,18 +106,19 @@ index 522535f..7c325c3 100644
          // add the space, if count doesnot divide frameheight without remainder
          cur.height += (i == count-1) ? last_step_y : 0;
          cur.width += (i == count-1) ? last_step_x : 0;
-@@ -668,6 +671,10 @@ void frame_apply_client_layout_max(HSFrame* frame, XRectangle rect) {
+@@ -668,6 +671,11 @@ void frame_apply_client_layout_max(HSFrame* frame, XRectangle rect) {
      int selection = frame->content.clients.selection;
      for (int i = 0; i < count; i++) {
          HSClient* client = get_client_from_window(buf[i]);
-+        if (*g_borderless_max && !g_cur_frame->parent && !client->pseudotile)
++        if (*g_borderless_max && !g_cur_frame->parent && !client->pseudotile) {
 +            client->borderless = true;
-+        else
++        } else {
 +            client->borderless = false;
++        }
          client_setup_border(client, (g_cur_frame == frame) && (i == selection));
          client_resize_tiling(client, rect);
          if (i == selection) {
-@@ -724,6 +731,7 @@ void frame_apply_client_layout_grid(HSFrame* frame, XRectangle rect) {
+@@ -724,6 +732,7 @@ void frame_apply_client_layout_grid(HSFrame* frame, XRectangle rect) {
  
              // apply size
              HSClient* client = get_client_from_window(buf[i]);

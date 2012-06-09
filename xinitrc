@@ -24,5 +24,6 @@ happy_fullscreen &
 
 # exec openbox-session
 exec herbstluftwm --locked
+# exec herbstluftwm --verbose --locked
 
 # vim: set ft=conf:
