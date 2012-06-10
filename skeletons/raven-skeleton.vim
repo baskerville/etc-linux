@@ -75,10 +75,10 @@ hi PmenuSel        ctermfg={fg_ceiling}    ctermbg={fg_comment}
 hi PmenuSbar       ctermfg={fg_ceiling}    ctermbg={fg_comment}
 hi WildMenu        ctermfg={fg_ceiling}    ctermbg={fg_comment}    cterm=none
 
-hi Visual          ctermfg=bg     ctermbg={cyan}
-hi VisualNOS       ctermfg=bg     ctermbg={blue}
-hi VertSplit       ctermfg=bg     ctermbg={bg_bump}    cterm=none
-hi LineNr          ctermfg={fg_comment}    ctermbg={bg_bump}
+hi Visual          ctermfg=bg             ctermbg={cyan}
+hi VisualNOS       ctermfg=bg             ctermbg={blue}
+hi VertSplit       ctermfg=bg             ctermbg={bg_bump}    cterm=none
+hi LineNr          ctermfg={fg_comment}   ctermbg={bg_bump}
 
 hi Title           ctermfg={azure}
 hi SpecialKey      ctermfg={green}
@@ -87,7 +87,7 @@ hi NonText         ctermfg={fg_comment}
 hi MatchParen      ctermfg={bg_floor}     ctermbg={teal}
 hi Directory       ctermfg={violet}
 
-hi ErrorMsg        ctermfg={red}    ctermbg=bg
+hi ErrorMsg        ctermfg={red}          ctermbg=bg
 hi WarningMsg      ctermfg={orange}
 hi MoreMsg         ctermfg={teal}
 hi ModeMsg         ctermfg={pink}
@@ -119,16 +119,16 @@ hi diffAdded       ctermfg={spring}
 hi diffRemoved     ctermfg={pink}
 hi diffChanged     ctermfg={orange}
 
-hi diffAdd         ctermfg={bg_floor}     ctermbg={green}
-hi diffDelete      ctermfg={bg_bump}   ctermbg={fg_comment}
-hi diffText        ctermfg={bg_floor}     ctermbg={red}
-hi diffChange      ctermfg={bg_floor}     ctermbg=fg
+hi diffAdd         ctermfg={bg_floor}   ctermbg={green}
+hi diffDelete      ctermfg={bg_bump}    ctermbg={fg_comment}
+hi diffText        ctermfg={bg_floor}   ctermbg={red}
+hi diffChange      ctermfg={bg_floor}   ctermbg=fg
 hi diffOldLine     ctermfg={violet}
 
-hi SpellBad        ctermfg={red}    ctermbg=bg      cterm=underline
-hi SpellCap        ctermfg={pink}    ctermbg=bg      cterm=underline
-hi SpellRare       ctermfg={violet}    ctermbg=bg      cterm=underline
-hi SpellLocal      ctermfg={orange}    ctermbg=bg      cterm=underline
+hi SpellBad        ctermfg={red}        ctermbg=bg    cterm=underline
+hi SpellCap        ctermfg={pink}       ctermbg=bg    cterm=underline
+hi SpellRare       ctermfg={violet}     ctermbg=bg    cterm=underline
+hi SpellLocal      ctermfg={orange}     ctermbg=bg    cterm=underline
 
 hi mkdCode         ctermfg={fg_comment}
 hi mkdURL          ctermfg={azure}
