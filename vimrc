@@ -97,6 +97,7 @@ nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
 nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
+nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
 "nmap <silent> <leader>_ :call Yank(expand("%").":".line("."))<cr>
 nmap <silent> <F1>  :set number!<cr>
 nmap <silent> <F2>  :set hlsearch!<cr>
@@ -135,6 +136,12 @@ endfunction
 function! Define(word)
     let response = system("wn " . a:word)
     echo response
+endfunction
+
+function! TransparentlyExecute(command)
+    let w = winsaveview()
+    execute a:command
+    call winrestview(w)
 endfunction
 
 function! EditSyntax()
