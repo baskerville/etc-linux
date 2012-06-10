@@ -1,10 +1,10 @@
 #include "colors/current"
 
 URxvt.modifier:             alt
-URxvt.font:                 xft:Inconsolata:pixelsize=21,xft:Meslo LG M:pixelsize=21
-URxvt.boldFont:             xft:Inconsolata:pixelsize=21,xft:Meslo LG M:pixelsize=21
-URxvt.italicFont:           xft:Inconsolata:pixelsize=21,xft:Meslo LG M:pixelsize=21
-URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=21,xft:Meslo LG M:pixelsize=21
+URxvt.font:                 xft:Inconsolata:pixelsize=16,xft:Meslo LG M:pixelsize=16
+URxvt.boldFont:             xft:Inconsolata:pixelsize=16,xft:Meslo LG M:pixelsize=16
+URxvt.italicFont:           xft:Inconsolata:pixelsize=16,xft:Meslo LG M:pixelsize=16
+URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=16,xft:Meslo LG M:pixelsize=16
 URxvt.geometry:             80x24
 URxvt.internalBorder:       9
 URxvt.iso14755:             false

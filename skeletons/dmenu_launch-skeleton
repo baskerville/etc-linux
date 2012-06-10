@@ -1,0 +1,9 @@
+#! /bin/dash
+
+fn='-*-terminus-medium-*-*-*-20-*-*-*-*-*-*-*'
+nb='{background}'
+nf='{foreground}'
+sb='{bg_bump}'
+sf='{fg_highlight}'
+
+dmenu_run -i -fn "$fn" -nb "$nb" -nf "$nf" -sb "$sb" -sf "$sf" -p '>' -q
