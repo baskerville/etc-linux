@@ -40,6 +40,7 @@ hc keybind $Mod-m set_layout max
 hc keybind $Mod-Return set_layout max
 hc keybind $Mod-g set_layout grid
 hc keybind $Mod-0 load '(clients grid:0)'
+hc keybind $Mod-grave rotate
 
 RESIZESTEP=0.03
 
