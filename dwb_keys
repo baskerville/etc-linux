@@ -239,6 +239,8 @@ hints_url_background= ;O
 
 sanitize= 
 
+eval= 
+
 [-p]
 save_search_field=gs
 add_view=ga
