@@ -7,3 +7,8 @@
 a {
     color: #0082CB !important;
 }
+
+.dwb_hint {
+    padding: 3px !important;
+    border-radius: 3px !important;
+}

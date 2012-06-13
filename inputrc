@@ -9,8 +9,8 @@ set bind-tty-special-chars     off
 "\C-p": history-search-backward
 "\C-n": history-search-forward
 "\C-\M-p": dynamic-complete-history
-"\C-x\C-j": menu-complete
-"\C-x\C-k": menu-complete-backward
+"\C-x\C-i": menu-complete
+"\C-x\C-o": menu-complete-backward
 "\C-u": kill-whole-line
 
 "\ei": tab-insert
