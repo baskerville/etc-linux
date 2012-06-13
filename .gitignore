@@ -3,4 +3,5 @@ tint2rc
 colors/current
 colors/redef-current
 dwb_keys.*
+dwb_config.*
 style.css
