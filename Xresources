@@ -14,7 +14,7 @@ URxvt.saveLines:            32767
 
 URxvt.urlLauncher:          web_browser
 URxvt.perl-ext:             default
-URxvt.perl-ext-common:      keyboard-select,url-select,clipboard,autocomplete-ALL-the-things,-option-popup,-selection-popup,-searchable-scrollback
+URxvt.perl-ext-common:      keyboard-select,url-select,clipboard,autocomplete-ALL-the-things,font-size,-option-popup,-selection-popup,-searchable-scrollback
 URxvt.keysym.M-slash:       perl:aAtt:complete
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym:M-s:           perl:keyboard-select:search
@@ -22,6 +22,8 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-c:           perl:clipboard:copy
 URxvt.keysym.M-v:           perl:clipboard:paste
 URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
+URxvt.keysym.C-Up:          perl:font-size:increase
+URxvt.keysym.C-Down:        perl:font-size:decrease
 URxvt.keysym.S-Up:          command:\033]720;1\007
 URxvt.keysym.S-Down:        command:\033]721;1\007
 URxvt.keysym.C-Return:      command:\033[?25t

@@ -50,6 +50,7 @@ alias rmnn='rm -iv -- "$(nn)"'
 alias rmrfnn='rmrf -v -- "$(nn)"'
 alias mo='mosaic .'
 alias fq='fc-list | grep -i'
+alias fqf='fc-list : family file | grep -i'
 alias dpms='xset q | grep "^ *DPMS is" | awk "{print \$3}" | tr "[:upper:]" "[:lower:]"'
 
 alias allprops='xdotool search --class . | xargs -I % xprop -id %'
