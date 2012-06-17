@@ -1,10 +1,10 @@
 #include "colors/current"
 
 URxvt.modifier:             alt
-URxvt.font:                 xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:Erler Dingbats:pixelsize=12,xft:Droid Sans Fallback:pixelsize=18
-URxvt.boldFont:             xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:Erler Dingbats:pixelsize=12,xft:Droid Sans Fallback:pixelsize=18
-URxvt.italicFont:           xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:Erler Dingbats:pixelsize=12,xft:Droid Sans Fallback:pixelsize=18
-URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:Erler Dingbats:pixelsize=12,xft:Droid Sans Fallback:pixelsize=18
+URxvt.font:                 xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:DejaVu Sans Mono:pixelsize=18,xft:Droid Sans Fallback:pixelsize=18
+URxvt.boldFont:             xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:DejaVu Sans Mono:pixelsize=18,xft:Droid Sans Fallback:pixelsize=18
+URxvt.italicFont:           xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:DejaVu Sans Mono:pixelsize=18,xft:Droid Sans Fallback:pixelsize=18
+URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=21,xft:Droid Sans Mono:pixelsize=18,xft:DejaVu Sans Mono:pixelsize=18,xft:Droid Sans Fallback:pixelsize=18
 URxvt.geometry:             80x24
 URxvt.internalBorder:       9
 URxvt.iso14755:             false
