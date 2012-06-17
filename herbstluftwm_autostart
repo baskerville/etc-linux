@@ -155,8 +155,8 @@ hc set always_show_frame     1
 hc set default_frame_layout  2
 hc set gapless_grid          1
 hc set smart_surroundings    1
-hc set frame_border_width    1
 hc set window_gap            0
+hc set frame_border_width    2
 hc set window_border_width   2
 
 hc unrule -F
