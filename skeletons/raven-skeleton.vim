@@ -75,8 +75,8 @@ hi PmenuSel        ctermfg={fg_ceiling}    ctermbg={fg_comment}
 hi PmenuSbar       ctermfg={fg_ceiling}    ctermbg={fg_comment}
 hi WildMenu        ctermfg={fg_ceiling}    ctermbg={fg_comment}    cterm=none
 
-hi Visual          ctermfg=bg             ctermbg={cyan}
-hi VisualNOS       ctermfg=bg             ctermbg={blue}
+hi Visual          ctermfg=bg             ctermbg={violet}
+hi VisualNOS       ctermfg=bg             ctermbg={magenta}
 hi VertSplit       ctermfg=bg             ctermbg={bg_bump}    cterm=none
 hi LineNr          ctermfg={fg_comment}   ctermbg={bg_bump}
 

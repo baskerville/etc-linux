@@ -75,10 +75,10 @@ hi PmenuSel        ctermfg=23    ctermbg=20
 hi PmenuSbar       ctermfg=23    ctermbg=20
 hi WildMenu        ctermfg=23    ctermbg=20    cterm=none
 
-hi Visual          ctermfg=bg     ctermbg=159
-hi VisualNOS       ctermfg=bg     ctermbg=198
-hi VertSplit       ctermfg=bg     ctermbg=19    cterm=none
-hi LineNr          ctermfg=20    ctermbg=19
+hi Visual          ctermfg=bg             ctermbg=216
+hi VisualNOS       ctermfg=bg             ctermbg=236
+hi VertSplit       ctermfg=bg             ctermbg=19    cterm=none
+hi LineNr          ctermfg=20   ctermbg=19
 
 hi Title           ctermfg=178
 hi SpecialKey      ctermfg=120
@@ -87,7 +87,7 @@ hi NonText         ctermfg=20
 hi MatchParen      ctermfg=16     ctermbg=139
 hi Directory       ctermfg=216
 
-hi ErrorMsg        ctermfg=43    ctermbg=bg
+hi ErrorMsg        ctermfg=43          ctermbg=bg
 hi WarningMsg      ctermfg=62
 hi MoreMsg         ctermfg=139
 hi ModeMsg         ctermfg=255
@@ -119,16 +119,16 @@ hi diffAdded       ctermfg=100
 hi diffRemoved     ctermfg=255
 hi diffChanged     ctermfg=62
 
-hi diffAdd         ctermfg=16     ctermbg=120
-hi diffDelete      ctermfg=19   ctermbg=20
-hi diffText        ctermfg=16     ctermbg=43
-hi diffChange      ctermfg=16     ctermbg=fg
+hi diffAdd         ctermfg=16   ctermbg=120
+hi diffDelete      ctermfg=19    ctermbg=20
+hi diffText        ctermfg=16   ctermbg=43
+hi diffChange      ctermfg=16   ctermbg=fg
 hi diffOldLine     ctermfg=216
 
-hi SpellBad        ctermfg=43    ctermbg=bg      cterm=underline
-hi SpellCap        ctermfg=255    ctermbg=bg      cterm=underline
-hi SpellRare       ctermfg=216    ctermbg=bg      cterm=underline
-hi SpellLocal      ctermfg=62    ctermbg=bg      cterm=underline
+hi SpellBad        ctermfg=43        ctermbg=bg    cterm=underline
+hi SpellCap        ctermfg=255       ctermbg=bg    cterm=underline
+hi SpellRare       ctermfg=216     ctermbg=bg    cterm=underline
+hi SpellLocal      ctermfg=62     ctermbg=bg    cterm=underline
 
 hi mkdCode         ctermfg=20
 hi mkdURL          ctermfg=178
