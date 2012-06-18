@@ -144,7 +144,6 @@ hc keybind XF86KbdBrightnessUp spawn togglethm light
 hc keybind $Mod-XF86KbdBrightnessDown spawn xset -dpms
 hc keybind $Mod-XF86KbdBrightnessUp spawn xset +dmps
 
-hc keybind $Mod-BackSpace             spawn xkill
 hc keybind Shift-XF86Eject            spawn wodim -eject
 hc keybind $Mod-XF86Eject             spawn dpms_standby
 hc keybind $Mod-Alt-XF86Eject         spawn sudo systemctl suspend
