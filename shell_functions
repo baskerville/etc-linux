@@ -105,11 +105,11 @@ dua() {
 }
 
 OO() {
-    tail -$@ | xargs -I % open "%"
+    tail -n "$@" | xargs -I % open "%"
 }
 
 RR() {
-    tail -$@ | xargs -I % rm -v "%"
+    tail -n "$@" | xargs -I % rm -v "%"
 }
 
 rcd() {
@@ -138,15 +138,11 @@ pb() {
 }
 
 pbg() {
-    pb "$@" | head -1 | xargs wget 
+    pb "$@" | head -n 1 | xargs wget 
 }
 
 ngfind() {
     grep -E $@ $XDG_DATA_HOME/nglist.txt | tr -dC '[a-z].\n' 
-}
-
-prune() {
-    rm -iv $XDG_BIN_DIR/$@ 
 }
 
 cpmicro() {
@@ -165,12 +161,12 @@ cphexagon() {
     cp  -Lr "$@" $HEXAGON/ 
 }
 
-mm() {
-    local output="$XDG_TMP_DIR/.mailcheck"
-    mpop -a | tee $output
-    local messages_count=$(grep -m 1 -Ech "^retrieving" $output)
-    [ "$messages_count" -gt 0 ] && m
-}
+# mm() {
+#     local output="$XDG_TMP_DIR/.mailcheck"
+#     mpop -a | tee $output
+#     local messages_count=$(grep -m 1 -Ech "^retrieving" $output)
+#     [ "$messages_count" -gt 0 ] && m
+# }
 
 mkmaildir() {
     local maildir="$HOME/.maildir"

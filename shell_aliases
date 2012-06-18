@@ -1,25 +1,27 @@
+alias j='jobs'
+alias x='xargs -d "\n"'
 alias cp='cp -i'
 alias mv='mv -i'
 alias cpr='cp -r'
-alias rmrf='rm -rf'
+
+alias ig='g -i'
+alias gn='g -n'
+alias ign='g -in'
+alias gcn='g -nC 1'
+
 alias cgrep='grep --color=auto'
 alias igrep='grep -i'
 alias rgrep='grep -r'
-alias chbin='chmod u+x'
+
+alias chbin='chmod 755'
 alias chord='chmod 644'
-alias lines='wc -l'
-alias x='xargs -d "\n"'
-alias j='jobs'
+alias octalrights='stat -c %a'
 
 alias scf='. $SHELL_CONFIG'
 alias ecf='editor $SHELL_CONFIG'
 alias epf='editor $SHELL_PROFILE'
 alias eal='editor $SHELL_ALIASES'
 alias efu='editor $SHELL_FUNCTIONS'
-
-alias ...='../..'
-alias ....='../../..'
-alias .....='../../../..'
 
 alias ls='ls -h --color=auto'
 alias l='ls --group-directories-first'
@@ -45,35 +47,30 @@ alias nAl='nA -l'
 alias on='open "$(nn)"'
 alias any='le1 | shuf -n 1'
 alias so='any | xargs open'
-alias ded='find . -type d -empty -print -delete'
+
+alias rmrf='rm -rf'
 alias rmnn='rm -iv -- "$(nn)"'
 alias rmrfnn='rmrf -v -- "$(nn)"'
+alias ded='find . -type d -empty -print -delete'
+
 alias mo='mosaic .'
 alias fq='fc-list : family | grep -i'
 alias fqs='fc-list : family style | grep -i'
 alias fqf='fc-list : family file | grep -i'
 alias dpms='xset q | grep "^ *DPMS is" | awk "{print \$3}" | tr "[:upper:]" "[:lower:]"'
 
-alias allprops='xdotool search --class . | xargs -I % xprop -id %'
-alias yd='youtube-dl -t'
-alias fp='cp -t ~/.fonts'
-alias cs='color_sieve'
 alias fren='tw www.freetranslation.com.fr-en'
 alias enfr='tw www.freetranslation.com.en-fr'
 alias deen='tw www.freetranslation.com.de-en'
 alias ende='tw www.freetranslation.com.en-de'
-alias phosphor='/usr/lib/xscreensaver/phosphor -program bash'
-alias apple2='/usr/lib/xscreensaver/apple2 -text -program bash'
-alias vub='vim_update_bundles'
+
+alias yd='youtube-dl -t'
+alias te='crontab -e'
+alias tl='crontab -l'
 alias vpx='vp -vo x11'
 alias am='alsamixer -g'
-
-alias nzd='nzbget -D'
-alias nzl='nzbget -L'
-alias nzq='nzbget -Q'
-
-alias cgl='castget -ln1'
-alias cgg='castget -vn1'
+alias fp='cp -t $HOME/.fonts'
+alias allprops='xdotool search --class . | xargs -I % xprop -id %'
 
 alias i='type -a'
 alias y='file -b'
@@ -82,7 +79,6 @@ alias me='file -b --mime-encoding'
 
 alias et='editor -p'
 alias vd='vimdiff'
-alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
 alias s='sr duckduckgo'
 alias cb='checkbashisms -f'
 alias ms='mpc search any'
@@ -95,36 +91,38 @@ alias clipo='xsel -bo'
 
 alias mduration="mediainfo '--Inform=General;%Duration/String%'"
 
+alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
+alias nb='togglecursor; newsbeuter; togglecursor'
+
 alias ivz='iv -Z'
 alias ivzr='ivz -tfr .'
 alias ivr='iv -tfr .'
+
 alias p="clipo | editor -"
 alias gp="primo | editor -"
+
 alias h="xxd -l 256"
+alias bcl='bc -ql $HOME/.bcrc'
+
+alias detox='detox -v'
+alias mp4box='MP4Box'
 alias mplayer='mplayer -softvol'
 alias vpnz='mplayer -vo x11 -nozoom'
-alias detox='detox -v'
-alias octalrights='stat -c %a'
-alias irb='irb --simple-prompt'
-alias csi='rlwrap csi -q'
-alias python='rlwrap python -q'
-alias maxima='rlwrap maxima -q'
-alias nb='togglecursor; newsbeuter; togglecursor'
-alias gdb='rlwrap gdb -q'
-alias bcl='bc -ql $HOME/.bcrc'
-alias mp4box='MP4Box'
-alias ig='g -i'
-alias gn='g -n'
-alias ign='g -in'
-alias gcn='g -nC 1'
+
 alias up='git commit -am update'
 alias pu='git push'
 alias upu='up && pu'
 
-alias subscriptions='grep ":" ~/.jnewsrc | awk -F : "{print $1}"'
+alias gdb='rlwrap gdb -q'
+alias irb='irb --simple-prompt'
+alias csi='rlwrap csi -q'
+alias python='rlwrap python -q'
+alias maxima='rlwrap maxima -q'
+
+alias subscriptions='grep ":" $HOME/.jnewsrc | awk -F : "{print $1}"'
 alias nu='pgrep -x slrnpull > /dev/null 2>&1 || slrnpull'
 alias dfc='dfc -d'
-alias dfcr='dfc -p rootfs'
+alias dfcr='dfc -np rootfs'
 
 alias T='date "+%A"'
 alias M='date "+%B"'
@@ -137,13 +135,13 @@ alias zt='z -t'
 alias zr='z -r'
 
 # alias nmt='sudo -u nmt'
-alias file_permissions_clear='find . -type f -print -perm -a+x -exec chmod 644 {} \;'
-alias dir_permissions_clear='find . -type d -print -exec chmod 755 {} \;'
-alias fatgarbage_remove='find . -name "._*" -print -exec rm {} \;'
-alias dsstore_remove='find . -type f -name .DS_Store -print -exec rm {} \;'
-alias dbthumbs_remove='find . -type f -name Thumbs.db -print -exec rm {} \;'
-alias b="acpi -b | grep -o '[0-9]*%'"
-alias lowerdir='find . -maxdepth 1 -type d ! -samefile . -exec prename -vl {} \;'
+alias clean_files_permissions='find . -type f -print -perm -a+x -exec chmod 644 {} \;'
+alias clean_dirs_permissions='find . -type d -print -exec chmod 755 {} \;'
+alias remove_fatgarbage='find . -name "._*" -print -exec rm {} \;'
+alias remove_dsstore='find . -type f -name .DS_Store -print -exec rm {} \;'
+alias remove_dbthumbs='find . -type f -name Thumbs.db -print -exec rm {} \;'
+
+alias b="acpi -b | grep -o '[0-9]\+%'"
 alias wrp='wr FRXX0076'
 
 alias zdata="cd "$DATA""
@@ -193,5 +191,12 @@ alias lpp='lp -o MediaType=PhotopaperPlus -o Resolution=603x600dpi'
 alias dlp='lp -o Duplex=DuplexNoTumble'
 alias dlp6='lp -o Duplex=DuplexNoTumble -o Resolution=600dpi'
 alias lp6='lp -o Resolution=600dpi'
+
+# alias nzd='nzbget -D'
+# alias nzl='nzbget -L'
+# alias nzq='nzbget -Q'
+
+# alias cgl='castget -ln1'
+# alias cgg='castget -vn1'
 
 # vim: ft=sh
