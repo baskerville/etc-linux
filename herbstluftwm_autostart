@@ -85,18 +85,19 @@ hc keybind $Mod-apostrophe spawn lasso
 hc keybind $Mod-Shift-apostrophe spawn small_lasso
 hc keybind $Mod-semicolon spawn glean_primary
 hc keybind $Mod-Shift-semicolon spawn glean_clipboard
-# hc keybind $Mod-b spawn toggle_panel
 hc keybind $Mod-Control-c spawn raise_or_run hlconf
 hc keybind $Mod-bracketleft use_index -1
 hc keybind $Mod-bracketright use_index +1
 hc keybind $Mod-braceleft cycle_monitor -1
 hc keybind $Mod-braceright cycle_monitor +1
 
-hc keybind XF86AudioLowerVolume spawn dvol strong_lower
-hc keybind XF86AudioRaiseVolume spawn dvol strong_raise
-hc keybind $Mod-XF86AudioLowerVolume spawn dvol lower
-hc keybind $Mod-XF86AudioRaiseVolume spawn dvol raise
 hc keybind XF86AudioMute spawn dvol toggle
+hc keybind XF86AudioLowerVolume spawn dvol lower
+hc keybind XF86AudioRaiseVolume spawn dvol raise
+hc keybind Shift-XF86AudioLowerVolume spawn dvol strong_lower
+hc keybind Shift-XF86AudioRaiseVolume spawn dvol strong_raise
+hc keybind $Mod-XF86AudioLowerVolume spawn dvol min
+hc keybind $Mod-XF86AudioRaiseVolume spawn dvol max
 hc keybind $Mod-XF86AudioMute spawn dvol status
 hc keybind $Mod-Control-0 spawn mpc -q seek 0%
 hc keybind $Mod-Control-1 spawn mpc -q seek 10%
@@ -138,7 +139,6 @@ hc keybind $Mod-XF86MonBrightnessDown spawn sudo brightness min
 hc keybind $Mod-XF86MonBrightnessUp spawn sudo brightness max
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
-# hc keybind $Mod-XF86LaunchB spawn scrot -s
 hc keybind $Mod-Alt-XF86KbdBrightnessUp spawn edit_xprop
 hc keybind XF86KbdBrightnessDown spawn togglethm dark
 hc keybind XF86KbdBrightnessUp spawn togglethm light
