@@ -97,6 +97,7 @@ hc keybind XF86AudioRaiseVolume spawn dvol strong_raise
 hc keybind $Mod-XF86AudioLowerVolume spawn dvol lower
 hc keybind $Mod-XF86AudioRaiseVolume spawn dvol raise
 hc keybind XF86AudioMute spawn dvol toggle
+hc keybind $Mod-XF86AudioMute spawn dvol status
 hc keybind $Mod-Control-0 spawn mpc -q seek 0%
 hc keybind $Mod-Control-1 spawn mpc -q seek 10%
 hc keybind $Mod-Control-2 spawn mpc -q seek 20%
