@@ -92,11 +92,11 @@ hc keybind $Mod-bracketright use_index +1
 hc keybind $Mod-braceleft cycle_monitor -1
 hc keybind $Mod-braceright cycle_monitor +1
 
-hc keybind XF86AudioLowerVolume spawn amixer -q set Master 1%- unmute
-hc keybind XF86AudioRaiseVolume spawn amixer -q set Master 1%+ unmute
-hc keybind $Mod-XF86AudioLowerVolume spawn amixer -q set Master 1- unmute
-hc keybind $Mod-XF86AudioRaiseVolume spawn amixer -q set Master 1+ unmute
-hc keybind XF86AudioMute spawn amixer -q set Master toggle
+hc keybind XF86AudioLowerVolume spawn dvol strong_lower
+hc keybind XF86AudioRaiseVolume spawn dvol strong_raise
+hc keybind $Mod-XF86AudioLowerVolume spawn dvol lower
+hc keybind $Mod-XF86AudioRaiseVolume spawn dvol raise
+hc keybind XF86AudioMute spawn dvol toggle
 hc keybind $Mod-Control-0 spawn mpc -q seek 0%
 hc keybind $Mod-Control-1 spawn mpc -q seek 10%
 hc keybind $Mod-Control-2 spawn mpc -q seek 20%

@@ -2,6 +2,7 @@ neaprc
 tint2rc
 colors/current
 colors/redef-current
+dzen2_Xresources
+override.css
 dwb_keys.*
 dwb_config.*
-override.css
