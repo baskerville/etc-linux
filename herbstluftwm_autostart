@@ -134,16 +134,16 @@ hc keybind XF86MonBrightnessDown spawn sudo brightness -1
 hc keybind XF86MonBrightnessUp spawn sudo brightness +1
 hc keybind Shift-XF86MonBrightnessDown spawn sudo brightness -10
 hc keybind Shift-XF86MonBrightnessUp spawn sudo brightness +10
-hc keybind $Mod-XF86MonBrightnessDown spawn killpanel
-hc keybind $Mod-XF86MonBrightnessUp spawn launchpanel
+hc keybind $Mod-XF86MonBrightnessDown spawn sudo brightness min
+hc keybind $Mod-XF86MonBrightnessUp spawn sudo brightness max
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
 # hc keybind $Mod-XF86LaunchB spawn scrot -s
 hc keybind $Mod-Alt-XF86KbdBrightnessUp spawn edit_xprop
 hc keybind XF86KbdBrightnessDown spawn togglethm dark
 hc keybind XF86KbdBrightnessUp spawn togglethm light
-hc keybind $Mod-XF86KbdBrightnessDown spawn xset -dpms
-hc keybind $Mod-XF86KbdBrightnessUp spawn xset +dmps
+hc keybind $Mod-XF86KbdBrightnessDown spawn killpanel
+hc keybind $Mod-XF86KbdBrightnessUp spawn launchpanel
 
 hc keybind Shift-XF86Eject            spawn wodim -eject
 hc keybind $Mod-XF86Eject             spawn dpms_standby
