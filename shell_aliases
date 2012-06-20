@@ -116,6 +116,7 @@ alias upu='up && pu'
 alias gdb='rlwrap gdb -q'
 alias irb='irb --simple-prompt'
 alias csi='rlwrap csi -q'
+alias prename='prename -v'
 alias python='rlwrap python -q'
 alias maxima='rlwrap maxima -q'
 
