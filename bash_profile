@@ -32,6 +32,7 @@ export MICRO=/media/micro
 export DATA=/media/data
 export TRAVELER=/media/traveler
 export HEXAGON=/media/hexagon
+export LACIE=/media/lacie
 
 export WALLPAPER="$HOME/.wallpaper"
 
@@ -53,7 +54,7 @@ source "$HOME/.coordinates"
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
   startx >& "$HOME/.Xlog"
-  cp "$HOME/.Xlog "$HOME/.Xlog.bak""
+  cp "$HOME/.Xlog" "$HOME/.Xlog.bak"
   logout
 fi
 

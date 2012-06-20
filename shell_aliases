@@ -76,6 +76,7 @@ alias i='type -a'
 alias y='file -b'
 alias mt='file -b --mime-type'
 alias me='file -b --mime-encoding'
+alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
 
 alias et='editor -p'
 alias vd='vimdiff'
@@ -90,9 +91,6 @@ alias clipi='xsel -bi'
 alias clipo='xsel -bo'
 
 alias mduration="mediainfo '--Inform=General;%Duration/String%'"
-
-alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
-alias nb='togglecursor; newsbeuter; togglecursor'
 
 alias ivz='iv -Z'
 alias ivzr='ivz -tfr .'
@@ -117,6 +115,7 @@ alias gdb='rlwrap gdb -q'
 alias irb='irb --simple-prompt'
 alias csi='rlwrap csi -q'
 alias prename='prename -v'
+alias nb='newsbeuter'
 alias python='rlwrap python -q'
 alias maxima='rlwrap maxima -q'
 

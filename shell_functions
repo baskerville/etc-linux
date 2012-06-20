@@ -29,6 +29,14 @@ tgz() {
     tar cvzf "${name}.tgz" "$@"
 }
 
+mil() {
+    mediainfo --Info-Parameters
+}
+
+mi() {
+    mediainfo "--Inform=General;%$@%"
+}
+
 msa() {
     ms "$@" | ma
 }
@@ -159,6 +167,10 @@ cptraveler() {
 
 cphexagon() {
     cp  -Lr "$@" $HEXAGON/ 
+}
+
+cplacie() {
+    cp  -Lr "$@" $LACIE/ 
 }
 
 # mm() {

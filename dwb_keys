@@ -241,6 +241,8 @@ sanitize=
 
 eval= 
 
+download= gd
+
 [-p]
 save_search_field=gs
 add_view=ga
