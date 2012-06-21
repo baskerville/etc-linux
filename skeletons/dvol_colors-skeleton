@@ -1,6 +1,6 @@
 TEXT_FG="{foreground}"
 TEXT_BG="{background}"
-ACTIVE_FG="{foreground}"
+ACTIVE_FG="{spring}"
 ACTIVE_BG="{bg_springboard}"
 MUTED_FG="{bg_springboard}"
 MUTED_BG="{bg_bump}"
