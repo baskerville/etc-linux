@@ -1,0 +1,4 @@
+TEXT_FG="{foreground}"
+TEXT_BG="{background}"
+ACTIVE_FG="{foreground}"
+ACTIVE_BG="{bg_springboard}"
