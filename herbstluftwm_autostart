@@ -131,15 +131,14 @@ hc keybind $Mod-Control-t spawn raise_or_run htop
 hc keybind $Mod-Control-i spawn raise_or_run notes
 hc keybind $Mod-Control-x spawn raise_or_run xlog
 
-hc keybind XF86MonBrightnessDown spawn sudo brightness -1
-hc keybind XF86MonBrightnessUp spawn sudo brightness +1
-hc keybind Shift-XF86MonBrightnessDown spawn sudo brightness -10
-hc keybind Shift-XF86MonBrightnessUp spawn sudo brightness +10
-hc keybind $Mod-XF86MonBrightnessDown spawn sudo brightness min
-hc keybind $Mod-XF86MonBrightnessUp spawn sudo brightness max
+hc keybind XF86MonBrightnessDown spawn dbright -1
+hc keybind XF86MonBrightnessUp spawn dbright +1
+hc keybind Shift-XF86MonBrightnessDown spawn dbright -10
+hc keybind Shift-XF86MonBrightnessUp spawn dbright +10
+hc keybind $Mod-XF86MonBrightnessDown spawn dbright min
+hc keybind $Mod-XF86MonBrightnessUp spawn dbright max
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
-hc keybind $Mod-Alt-XF86KbdBrightnessUp spawn edit_xprop
 hc keybind XF86KbdBrightnessDown spawn togglethm dark
 hc keybind XF86KbdBrightnessUp spawn togglethm light
 hc keybind $Mod-XF86KbdBrightnessDown spawn killpanel
