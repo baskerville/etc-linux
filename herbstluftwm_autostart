@@ -25,7 +25,7 @@ for tag_name in $TAG_NAMES ; do
     hc keybind "$Mod-$tag_key" use "$tag_name"
     hc keybind "$Mod-Shift-$tag_key" move "$tag_name"
     tag_key=$(((tag_key + 1) % 10))
-    hc load "$tag_name" '(clients max:0)'
+    hc load "$tag_name" '(clients grid:0)'
 done
 
 hc keybind $Mod-r remove
@@ -98,7 +98,6 @@ hc keybind Shift-XF86AudioLowerVolume spawn dvol strong_lower
 hc keybind Shift-XF86AudioRaiseVolume spawn dvol strong_raise
 hc keybind $Mod-XF86AudioLowerVolume spawn dvol min
 hc keybind $Mod-XF86AudioRaiseVolume spawn dvol max
-hc keybind $Mod-XF86AudioMute spawn dvol status
 hc keybind $Mod-Control-0 spawn mpc -q seek 0%
 hc keybind $Mod-Control-1 spawn mpc -q seek 10%
 hc keybind $Mod-Control-2 spawn mpc -q seek 20%
@@ -131,6 +130,9 @@ hc keybind $Mod-Control-t spawn raise_or_run htop
 hc keybind $Mod-Control-i spawn raise_or_run notes
 hc keybind $Mod-Control-x spawn raise_or_run xlog
 
+hc keybind XF86LaunchB spawn dbright status
+hc keybind Shift-XF86LaunchB spawn dvol status
+hc keybind XF86MonBrightnessDown spawn dbright -1
 hc keybind XF86MonBrightnessDown spawn dbright -1
 hc keybind XF86MonBrightnessUp spawn dbright +1
 hc keybind Shift-XF86MonBrightnessDown spawn dbright -10
@@ -138,7 +140,7 @@ hc keybind Shift-XF86MonBrightnessUp spawn dbright +10
 hc keybind $Mod-XF86MonBrightnessDown spawn dbright min
 hc keybind $Mod-XF86MonBrightnessUp spawn dbright max
 hc keybind $Mod-XF86LaunchA spawn scrot
-hc keybind $Mod-XF86LaunchB spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
+hc keybind $Mod-Shift-XF86LaunchA spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
 hc keybind XF86KbdBrightnessDown spawn togglethm dark
 hc keybind XF86KbdBrightnessUp spawn togglethm light
 hc keybind $Mod-XF86KbdBrightnessDown spawn killpanel
@@ -151,7 +153,7 @@ hc keybind $Mod-Control-XF86Eject     spawn sudo systemctl reboot
 hc keybind $Mod-Alt-Control-XF86Eject spawn sudo systemctl poweroff
 
 hc set always_show_frame     1
-hc set default_frame_layout  2
+hc set default_frame_layout  3
 hc set gapless_grid          1
 hc set smart_surroundings    1
 hc set window_gap            0
