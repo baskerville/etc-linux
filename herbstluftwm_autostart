@@ -139,6 +139,7 @@ hc keybind Shift-XF86MonBrightnessDown spawn dbright -10
 hc keybind Shift-XF86MonBrightnessUp spawn dbright +10
 hc keybind $Mod-XF86MonBrightnessDown spawn dbright min
 hc keybind $Mod-XF86MonBrightnessUp spawn dbright max
+hc keybind $Mod-Control-g spawn pickcolor
 hc keybind $Mod-XF86LaunchA spawn scrot
 hc keybind $Mod-Shift-XF86LaunchA spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
 hc keybind XF86KbdBrightnessDown spawn togglethm dark
