@@ -20,7 +20,7 @@ mpd
 urxvtd -q -o -f
 unclutter &
 
-happy_fullscreen &
+happy_fs &
 
 # exec openbox-session
 exec herbstluftwm --locked
