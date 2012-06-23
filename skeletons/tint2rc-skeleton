@@ -13,9 +13,9 @@ background_color = {background} 100
 panel_items = STC
 panel_monitor = all
 panel_position = top center horizontal
-panel_size = 100% 22
+panel_size = 100% 24
 panel_margin = 0 0
-panel_padding = 5 2 0
+panel_padding = 5 0 0
 panel_background_id = 2
 panel_layer = bottom
 panel_dock = 0
@@ -26,7 +26,7 @@ autohide = 0
 
 # Taskbar
 taskbar_mode = single_desktop
-taskbar_padding = 5 2 3
+taskbar_padding = 5 0 0
 
 # Tasks
 urgent_nb_of_blink = 8
@@ -34,7 +34,7 @@ task_icon = 0
 task_text = 1
 task_centered = 1
 # task_maximum_size = 200 35
-task_padding = 1 1
+task_padding = 1 0
 task_background_id = 1
 task_active_background_id = 1
 task_urgent_background_id = 1
@@ -42,11 +42,11 @@ task_iconified_background_id = 1
 task_tooltip = 0
 
 # Fonts
-task_font = terminus 12px
+task_font = DejaVu Sans 12px
 task_font_color = {fg_comment} 100
-task_active_font_color = {foreground} 100
+task_active_font_color = {violet} 100
 task_urgent_font_color = {red} 100
-task_iconified_font_color = {cyan} 100
+task_iconified_font_color = {yellow} 100
 font_shadow = 0
 
 # System Tray
@@ -58,11 +58,11 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = terminus 12px
+time1_font = DejaVu Sans 12px
 # time2_format = %A %d %B
 # time2_font = sans 6
-clock_font_color = {foreground} 100
-clock_padding = 1 1
+clock_font_color = {teal} 100
+clock_padding = 1 0
 clock_background_id = 0
 # clock_rclick_command = xclock
 
