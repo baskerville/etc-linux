@@ -42,7 +42,7 @@ task_iconified_background_id = 1
 task_tooltip = 0
 
 # Fonts
-task_font = DejaVu Sans 12px
+task_font = sans-serif 12px
 task_font_color = #7F7F83 100
 task_active_font_color = #AE9EDC 100
 task_urgent_font_color = #DE928B 100
@@ -58,7 +58,7 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = DejaVu Sans 12px
+time1_font = sans-serif 12px
 # time2_format = %A %d %B
 # time2_font = sans 6
 clock_font_color = #59B7A4 100
