@@ -7,7 +7,7 @@ map <A-1> set "pages-per-row 1"
 map <A-2> set "pages-per-row 2"
 map e rotate rotate-ccw
 
-set font terminus
+set font sans-serif
 set render-loading false
 set page-padding   0
 set adjust-open    "width"
