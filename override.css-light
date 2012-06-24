@@ -1,7 +1,7 @@
 * {
     background: #FAF0E6 !important;
     color: #69717A !important;
-    font: 16px Inconsolata, sans-serif !important;
+    font: 16px sans-serif !important;
 }
 
 a {

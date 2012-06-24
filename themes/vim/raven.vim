@@ -84,7 +84,7 @@ hi Title           ctermfg=178
 hi SpecialKey      ctermfg=120
 hi Conceal         ctermfg=100       ctermbg=bg
 hi NonText         ctermfg=20
-hi MatchParen      ctermfg=16     ctermbg=139
+hi MatchParen      ctermfg=16     ctermbg=255
 hi Directory       ctermfg=216
 
 hi ErrorMsg        ctermfg=43          ctermbg=bg

@@ -84,7 +84,7 @@ hi Title           ctermfg={azure}
 hi SpecialKey      ctermfg={green}
 hi Conceal         ctermfg={spring}       ctermbg=bg
 hi NonText         ctermfg={fg_comment}
-hi MatchParen      ctermfg={bg_floor}     ctermbg={teal}
+hi MatchParen      ctermfg={bg_floor}     ctermbg={pink}
 hi Directory       ctermfg={violet}
 
 hi ErrorMsg        ctermfg={red}          ctermbg=bg
