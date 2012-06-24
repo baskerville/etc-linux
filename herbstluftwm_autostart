@@ -132,6 +132,7 @@ hc keybind $Mod-Control-x spawn raise_or_run xlog
 
 hc keybind XF86LaunchB spawn dvol status
 hc keybind Shift-XF86LaunchB spawn dbright status
+hc keybind $Mod-b spawn dbatt status
 hc keybind XF86MonBrightnessDown spawn dbright -1
 hc keybind XF86MonBrightnessDown spawn dbright -1
 hc keybind XF86MonBrightnessUp spawn dbright +1
