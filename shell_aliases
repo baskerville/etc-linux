@@ -106,6 +106,7 @@ alias detox='detox -v'
 alias mp4box='MP4Box'
 alias mplayer='mplayer -softvol'
 alias vpnz='mplayer -vo x11 -nozoom'
+alias camshot='shotdev /dev/video0'
 
 alias up='git commit -am update'
 alias pu='git push'

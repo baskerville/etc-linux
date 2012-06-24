@@ -1,0 +1,287 @@
+From 24108ddfe7b61faa489c8a338e91d3b4b1e993d3 Mon Sep 17 00:00:00 2001
+From: baskerville <nihilhill@gmail.com>
+Date: Sun, 24 Jun 2012 10:32:31 +0200
+Subject: [PATCH] New settings: 'smart_frame_surroundings' and
+ 'smart_window_borders'
+
+---
+ doc/herbstluftwm.txt |  8 ++++++++
+ src/clientlist.c     | 27 +++++++++++++++++----------
+ src/clientlist.h     |  4 ++--
+ src/layout.c         | 52 +++++++++++++++++++++++++++++++---------------------
+ src/monitor.c        | 14 +++++++++-----
+ src/settings.c       |  2 ++
+ 6 files changed, 69 insertions(+), 38 deletions(-)
+
+diff --git a/doc/herbstluftwm.txt b/doc/herbstluftwm.txt
+index 0226118..f1c8e73 100644
+--- a/doc/herbstluftwm.txt
++++ b/doc/herbstluftwm.txt
+@@ -614,6 +614,14 @@ gapless_grid (Integer)::
+     this frame. If unset, then the last client has the same size as all other
+     clients in this frame.
+ 
++smart_frame_surroundings (Integer)::
++    If set, frame borders/gaps will be removed when there's no ambiguity
++    regarding the focused frame.
++
++smart_window_borders (Integer)::
++    If set, window borders will be removed when there's no ambiguity regarding
++    the focused window.
++
+ focus_follows_shift (Integer)::
+     If set, focus stays in the window, if window is shifted to another frame.
+     If unset, focus stays in the frame.
+diff --git a/src/clientlist.c b/src/clientlist.c
+index 5a4204b..fe1d60b 100644
+--- a/src/clientlist.c
++++ b/src/clientlist.c
+@@ -33,6 +33,7 @@ int g_monitor_float_treshold = 24;
+ int* g_window_border_width;
+ int* g_raise_on_focus;
+ int* g_snap_gap;
++int* g_smart_window_borders;
+ unsigned long g_window_border_active_color;
+ unsigned long g_window_border_urgent_color;
+ unsigned long g_window_border_normal_color;
+@@ -58,6 +59,7 @@ static HSClient* create_client() {
+ static void fetch_colors() {
+     g_window_border_width = &(settings_find("window_border_width")->value.i);
+     g_snap_gap = &(settings_find("snap_gap")->value.i);
++    g_smart_window_borders = &(settings_find("smart_window_borders")->value.i);
+     g_raise_on_focus = &(settings_find("raise_on_focus")->value.i);
+     char* str = settings_find("window_border_normal_color")->value.s;
+     g_window_border_normal_color = getcolor(str);
+@@ -158,7 +160,6 @@ HSClient* manage_client(Window win) {
+     // actually manage it
+     g_hash_table_insert(g_clients, &(client->window), client);
+     ewmh_add_client(client->window);
+-    XSetWindowBorderWidth(g_display, win, *g_window_border_width);
+     // insert to layout
+     if (!client->tag) {
+         client->tag = m->tag;
+@@ -296,7 +297,7 @@ void client_resize_fullscreen(HSClient* client, HSMonitor* m) {
+ 
+ }
+ 
+-void client_resize(HSClient* client, XRectangle rect) {
++void client_resize(HSClient* client, XRectangle rect, HSFrame* frame) {
+     // ensure minimum size
+     if (rect.width < WINDOW_MIN_WIDTH) {
+         rect.width = WINDOW_MIN_WIDTH;
+@@ -329,13 +330,19 @@ void client_resize(HSClient* client, XRectangle rect) {
+         && client->last_border_width == *g_window_border_width) {
+         return;
+     }
+-    client->last_size = rect;
+-    client->last_border_width = *g_window_border_width;
+ 
+-    // apply border width
+-    rect.width -= *g_window_border_width * 2;
+-    rect.height -= *g_window_border_width * 2;
+-    XSetWindowBorderWidth(g_display, win, *g_window_border_width);
++    client->last_size = rect;
++    if (*g_smart_window_borders && !client->pseudotile
++        && (frame->content.clients.count == 1 || frame->content.clients.layout == LAYOUT_MAX)) {
++        client->last_border_width = 0;
++        XSetWindowBorderWidth(g_display, win, 0);
++    } else {
++        client->last_border_width = *g_window_border_width;
++        // apply border width
++        rect.width -= *g_window_border_width * 2;
++        rect.height -= *g_window_border_width * 2;
++        XSetWindowBorderWidth(g_display, win, *g_window_border_width);
++    }
+     XMoveResizeWindow(g_display, win, rect.x, rect.y, rect.width, rect.height);
+     //// send new size to client
+     //// WHY SHOULD I? -> faster? only one call?
+@@ -354,12 +361,12 @@ void client_resize(HSClient* client, XRectangle rect) {
+     //XSendEvent(g_display, win, False, StructureNotifyMask, (XEvent *)&ce);
+ }
+ 
+-void client_resize_tiling(HSClient* client, XRectangle rect) {
++void client_resize_tiling(HSClient* client, XRectangle rect, HSFrame* frame) {
+     HSMonitor* m;
+     if (client->fullscreen && (m = find_monitor_with_tag(client->tag))) {
+         client_resize_fullscreen(client, m);
+     } else {
+-        client_resize(client, rect);
++        client_resize(client, rect, frame);
+     }
+ }
+ 
+diff --git a/src/clientlist.h b/src/clientlist.h
+index 1a66f07..b484aa2 100644
+--- a/src/clientlist.h
++++ b/src/clientlist.h
+@@ -57,8 +57,8 @@ XRectangle client_outer_floating_rect(HSClient* client);
+ 
+ Window string_to_client(char* str, HSClient** ret_client);
+ void client_setup_border(HSClient* client, bool focused);
+-void client_resize(HSClient* client, XRectangle rect);
+-void client_resize_tiling(HSClient* client, XRectangle rect);
++void client_resize(HSClient* client, XRectangle rect, HSFrame* frame);
++void client_resize_tiling(HSClient* client, XRectangle rect, HSFrame* frame);
+ void client_resize_floating(HSClient* client, HSMonitor* m);
+ void client_clear_urgent(HSClient* client);
+ void client_update_wm_hints(HSClient* client);
+diff --git a/src/layout.c b/src/layout.c
+index 522535f..876b0f2 100644
+--- a/src/layout.c
++++ b/src/layout.c
+@@ -34,6 +34,7 @@ int* g_focus_follows_shift;
+ int* g_frame_bg_transparent;
+ int* g_direction_external_only;
+ int* g_gapless_grid;
++int* g_smart_frame_surroundings;
+ unsigned long g_frame_border_active_color;
+ unsigned long g_frame_border_normal_color;
+ unsigned long g_frame_bg_active_color;
+@@ -65,6 +66,7 @@ static void fetch_frame_colors() {
+     g_default_frame_layout = &(settings_find("default_frame_layout")->value.i);
+     g_direction_external_only = &(settings_find("default_direction_external_only")->value.i);
+     g_gapless_grid = &(settings_find("gapless_grid")->value.i);
++    g_smart_frame_surroundings = &(settings_find("smart_frame_surroundings")->value.i);
+     *g_default_frame_layout = CLAMP(*g_default_frame_layout, 0, LAYOUT_COUNT - 1);
+     char* str = settings_find("frame_border_normal_color")->value.s;
+     g_frame_border_normal_color = getcolor(str);
+@@ -648,7 +650,7 @@ void frame_apply_client_layout_linear(HSFrame* frame, XRectangle rect, bool vert
+         cur.height += (i == count-1) ? last_step_y : 0;
+         cur.width += (i == count-1) ? last_step_x : 0;
+         client_setup_border(client, (g_cur_frame == frame) && (i == selection));
+-        client_resize_tiling(client, cur);
++        client_resize_tiling(client, cur, frame);
+         cur.y += step_y;
+         cur.x += step_x;
+     }
+@@ -669,7 +671,7 @@ void frame_apply_client_layout_max(HSFrame* frame, XRectangle rect) {
+     for (int i = 0; i < count; i++) {
+         HSClient* client = get_client_from_window(buf[i]);
+         client_setup_border(client, (g_cur_frame == frame) && (i == selection));
+-        client_resize_tiling(client, rect);
++        client_resize_tiling(client, rect, frame);
+         if (i == selection) {
+             XRaiseWindow(g_display, buf[i]);
+         }
+@@ -725,7 +727,7 @@ void frame_apply_client_layout_grid(HSFrame* frame, XRectangle rect) {
+             // apply size
+             HSClient* client = get_client_from_window(buf[i]);
+             client_setup_border(client, (g_cur_frame == frame) && (i == selection));
+-            client_resize_tiling(client, cur);
++            client_resize_tiling(client, cur, frame);
+             cur.x += width;
+             i++;
+         }
+@@ -737,31 +739,39 @@ void frame_apply_client_layout_grid(HSFrame* frame, XRectangle rect) {
+ void frame_apply_layout(HSFrame* frame, XRectangle rect) {
+     if (frame->type == TYPE_CLIENTS) {
+         size_t count = frame->content.clients.count;
+-        // frame only -> apply window_gap
+-        rect.height -= *g_window_gap;
+-        rect.width -= *g_window_gap;
+-        // apply frame width
+-        rect.x += *g_frame_border_width;
+-        rect.y += *g_frame_border_width;
+-        rect.height -= *g_frame_border_width * 2;
+-        rect.width -= *g_frame_border_width * 2;
++        if (!*g_smart_frame_surroundings || frame->parent) {
++            // frame only -> apply window_gap
++            rect.height -= *g_window_gap;
++            rect.width -= *g_window_gap;
++            // apply frame width
++            rect.x += *g_frame_border_width;
++            rect.y += *g_frame_border_width;
++            rect.height -= *g_frame_border_width * 2;
++            rect.width -= *g_frame_border_width * 2;
++        }
+         if (rect.width <= WINDOW_MIN_WIDTH || rect.height <= WINDOW_MIN_HEIGHT) {
+             // do nothing on invalid size
+             return;
+         }
+-        XSetWindowBorderWidth(g_display, frame->window, *g_frame_border_width);
+-        // set indicator frame
+         unsigned long border_color = g_frame_border_normal_color;
+         unsigned long bg_color = g_frame_bg_normal_color;
+-        if (g_cur_frame == frame) {
+-            border_color = g_frame_border_active_color;
+-            bg_color = g_frame_bg_active_color;
++        if (!*g_smart_frame_surroundings || frame->parent) {
++            XSetWindowBorderWidth(g_display, frame->window, *g_frame_border_width);
++            // set indicator frame
++            if (g_cur_frame == frame) {
++                border_color = g_frame_border_active_color;
++                bg_color = g_frame_bg_active_color;
++            }
++            XSetWindowBorder(g_display, frame->window, border_color);
++            XMoveResizeWindow(g_display, frame->window,
++                              rect.x - *g_frame_border_width,
++                              rect.y - *g_frame_border_width,
++                              rect.width, rect.height);
++        } else {
++            XSetWindowBorderWidth(g_display, frame->window, 0);
++            XMoveResizeWindow(g_display, frame->window, rect.x, rect.y, rect.width, rect.height);
+         }
+-        XSetWindowBorder(g_display, frame->window, border_color);
+-        XMoveResizeWindow(g_display, frame->window,
+-                          rect.x - *g_frame_border_width,
+-                          rect.y - *g_frame_border_width,
+-                          rect.width, rect.height);
++
+         if (*g_frame_bg_transparent) {
+             XSetWindowBackgroundPixmap(g_display, frame->window, ParentRelative);
+         } else {
+diff --git a/src/monitor.c b/src/monitor.c
+index d33b2df..2261252 100644
+--- a/src/monitor.c
++++ b/src/monitor.c
+@@ -22,6 +22,7 @@
+ 
+ int* g_monitors_locked;
+ int* g_swap_monitors_to_get_tag;
++int* g_smart_frame_surroundings;
+ 
+ typedef struct RectList {
+     XRectangle rect;
+@@ -35,6 +36,7 @@ void monitor_init() {
+     g_cur_monitor = 0;
+     g_monitors = g_array_new(false, false, sizeof(HSMonitor));
+     g_swap_monitors_to_get_tag = &(settings_find("swap_monitors_to_get_tag")->value.i);
++    g_smart_frame_surroundings = &(settings_find("smart_frame_surroundings")->value.i);
+ }
+ 
+ void monitor_destroy() {
+@@ -55,11 +57,13 @@ void monitor_apply_layout(HSMonitor* monitor) {
+         rect.width -= (monitor->pad_left + monitor->pad_right);
+         rect.y += monitor->pad_up;
+         rect.height -= (monitor->pad_up + monitor->pad_down);
+-        // apply window gap
+-        rect.x += *g_window_gap;
+-        rect.y += *g_window_gap;
+-        rect.height -= *g_window_gap;
+-        rect.width -= *g_window_gap;
++        if (!*g_smart_frame_surroundings || monitor->tag->frame->type == TYPE_FRAMES ) {
++            // apply window gap
++            rect.x += *g_window_gap;
++            rect.y += *g_window_gap;
++            rect.height -= *g_window_gap;
++            rect.width -= *g_window_gap;
++        }
+         if (monitor->tag->floating) {
+             frame_apply_floating_layout(monitor->tag->frame, monitor);
+         } else {
+diff --git a/src/settings.c b/src/settings.c
+index 9a68336..846ba99 100644
+--- a/src/settings.c
++++ b/src/settings.c
+@@ -61,6 +61,8 @@ SettingsPair g_settings[] = {
+     SET_INT(    "raise_on_focus",                  0,           NULL        ),
+     SET_INT(    "raise_on_click",                  1,           NULL        ),
+     SET_INT(    "gapless_grid",                    1,           RELAYOUT    ),
++    SET_INT(    "smart_window_borders",            0,           RELAYOUT    ),
++    SET_INT(    "smart_frame_surroundings",        0,           RELAYOUT    ),
+     SET_INT(    "monitors_locked",                 0,           LOCK_CHANGED),
+     SET_INT(    "auto_detect_monitors",            0,           NULL        ),
+     SET_STRING( "tree_style",                      "*| +`--.",  FR_COLORS   ),
+-- 
+1.7.11
+
