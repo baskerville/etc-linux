@@ -1,6 +1,6 @@
 #! /bin/dash
 
-fn='-*-terminus-medium-*-*-*-20-*-*-*-*-*-*-*'
+fn='-*-terminus-medium-*-*-*-22-*-*-*-*-*-*-*'
 nb='{background}'
 nf='{foreground}'
 sb='{bg_bump}'

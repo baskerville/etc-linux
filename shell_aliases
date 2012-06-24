@@ -11,6 +11,10 @@ alias gcn='g -nC 1'
 
 alias cgrep='grep --color=auto'
 alias igrep='grep -i'
+alias icgrep='grep --color=auto -i'
+alias ngrep='grep -n'
+alias ingrep='grep -in'
+alias cingrep='grep -in --color=auto'
 alias rgrep='grep -r'
 
 alias chbin='chmod 755'
