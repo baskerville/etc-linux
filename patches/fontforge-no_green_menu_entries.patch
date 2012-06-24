@@ -1,0 +1,25 @@
+From ba4aa6a9cba646f414b35770392d3173b7c868f7 Mon Sep 17 00:00:00 2001
+From: baskerville <nihilhill@gmail.com>
+Date: Sun, 24 Jun 2012 22:59:33 +0200
+Subject: [PATCH] no green menu entries
+
+---
+ fontforge/windowmenu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fontforge/windowmenu.c b/fontforge/windowmenu.c
+index b258b12..6f50cd6 100644
+--- a/fontforge/windowmenu.c
++++ b/fontforge/windowmenu.c
+@@ -38,7 +38,7 @@ static void WindowSelect(GWindow base,struct gmenuitem *mi,GEvent *e) {
+ static void AddMI(GMenuItem *mi,GWindow gw,int changed, int top) {
+     mi->ti.userdata = gw;
+     mi->ti.bg = changed?0xffffff:GDrawGetDefaultBackground(GDrawGetDisplayOfWindow(gw));
+-    if ( top ) mi->ti.fg = 0x008000;
++    /* if ( top ) mi->ti.fg = 0x008000; */
+     mi->invoke = WindowSelect;
+     mi->ti.text = GDrawGetWindowTitle(gw);
+     if(mi->ti.text == NULL)
+-- 
+1.7.11
+
