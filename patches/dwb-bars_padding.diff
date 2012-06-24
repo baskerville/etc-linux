@@ -1,0 +1,64 @@
+diff -r 3a1d45c9eae2 src/completion.c
+--- a/src/completion.c	Fri Jun 22 18:43:00 2012 +0200
++++ b/src/completion.c	Sun Jun 24 11:00:44 2012 +0200
+@@ -81,7 +81,11 @@
+ 
+   completion_modify_completion_item(c, &dwb.color.normal_c_fg, &dwb.color.normal_c_bg, dwb.font.fd_inactive);
+ 
+-  gtk_container_add(GTK_CONTAINER(c->event), hbox);
++  GtkWidget *al = gtk_alignment_new(0.5, 0.5, 1, 1);
++  gtk_alignment_set_padding(GTK_ALIGNMENT(al), 2, 2, 2, 2);
++  gtk_container_add(GTK_CONTAINER(al), hbox);
++  gtk_container_add(GTK_CONTAINER(c->event), al);
++
+   return c;
+ }/*}}}*/
+ 
+diff -r 3a1d45c9eae2 src/download.c
+--- a/src/download.c	Fri Jun 22 18:43:00 2012 +0200
++++ b/src/download.c	Sun Jun 24 11:00:44 2012 +0200
+@@ -354,7 +354,12 @@
+ 
+   gtk_box_pack_start(GTK_BOX(hbox), l->llabel, false, false, 1);
+   gtk_box_pack_start(GTK_BOX(hbox), l->rlabel, false, false, 1);
+-  gtk_container_add(GTK_CONTAINER(l->event), hbox);
++
++  GtkWidget *al = gtk_alignment_new(0.5, 0.5, 1, 1);
++  gtk_alignment_set_padding(GTK_ALIGNMENT(al), 2, 2, 2, 2);
++  gtk_container_add(GTK_CONTAINER(al), hbox);
++  gtk_container_add(GTK_CONTAINER(l->event), al);
++
+   gtk_box_pack_start(GTK_BOX(dwb.gui.downloadbar), l->event, false, false, 2);
+ 
+   gtk_label_set_use_markup(GTK_LABEL(l->llabel), true);
+diff -r 3a1d45c9eae2 src/dwb.c
+--- a/src/dwb.c	Fri Jun 22 18:43:00 2012 +0200
++++ b/src/dwb.c	Sun Jun 24 11:00:44 2012 +0200
+@@ -3523,7 +3523,10 @@
+   gtk_box_pack_start(GTK_BOX(status_hbox), dwb.gui.entry, true, true, 0);
+   gtk_box_pack_start(GTK_BOX(status_hbox), dwb.gui.urilabel, true, true, 0);
+   gtk_box_pack_start(GTK_BOX(status_hbox), dwb.gui.rstatus, false, false, 0);
+-  gtk_container_add(GTK_CONTAINER(dwb.gui.statusbox), status_hbox);
++  GtkWidget *al = gtk_alignment_new(0.5, 0.5, 1, 1);
++  gtk_alignment_set_padding(GTK_ALIGNMENT(al), 3, 3, 3, 3);
++  gtk_container_add(GTK_CONTAINER(al), status_hbox);
++  gtk_container_add(GTK_CONTAINER(dwb.gui.statusbox), al);
+ 
+   gtk_container_add(GTK_CONTAINER(dwb.gui.window), dwb.gui.vbox);
+ 
+diff -r 3a1d45c9eae2 src/view.c
+--- a/src/view.c	Fri Jun 22 18:43:00 2012 +0200
++++ b/src/view.c	Sun Jun 24 11:00:44 2012 +0200
+@@ -913,8 +913,10 @@
+   v->tabicon = gtk_image_new_from_pixbuf(pb);
+   gtk_box_pack_end(GTK_BOX(v->tabbox), v->tabicon, false, false, 0);
+ 
+-  gtk_container_add(GTK_CONTAINER(v->tabevent), v->tabbox);
+-
++  GtkWidget *al = gtk_alignment_new(0.5, 0.5, 1, 1);
++  gtk_alignment_set_padding(GTK_ALIGNMENT(al), 3, 3, 3, 3);
++  gtk_container_add(GTK_CONTAINER(al), v->tabbox);
++  gtk_container_add(GTK_CONTAINER(v->tabevent), al);
+ 
+   /* gtk_container_add(GTK_CONTAINER(v->tabevent), v->tablabel); */
+ 
