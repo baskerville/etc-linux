@@ -8,16 +8,16 @@ bind-key h left
 bind-key l right
 bind-key m toggle-show-read-feeds
 
-color background default default
-color listnormal default default
-color listfocus default color17
-color info default color19
-color article default default
-
-highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
-
 feedlist-title-format     " Feeds (%u unread) "
 articlelist-title-format  " %T (%u unread) "
 itemview-title-format     " %T "
 feedlist-format           " %4i  %n %8u  %t "
 articlelist-format        " %4i  %f %?T?|%-17T|  ?%t "
+
+color background default default
+color listnormal default default
+color listfocus color16 color20
+color info default color19
+color article default default
+
+highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
