@@ -160,8 +160,8 @@ hc set gapless_grid          1
 hc set smart_frame_surroundings    1
 hc set smart_window_borders        1
 hc set window_gap            0
-hc set frame_border_width    2
-hc set window_border_width   2
+hc set frame_border_width    3
+hc set window_border_width   3
 
 hc unrule -F
 hc rule focus=on
@@ -175,7 +175,6 @@ hc rule class=Xscreensaver-demo pseudotile=on
 hc rule instance=ncmpcpp tag=nine
 hc rule class=Inkscape title~'^Export Bitmap' pseudotile=on
 hc rule class=Audacity title='Frequency Analysis' pseudotile=off
-hc rule class=MPlayer pseudotile=on
 hc rule class=fontforge tag=seven
 hc floating seven on
 hc rule class=Gimp tag=eight
