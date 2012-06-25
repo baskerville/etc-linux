@@ -170,7 +170,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule class=Dwb tag=two
 hc rule instance=mutt tag=three
-hc rule instance=slrn tag=four
+hc rule instance=slrn tag=three
 hc rule class=Xscreensaver-demo pseudotile=on
 hc rule instance=ncmpcpp tag=nine
 hc rule class=Inkscape title~'^Export Bitmap' pseudotile=on
