@@ -1,6 +1,6 @@
 color	normal	    default	        default
 color	status	    default	        black
-color	indicator	color16      color21
+color	indicator	color{bg_floor}      color{foreground}
 color	markers	    brightred	    black	
 color	tilde	    brightblack	    default
 color	tree   	    brightblack     default
