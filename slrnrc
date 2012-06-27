@@ -299,7 +299,8 @@ color article		"default"	"default"
 color author		"default"	"default"
 color boldtext		"white"	"default"
 color box		"black"		"white"
-color cursor		"color16"	"color20"
+% color cursor		"color16"	"color20"
+color cursor		"color16"	"blue"
 color date		"default"	"default"  
 color description	"default"	"default"
 color error		"red"		"default"	"bold"
@@ -557,3 +558,5 @@ interpret "next_prev_threads.sl"
 
 setkey article prev_thread  "^P"
 setkey article next_thread  "^N"
+
+% vim:set ft=slrnrc:

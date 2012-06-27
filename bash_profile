@@ -36,8 +36,8 @@ export LACIE=/media/lacie
 
 export WALLPAPER="$HOME/.wallpaper"
 
-export DPMS_STANDBY=360
-export DPMS_SUSPEND=420
+export DPMS_STANDBY=180
+export DPMS_SUSPEND=360
 export DPMS_OFF=480
 
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blinking
