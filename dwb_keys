@@ -243,6 +243,8 @@ eval=
 
 download= gd
 
+toggle_tab=Control @Tab@
+
 [-p]
 save_search_field=gs
 add_view=ga

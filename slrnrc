@@ -408,7 +408,7 @@ setkey group refresh_groups   "G"      % Get new news from server
 setkey group toggle_scoring   "K"      % Select scoring mode
 setkey group repeat_last_key  "."      % Repeat last key sequence
 setkey group evaluate_cmd     "^X<Esc>"   % Read line and interpret it as S-Lang
-% setkey group suspend          "^Z"     % Suspend slrn
+setkey group suspend          "^Z"     % Suspend slrn
 setkey group quit             "Q"      % Quit slrn
 
 % Group management:
@@ -455,7 +455,7 @@ setkey article save                 "O"		% Save article
 setkey article pipe                 "|"		% Pipe article
 setkey article print                "y"		% Print article
 setkey article decode               ":"		% Decode article
-% setkey article suspend              "^Z"	% Suspend slrn
+setkey article suspend              "^Z"	% Suspend slrn
 setkey article fast_quit            "Q"		% Quit slrn immediately
 
 % Moving in the article pager:
@@ -555,8 +555,10 @@ setkey readline cycle		 " "		% Cycle among filenames
 
 interpret "hide_cursor.sl"
 interpret "next_prev_threads.sl"
+interpret "hide_or_quit.sl"
 
 setkey article prev_thread  "^P"
 setkey article next_thread  "^N"
+setkey article hide_or_quit  "q"
 
 % vim:set ft=slrnrc:
