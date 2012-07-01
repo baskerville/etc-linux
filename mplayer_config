@@ -1,6 +1,7 @@
-# vo=x11
-vo=xv
+vo=xv,x11
 ao=alsa
 # heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
-subfont-osd-scale=2
-#subfont-text-scale=2
+# subfont-osd-scale=2
+# subfont-text-scale=2
+# zoom=no
+# fs=no

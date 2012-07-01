@@ -16,7 +16,7 @@ _prompt_command() {
     builtin history -a
     case "$TERM" in
         rxvt* | xterm*)
-            echo -en "\e]0;${PWD//$HOME/~}\a"
+            echo -en "\e]0;terminal ${PWD//$HOME/~}\a"
             ;;
     esac
     tput ed
