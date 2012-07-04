@@ -1,6 +1,6 @@
 [neap]
 color_background = {background}
 color_inactive = {bg_springboard}
-color_active = {orange}
+color_active = {foreground}
 padding = 0
 spacing = 1
