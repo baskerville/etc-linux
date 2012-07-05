@@ -44,9 +44,9 @@ task_tooltip = 0
 # Fonts
 task_font = sans-serif 12px
 task_font_color = {fg_comment} 100
-task_active_font_color = {cyan} 100
+task_active_font_color = {yellow} 100
 task_urgent_font_color = {red} 100
-task_iconified_font_color = {yellow} 100
+task_iconified_font_color = {blue} 100
 font_shadow = 0
 
 # System Tray
