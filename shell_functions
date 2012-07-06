@@ -41,10 +41,6 @@ msa() {
     ms "$@" | ma
 }
 
-b64() {
-    echo "$@" | openssl base64 
-}
-
 g() {
     grep -r --color=auto "$@" .
 }
