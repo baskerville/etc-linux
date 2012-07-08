@@ -63,8 +63,8 @@ visualizer_sync_interval = "30"
 ##
 #
 #visualizer_type = "wave" (spectrum/wave)
-visualizer_type = "spectrum" (spectrum/wave)
-#
+visualizer_type = "wave"
+visualizer_look = "◆│"
 ##### system encoding #####
 ##
 ## ncmpcpp should detect your charset encoding
@@ -446,7 +446,7 @@ progressbar_color = "blue"
 #
 active_column_color = "green"
 #
-#visualizer_color = "yellow"
+visualizer_color = "cyan"
 #
 #window_border_color = "green"
 #
