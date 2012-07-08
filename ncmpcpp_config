@@ -26,15 +26,16 @@ mpd_music_dir = "~/music"
 ## has to be set to 44100:16:1. Example configuration:
 ## (it has to be put into mpd.conf)
 ##
-## audio_output {
-##        type            "fifo"
-##        name            "My FIFO"
-##        path            "/tmp/mpd.fifo"
-##        format          "44100:16:1"
-## }
+# audio_output {
+#        type            "fifo"
+#        name            "My FIFO"
+#        path            "/tmp/mpd.fifo"
+#        format          "44100:16:1"
+# }
 ##
+visualizer_in_stereo = "yes"
 #
-#visualizer_fifo_path = ""
+visualizer_fifo_path = "/tmp/mpd.fifo"
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -44,7 +45,7 @@ mpd_music_dir = "~/music"
 ## are some problems with it.
 ##
 #
-#visualizer_output_name = ""
+visualizer_output_name = "my_fifo"
 #
 ##
 ## Note: Below parameter defines how often ncmpcpp
@@ -54,7 +55,7 @@ mpd_music_dir = "~/music"
 ## Keep in mind that sane values start with >=10.
 ##
 #
-#visualizer_sync_interval = "30"
+visualizer_sync_interval = "30"
 #
 ##
 ## Note: To enable spectrum frequency visualization
@@ -62,6 +63,7 @@ mpd_music_dir = "~/music"
 ##
 #
 #visualizer_type = "wave" (spectrum/wave)
+visualizer_type = "spectrum" (spectrum/wave)
 #
 ##### system encoding #####
 ##

@@ -196,6 +196,8 @@ alias lpp='lp -o MediaType=PhotopaperPlus -o Resolution=603x600dpi'
 alias dlp='lp -o Duplex=DuplexNoTumble'
 alias dlp6='lp -o Duplex=DuplexNoTumble -o Resolution=600dpi'
 alias lp6='lp -o Resolution=600dpi'
+alias lpb='lp -o StpFullBleed=True -o StpiShrinkOutput=Expand'
+alias lpb6='lp -o Resolution=600dpi -o StpFullBleed=True -o StpiShrinkOutput=Expand'
 
 # alias nzd='nzbget -D'
 # alias nzl='nzbget -L'

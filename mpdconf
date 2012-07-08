@@ -14,4 +14,11 @@ audio_output {
     mixer_control   "Master"
 }
 
+audio_output {
+    type            "fifo"
+    name            "My FIFO"
+    path            "/tmp/mpd.fifo"
+    format          "44100:16:1"
+}
+
 # vim: set ft=conf:
