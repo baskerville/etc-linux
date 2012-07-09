@@ -1,3 +1,4 @@
+alias zl='z -l'
 alias j='jobs'
 alias x='xargs -d "\n"'
 alias cp='cp -i'
