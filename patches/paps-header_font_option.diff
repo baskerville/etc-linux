@@ -1,0 +1,49 @@
+diff -ur a/src/paps.1 b/src/paps.1
+--- a/src/paps.1	2007-01-19 12:05:27.000000000 +0100
++++ b/src/paps.1	2012-07-10 20:15:41.667730568 +0200
+@@ -61,6 +61,9 @@
+ .B \-\-header
+ Draw page header for each page.
+ .TP
++.B \-\-header\-font=desc
++Set the header font description. Default is Monospace Bold 12.
++.TP
+ .B \-\-markup
+ Interpret the text as pango markup.
+ .TP
+diff -ur a/src/paps.c b/src/paps.c
+--- a/src/paps.c	2007-04-13 07:04:14.000000000 +0200
++++ b/src/paps.c	2012-07-10 20:14:01.442846966 +0200
+@@ -35,7 +35,7 @@
+ #define DEFAULT_FONT_FAMILY	"Monospace"
+ #define DEFAULT_FONT_SIZE	"12"
+ #define HEADER_FONT_FAMILY	"Monospace Bold"
+-#define HEADER_FONT_SCALE	"12"
++#define HEADER_FONT_SIZE	"12"
+ #define MAKE_FONT_NAME(f,s)	f " " s
+ 
+ typedef enum {
+@@ -283,6 +283,7 @@
+   int num_columns = 1;
+   int top_margin = 36, bottom_margin = 36, right_margin = 36, left_margin = 36;
+   gchar *font = MAKE_FONT_NAME (DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE), *encoding = NULL;
++  gchar *header_font_desc = MAKE_FONT_NAME (HEADER_FONT_FAMILY, HEADER_FONT_SIZE);
+   page_layout_t page_layout;
+   GOptionContext *ctxt = g_option_context_new("[text file]");
+   GOptionEntry entries[] = {
+@@ -290,6 +291,7 @@
+     {"stretch-chars", 0, 0, G_OPTION_ARG_NONE, &do_stretch_chars, "Whether to stretch characters in y-direction to fill lines. (Default: no)", NULL},
+     {"markup", 0, 0, G_OPTION_ARG_NONE, &do_use_markup, "Should the text be considered pango markup? (Default: no)", NULL},
+     {"columns", 0, 0, G_OPTION_ARG_INT, &num_columns, "Number of columns output. (Default: 1)", "NUM"},
++    {"header-font", 0, 0, G_OPTION_ARG_STRING, &header_font_desc, "Set the header font description. (Default: Monospace Bold 12)", "DESC"},
+     {"font", 0, 0, G_OPTION_ARG_STRING, &font, "Set the font description. (Default: Monospace 12)", "DESC"},
+     {"rtl", 0, 0, G_OPTION_ARG_NONE, &do_rtl, "Do rtl layout.", NULL},
+     {"paper", 0, 0, G_OPTION_ARG_CALLBACK, _paps_arg_paper_cb,
+@@ -324,7 +326,6 @@
+   int do_tumble = -1;   /* -1 means not initialized */
+   int do_duplex = -1;
+   gchar *paps_header = NULL;
+-  gchar *header_font_desc = MAKE_FONT_NAME (HEADER_FONT_FAMILY, HEADER_FONT_SCALE);
+   gchar *filename_in, *title, *text;
+   int header_sep = 20;
+   int max_width = 0, w;

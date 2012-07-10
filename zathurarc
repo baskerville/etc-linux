@@ -9,24 +9,25 @@ map <A-b> set "page-padding 3"
 map <A-B> set "page-padding 0"
 map e rotate rotate-ccw
 
+set page-padding 0
+set first-page-column 2
 set font sans-serif
 set render-loading false
 set window-title-basename true
-set page-padding   0
-set first-page-column   2
-set adjust-open    "width"
-set zoom-min       1
-set zoom-max       5000
+set adjust-open "width"
 
-set default-bg         '#32312E'
-set default-fg         '#A6A7AA'
-set inputbar-bg        '#32312E'
-set inputbar-fg        '#A6A7AA'
-set statusbar-bg       '#32312E'
-set statusbar-fg       '#A6A7AA'
-set recolor-darkcolor  '#69717A'
+set zoom-min 1
+set zoom-max 5000
+
+set default-bg '#32312E'
+set default-fg '#A6A7AA'
+set inputbar-bg '#32312E'
+set inputbar-fg '#A6A7AA'
+set statusbar-bg '#32312E'
+set statusbar-fg '#A6A7AA'
+set recolor-darkcolor '#69717A'
 set recolor-lightcolor '#FAF0E6'
-set highlight-color        '#FFFF00'
+set highlight-color '#FFFF00'
 set highlight-active-color '#00FFFF'
 set highlight-transparency 0.33
 
