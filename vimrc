@@ -68,6 +68,7 @@ if has("autocmd")
 
     autocmd FileType perl setlocal keywordprg=perldoc
     autocmd FileType ruby setlocal keywordprg=ri
+    autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
     if exists("+omnifunc")
         autocmd Filetype *
