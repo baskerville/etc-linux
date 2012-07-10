@@ -95,7 +95,8 @@ nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bd<cr>
 vmap <leader>t :!titlecase<cr>
-" nmap <return> zA
+nmap <leader>z viw1z=
+nmap <leader>Z viw2z=
 nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
@@ -103,7 +104,6 @@ nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
-"nmap <silent> <leader>_ :call Yank(expand("%").":".line("."))<cr>
 nmap <silent> <F1>  :set number!<cr>
 nmap <silent> <F2>  :set hlsearch!<cr>
 nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " fg<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#") . ">" <cr>
