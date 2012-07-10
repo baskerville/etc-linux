@@ -5,13 +5,15 @@ map Q quit
 map <S-Space> scroll full-up
 map <A-1> set "pages-per-row 1"
 map <A-2> set "pages-per-row 2"
-map <A-3> set "page-padding 3"
-map <A-4> set "page-padding 0"
+map <A-b> set "page-padding 3"
+map <A-B> set "page-padding 0"
 map e rotate rotate-ccw
 
 set font sans-serif
 set render-loading false
+set window-title-basename true
 set page-padding   0
+set first-page-column   2
 set adjust-open    "width"
 set zoom-min       1
 set zoom-max       5000
