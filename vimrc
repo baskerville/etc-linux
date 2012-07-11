@@ -103,7 +103,7 @@ nmap <leader>d :bd<cr>
 vmap <leader>t :!titlecase<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
-nmap <leader>] :! sr scroogle =expand("<cword>")<cr><cr><cr>
+nmap <leader>] :!web_browser =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
 nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>

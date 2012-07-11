@@ -193,3 +193,4 @@ hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 hc unlock
 
 updatethm
+reloadwallpaper
