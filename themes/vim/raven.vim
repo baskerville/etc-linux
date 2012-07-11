@@ -10,7 +10,7 @@ if exists("syntax on")
     syntax reset
 endif
 
-let g:colors_name="raven"
+let g:colors_name="colors"
 
 "
 " preferred groups
@@ -134,6 +134,8 @@ hi mkdCode         ctermfg=20
 hi mkdURL          ctermfg=178
 hi mkdLink         ctermfg=236
 
+hi User1           ctermfg=20 ctermbg=19
+
 hi def link mailSubject Title
 hi def link mailSignature Comment
 hi def link mailQuoted2 mailQuoted1
@@ -141,3 +143,5 @@ hi def link perlSharpBang Comment
 hi def link javaScriptNumber Number
 hi def link markdownCode Comment
 hi def link markdownCodeBlock Comment
+
+" vim: set ft=vim:

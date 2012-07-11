@@ -33,7 +33,13 @@ set smartcase
 " let g:is_posix = 1
 let g:xdefaults_no_if0 = 1
 " let g:vimsyn_novimhictermerror = 1
-set statusline=%F%m%r%h%w\ %=%y\ [%{strlen(&fenc)?&fenc:'n/a'}]\ [%{&ff}]\ %l,%v\ %p%%
+let g:main_ff = substitute(&ffs, ',.*', '', '')
+set statusline=
+set statusline+=%F%1*%m%r%h%w
+set statusline+=\ %=%Y
+set statusline+=\ [%{strlen(&fenc)?&fenc:'n/a'}]
+set statusline+=\ [%{&ff}]%*
+set statusline+=\ %l,%v\ %p%%
 set laststatus=2
 set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
