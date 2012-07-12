@@ -556,6 +556,7 @@ setkey readline cycle		 " "		% Cycle among filenames
 interpret "hide_cursor.sl"
 interpret "next_prev_threads.sl"
 interpret "hide_or_quit.sl"
+% interpret "xface.sl"
 
 setkey article prev_thread  "^P"
 setkey article next_thread  "^N"
