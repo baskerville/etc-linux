@@ -147,7 +147,7 @@ static const keymap_t keys[] = {
             "catapult rename \"$SXIV_IMG\"" },
 	{ true,   XK_semicolon,     it_shell_cmd,         (arg_t) \
             "catapult repeat \"$SXIV_IMG\"" },
-	{ false,  XK_period,        it_shell_cmd,         (arg_t) \
+	{ false,  XK_c,             it_shell_cmd,         (arg_t) \
             "copy_args \"$SXIV_IMG\"" },
 	{ false,  XK_slash,         it_shell_cmd,         (arg_t) \
             "browse_parent \"$SXIV_IMG\"" },
