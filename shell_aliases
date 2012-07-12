@@ -50,6 +50,7 @@ alias nl='n -l'
 alias nAl='nA -l'
 
 alias on='open "$(nn)"'
+alias gin='fileinfo "$(nn)"'
 alias any='le1 | shuf -n 1'
 alias so='any | xargs open'
 
