@@ -71,6 +71,7 @@ if has("autocmd")
     autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
     autocmd FileType xdefaults setlocal commentstring=!%s
     autocmd FileType slrnrc setlocal commentstring=%%s
+    autocmd FileType slang setlocal commentstring=%%s
 
     autocmd FileType perl setlocal keywordprg=perldoc
     autocmd FileType ruby setlocal keywordprg=ri

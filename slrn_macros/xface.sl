@@ -10,4 +10,4 @@ define show_xface ()
     }
 }
 
-register_hook ("read_article_hook", "show_xface");
+% register_hook ("read_article_hook", "show_xface");
