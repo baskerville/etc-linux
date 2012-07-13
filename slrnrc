@@ -558,9 +558,13 @@ interpret "next_prev_threads.sl"
 interpret "hide_or_quit.sl"
 interpret "xface.sl"
 
-setkey article show_xface   "^F"
+setkey article show_xface   "<Esc>F"
 setkey article prev_thread  "^P"
 setkey article next_thread  "^N"
 setkey article hide_or_quit  "q"
+
+set custom_headers "X-Face: QY}q5L~UF#6|F|m\"mYo%%;cv!sNfW&aS1{3[Qy\"5#Ro{m]rI}[h?%%lv#-o/{-8Y]\\Nbjh+4j+iNa@[v5j|v-'elKt5)jMyT|_j~$4WP*{N$ru!TMf7Iw\"8]40>w"
+set followup_custom_headers "X-Face: QY}q5L~UF#6|F|m\"mYo%%;cv!sNfW&aS1{3[Qy\"5#Ro{m]rI}[h?%%lv#-o/{-8Y]\\Nbjh+4j+iNa@[v5j|v-'elKt5)jMyT|_j~$4WP*{N$ru!TMf7Iw\"8]40>w"
+set reply_custom_headers "X-Face: QY}q5L~UF#6|F|m\"mYo%%;cv!sNfW&aS1{3[Qy\"5#Ro{m]rI}[h?%%lv#-o/{-8Y]\\Nbjh+4j+iNa@[v5j|v-'elKt5)jMyT|_j~$4WP*{N$ru!TMf7Iw\"8]40>w"
 
 % vim:set ft=slrnrc:
