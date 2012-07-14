@@ -24,9 +24,9 @@
 #
 #key_down_artist = '}'
 #
-key_page_up = 2 #^b
+key_page_up = ''
 #
-key_page_down = 6 #^f
+key_page_down = ''
 #
 key_home = 'g'
 #
@@ -115,6 +115,8 @@ key_next_column = 261 'l'
 #key_sort_playlist = 22
 #
 key_apply_filter = 'F'
+#
+key_clear_filter = ''
 #
 #key_find_forward = '/'
 #
