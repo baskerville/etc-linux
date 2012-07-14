@@ -1,9 +1,9 @@
 #! /bin/dash
 
 fn='-*-terminus-medium-*-*-*-22-*-*-*-*-*-*-*'
-nb='{background}'
-nf='{foreground}'
-sb='{bg_bump}'
-sf='{fg_highlight}'
+nb='{{background}}'
+nf='{{foreground}}'
+sb='{{bg_bump}}'
+sf='{{fg_highlight}}'
 
 dmenu -i -fn "$fn" -nb "$nb" -nf "$nf" -sb "$sb" -sf "$sf"

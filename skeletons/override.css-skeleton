@@ -1,9 +1,9 @@
-* (
-    background: {background} !important;
-    color: {foreground} !important;
+* {
+    background: {{background}} !important;
+    color: {{foreground}} !important;
     font: 16px sans-serif !important;
-)
+}
 
-a (
-    color: {azure} !important;
-)
+a {
+    color: {{azure}} !important;
+}

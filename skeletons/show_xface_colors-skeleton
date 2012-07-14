@@ -1,2 +1,2 @@
-TEXT_FG="{foreground}"
-TEXT_BG="{background}"
+TEXT_FG="{{foreground}}"
+TEXT_BG="{{background}}"
