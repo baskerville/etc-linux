@@ -1,4 +1,6 @@
 browser web_browser
+# html-renderer "w3m -dump -T text/html"
+html-renderer "elinks -dump -force-html"
 
 bind-key ^B pageup
 bind-key ^F pagedown
@@ -21,3 +23,5 @@ color info default color19
 color article default default
 
 highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
+
+# vim: set ft=conf:
