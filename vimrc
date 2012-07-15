@@ -120,7 +120,7 @@ nmap <silent> <F6> :setlocal spell! spelllang=fr<cr>
 nmap <silent> <F7> :call ToggleWrap()<cr>
 nmap <silent> <F8> :call ToggleSyntax()<cr>
 nmap <silent> <F9> :call ToggleConceal()<cr>
-nmap <silent> <F10> :call ToggleText()<cr>
+nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :edit<cr>
 nmap <silent> <F12> :call EditSyntax()<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>
@@ -173,11 +173,11 @@ function! ToggleSyntax()
     endif
 endfunction
 
-function! ToggleText()
-    if &filetype == "text"
-        set filetype=
+function! ToggleColorColumn()
+    if &colorcolumn
+        set colorcolumn=0
     else
-        set filetype=text
+        set colorcolumn=80
     endif
 endfunction
 
