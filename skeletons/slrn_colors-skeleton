@@ -77,7 +77,7 @@ color thread_number	"gray"	"default"
 color tilde		"black"		"default" "bold"
 color tree		"gray"		"default"
 color underlinetext	"white"		"default"	"underline"
-color url		"magenta"		"default"	"bold"
+color url		"blue"		"default"	"bold"
 color verbatim	"white"		"default"
 
 % These attributes are for terminals that cannot display color:

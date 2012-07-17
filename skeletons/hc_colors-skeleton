@@ -1,7 +1,7 @@
 #! /bin/dash
 
-hc set frame_bg_normal_color      '{{background}}'
-hc set frame_bg_active_color      '{{bg_dip}}'
+hc set frame_bg_normal_color      '{{bg_pit}}'
+hc set frame_bg_active_color      '{{bg_pit}}'
 hc set frame_border_normal_color  '{{bg_bump}}'
 hc set frame_border_active_color  '{{fg_comment}}'
 hc set window_border_normal_color '{{bg_bump}}'
