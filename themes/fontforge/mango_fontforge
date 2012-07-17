@@ -1,17 +1,17 @@
 fontforge.FontView.GlyphInfoColor: #7a7a7a
 fontforge.FontView.EmptySlotFgColor: #d08080
-fontforge.FontView.SelectedColor: #fff294
+fontforge.FontView.SelectedColor: #fff2b5
 fontforge.FontView.SelectedFgColor: #000000
 fontforge.FontView.ChangedColor: #cc1f8a
 fontforge.FontView.HintingNeededColor: #8c6bff
 fontforge.FontView.FontSize: 10
-fontforge.FontView.FontFamily: terminus,courier,monospace,clearlyu,unifont
-fontforge.FontView.SerifFamily: dejavu serif,times,caslon,serif,clearlyu,unifont
-fontforge.FontView.ScriptFamily: script,formalscript,serif
-fontforge.FontView.FrakturFamily: fraktur,serif
-fontforge.FontView.DoubleStruckFamily: doublestruck,serif
-fontforge.FontView.SansFamily: dejavu sans,helvetica,caliban,sans,clearlyu,unifont
-fontforge.FontView.MonoFamily: courier,monospace,clearlyu,unifont
+fontforge.FontView.FontFamily: sans-serif
+fontforge.FontView.SerifFamily: serif
+fontforge.FontView.ScriptFamily: serif
+fontforge.FontView.FrakturFamily: serif
+fontforge.FontView.DoubleStruckFamily: serif
+fontforge.FontView.SansFamily: sans-serif
+fontforge.FontView.MonoFamily: terminus
 
 fontforge.CharView.PointColor: #2194ff
 fontforge.CharView.FirstPointColor: #12b5b5
@@ -75,12 +75,12 @@ Gdraw.Background: #dcdcdc
 Gdraw.Foreground: #2e2e2e
 Gdraw.ScreenWidthInches: 20
 
-Gdraw.GProgress.Font: 400 10pt dejavu sans
+Gdraw.GProgress.Font: 400 10pt sans-serif
 Gdraw.GProgress.Foreground: #000000
 Gdraw.GProgress.FillColor: #e8ff6e
 Gdraw.GProgress.Background: #f2e0cf
 
-Gdraw.GGadget.Popup.Font: 400 10pt dejavu sans
+Gdraw.GGadget.Popup.Font: 400 10pt sans-serif
 Gdraw.GGadget.Popup.Foreground: #000000
 Gdraw.GGadget.Popup.Background: #ffffc0
 Gdraw.GGadget.Popup.Delay: 1000
@@ -103,13 +103,15 @@ Gdraw.GGadget.Box.BorderBrightest: #f7f7f7
 Gdraw.GGadget.Box.BorderBrighter: #cfcfcf
 Gdraw.GGadget.Box.BorderDarker: #666663
 Gdraw.GGadget.Box.BorderDarkest: #808080
-Gdraw.GGadget.Box.ActiveBorder: #ffde82
+Gdraw.GGadget.Box.BorderInnerCol: #000000
+Gdraw.GGadget.Box.BorderOuterCol: #000000
+Gdraw.GGadget.Box.ActiveBorder: #ffe0a1
 Gdraw.GGadget.Box.BorderType: none
 Gdraw.GGadget.Box.BorderShape: rect
 Gdraw.GGadget.Box.BorderWidth: 1
 Gdraw.GGadget.Box.Padding: 2
 Gdraw.GGadget.Box.Radius: 0
-Gdraw.GGadget.Font: 400 10pt dejavu sans
+Gdraw.GGadget.Font: 400 10pt sans-serif
 Gdraw.GGadget.TextImageSkip: 4
 Gdraw.GGadget.ImagePath: =
 
@@ -120,17 +122,16 @@ Gdraw.GListMark.Width: 12
 Gdraw.GLabel.Box.BorderType: none
 Gdraw.GLabel.Box.BorderWidth: 0
 Gdraw.GLabel.Box.Padding: 2
-Gdraw.GLabel.Font: 400 10pt dejavu sans
+Gdraw.GLabel.Font: 400 10pt sans-serif
 
 Gdraw.GButton.Box.BorderInner: False
 Gdraw.GButton.Box.BorderOuter: False
 Gdraw.GButton.Box.DoDepressedBackground: True
 Gdraw.GButton.Box.DrawDefault: False
 Gdraw.GButton.Box.NormalBackground: #cfcfcf
-Gdraw.GButton.Box.PressedBackground: #c9e873
+Gdraw.GButton.Box.PressedBackground: #d9e399
 Gdraw.GButton.Box.BorderShape: roundrect
-Gdraw.GButton.Box.Padding: 2
-Gdraw.GButton.Font: 400 10pt dejavu sans
+Gdraw.GButton.Font: 400 10pt sans-serif
 Gdraw.GButton.ShiftOnPress: False
 
 
@@ -139,26 +140,24 @@ Gdraw.GButton.ShiftOnPress: False
 
 Gdraw.GRadio.Box.BorderType: none
 Gdraw.GRadio.Box.Padding: 2
-Gdraw.GRadio.Font: 400 10pt dejavu sans
+Gdraw.GRadio.Font: 400 10pt sans-serif
 
 Gdraw.GRadioOn.Box.DoDepressedBackground: True
 Gdraw.GRadioOn.Box.PressedBackground: #a67aff
 Gdraw.GRadioOn.Box.BorderType: none
 Gdraw.GRadioOn.Box.BorderShape: diamond
-Gdraw.GRadioOn.Box.Padding: 2
 
 Gdraw.GRadioOff.Box.DoDepressedBackground: True
 Gdraw.GRadioOff.Box.PressedBackground: #b0b0b0
 Gdraw.GRadioOff.Box.BorderType: lowered
 Gdraw.GRadioOff.Box.BorderShape: diamond
-Gdraw.GRadioOff.Box.Padding: 2
 
 Gdraw.GCheckBox.Box.BorderType: none
 Gdraw.GCheckBox.Box.Padding: 2
-Gdraw.GCheckBox.Font: 400 10pt dejavu sans
+Gdraw.GCheckBox.Font: 400 10pt sans-serif
 
 Gdraw.GCheckBoxOn.Box.DoDepressedBackground: True
-Gdraw.GCheckBoxOn.Box.PressedBackground: #f0bf7d
+Gdraw.GCheckBoxOn.Box.PressedBackground: #ccbde8
 Gdraw.GCheckBoxOn.Box.BorderType: none
 Gdraw.GCheckBoxOn.Box.BorderShape: rect
 
@@ -170,7 +169,7 @@ Gdraw.GCheckBoxOff.Box.BorderShape: rect
 Gdraw.GTextField.Box.NormalBackground: #ffffff
 Gdraw.GTextField.Box.BorderShape: roundrect
 Gdraw.GTextField.Box.Padding: 2
-Gdraw.GTextField.Font: 400 10pt dejavu sans
+Gdraw.GTextField.Font: 400 10pt sans-serif
 
 
 Gdraw.GComboBoxMenu.Box.Padding: 2
@@ -181,7 +180,7 @@ Gdraw.GNumericFieldSpinner.Box.BorderWidth: 0
 Gdraw.GNumericFieldSpinner.Box.Padding: 2
 
 Gdraw.GList.Box.BorderOuter: False
-Gdraw.GList.Font: 400 10pt dejavu sans
+Gdraw.GList.Font: 400 10pt sans-serif
 
 Gdraw.GScrollBar.Box.BorderOuter: False
 Gdraw.GScrollBar.Box.NormalForeground: #d9d9d9
@@ -200,25 +199,26 @@ Gdraw.GScrollBarThumb.Box.BorderShape: roundrect
 Gdraw.GScrollBarThumb.Box.BorderWidth: 1
 Gdraw.GScrollBarThumb.Box.Padding: 2
 
-Gdraw.GLine.Box.BorderType: engraved
+Gdraw.GLine.Box.BorderDarker: #c7c7c7
+Gdraw.GLine.Box.BorderType: lowered
 Gdraw.GLine.Box.BorderShape: rect
 Gdraw.GLine.Box.Padding: 2
 
-Gdraw.GHVGroupBox.Box.NormalBackground: #ffffffff
-Gdraw.GHVGroupBox.Box.DisabledBackground: #ffffffff
-Gdraw.GHVGroupBox.Box.BorderType: engraved
-Gdraw.GHVGroupBox.Box.BorderShape: rect
-Gdraw.GHVGroupBox.Box.Padding: 2
+Gdraw.GGroup.Box.NormalBackground: #ffffffff
+Gdraw.GGroup.Box.DisabledBackground: #ffffffff
+Gdraw.GGroup.Box.BorderType: engraved
+Gdraw.GGroup.Box.BorderShape: rect
+Gdraw.GGroup.Box.Padding: 2
 
 Gdraw.GMenuBar.Box.BorderOuter: False
 Gdraw.GMenuBar.Box.BorderShape: rect
 Gdraw.GMenuBar.Box.BorderWidth: 0
-Gdraw.GMenuBar.Font: 400 10pt dejavu sans
+Gdraw.GMenuBar.Font: 400 10pt sans-serif
 
 Gdraw.GMenu.Box.BorderOuter: False
 Gdraw.GMenu.Box.BorderShape: rect
 Gdraw.GMenu.Box.Padding: 2
-Gdraw.GMenu.Font: 400 10pt dejavu sans
+Gdraw.GMenu.Font: 400 10pt sans-serif
 Gdraw.GMenu.MacIcons: False
 
 Gdraw.GMatrixEdit.Box.NormalBackground: #ffffff
@@ -227,7 +227,7 @@ Gdraw.GMatrixEdit.Box.BorderType: none
 Gdraw.GMatrixEdit.Box.BorderShape: rect
 Gdraw.GMatrixEdit.Box.BorderWidth: 0
 Gdraw.GMatrixEdit.Box.Padding: 2
-Gdraw.GMatrixEdit.Font: 400 10pt dejavu sans
+Gdraw.GMatrixEdit.Font: 400 10pt sans-serif
 
 Gdraw.GMatrixEdit.TitleBG: #9ed9a8
 Gdraw.GMatrixEdit.TitleFG: #000000
@@ -236,7 +236,7 @@ Gdraw.GMatrixEdit.RuleCol: #000000
 Gdraw.GMatrixEdit.FrozenCol: #c71cff
 Gdraw.GMatrixEdit.ActiveCol: #540dff
 Gdraw.GMatrixEdit.ActiveBG: #ffffc0
-Gdraw.GMatrixEdit.TitleFont: 700 9pt dejavu sans,helvetica,caliban,sans,clearlyu,unifont
+Gdraw.GMatrixEdit.TitleFont: 700 9pt sans-serif
 
 Gdraw.GDrawable.Box.BorderType: none
 Gdraw.GDrawable.Box.BorderWidth: 0
