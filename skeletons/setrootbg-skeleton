@@ -1,0 +1,6 @@
+#! /bin/dash
+
+xsetroot -solid '{{bg_dip}}'
+
+hc set frame_bg_transparent 0
+hc set frame_bg_transparent 1
