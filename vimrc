@@ -106,6 +106,7 @@ nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>] :!web_browser =expand("<cword>")<cr><cr><cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"), "en")<cr>
+nmap <silent> <leader>g? :call Define(expand("<cword>"), "fr")<cr>
 nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
 nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
@@ -146,7 +147,7 @@ function! CleanMuttHeader()
 endfunction
 
 function! Define(word, lang)
-    if (lang == "en")
+    if (a:lang == "en")
         let response = system("wn " . a:word)
     elseif (lang == "fr")
         let response = system("defr " . a:word)
