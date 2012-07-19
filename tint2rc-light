@@ -43,7 +43,7 @@ task_tooltip = 0
 
 # Fonts
 task_font = sans-serif 11px
-task_font_color = #969BA9 100
+task_font_color = #979BA6 100
 task_active_font_color = #877300 100
 task_urgent_font_color = #CB4344 100
 task_iconified_font_color = #0079E1 100
@@ -61,7 +61,7 @@ time1_format = %H:%M
 time1_font = sans-serif 11px
 # time2_format = %A %d %B
 # time2_font = sans 6
-clock_font_color = #707582 100
+clock_font_color = #71757F 100
 clock_padding = 1 0
 clock_background_id = 0
 # clock_rclick_command = xclock
