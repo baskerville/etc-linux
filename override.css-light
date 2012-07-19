@@ -1,9 +1,9 @@
 * {
-    background: #F8EAE4 !important;
-    color: #626E73 !important;
+    background: #FDF6E7 !important;
+    color: #707582 !important;
     font: 16px sans-serif !important;
 }
 
 a {
-    color: #0080BC !important;
+    color: #0086D0 !important;
 }

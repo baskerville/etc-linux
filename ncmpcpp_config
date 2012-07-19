@@ -33,7 +33,7 @@ mpd_music_dir = "~/music"
 #        format          "44100:16:1"
 # }
 ##
-visualizer_in_stereo = "yes"
+visualizer_in_stereo = "no"
 #
 visualizer_fifo_path = "/tmp/mpd.fifo"
 #
@@ -65,6 +65,7 @@ visualizer_sync_interval = "30"
 #visualizer_type = "wave" (spectrum/wave)
 visualizer_type = "wave"
 visualizer_look = "◆│"
+#
 ##### system encoding #####
 ##
 ## ncmpcpp should detect your charset encoding
@@ -147,11 +148,21 @@ message_delay_time = "3"
 song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
 #
 song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
-# song_status_format = "$2%a $1• $3%t $1• $4%b {(Disc %d) }$1• $5%y$1"
 #
 #song_library_format = "{%n - }{%t}|{%f}"
 #
 #tag_editor_album_format = "{(%y) }%b"
+#
+##
+## Note: Below variables are used for sorting songs in browser.
+## The sort mode determines how songs are sorted, and can be used
+## in combination with a sort format to specify a custom sorting format.
+## Possible values for browser_sort_mode are "name", "mtime" and "format".
+##
+#
+#browser_sort_mode = "name"
+#
+#browser_sort_format = "{%a - }{%t}|{%f} {(%l)}"
 #
 ##
 ## Note: Below variables are for alternative version of user's interface.
@@ -268,8 +279,10 @@ search_engine_display_mode = "columns"
 ## Note: You can specify third character which will
 ## be used to build 'empty' part of progressbar.
 ##
-# progressbar_look = "─╼·"
-progressbar_look = "━━╸"
+#progressbar_look = "=>"
+#
+progressbar_look = "━━━"
+#progressbar_boldness = "yes"
 #
 #default_place_to_search_in = "database" (database/playlist)
 #
@@ -300,6 +313,8 @@ header_visibility = "no"
 #lines_scrolled = "2"
 #
 #follow_now_playing_lyrics = "no"
+#
+#fetch_lyrics_for_current_song_in_background = "no"
 #
 #store_lyrics_in_song_dir = "no"
 #
@@ -342,6 +357,15 @@ display_screens_numbers_on_start = "no"
 ## playlist, visualizer and media library screens.
 ##
 #screen_switcher_mode = "sequence: 2 -> 3"
+#
+##
+## Default width of locked screen (in %).
+## Acceptable values are from 20 to 80.
+##
+#
+#locked_screen_width_part = "50"
+#
+#ask_for_locked_screen_width_part = "yes"
 #
 ##
 ## Note: You can define startup screen for ncmpcpp
@@ -437,8 +461,9 @@ main_window_color = "default"
 #color2 = "green"
 #
 main_window_highlight_color = "normal"
+progressbar_color = "black"
 #
-progressbar_color = "blue"
+progressbar_elapsed_color = "blue"
 #
 # statusbar_color = "black"
 #
