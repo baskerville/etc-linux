@@ -53,8 +53,8 @@ hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 resize
 hc mousebind $Mod-Button3 zoom
 
-hc keybind $Mod-Tab         cycle_all +1
-hc keybind $Mod-Shift-Tab   cycle_all -1
+hc keybind $Mod-Tab         cycle_all --skip-invisible +1
+hc keybind $Mod-Shift-Tab   cycle_all --skip-invisible -1
 hc keybind $Mod-c cycle +1
 hc keybind $Mod-Shift-c cycle -1
 hc keybind $Mod-h focus left
@@ -160,9 +160,9 @@ hc set default_frame_layout  3
 hc set gapless_grid          1
 hc set smart_frame_surroundings 1
 hc set smart_window_surroundings 1
-hc set double_window_borders 1
+hc set double_window_border  1
 hc set frame_gap             0
-hc set window_gap            3
+hc set window_gap            2
 hc set frame_border_width    1
 hc set window_border_width   2
 # hc set frame_normal_opacity  0
