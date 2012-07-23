@@ -240,7 +240,7 @@ song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
 ##   not available.
 ##
 #
-song_columns_list_format = "(5f)[blue]{nE} (20)[cyan]{aE} (40)[green]{t|f} (20)[yellow]{bE} (4f)[red]{yE} (7f)[magenta]{lE}"
+song_columns_list_format = "(5f)[cyan]{nE} (20)[blue]{aE} (40)[cyan]{t|f} (20)[blue]{bE} (4f)[cyan]{yE} (7f)[blue]{lE}"
 #
 ##### various settings #####
 #
