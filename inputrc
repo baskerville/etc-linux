@@ -13,6 +13,8 @@ set bind-tty-special-chars     off
 "\C-x\C-o": menu-complete-backward
 "\C-u": kill-whole-line
 "\C-\M-w": unix-word-rubout
+"\C-\M-f": shell-forward-word
+"\C-\M-b": shell-backward-word
 
 "\ei": tab-insert
 "\e,": shell-expand-line
