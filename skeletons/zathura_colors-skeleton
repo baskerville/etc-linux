@@ -1,0 +1,11 @@
+set default-bg '{{bg_dip}}'
+set default-fg '{{foreground}}'
+set inputbar-bg '{{bg_bump}}'
+set inputbar-fg '{{foreground}}'
+set statusbar-bg '{{bg_bump}}'
+set statusbar-fg '{{foreground}}'
+set recolor-darkcolor '{{foreground}}'
+set recolor-lightcolor '{{background}}'
+set highlight-color '#FFFF00'
+set highlight-active-color '#00FFFF'
+set highlight-transparency 0.33

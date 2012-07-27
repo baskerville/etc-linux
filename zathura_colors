@@ -1,0 +1,11 @@
+set default-bg '#FFFFEF'
+set default-fg '#71757F'
+set inputbar-bg '#EAE5D6'
+set inputbar-fg '#71757F'
+set statusbar-bg '#EAE5D6'
+set statusbar-fg '#71757F'
+set recolor-darkcolor '#71757F'
+set recolor-lightcolor '#FDF6E7'
+set highlight-color '#FFFF00'
+set highlight-active-color '#00FFFF'
+set highlight-transparency 0.33

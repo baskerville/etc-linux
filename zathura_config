@@ -1,0 +1,23 @@
+# vim: set ft=conf:
+
+map F follow
+map f toggle_fullscreen
+map q quit
+map Q quit
+map <S-Space> scroll full-up
+map <A-1> set "pages-per-row 1"
+map <A-2> set "pages-per-row 2"
+map <A-b> set "page-padding 3"
+map <A-B> set "page-padding 0"
+map e rotate rotate-ccw
+
+set page-padding 0
+set first-page-column 2
+set font sans-serif
+set render-loading false
+set window-title-basename true
+set adjust-open "width"
+
+set zoom-min 1
+set zoom-max 5000
+
