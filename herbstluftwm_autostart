@@ -162,10 +162,10 @@ hc set smart_frame_surroundings 1
 hc set smart_window_surroundings 1
 hc set frame_gap             0
 hc set window_gap            2
-hc set frame_border_width    3
-hc set window_border_width   3
-hc set window_border_inner_width   2
-hc set frame_border_inner_width   2
+hc set frame_border_width    4
+hc set window_border_width   4
+hc set window_border_inner_width   3
+hc set frame_border_inner_width   3
 # hc set frame_normal_opacity  0
 # hc set frame_active_opacity  0
 

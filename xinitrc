@@ -19,7 +19,7 @@ xsetroot -cursor_name left_ptr
 
 mpd
 urxvtd -q -o -f
-unclutter &
+unclutter -noevents &
 
 happy_fs &
 

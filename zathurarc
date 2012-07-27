@@ -1,3 +1,5 @@
+# vim: set ft=conf:
+
 map F follow
 map f toggle_fullscreen
 map q quit
@@ -19,16 +21,14 @@ set adjust-open "width"
 set zoom-min 1
 set zoom-max 5000
 
-set default-bg '#32312E'
-set default-fg '#A6A7AA'
-set inputbar-bg '#32312E'
-set inputbar-fg '#A6A7AA'
-set statusbar-bg '#32312E'
-set statusbar-fg '#A6A7AA'
-set recolor-darkcolor '#69717A'
-set recolor-lightcolor '#FAF0E6'
+set default-bg '#FFFFEF'
+set default-fg '#71757F'
+set inputbar-bg '#EAE5D6'
+set inputbar-fg '#71757F'
+set statusbar-bg '#EAE5D6'
+set statusbar-fg '#71757F'
+set recolor-darkcolor '#71757F'
+set recolor-lightcolor '#FDF6E7'
 set highlight-color '#FFFF00'
 set highlight-active-color '#00FFFF'
 set highlight-transparency 0.33
-
-# vim: set ft=conf:
