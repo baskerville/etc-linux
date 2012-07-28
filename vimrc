@@ -12,7 +12,7 @@ set wildmenu
 set backspace=indent,eol,start
 set linebreak
 set autoindent
-" set smartindent
+set smartindent
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -30,9 +30,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-" let g:is_posix = 1
 let g:xdefaults_no_if0 = 1
-" let g:vimsyn_novimhictermerror = 1
 let g:main_ff = substitute(&ffs, ',.*', '', '')
 set statusline=
 set statusline+=%F%1*%m%r%h%w
@@ -43,7 +41,6 @@ set statusline+=\ %l,%v\ %p%%
 set laststatus=2
 set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
-" set listchars=eol:a,tab:b\ ,trail:c,extends:d,precedes:e,conceal:f,nbsp:g
 
 set t_Co=256
 syntax on
