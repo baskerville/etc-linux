@@ -12,7 +12,6 @@ Mod=Mod4
 hc keybind $Mod-Alt-Escape quit
 hc keybind $Mod-Escape reload
 hc keybind $Mod-w close
-hc keybind $Mod-space spawn dmenu_launch
 
 DEFAULT_TAG='one'
 TAG_NAMES="$DEFAULT_TAG two three four five six seven eight nine"
@@ -74,85 +73,10 @@ hc keybind $Mod-Alt-Shift-j shift -e down
 hc keybind $Mod-Alt-Shift-k shift -e up
 hc keybind $Mod-Alt-Shift-l shift -e right
 
-hc keybind $Mod-Control-comma spawn focus_or_run dwb
-hc keybind $Mod-Control-Shift-comma spawn focus_or_run dwb_restore
-hc keybind $Mod-Control-slash spawn urxvtc
-hc keybind $Mod-Control-Shift-slash spawn urxvtc -cd "$XDG_DOWNLOAD_DIR"
-hc keybind $Mod-Control-period spawn focus_or_run mutt
-hc keybind $Mod-Control-Shift-period spawn focus_or_run slrn
-
-hc keybind $Mod-apostrophe spawn lasso
-hc keybind $Mod-Shift-apostrophe spawn small_lasso
-hc keybind $Mod-semicolon spawn glean_primary
-hc keybind $Mod-Shift-semicolon spawn glean_clipboard
-hc keybind $Mod-Control-c spawn focus_or_run hlconf
 hc keybind $Mod-bracketleft use_index -1
 hc keybind $Mod-bracketright use_index +1
 hc keybind $Mod-braceleft cycle_monitor -1
 hc keybind $Mod-braceright cycle_monitor +1
-
-hc keybind XF86AudioMute spawn dvol toggle
-hc keybind XF86AudioLowerVolume spawn dvol lower
-hc keybind XF86AudioRaiseVolume spawn dvol raise
-hc keybind Shift-XF86AudioLowerVolume spawn dvol strong_lower
-hc keybind Shift-XF86AudioRaiseVolume spawn dvol strong_raise
-hc keybind $Mod-XF86AudioLowerVolume spawn dvol min
-hc keybind $Mod-XF86AudioRaiseVolume spawn dvol max
-hc keybind $Mod-Control-0 spawn mpc -q seek 0%
-hc keybind $Mod-Control-1 spawn mpc -q seek 10%
-hc keybind $Mod-Control-2 spawn mpc -q seek 20%
-hc keybind $Mod-Control-3 spawn mpc -q seek 30%
-hc keybind $Mod-Control-4 spawn mpc -q seek 40%
-hc keybind $Mod-Control-5 spawn mpc -q seek 50%
-hc keybind $Mod-Control-6 spawn mpc -q seek 60%
-hc keybind $Mod-Control-7 spawn mpc -q seek 70%
-hc keybind $Mod-Control-8 spawn mpc -q seek 80%
-hc keybind $Mod-Control-9 spawn mpc -q seek 90%
-hc keybind XF86AudioPrev spawn mpc -q prev
-hc keybind XF86AudioNext spawn mpc -q next
-hc keybind XF86AudioPlay spawn mpc -q toggle
-hc keybind $Mod-XF86AudioPlay spawn focus_or_run ncmpcpp
-hc keybind $Mod-Shift-XF86AudioPlay spawn copy_mpd_title
-hc keybind $Mod-Control-XF86AudioPlay spawn mpc load radios
-hc keybind $Mod-XF86AudioPrev spawn mpc seek -1
-hc keybind $Mod-XF86AudioNext spawn mpc seek +1
-
-hc keybind $Mod-Insert spawn copy_primary_to_clipboard
-hc keybind $Mod-Shift-Insert spawn copy_clipboard_to_primary
-hc keybind $Mod-Control-p spawn dash -c 'printf $(pwgen -nc) | xsel -bi'
-
-hc keybind $Mod-equal spawn mosaic "$XDG_DOWNLOAD_DIR"
-hc keybind $Mod-Shift-equal spawn mosaic "$HOME/image"
-
-hc keybind $Mod-Control-a spawn focus_or_run accounts
-hc keybind $Mod-Control-Shift-a spawn focus_or_run boards
-hc keybind $Mod-Control-t spawn focus_or_run htop
-hc keybind $Mod-Control-i spawn focus_or_run notes
-hc keybind $Mod-Control-x spawn focus_or_run xlog
-
-hc keybind XF86LaunchB spawn dvol status
-hc keybind Shift-XF86LaunchB spawn dbright status
-hc keybind $Mod-b spawn dbatt status
-hc keybind XF86MonBrightnessDown spawn dbright -1
-hc keybind XF86MonBrightnessDown spawn dbright -1
-hc keybind XF86MonBrightnessUp spawn dbright +1
-hc keybind Shift-XF86MonBrightnessDown spawn dbright -10
-hc keybind Shift-XF86MonBrightnessUp spawn dbright +10
-hc keybind $Mod-XF86MonBrightnessDown spawn dbright min
-hc keybind $Mod-XF86MonBrightnessUp spawn dbright max
-hc keybind $Mod-Control-g spawn pickcolor
-hc keybind $Mod-XF86LaunchA spawn scrot
-hc keybind $Mod-Shift-XF86LaunchA spawn dash -c 'import +repage $(date +%Y-%m-%d-%H%M%S)_ss.png'
-hc keybind XF86KbdBrightnessDown spawn togglethm dark
-hc keybind XF86KbdBrightnessUp spawn togglethm light
-hc keybind $Mod-XF86KbdBrightnessDown spawn killpanel
-hc keybind $Mod-XF86KbdBrightnessUp spawn launchpanel
-
-hc keybind Shift-XF86Eject            spawn wodim -eject
-hc keybind $Mod-XF86Eject             spawn dpms_standby
-hc keybind $Mod-Alt-XF86Eject         spawn sudo systemctl suspend
-hc keybind $Mod-Control-XF86Eject     spawn sudo systemctl reboot
-hc keybind $Mod-Alt-Control-XF86Eject spawn sudo systemctl poweroff
 
 hc set raise_on_focus        1
 hc set always_show_frame     0

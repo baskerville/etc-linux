@@ -1,0 +1,208 @@
+"dmenu_launch"
+    Mod4 + space
+
+"focus_or_run dwb"
+    Mod4 + Control + comma
+
+"focus_or_run dwb_restore"
+    Mod4 + Control + Shift + comma
+
+"urxvtc"
+    Mod4 + Control + slash
+
+"urxvtc -cd /home/ice/incoming"
+    Mod4 + Control + Shift + slash
+
+"focus_or_run mutt"
+    Mod4 + Control + period
+
+"focus_or_run slrn"
+    Mod4 + Control + Shift + period
+
+"lasso"
+    Mod4 + apostrophe
+
+"small_lasso"
+    Mod4 + Shift + apostrophe
+
+"glean_primary"
+    Mod4 + semicolon
+
+"glean_clipboard"
+    Mod4 + Shift + semicolon
+
+"focus_or_run hlconf"
+    Mod4 + Control + c
+
+"dvol toggle"
+    XF86AudioMute
+
+"dvol lower"
+    XF86AudioLowerVolume
+
+"dvol raise"
+    XF86AudioRaiseVolume
+
+"dvol strong_lower"
+    Shift + XF86AudioLowerVolume
+
+"dvol strong_raise"
+    Shift + XF86AudioRaiseVolume
+
+"dvol min"
+    Mod4 + XF86AudioLowerVolume
+
+"dvol max"
+    Mod4 + XF86AudioRaiseVolume
+
+"mpc -q seek 0%"
+    Mod4 + Control + 0
+
+"mpc -q seek 10%"
+    Mod4 + Control + 1
+
+"mpc -q seek 20%"
+    Mod4 + Control + 2
+
+"mpc -q seek 30%"
+    Mod4 + Control + 3
+
+"mpc -q seek 40%"
+    Mod4 + Control + 4
+
+"mpc -q seek 50%"
+    Mod4 + Control + 5
+
+"mpc -q seek 60%"
+    Mod4 + Control + 6
+
+"mpc -q seek 70%"
+    Mod4 + Control + 7
+
+"mpc -q seek 80%"
+    Mod4 + Control + 8
+
+"mpc -q seek 90%"
+    Mod4 + Control + 9
+
+"mpc -q prev"
+    XF86AudioPrev
+
+"mpc -q next"
+    XF86AudioNext
+
+"mpc -q toggle"
+    XF86AudioPlay
+
+"focus_or_run ncmpcpp"
+    Mod4 + XF86AudioPlay
+
+"copy_mpd_title"
+    Mod4 + Shift + XF86AudioPlay
+
+"mpc load radios"
+    Mod4 + Control + XF86AudioPlay
+
+"mpc seek -1"
+    Mod4 + XF86AudioPrev
+
+"mpc seek +1"
+    Mod4 + XF86AudioNext
+
+"copy_primary_to_clipboard"
+    Mod4 + Insert
+
+"copy_clipboard_to_primary"
+    Mod4 + Shift + Insert
+
+"dash -c 'printf $(pwgen -nc) | xsel -bi'"
+    Mod4 + Control + p
+
+"mosaic /home/ice/incoming"
+    Mod4 + equal
+
+"mosaic /home/ice/image"
+    Mod4 + Shift + equal
+
+"focus_or_run accounts"
+    Mod4 + Control + a
+
+"focus_or_run boards"
+    Mod4 + Control + Shift + a
+
+"focus_or_run htop"
+    Mod4 + Control + t
+
+"focus_or_run notes"
+    Mod4 + Control + i
+
+"focus_or_run xlog"
+    Mod4 + Control + x
+
+"dvol status"
+    XF86LaunchB
+
+"dbright status"
+    Shift + XF86LaunchB
+
+"dbatt status"
+    Mod4 + b
+
+"dbright -1"
+    XF86MonBrightnessDown
+
+"dbright -1"
+    XF86MonBrightnessDown
+
+"dbright +1"
+    XF86MonBrightnessUp
+
+"dbright -10"
+    Shift + XF86MonBrightnessDown
+
+"dbright +10"
+    Shift + XF86MonBrightnessUp
+
+"dbright min"
+    Mod4 + XF86MonBrightnessDown
+
+"dbright max"
+    Mod4 + XF86MonBrightnessUp
+
+"pickcolor"
+    Mod4 + Control + g
+
+"scrot"
+    Mod4 + XF86LaunchA
+
+"scrot -s"
+    Mod4 + Shift + XF86LaunchA + Release
+
+"togglethm dark"
+    XF86KbdBrightnessDown
+
+"togglethm light"
+    XF86KbdBrightnessUp
+
+"killpanel"
+    Mod4 + XF86KbdBrightnessDown
+
+"launchpanel"
+    Mod4 + XF86KbdBrightnessUp
+
+"wodim -eject"
+    Shift + XF86Eject
+
+"dpms_standby"
+    Mod4 + XF86Eject
+
+"sudo systemctl suspend"
+    Mod4 + Alt + XF86Eject
+
+"sudo systemctl reboot"
+    Mod4 + Control + XF86Eject
+
+"sudo systemctl poweroff"
+    Mod4 + Alt + Control + XF86Eject
+
+# vim: set ft=conf:

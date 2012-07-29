@@ -151,3 +151,4 @@ tab-normal-fg-color-2=#71757F
 tab-number-color=#979BA6
 tab-protected-color=#E172D7
 searchengine-submit-pattern=TERMS
+close-last-tab-policy=ignore
