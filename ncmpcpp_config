@@ -64,7 +64,7 @@ visualizer_sync_interval = "30"
 #
 #visualizer_type = "wave" (spectrum/wave)
 visualizer_type = "wave"
-visualizer_look = "◆│"
+visualizer_look = "●●"
 #
 ##### system encoding #####
 ##
