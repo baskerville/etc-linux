@@ -26,6 +26,6 @@ happy_fs &
 
 # exec openbox-session
 exec herbstluftwm --locked
-# exec /home/ice/src/projects/bspwm/bspwm
+exec /home/ice/src/projects/bspwm/bspwm > /tmp/bspwm-out 2>&1
 
 # vim: set ft=conf:

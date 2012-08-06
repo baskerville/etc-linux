@@ -126,6 +126,6 @@ source ~/.mutt/theme
 folder-hook !=sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21n  %-80.80s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21t  %-80.80s %> %D  %4c"'
 
-mailboxes =inbox =lists =arch =vim =mutt =herbstluftwm =urxvt =commandes =paypal =apo =xd =typo =fai =univ
+mailboxes =inbox =lists =arch =herbstluftwm =commandes =paypal =xd =fai =univ
 
 # my_hdr X-Face: QY}q5L~UF\#6|F|m\"mYo%\;cv!sNfW&aS1{3[Qy\"5\#Ro{m]rI}[h?%lv\#-o/{-8Y]\\Nbjh+4j+iNa@[v5j|v-\'elKt5)jMyT|_j~\$4WP*{N\$ru!TMf7Iw\"8]40>w

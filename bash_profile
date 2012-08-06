@@ -35,6 +35,7 @@ export TRAVELER=/media/traveler
 export HEXAGON=/media/hexagon
 export LACIE=/media/lacie
 
+export BSPWM_SOCKET=/tmp/bspwm-socket
 export WALLPAPER="$HOME/.wallpaper"
 
 export DPMS_STANDBY=180
