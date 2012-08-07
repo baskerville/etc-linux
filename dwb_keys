@@ -245,6 +245,10 @@ download= gd
 
 toggle_tab=Control @Tab@
 
+group_show= as
+group_tag= am
+group_toggle= at
+
 [-p]
 save_search_field=gs
 add_view=ga
