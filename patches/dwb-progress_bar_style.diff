@@ -1,0 +1,146 @@
+diff -r eb2a9350a6c0 src/config.h
+--- a/src/config.h	Mon Jul 30 01:02:32 2012 +0200
++++ b/src/config.h	Tue Jul 31 11:28:01 2012 +0200
+@@ -1026,6 +1026,10 @@
+     SETTING_GLOBAL,  COLOR_CHAR, { .p = "#0000aa"       },    (S_Func) dwb_reload_layout,  { 0 }, },
+   { { "download-gradient-end",                        "Download end gradient color", },           
+     SETTING_GLOBAL,  COLOR_CHAR, { .p = "#00aa00"       },    (S_Func) dwb_reload_layout,  { 0 }, },
++  { { "progress-bar-full-color",                        "Color of the full part of the progress bar", },           
++    SETTING_GLOBAL,  COLOR_CHAR, { .p = "#ffffff"       },    (S_Func) dwb_reload_layout,  { 0 }, },
++  { { "progress-bar-empty-color",                        "Color of the empty part of the progress bar", },           
++    SETTING_GLOBAL,  COLOR_CHAR, { .p = "#ffffff"       },    (S_Func) dwb_reload_layout,  { 0 }, },
+ 
+   { { "font",                                    "Default font used for the ui", },                                       
+     SETTING_GLOBAL,  CHAR, { .p = "monospace 8"          },   (S_Func) dwb_reload_layout,  { 0 }, },
+@@ -1073,6 +1077,8 @@
+     SETTING_GLOBAL,  BOOLEAN,    { .b = true },          NULL,  { 0 }, }, 
+   { { "widget-packing",                            "Packing of the main widgets", },                                       
+     SETTING_GLOBAL,  CHAR,    { .p = "dtws" },           (S_Func)dwb_set_widget_packing,  { 0 }, }, 
++  { { "progress-bar-style",                        "Style of the progress bar", },                   
++    SETTING_GLOBAL | SETTING_ONINIT,  CHAR, { .p = "default" }, (S_Func)dwb_set_progress_bar_style,   { 0 }, },
+   { { "cache-model",                            "Packing of the main widgets", },                                       
+     SETTING_GLOBAL,  CHAR,    { .p = "webbrowser" },           NULL,  { 0 }, }, 
+   { { "javascript-schemes",                    "Whether to allow loading urls with 'javascript' scheme", },                                       
+diff -r eb2a9350a6c0 src/dwb.c
+--- a/src/dwb.c	Mon Jul 30 01:02:32 2012 +0200
++++ b/src/dwb.c	Tue Jul 31 11:28:01 2012 +0200
+@@ -62,6 +62,7 @@
+ static DwbStatus dwb_set_scroll_step(GList *, WebSettings *);
+ static DwbStatus dwb_set_private_browsing(GList *, WebSettings *);
+ static DwbStatus dwb_set_new_tab_position_policy(GList *, WebSettings *);
++static DwbStatus dwb_set_progress_bar_style(GList *, WebSettings *);
+ static DwbStatus dwb_set_close_tab_position_policy(GList *, WebSettings *);
+ static DwbStatus dwb_set_cookies(GList *, WebSettings *);
+ static DwbStatus dwb_set_widget_packing(GList *, WebSettings *);
+@@ -194,6 +195,17 @@
+ }
+ 
+ static DwbStatus 
++dwb_set_progress_bar_style(GList *gl, WebSettings *s) {
++  if (!g_strcmp0("default", s->arg_local.p)) 
++    dwb.misc.progress_bar_style = PROGRESS_BAR_DEFAULT;
++  else if (!g_strcmp0("simple", s->arg_local.p)) 
++    dwb.misc.progress_bar_style = PROGRESS_BAR_SIMPLE;
++  else 
++    return STATUS_ERROR;
++  return STATUS_OK;
++}
++
++static DwbStatus 
+ dwb_set_ntlm(GList *gl, WebSettings *s) {
+   dwb_soup_set_ntlm(s->arg_local.b);
+   return STATUS_OK;
+@@ -584,14 +596,18 @@
+     g_string_append(string, "</span>]");
+   }
+   if (v->status->progress != 0) {
++    wchar_t *bar_blocks = PROGRESS_DEFAULT;
+     wchar_t buffer[PBAR_LENGTH + 1] = { 0 };
+     wchar_t cbuffer[PBAR_LENGTH] = { 0 };
+     int length = PBAR_LENGTH * v->status->progress / 100;
+-    wmemset(buffer, 0x2588, length - 1);
+-    buffer[length] = 0x258f - (int)((v->status->progress % 10) / 10.0*8);
+-    wmemset(cbuffer, 0x2581, PBAR_LENGTH-length-1);
++    if (dwb.misc.progress_bar_style == PROGRESS_BAR_SIMPLE)
++        bar_blocks = PROGRESS_SIMPLE;
++    wmemset(buffer, bar_blocks[1], length - 1);
++    if (dwb.misc.progress_bar_style == PROGRESS_BAR_DEFAULT)
++        buffer[length] = bar_blocks[3] - (int)((v->status->progress % 10) / 10.0*8);
++    wmemset(cbuffer, bar_blocks[2], PBAR_LENGTH-length-1);
+     cbuffer[PBAR_LENGTH - length] = '\0';
+-    g_string_append_printf(string, "\u2595%ls%ls\u258f", buffer, cbuffer);
++    g_string_append_printf(string, "%lc<span foreground='%s'>%ls</span><span foreground='%s'>%ls</span>%lc", bar_blocks[0], dwb.color.progress_full, buffer, dwb.color.progress_empty, cbuffer, bar_blocks[3]);
+   }
+   if (string->len > 0) 
+     dwb_set_status_bar_text(dwb.gui.rstatus, string->str, NULL, NULL, true);
+@@ -3385,6 +3401,8 @@
+   dwb.color.allow_color = GET_CHAR("status-allowed-color");
+   dwb.color.block_color = GET_CHAR("status-blocked-color");
+ 
++  dwb.color.progress_full = GET_CHAR("progress-bar-full-color");
++  dwb.color.progress_empty = GET_CHAR("progress-bar-empty-color");
+ 
+   char *font = GET_CHAR("font");
+   if (font) 
+diff -r eb2a9350a6c0 src/dwb.h
+--- a/src/dwb.h	Mon Jul 30 01:02:32 2012 +0200
++++ b/src/dwb.h	Tue Jul 31 11:28:01 2012 +0200
+@@ -47,6 +47,9 @@
+ 
+ #define HINT_SEARCH_SUBMIT "_dwb_search_submit_"
+ 
++#define PROGRESS_DEFAULT L"▕█▁▏"
++#define PROGRESS_SIMPLE L" ██ "
++
+ #if GTK_CHECK_VERSION(3, 0, 0)
+ #define _HAS_GTK3 1
+ #endif
+@@ -394,6 +397,11 @@
+ } CloseLastTabPolicy;
+ 
+ typedef enum {
++  PROGRESS_BAR_DEFAULT,
++  PROGRESS_BAR_SIMPLE,
++} ProgressBarStyle;
++
++typedef enum {
+   COOKIE_STORE_SESSION,
+   COOKIE_STORE_PERSISTENT,
+   COOKIE_STORE_NEVER,
+@@ -676,6 +684,8 @@
+   char *tab_protected_color;
+   char *allow_color;
+   char *block_color;
++  char *progress_full;
++  char *progress_empty;
+ };
+ struct _Font {
+   PangoFontDescription *fd_active;
+@@ -752,6 +762,7 @@
+   char *hint_style;
+   int script_signals;
+   CloseLastTabPolicy clt_policy;
++  ProgressBarStyle progress_bar_style;
+ };
+ enum Files {
+   FILES_FIRST = 0,
+diff -r eb2a9350a6c0 util/settings.pre
+--- a/util/settings.pre	Mon Jul 30 01:02:32 2012 +0200
++++ b/util/settings.pre	Tue Jul 31 11:28:01 2012 +0200
+@@ -69,6 +69,8 @@
+ download-bg-color text Background color of the download bar
+ download-gradient-start text Start color for download progress gradient color
+ download-gradient-end text End color for download progress gradient color
++progress-bar-full-color text Color of the full part of the progress bar
++progress-bar-empty-color text Color of the empty part of the progress bar
+ 
+ # lt Layout
+ background-tabs checkbox Whether to open tabs in background
+@@ -87,6 +89,7 @@
+ tabbed-browsing checkbox Whether to enable tabbed browsing
+ user-stylesheet-uri text The uri of a stylesheet applied to every page
+ widget-packing text Packing of the main widgets; t (T)=tabbar (hidden), w=webview, s (S)=statusbar (hidden), d=downloadbar
++progress-bar-style select @default @simple The progress bar style
+ 
+ # hints Hints
+ hint-active-color text Color of active links in hintmode
