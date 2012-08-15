@@ -99,6 +99,7 @@ macro index ( "<search-reverse>~P\n"
 macro index ) "<search>~P\n"
 macro index,attach { "<first-entry>"
 macro index,attach } "<last-entry>"
+macro index M "<tag-pattern>.\n<clear-flag>N<clear-flag>O<clear-flag>*" "Mark all messages as read"
 
 # TODO: \'x instead of gx
 macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
