@@ -77,6 +77,7 @@ static const keymap_t keys[] = {
 	{ false,  XK_bracketleft,   i_navigate,           (arg_t) -10 },
 	{ false,  XK_braceright,    i_navigate,           (arg_t) +100 },
 	{ false,  XK_braceleft,     i_navigate,           (arg_t) -100 },
+	{ true,   XK_t,             i_alternate,          (arg_t) None },
 	{ false,  XK_g,             it_first,             (arg_t) None },
 	{ false,  XK_G,             it_n_or_last,         (arg_t) None },
 
