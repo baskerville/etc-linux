@@ -13,7 +13,7 @@ URxvt.scrollBar:            false
 URxvt.mouseWheelScrollPage: true
 URxvt.saveLines:            32767
 
-URxvt.urlLauncher:          web_browser
+URxvt.url-select.launcher:  web_browser
 URxvt.perl-ext:             default
 URxvt.perl-ext-common:      keyboard-select,url-select,clipboard,autocomplete-ALL-the-things,font-size,-option-popup,-selection-popup,-searchable-scrollback
 URxvt.keysym.M-slash:       perl:aAtt:complete

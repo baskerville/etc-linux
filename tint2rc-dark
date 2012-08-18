@@ -44,7 +44,7 @@ task_tooltip = 0
 # Fonts
 task_font = sans-serif 11px
 task_font_color = #7C716B 100
-task_active_font_color = #A9995E 100
+task_active_font_color = #A39792 100
 task_urgent_font_color = #D0857E 100
 task_iconified_font_color = #7C9BD4 100
 font_shadow = 0
