@@ -1,6 +1,6 @@
 [neap]
-color_background = #002B36
-color_inactive = #2D4C59
-color_active = #A39792
+color_background = #32312E
+color_inactive = #545350
+color_active = #A4A6B1
 padding = 0
 spacing = 1
