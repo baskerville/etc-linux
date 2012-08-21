@@ -96,7 +96,8 @@ alias primo='xsel -po'
 alias clipi='xsel -bi'
 alias clipo='xsel -bo'
 
-alias mduration="mediainfo '--Inform=General;%Duration/String%'"
+alias mdur="mediainfo '--Inform=General;%Duration/String%'"
+alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"
 
 alias ivz='iv -Z'
 alias ivzr='ivz -tfr .'
