@@ -115,7 +115,7 @@ alias mplayer='mplayer -softvol'
 alias vpnz='mplayer -vo x11 -nozoom'
 alias camshot='shotdev /dev/video0'
 
-alias up='git commit -am update'
+alias up='git commit -am Update'
 alias pu='git push'
 alias upu='up && pu'
 
