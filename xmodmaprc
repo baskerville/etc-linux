@@ -1,15 +1,10 @@
-!
 ! Apple Compact Aluminium Keyboard
-! 
+! Model A1242
 
-! clear Lock
-! clear Control
+clear Lock
+clear Control
 
-! CapsLock becomes Control
-! keycode 66 = Control_L
+keycode 66 = Control_L
+keycode 37 = Multi_key Caps_Lock
 
-! Control becomes Compose
-! Shift-Control becomes CapsLock
-! keycode 37 = Multi_key Caps_Lock
-
-! add Control = Control_L
+add Control = Control_L Control_R

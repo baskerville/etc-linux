@@ -1,6 +1,7 @@
 setxkbmap -option terminate:ctrl_alt_bksp
+xmodmap "$HOME/.xmodmaprc"
 kdlaunch &
-xrdb -merge ~/.Xresources
+xrdb -merge "$HOME/.Xresources"
 # compton -bCcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o 0.8
 
 # reload fonts
@@ -26,6 +27,6 @@ happy_fs &
 
 # exec openbox-session
 exec herbstluftwm --locked
-exec /home/ice/src/projects/bspwm/bspwm > /tmp/bspwm-out 2>&1
+# exec /home/ice/src/projects/bspwm/bspwm
 
 # vim: set ft=conf:

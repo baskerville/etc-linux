@@ -1,15 +1,11 @@
-! keydouble configuration file
-!
+! Keydouble Configuration
 ! natart_pairs: 36:255
 
-clear Lock
 clear Control
-
-keycode 66 = Control_L
 
 keycode 36 = Control_R
 keycode 255 = Return
-
-keycode 37 = Multi_key Caps_Lock
+! keycode 65 = Mode_switch
+! keycode 254 = space
 
 add Control = Control_L Control_R
