@@ -23,6 +23,7 @@ export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
 export NNTPSERVER='news.orange.fr'
 export SLRNPULL_ROOT="$HOME/.slrnpull"
 export _Z_NO_RESOLVE_SYMLINKS=1
+# export NETCFG_DEBUG=1
 
 export SHELL_CONFIG="$HOME/.bashrc"
 export SHELL_PROFILE="$HOME/.bash_profile"
