@@ -23,7 +23,7 @@ export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
 export NNTPSERVER='news.orange.fr'
 export SLRNPULL_ROOT="$HOME/.slrnpull"
 export _Z_NO_RESOLVE_SYMLINKS=1
-# export NETCFG_DEBUG=1
+export NETCFG_DEBUG=1
 
 export SHELL_CONFIG="$HOME/.bashrc"
 export SHELL_PROFILE="$HOME/.bash_profile"
@@ -47,7 +47,7 @@ export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blinking
 export LESS_TERMCAP_md=$'\e[1;35m'     # begin bold
 export LESS_TERMCAP_me=$'\e[0m'        # end mode
 export LESS_TERMCAP_so=$'\e[1;40;36m'  # begin standout - info box
-export LESS_TERMCAP_se=$'\e[0m\e[?25l' # end standout
+export LESS_TERMCAP_se=$'\e[0m'        # end standout
 export LESS_TERMCAP_us=$'\e[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\e[0m'        # end underline
 

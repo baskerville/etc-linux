@@ -101,7 +101,9 @@ nmap <leader>d :bd<cr>
 vmap <leader>t :!titlecase<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
-nmap <leader>] :!web_browser =expand("<cword>")<cr><cr><cr>
+nmap <leader>w :!web_browser =expand("<cword>")<cr><cr><cr>
+nmap <leader>[ :cp<cr>
+nmap <leader>] :cn<cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"), "en")<cr>
 nmap <silent> <leader>g? :call Define(expand("<cword>"), "fr")<cr>
 nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
@@ -120,7 +122,7 @@ nmap <silent> <F8> :call ToggleSyntax()<cr>
 nmap <silent> <F9> :call ToggleConceal()<cr>
 nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :edit<cr>
-nmap <silent> <F12> :call EditSyntax()<cr>
+nmap <silent> <F12> :make<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal tabstop=".v:count1<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>
 nmap <silent> <leader>yy yy:call YankClip()<cr>

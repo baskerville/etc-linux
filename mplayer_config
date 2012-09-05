@@ -1,5 +1,6 @@
 vo=xv,x11
 ao=alsa
+use-filename-title=yes
 # heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
 # subfont-osd-scale=2
 # subfont-text-scale=2
