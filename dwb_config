@@ -155,4 +155,4 @@ tab-normal-fg-color-1=#71757F
 tab-normal-fg-color-2=#71757F
 tab-number-color=#979BA6
 tab-protected-color=#E172D7
-file-sync-interval=120
+file-sync-interval=0
