@@ -281,7 +281,7 @@ search_engine_display_mode = "columns"
 ##
 #progressbar_look = "=>"
 #
-progressbar_look = "━━ "
+progressbar_look = "━━━"
 #progressbar_boldness = "yes"
 #
 #default_place_to_search_in = "database" (database/playlist)
@@ -461,10 +461,10 @@ main_window_color = "default"
 #color2 = "green"
 #
 main_window_highlight_color = "normal"
-# progressbar_color = "black"
-progressbar_color = "blue"
+progressbar_color = "black"
+# progressbar_color = "blue"
 #
-# progressbar_elapsed_color = "blue"
+progressbar_elapsed_color = "blue"
 #
 # statusbar_color = "black"
 #
