@@ -136,9 +136,9 @@ def_key "G"
 #def_key "enter"
 #  press_enter
 #
-#def_key "delete"
-#  delete
-#
+def_key "d"
+  delete
+
 def_key "l"
   next_column
 
