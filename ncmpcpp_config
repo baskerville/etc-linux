@@ -281,7 +281,7 @@ search_engine_display_mode = "columns"
 ##
 #progressbar_look = "=>"
 #
-progressbar_look = "━━━"
+progressbar_look = "━━ "
 #progressbar_boldness = "yes"
 #
 #default_place_to_search_in = "database" (database/playlist)

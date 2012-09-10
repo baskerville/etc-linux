@@ -73,6 +73,8 @@ alias iten='tw www.freetranslation.com.it-en'
 alias enit='tw www.freetranslation.com.en-it'
 alias esen='tw www.freetranslation.com.es-en'
 alias enes='tw www.freetranslation.com.en-es'
+alias jaen='tw translate.google.com.ja-en'
+alias enja='tw translate.google.com.en-ja'
 
 alias yd='youtube-dl -t'
 alias te='crontab -e'
