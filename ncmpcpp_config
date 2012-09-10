@@ -462,8 +462,6 @@ main_window_color = "default"
 #
 main_window_highlight_color = "normal"
 progressbar_color = "black"
-# progressbar_color = "blue"
-#
 progressbar_elapsed_color = "blue"
 #
 # statusbar_color = "black"
