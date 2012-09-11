@@ -1,3 +1,45 @@
+# bspwm hotkeys
+
+# "bspc quit"
+#     Mod4 + Alt + Escape
+
+# "bspc focus left"
+#     Mod4 + h
+
+# "bspc focus right"
+#     Mod4 + l
+
+# "bspc focus up"
+#     Mod4 + k
+
+# "bspc focus down"
+#     Mod4 + j
+
+# "bspc push left"
+#     Mod4 + Control + h
+
+# "bspc push right"
+#     Mod4 + Control + l
+
+# "bspc push up"
+#     Mod4 + Control + k
+
+# "bspc push down"
+#     Mod4 + Control + j
+
+# "bspc pull left"
+#     Mod4 + Alt + h
+
+# "bspc pull right"
+#     Mod4 + Alt + l
+
+# "bspc pull up"
+#     Mod4 + Alt + k
+
+# "bspc pull down"
+#     Mod4 + Alt + j
+
+# wm independent hotkeys
 "dmenu_launch"
     Mod4 + space
 
