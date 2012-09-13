@@ -59,6 +59,7 @@ if has("autocmd")
     autocmd BufRead,BufEnter *.mxml set filetype=mxml
     autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
     autocmd BufRead,BufEnter *.nfo set filetype=nfo
+    autocmd BufRead,BufEnter *.ck set filetype=ck
     autocmd BufRead,BufEnter *keydoublerc set filetype=xmodmap
     autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
 

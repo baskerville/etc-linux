@@ -2,6 +2,8 @@ outer_border_width = 1
 main_border_width = 1
 inner_border_width = 2
 window_gap = 2
+top_padding = 24;
+
 adaptive_window_gap = false
 adaptive_window_border = false
 

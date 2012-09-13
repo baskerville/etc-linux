@@ -1,7 +1,18 @@
+#
 # bspwm hotkeys
+#
 
 # "bspc quit"
 #     Mod4 + Alt + Escape
+
+# "bspc layout tiled"
+#     Mod4 + t
+
+# "bspc layout monocle"
+#     Mod4 + m
+
+# "bspc alternate"
+#     Mod4 + Tab
 
 # "bspc focus left"
 #     Mod4 + h
@@ -14,6 +25,24 @@
 
 # "bspc focus down"
 #     Mod4 + j
+
+# "bspc cycle next"
+#     Mod4 + c
+
+# "bspc cycle prev"
+#     Mod4 + Shift + c
+
+# "bspc presel left"
+#     Mod4 + Shift + h
+
+# "bspc presel right"
+#     Mod4 + Shift + l
+
+# "bspc presel up"
+#     Mod4 + Shift + k
+
+# "bspc presel down"
+#     Mod4 + Shift + j
 
 # "bspc push left"
 #     Mod4 + Control + h
@@ -39,7 +68,70 @@
 # "bspc pull down"
 #     Mod4 + Alt + j
 
+# "bspc use One"
+#     Mod4 + 1
+
+# "bspc use Two"
+#     Mod4 + 2
+
+# "bspc use Three"
+#     Mod4 + 3
+
+# "bspc use Four"
+#     Mod4 + 4
+
+# "bspc use Five"
+#     Mod4 + 5
+
+# "bspc use Six"
+#     Mod4 + 6
+
+# "bspc use Seven"
+#     Mod4 + 7
+
+# "bspc use Eight"
+#     Mod4 + 8
+
+# "bspc use Nine"
+#     Mod4 + 9
+
+# "bspc use Ten"
+#     Mod4 + 0
+
+# "bspc send_to One"
+#     Mod4 + Shift + 1
+
+# "bspc send_to Two"
+#     Mod4 + Shift + 2
+
+# "bspc send_to Three"
+#     Mod4 + Shift + 3
+
+# "bspc send_to Four"
+#     Mod4 + Shift + 4
+
+# "bspc send_to Five"
+#     Mod4 + Shift + 5
+
+# "bspc send_to Six"
+#     Mod4 + Shift + 6
+
+# "bspc send_to Seven"
+#     Mod4 + Shift + 7
+
+# "bspc send_to Eight"
+#     Mod4 + Shift + 8
+
+# "bspc send_to Nine"
+#     Mod4 + Shift + 9
+
+# "bspc send_to Ten"
+#     Mod4 + Shift + 0
+
+#
 # wm independent hotkeys
+#
+
 "dmenu_launch"
     Mod4 + space
 

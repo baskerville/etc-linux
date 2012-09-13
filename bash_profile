@@ -37,7 +37,7 @@ export HEXAGON=/media/hexagon
 export LACIE=/media/lacie
 
 export BSPWM_SOCKET=/tmp/bspwm-socket
-export BSPWM_FIFO=/tmp/bspwm-fifo
+export ESTA_FIFO=/tmp/esta-fifo
 export WALLPAPER="$HOME/.wallpaper"
 
 export DPMS_STANDBY=180
