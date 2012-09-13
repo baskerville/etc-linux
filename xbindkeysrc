@@ -5,11 +5,20 @@
 # "bspc quit"
 #     Mod4 + Alt + Escape
 
+# "bspc close"
+#     Mod4 + w
+
 # "bspc layout tiled"
 #     Mod4 + t
 
 # "bspc layout monocle"
 #     Mod4 + m
+
+# "bspc rotate clockwise"
+#     Mod4 + r
+
+# "bspc rotate counter_clockwise"
+#     Mod4 + Shift + r
 
 # "bspc alternate"
 #     Mod4 + Tab
@@ -33,40 +42,40 @@
 #     Mod4 + Shift + c
 
 # "bspc presel left"
-#     Mod4 + Shift + h
-
-# "bspc presel right"
-#     Mod4 + Shift + l
-
-# "bspc presel up"
-#     Mod4 + Shift + k
-
-# "bspc presel down"
-#     Mod4 + Shift + j
-
-# "bspc push left"
 #     Mod4 + Control + h
 
-# "bspc push right"
+# "bspc presel right"
 #     Mod4 + Control + l
 
-# "bspc push up"
+# "bspc presel up"
 #     Mod4 + Control + k
 
-# "bspc push down"
+# "bspc presel down"
 #     Mod4 + Control + j
 
-# "bspc pull left"
+# "bspc push left"
 #     Mod4 + Alt + h
 
-# "bspc pull right"
+# "bspc push right"
 #     Mod4 + Alt + l
 
-# "bspc pull up"
+# "bspc push up"
 #     Mod4 + Alt + k
 
-# "bspc pull down"
+# "bspc push down"
 #     Mod4 + Alt + j
+
+# "bspc pull left"
+#     Mod4 + Alt + Shift + h
+
+# "bspc pull right"
+#     Mod4 + Alt + Shift + l
+
+# "bspc pull up"
+#     Mod4 + Alt + Shift + k
+
+# "bspc pull down"
+#     Mod4 + Alt + Shift + j
 
 # "bspc use One"
 #     Mod4 + 1
