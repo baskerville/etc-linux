@@ -66,16 +66,16 @@
 #     Mod4 + Alt + j
 
 # "bspc pull left"
-#     Mod4 + Alt + Shift + h
-
-# "bspc pull right"
 #     Mod4 + Alt + Shift + l
 
+# "bspc pull right"
+#     Mod4 + Alt + Shift + h
+
 # "bspc pull up"
-#     Mod4 + Alt + Shift + k
+#     Mod4 + Alt + Shift + j
 
 # "bspc pull down"
-#     Mod4 + Alt + Shift + j
+#     Mod4 + Alt + Shift + k
 
 # "bspc use One"
 #     Mod4 + 1
