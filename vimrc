@@ -102,7 +102,7 @@ nmap <leader>d :bd<cr>
 vmap <leader>t :!titlecase<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
-nmap <leader>w :!web_browser =expand("<cword>")<cr><cr><cr>
+nmap <leader>W :!web_browser =expand("<cword>")<cr><cr><cr>
 nmap <leader>[ :cp<cr>
 nmap <leader>] :cn<cr>
 nmap <silent> <leader>? :call Define(expand("<cword>"), "en")<cr>

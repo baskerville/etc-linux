@@ -20,6 +20,12 @@
 # "bspc rotate counter_clockwise"
 #     Mod4 + Shift + r
 
+# "bspc toggle_floating"
+#     Mod4 + s
+
+# "bspc toggle_fullscreen"
+#     Mod4 + f
+
 # "bspc alternate"
 #     Mod4 + Tab
 
@@ -34,6 +40,18 @@
 
 # "bspc focus down"
 #     Mod4 + j
+
+# "bspc shift left"
+#     Mod4 + Shift + h
+
+# "bspc shift right"
+#     Mod4 + Shift + l
+
+# "bspc shift up"
+#     Mod4 + Shift + k
+
+# "bspc shift down"
+#     Mod4 + Shift + j
 
 # "bspc cycle next"
 #     Mod4 + c
