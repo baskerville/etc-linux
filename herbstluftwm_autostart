@@ -14,7 +14,7 @@ hc keybind $Mod-Escape reload
 hc keybind $Mod-w close
 
 DEFAULT_TAG='One'
-TAG_NAMES="$DEFAULT_TAG Two Three Four Five Six Seven Eight Nine"
+TAG_NAMES="$DEFAULT_TAG Two Three Four Five Six Seven Eight Nine Ten"
 tag_key=1
 
 hc rename default "$DEFAULT_TAG"
@@ -38,7 +38,7 @@ hc keybind $Mod-n set_layout horizontal
 hc keybind $Mod-m set_layout max
 hc keybind $Mod-Return set_layout max
 hc keybind $Mod-g set_layout grid
-hc keybind $Mod-0 load '(clients grid:0)'
+hc keybind $Mod-minus load '(clients grid:0)'
 hc keybind $Mod-grave rotate
 
 RESIZESTEP=0.03
@@ -52,8 +52,7 @@ hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 resize
 hc mousebind $Mod-Button3 zoom
 
-hc keybind $Mod-Tab         cycle_all --skip-invisible +1
-hc keybind $Mod-Shift-Tab   cycle_all --skip-invisible -1
+hc keybind $Mod-Tab emit_hook goto_last_tag
 hc keybind $Mod-c cycle +1
 hc keybind $Mod-Shift-c cycle -1
 hc keybind $Mod-h focus left
@@ -78,17 +77,17 @@ hc keybind $Mod-bracketright use_index +1
 hc keybind $Mod-braceleft cycle_monitor -1
 hc keybind $Mod-braceright cycle_monitor +1
 
-hc set raise_on_focus        1
-hc set always_show_frame     0
-hc set default_frame_layout  3
-hc set gapless_grid          1
-hc set smart_frame_surroundings 1
-hc set smart_window_surroundings 1
-hc set frame_gap             0
-hc set window_gap            2
-hc set frame_border_width    4
-hc set window_border_width   4
-hc set window_border_inner_width   3
+hc set raise_on_focus             1
+hc set always_show_frame          0
+hc set default_frame_layout       3
+hc set gapless_grid               1
+hc set smart_frame_surroundings   1
+hc set smart_window_surroundings  1
+hc set frame_gap                  0
+hc set window_gap                 2
+hc set window_border_width        4
+hc set window_border_inner_width  3
+hc set frame_border_width         4
 hc set frame_border_inner_width   3
 # hc set frame_normal_opacity  0
 # hc set frame_active_opacity  0
@@ -121,6 +120,6 @@ hc rule class=Gimp windowrole=gimp-toolbox focus=off index=00
 hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 
 hc unlock
-
+hc_lasttag &
 updatethm
-# reloadwallpaper
+ reloadwallpaper
