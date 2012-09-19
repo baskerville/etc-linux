@@ -2,158 +2,197 @@
 # bspwm hotkeys
 #
 
-# "bspc quit"
-#     Mod4 + Alt + Escape
+"bspc quit"
+    Mod4 + Alt + Escape
 
-# "bspc close"
-#     Mod4 + w
+"bspc close"
+    Mod4 + w
 
-# "bspc layout tiled"
-#     Mod4 + t
+"bspc layout tiled"
+    Mod4 + t
 
-# "bspc layout monocle"
-#     Mod4 + m
+"bspc layout monocle"
+    Mod4 + m
 
-# "bspc rotate clockwise"
-#     Mod4 + r
+"bspc rotate clockwise"
+    Mod4 + r
 
-# "bspc rotate counter_clockwise"
-#     Mod4 + Shift + r
+"bspc rotate counter_clockwise"
+    Mod4 + Shift + r
 
-# "bspc toggle_floating"
-#     Mod4 + s
+"bspc toggle_floating"
+    Mod4 + s
 
-# "bspc toggle_fullscreen"
-#     Mod4 + f
+"bspc toggle_fullscreen"
+    Mod4 + f
 
-# "bspc alternate"
-#     Mod4 + Tab
+"bspc alternate"
+    Mod4 + Tab
 
-# "bspc focus left"
-#     Mod4 + h
+"bspc focus left"
+    Mod4 + h
 
-# "bspc focus right"
-#     Mod4 + l
+"bspc focus right"
+    Mod4 + l
 
-# "bspc focus up"
-#     Mod4 + k
+"bspc focus up"
+    Mod4 + k
 
-# "bspc focus down"
-#     Mod4 + j
+"bspc focus down"
+    Mod4 + j
 
-# "bspc shift left"
-#     Mod4 + Shift + h
+"bspc shift left"
+    Mod4 + Shift + h
 
-# "bspc shift right"
-#     Mod4 + Shift + l
+"bspc shift right"
+    Mod4 + Shift + l
 
-# "bspc shift up"
-#     Mod4 + Shift + k
+"bspc shift up"
+    Mod4 + Shift + k
 
-# "bspc shift down"
-#     Mod4 + Shift + j
+"bspc shift down"
+    Mod4 + Shift + j
 
-# "bspc cycle next"
-#     Mod4 + c
+"bspc cycle next --skip-tiled"
+    Mod4 + a
 
-# "bspc cycle prev"
-#     Mod4 + Shift + c
+"bspc cycle prev --skip-tiled"
+    Mod4 + Shift + a
 
-# "bspc presel left"
-#     Mod4 + Control + h
+"bspc cycle next"
+    Mod4 + c
 
-# "bspc presel right"
-#     Mod4 + Control + l
+"bspc cycle prev"
+    Mod4 + Shift + c
 
-# "bspc presel up"
-#     Mod4 + Control + k
+"bspc cycle_desktop next"
+    Mod4 + bracketright
 
-# "bspc presel down"
-#     Mod4 + Control + j
+"bspc cycle_desktop prev"
+    Mod4 + bracketleft
 
-# "bspc push left"
-#     Mod4 + Alt + h
+"bspc presel left"
+    Mod4 + Control + h
 
-# "bspc push right"
-#     Mod4 + Alt + l
+"bspc presel right"
+    Mod4 + Control + l
 
-# "bspc push up"
-#     Mod4 + Alt + k
+"bspc presel up"
+    Mod4 + Control + k
 
-# "bspc push down"
-#     Mod4 + Alt + j
+"bspc presel down"
+    Mod4 + Control + j
 
-# "bspc pull left"
-#     Mod4 + Alt + Shift + l
+"bspc push left"
+    Mod4 + Alt + h
 
-# "bspc pull right"
-#     Mod4 + Alt + Shift + h
+"bspc push right"
+    Mod4 + Alt + l
 
-# "bspc pull up"
-#     Mod4 + Alt + Shift + j
+"bspc push up"
+    Mod4 + Alt + k
 
-# "bspc pull down"
-#     Mod4 + Alt + Shift + k
+"bspc push down"
+    Mod4 + Alt + j
 
-# "bspc use One"
-#     Mod4 + 1
+"bspc pull left"
+    Mod4 + Alt + Shift + l
 
-# "bspc use Two"
-#     Mod4 + 2
+"bspc pull right"
+    Mod4 + Alt + Shift + h
 
-# "bspc use Three"
-#     Mod4 + 3
+"bspc pull up"
+    Mod4 + Alt + Shift + j
 
-# "bspc use Four"
-#     Mod4 + 4
+"bspc pull down"
+    Mod4 + Alt + Shift + k
 
-# "bspc use Five"
-#     Mod4 + 5
+"bspc ratio 0.1"
+    Mod4 + Control + 1
 
-# "bspc use Six"
-#     Mod4 + 6
+"bspc ratio 0.2"
+    Mod4 + Control + 2
 
-# "bspc use Seven"
-#     Mod4 + 7
+"bspc ratio 0.3"
+    Mod4 + Control + 3
 
-# "bspc use Eight"
-#     Mod4 + 8
+"bspc ratio 0.4"
+    Mod4 + Control + 4
 
-# "bspc use Nine"
-#     Mod4 + 9
+"bspc ratio 0.5"
+    Mod4 + Control + 5
 
-# "bspc use Ten"
-#     Mod4 + 0
+"bspc ratio 0.6"
+    Mod4 + Control + 6
 
-# "bspc send_to One"
-#     Mod4 + Shift + 1
+"bspc ratio 0.7"
+    Mod4 + Control + 7
 
-# "bspc send_to Two"
-#     Mod4 + Shift + 2
+"bspc ratio 0.8"
+    Mod4 + Control + 8
 
-# "bspc send_to Three"
-#     Mod4 + Shift + 3
+"bspc ratio 0.9"
+    Mod4 + Control + 9
 
-# "bspc send_to Four"
-#     Mod4 + Shift + 4
+"bspc use One"
+    Mod4 + 1
 
-# "bspc send_to Five"
-#     Mod4 + Shift + 5
+"bspc use Two"
+    Mod4 + 2
 
-# "bspc send_to Six"
-#     Mod4 + Shift + 6
+"bspc use Three"
+    Mod4 + 3
 
-# "bspc send_to Seven"
-#     Mod4 + Shift + 7
+"bspc use Four"
+    Mod4 + 4
 
-# "bspc send_to Eight"
-#     Mod4 + Shift + 8
+"bspc use Five"
+    Mod4 + 5
 
-# "bspc send_to Nine"
-#     Mod4 + Shift + 9
+"bspc use Six"
+    Mod4 + 6
 
-# "bspc send_to Ten"
-#     Mod4 + Shift + 0
+"bspc use Seven"
+    Mod4 + 7
+
+"bspc use Eight"
+    Mod4 + 8
+
+"bspc use Nine"
+    Mod4 + 9
+
+"bspc use Ten"
+    Mod4 + 0
+
+"bspc send_to One"
+    Mod4 + Shift + 1
+
+"bspc send_to Two"
+    Mod4 + Shift + 2
+
+"bspc send_to Three"
+    Mod4 + Shift + 3
+
+"bspc send_to Four"
+    Mod4 + Shift + 4
+
+"bspc send_to Five"
+    Mod4 + Shift + 5
+
+"bspc send_to Six"
+    Mod4 + Shift + 6
+
+"bspc send_to Seven"
+    Mod4 + Shift + 7
+
+"bspc send_to Eight"
+    Mod4 + Shift + 8
+
+"bspc send_to Nine"
+    Mod4 + Shift + 9
+
+"bspc send_to Ten"
+    Mod4 + Shift + 0
 
 #
 # wm independent hotkeys
@@ -217,34 +256,34 @@
     Mod4 + XF86AudioRaiseVolume
 
 "mpc -q seek 0%"
-    Mod4 + Control + 0
+    Mod4 + Alt + 0
 
 "mpc -q seek 10%"
-    Mod4 + Control + 1
+    Mod4 + Alt + 1
 
 "mpc -q seek 20%"
-    Mod4 + Control + 2
+    Mod4 + Alt + 2
 
 "mpc -q seek 30%"
-    Mod4 + Control + 3
+    Mod4 + Alt + 3
 
 "mpc -q seek 40%"
-    Mod4 + Control + 4
+    Mod4 + Alt + 4
 
 "mpc -q seek 50%"
-    Mod4 + Control + 5
+    Mod4 + Alt + 5
 
 "mpc -q seek 60%"
-    Mod4 + Control + 6
+    Mod4 + Alt + 6
 
 "mpc -q seek 70%"
-    Mod4 + Control + 7
+    Mod4 + Alt + 7
 
 "mpc -q seek 80%"
-    Mod4 + Control + 8
+    Mod4 + Alt + 8
 
 "mpc -q seek 90%"
-    Mod4 + Control + 9
+    Mod4 + Alt + 9
 
 "mpc -q prev"
     XF86AudioPrev

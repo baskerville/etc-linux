@@ -137,7 +137,7 @@ def_key "G"
 #  press_enter
 #
 def_key "d"
-  delete
+  delete_playlist_items
 
 def_key "l"
   next_column

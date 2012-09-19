@@ -64,7 +64,7 @@ hi Todo            ctermfg={{spring}}  ctermbg=bg    cterm=none
 " minor groups
 "
 hi StatusLine      ctermfg=fg     ctermbg={{bg_bump}}    cterm=none
-hi StatusLineNC    ctermfg={{fg_comment}}    ctermbg={{bg_bump}}    cterm=none
+hi StatusLineNC    ctermfg={{fg_comment}}   ctermbg={{bg_bump}}    cterm=none
 
 hi TabLine         ctermfg=fg     ctermbg={{bg_bump}}    cterm=none
 hi TabLineSel      ctermfg={{cyan}}    ctermbg={{bg_bump}}    cterm=none
@@ -133,8 +133,6 @@ hi SpellLocal      ctermfg={{orange}}     ctermbg=bg    cterm=underline
 hi mkdCode         ctermfg={{fg_comment}}
 hi mkdURL          ctermfg={{azure}}
 hi mkdLink         ctermfg={{magenta}}
-
-hi User1           ctermfg={{fg_comment}} ctermbg={{bg_bump}}
 
 hi def link mailSubject Title
 hi def link mailSignature Comment

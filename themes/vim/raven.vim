@@ -64,7 +64,7 @@ hi Todo            ctermfg=101  ctermbg=bg    cterm=none
 " minor groups
 "
 hi StatusLine      ctermfg=fg     ctermbg=19    cterm=none
-hi StatusLineNC    ctermfg=20    ctermbg=19    cterm=none
+hi StatusLineNC    ctermfg=20   ctermbg=19    cterm=none
 
 hi TabLine         ctermfg=fg     ctermbg=19    cterm=none
 hi TabLineSel      ctermfg=159    ctermbg=19    cterm=none
@@ -133,8 +133,6 @@ hi SpellLocal      ctermfg=62     ctermbg=bg    cterm=underline
 hi mkdCode         ctermfg=20
 hi mkdURL          ctermfg=178
 hi mkdLink         ctermfg=236
-
-hi User1           ctermfg=20 ctermbg=19
 
 hi def link mailSubject Title
 hi def link mailSignature Comment

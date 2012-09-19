@@ -26,7 +26,7 @@ xbindkeys
 happy_fs &
 
 # exec openbox-session
-exec herbstluftwm --locked
-# exec bspwm
+# exec herbstluftwm --locked
+exec bspwm
 
 # vim: set ft=conf:

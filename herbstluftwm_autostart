@@ -122,4 +122,4 @@ hc rule class=Gimp windowrole=gimp-dock focus=off index=1
 hc unlock
 hc_lasttag &
 updatethm
- reloadwallpaper
+# reloadwallpaper
