@@ -26,6 +26,9 @@
 "bspc toggle_fullscreen"
     Mod4 + f
 
+"bspc toggle_locked"
+    Mod4 + g
+
 "bspc alternate"
     Mod4 + Tab
 
@@ -54,10 +57,10 @@
     Mod4 + Shift + j
 
 "bspc cycle next --skip-tiled"
-    Mod4 + a
+    Mod4 + grave
 
 "bspc cycle prev --skip-tiled"
-    Mod4 + Shift + a
+    Mod4 + Shift + grave
 
 "bspc cycle next"
     Mod4 + c
@@ -198,6 +201,12 @@
 # wm independent hotkeys
 #
 
+"urxvtc"
+    Mod4 + Control + slash
+
+"urxvtc -cd /home/ice/incoming"
+    Mod4 + Control + Shift + slash
+
 "dmenu_launch"
     Mod4 + space
 
@@ -206,12 +215,6 @@
 
 "focus_or_run dwb_restore"
     Mod4 + Control + Shift + comma
-
-"urxvtc"
-    Mod4 + Control + slash
-
-"urxvtc -cd /home/ice/incoming"
-    Mod4 + Control + Shift + slash
 
 "focus_or_run mutt"
     Mod4 + Control + period
@@ -231,7 +234,7 @@
 "glean_clipboard"
     Mod4 + Shift + semicolon
 
-"focus_or_run hlconf"
+"focus_or_run bspwm_config"
     Mod4 + Control + c
 
 "dvol toggle"
@@ -384,10 +387,10 @@
 "togglethm light"
     XF86KbdBrightnessUp
 
-"killpanel"
+"updatethm"
     Mod4 + XF86KbdBrightnessDown
 
-"launchpanel"
+"reloadpanel"
     Mod4 + XF86KbdBrightnessUp
 
 "wodim -eject"

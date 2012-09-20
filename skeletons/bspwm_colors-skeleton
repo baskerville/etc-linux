@@ -1,8 +1,10 @@
 #! /bin/dash
 
-bspc set normal_border_color "{{bg_bump}}"
-bspc set active_border_color "{{fg_comment}}"
-bspc set locked_border_color "{{magenta_comment}}"
-bspc set inner_border_color "{{background}}"
-bspc set outer_border_color "{{bg_dip}}"
-bspc set presel_border_color "{{spring}}"
+bspc set normal_border_color        "{{bg_bump}}"
+bspc set active_border_color        "{{fg_comment}}"
+bspc set inner_border_color         "{{background}}"
+bspc set outer_border_color         "{{background}}"
+bspc set presel_border_color        "{{spring}}"
+bspc set active_locked_border_color "{{yellow}}"
+bspc set normal_locked_border_color "{{yellow_comment}}"
+bspc set urgent_border_color        "{{red}}"

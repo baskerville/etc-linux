@@ -12,6 +12,7 @@ URxvt.iso14755:             false
 URxvt.scrollBar:            false
 URxvt.mouseWheelScrollPage: true
 URxvt.saveLines:            32767
+URxvt.urgentOnBell:         true
 
 URxvt.url-select.launcher:  web_browser
 URxvt.perl-ext:             default
