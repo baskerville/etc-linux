@@ -57,10 +57,10 @@
     Mod4 + Shift + j
 
 "bspc cycle next --skip-tiled"
-    Mod4 + grave
+    Mod4 + a
 
 "bspc cycle prev --skip-tiled"
-    Mod4 + Shift + grave
+    Mod4 + Shift + a
 
 "bspc cycle next"
     Mod4 + c
