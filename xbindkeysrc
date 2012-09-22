@@ -27,7 +27,7 @@
     Mod4 + f
 
 "bspc toggle_locked"
-    Mod4 + g
+    Mod4 + p
 
 "bspc alternate"
     Mod4 + Tab
@@ -55,6 +55,12 @@
 
 "bspc shift down"
     Mod4 + Shift + j
+
+"bspc cycle next --skip-floating"
+    Mod4 + d
+
+"bspc cycle prev --skip-floating"
+    Mod4 + Shift + d
 
 "bspc cycle next --skip-tiled"
     Mod4 + a
@@ -85,6 +91,9 @@
 
 "bspc presel down"
     Mod4 + Control + j
+
+"bspc cancel"
+    Mod4 + Control + BackSpace
 
 "bspc push left"
     Mod4 + Alt + h
