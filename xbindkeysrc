@@ -119,6 +119,36 @@
 "bspc pull down"
     Mod4 + Alt + Shift + k
 
+"bspc set window_gap 3"
+    Mod4 + Alt + Control + 1
+
+"bspc set window_gap 6"
+    Mod4 + Alt + Control + 2
+
+"bspc set window_gap 9"
+    Mod4 + Alt + Control + 3
+
+"bspc set window_gap 15"
+    Mod4 + Alt + Control + 4
+
+"bspc set window_gap 24"
+    Mod4 + Alt + Control + 5
+
+"bspc set window_gap 39"
+    Mod4 + Alt + Control + 6
+
+"bspc set window_gap 63"
+    Mod4 + Alt + Control + 7
+
+"bspc set window_gap 102"
+    Mod4 + Alt + Control + 8
+
+"bspc set window_gap 165"
+    Mod4 + Alt + Control + 9
+
+"bspc set window_gap 267"
+    Mod4 + Alt + Control + 0
+
 "bspc ratio 0.1"
     Mod4 + Control + 1
 

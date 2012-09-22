@@ -2,6 +2,6 @@ outer_border_width = 3
 main_border_width = 1
 inner_border_width = 3
 window_gap = 6 
-top_padding = 24;
+top_padding = 24
 
 -- vim: set ft=lua:
