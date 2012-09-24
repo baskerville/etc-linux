@@ -68,6 +68,18 @@
 "bspc cycle prev --skip-tiled"
     Mod4 + Shift + a
 
+"bspc cycle next --skip-class-equal"
+    Mod4 + grave
+
+"bspc cycle prev --skip-class-equal"
+    Mod4 + Shift + grave
+
+"bspc cycle next --skip-class-differ"
+    Mod4 + e
+
+"bspc cycle prev --skip-class-differ"
+    Mod4 + Shift + e
+
 "bspc cycle next"
     Mod4 + c
 
