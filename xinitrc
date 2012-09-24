@@ -2,7 +2,6 @@ setxkbmap -option terminate:ctrl_alt_bksp
 xmodmap "$HOME/.xmodmaprc"
 kdlaunch &
 xrdb -merge "$HOME/.Xresources"
-# compton -bCcfF -O .1 -I .1 -D 1 -t -8 -l -9 -r 6 -o 0.8
 
 # reload fonts
 xset +fp /usr/share/fonts/local
