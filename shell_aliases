@@ -58,6 +58,7 @@ alias rmrf='rm -rf'
 alias rmnn='rm -iv -- "$(nn)"'
 alias rmrfnn='rmrf -v -- "$(nn)"'
 alias ded='find . -type d -empty -print -delete'
+alias duffr='duff -f "%n" -r .'
 
 alias mo='mosaic .'
 alias fq='fc-list : family | grep -i'
