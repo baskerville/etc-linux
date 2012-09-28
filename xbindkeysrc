@@ -8,6 +8,9 @@
 "bspc close"
     Mod4 + w
 
+"bspc kill"
+    Mod4 + Shift + w
+
 "bspc layout tiled"
     Mod4 + t
 
