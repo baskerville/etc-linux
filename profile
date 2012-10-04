@@ -24,6 +24,7 @@ export NNTPSERVER='news.orange.fr'
 export SLRNPULL_ROOT="$HOME/.slrnpull"
 export _Z_NO_RESOLVE_SYMLINKS=1
 export POST_UP='post_up'
+export POST_DOWN='post_down'
 
 export SHELL_CONFIG="$HOME/.bashrc"
 export SHELL_PROFILE="$HOME/.bash_profile"
