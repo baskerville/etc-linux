@@ -11,11 +11,11 @@
 "bspc kill"
     Mod4 + Shift + w
 
-"bspc layout tiled"
+"bspc cycle_layout"
     Mod4 + t
 
-"bspc layout monocle"
-    Mod4 + m
+"bspc cycle_layout"
+    Mod4 + y
 
 "bspc rotate clockwise"
     Mod4 + r
