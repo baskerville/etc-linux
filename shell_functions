@@ -49,6 +49,12 @@ f() {
     find . -maxdepth 1 -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
+ff() {
+    dir=$1
+    shift
+    find "$dir" -iregex ".*$@.*" -printf '%p\0' | xargs -r0 ls --color=auto -1d
+}
+
 F() {
     find . -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
