@@ -1,24 +1,23 @@
 general {
-        # colors = true
-        interval = 5
+    interval = 5
+    output_format = "none"
 }
 
 # order += "disk /"
 order += "wireless wlan0"
-# order += "load"
 order += "time"
 
 wireless wlan0 {
-        format_up = "W"
-        format_down = "w"
+    format_up = "◉"
+    format_down = "○"
 }
 
 time {
-        format = "%H:%M"
+    format = "%A %H:%M"
 }
 
 disk "/" {
-        format = "%free"
+    format = "%free"
 }
 
 # vim: set ft=conf:
