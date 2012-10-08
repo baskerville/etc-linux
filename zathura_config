@@ -10,6 +10,9 @@ map <A-2> set "pages-per-row 2"
 map <A-b> set "page-padding 3"
 map <A-B> set "page-padding 0"
 map e rotate rotate-ccw
+map [normal] f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+map F follow
 
 set page-padding 0
 set first-page-column 2
