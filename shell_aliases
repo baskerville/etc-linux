@@ -139,6 +139,7 @@ alias subscriptions='grep ":" $HOME/.jnewsrc | awk -F : "{print $1}"'
 alias nu='pgrep -x slrnpull > /dev/null 2>&1 || slrnpull'
 alias dfc='dfc -d'
 alias dfcr='dfc -np rootfs'
+alias dfcs='dfc -np /dev/sdc'
 
 alias t='date "+%H:%M"'
 alias T='date "+%S"'

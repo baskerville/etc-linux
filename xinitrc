@@ -17,7 +17,7 @@ xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF
 # neutral mouse cursor
 xsetroot -cursor_name left_ptr
 
-mpd
+pgrep -x mpd > /dev/null || mpd
 urxvtd -q -o -f
 unclutter -noevents &
 xbindkeys
