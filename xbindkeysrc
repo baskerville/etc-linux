@@ -23,6 +23,9 @@
 "bspc rotate counter_clockwise"
     Mod4 + Shift + r
 
+"bspc rotate full_cycle"
+    Mod4 + u
+
 "bspc toggle_floating"
     Mod4 + s
 
@@ -302,6 +305,9 @@
 
 "focus_or_run bspwm_config"
     Mod4 + Control + c
+
+"focus_or_run xbindkeys_config"
+    Mod4 + Shift + Control + c
 
 "dvol toggle"
     XF86AudioMute
