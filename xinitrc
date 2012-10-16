@@ -12,6 +12,8 @@ xset r rate 320 35
 
 # mouse acceleration
 xset m 3/2 6
+
+# DPMS
 xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF
 
 # neutral mouse cursor
@@ -21,11 +23,8 @@ pgrep -x mpd > /dev/null || mpd
 urxvtd -q -o -f
 unclutter -noevents &
 xbindkeys
-
 happy_fs &
 
-# exec openbox-session
-# exec herbstluftwm --locked
 exec bspwm
 
 # vim: set ft=conf:
