@@ -60,6 +60,7 @@ if has("autocmd")
     autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
     autocmd BufRead,BufEnter *.nfo set filetype=nfo
     autocmd BufRead,BufEnter *.ck set filetype=ck
+    autocmd BufRead,BufEnter *.j2 set filetype=htmljinja
     autocmd BufRead,BufEnter *keydoublerc set filetype=xmodmap
     autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
 
