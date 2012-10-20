@@ -135,6 +135,10 @@ static const keymap_t keys[] = {
 			"mogrify -rotate -90 \"$SXIV_IMG\"" },
 	{ true,   XK_greater,       it_shell_cmd,         (arg_t) \
 			"mogrify -rotate +90 \"$SXIV_IMG\"" },
+	{ true,   XK_backslash,         it_shell_cmd,         (arg_t) \
+			"jpegtran -flip horizontal -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
+	{ true,   XK_bar,        it_shell_cmd,         (arg_t) \
+			"jpegtran -flip vertical -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ true,   XK_comma,         it_shell_cmd,         (arg_t) \
 			"jpegtran -rotate 270 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ true,   XK_period,        it_shell_cmd,         (arg_t) \
