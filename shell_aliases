@@ -146,7 +146,7 @@ alias T='date "+%S"'
 alias M='date "+%B"'
 alias Y='date "+%Y"'
 alias d='date "+%A"'
-alias D='date "+%Y/%m/%d %H:%M"'
+alias D='date "+%Y%m%d-%H%M"'
 
 alias zt='z -t'
 alias zr='z -r'
