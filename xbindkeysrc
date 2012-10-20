@@ -33,7 +33,7 @@
     Mod4 + f
 
 "bspc toggle_locked"
-    Mod4 + p
+    Mod4 + o
 
 "bspc alternate"
     Mod4 + Tab
