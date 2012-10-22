@@ -33,7 +33,10 @@
     Mod4 + f
 
 "bspc toggle_locked"
-    Mod4 + o
+    Mod4 + x
+
+"bspc alternate_focus"
+    Mod4 + Return
 
 "bspc alternate"
     Mod4 + Tab
@@ -61,6 +64,12 @@
 
 "bspc shift down"
     Mod4 + Shift + j
+
+"bspc nearest older"
+    Mod4 + o
+
+"bspc nearest newer"
+    Mod4 + i
 
 "bspc cycle next --skip-floating"
     Mod4 + d
