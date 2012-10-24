@@ -26,5 +26,6 @@ xbindkeys
 happy_fs &
 
 exec bspwm
+# exec mywm
 
 # vim: set ft=conf:

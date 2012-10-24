@@ -35,10 +35,10 @@
 "bspc toggle_locked"
     Mod4 + x
 
-"bspc alternate_focus"
+"bspc alternate"
     Mod4 + Return
 
-"bspc alternate"
+"bspc alternate_desktop"
     Mod4 + Tab
 
 "bspc focus left"
@@ -101,10 +101,10 @@
 "bspc cycle prev"
     Mod4 + Shift + c
 
-"bspc cycle_desktop next"
+"bspc cycle_desktop next --skip-free"
     Mod4 + bracketright
 
-"bspc cycle_desktop prev"
+"bspc cycle_desktop prev --skip-free"
     Mod4 + bracketleft
 
 "bspc presel left"
@@ -120,7 +120,7 @@
     Mod4 + Control + j
 
 "bspc cancel"
-    Mod4 + Control + BackSpace
+    Mod4 + BackSpace
 
 "bspc push left"
     Mod4 + Alt + h

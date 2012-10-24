@@ -1,7 +1,11 @@
-* {
+html,body {
     background: {{background}} !important;
     color: {{foreground}} !important;
-    font: 16px sans-serif !important;
+    font-family: sans-serif !important;
+}
+
+pre {
+    font-family: monospace !important;
 }
 
 a {

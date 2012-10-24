@@ -1,7 +1,11 @@
-* {
+html,body {
     background: #32312E !important;
     color: #A4A6B1 !important;
-    font: 16px sans-serif !important;
+    font-family: sans-serif !important;
+}
+
+pre {
+    font-family: monospace !important;
 }
 
 a {
