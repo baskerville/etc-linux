@@ -333,12 +333,6 @@
 "dvol strong_raise"
     Shift + XF86AudioRaiseVolume
 
-"dvol min"
-    Mod4 + XF86AudioLowerVolume
-
-"dvol max"
-    Mod4 + XF86AudioRaiseVolume
-
 "mpc -q seek 0%"
     Mod4 + Alt + 0
 
