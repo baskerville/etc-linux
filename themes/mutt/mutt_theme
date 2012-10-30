@@ -1,16 +1,16 @@
 color   normal       white           black
 color   status       white           cyan
-color   indicator    black           yellow
+color   indicator    black           magenta
 color   markers      brightred       magenta
 color   tilde        brightblack     black
 color   tree         brightblack     black
 
-color   index        brightmagenta   black   ~P
+color   index        yellow          black   ~P
 color   index        blue            black   ~N
-color   index        brightgreen     black   ~O
+color   index        magenta         black   ~O
 color   index        brightred       black   ~D
-color   index        brightyellow    black   ~F
-color   index        brightcyan      black   ~T
+color   index        red             black   ~F
+color   index        green           black   ~T
 
 color   header       brightblack     black   "."
 
