@@ -1,8 +1,8 @@
-neaprc
 tint2rc
 colors/current
 colors/redef-current
-dzen2_Xresources
+colors/redef_console-current
+dzen2_xresources
 override.css
 dwb_keys.*
 dwb_config.*

@@ -42,12 +42,15 @@ set laststatus=2
 set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
 
-set t_Co=256
 syntax on
 filetype plugin on
 filetype indent on
 
-colorscheme raven
+if &t_Co < 256
+    colorscheme raven8
+else
+    colorscheme raven
+endif
 
 call pathogen#infect()
 
@@ -71,6 +74,7 @@ if has("autocmd")
     autocmd FileType xdefaults setlocal commentstring=!%s
     autocmd FileType slrnrc setlocal commentstring=%%s
     autocmd FileType slang setlocal commentstring=%%s
+    autocmd FileType html,xhtml,htmljinja setlocal shiftwidth=2 softtabstop=2
 
     autocmd FileType perl setlocal keywordprg=perldoc
     autocmd FileType ruby setlocal keywordprg=ri

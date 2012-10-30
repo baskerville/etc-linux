@@ -1,8 +1,7 @@
 " Vim Color File
 " Name:       raven.vim
-" Version:    0.1
-" Maintainer: baskerville a lavabit o com
-"
+" Version:    0.2
+" Maintainer: baskerville at lavabit.com
 
 hi clear
 
@@ -14,125 +13,126 @@ let g:colors_name="raven"
 
 "
 " preferred groups
-" (see `:h w18`)
+" (:h w18)
 "
-hi Normal          ctermfg=21    ctermbg=18     cterm=none
-hi Comment         ctermfg=20
+hi Normal          cterm=none ctermfg=7 ctermbg=0
+hi Comment         cterm=none ctermfg=8
 
-hi Constant        ctermfg=82
-hi String          ctermfg=82
-hi Character       ctermfg=82
-hi Number          ctermfg=82
-hi Boolean         ctermfg=82
-hi Float           ctermfg=82
+hi Constant        ctermfg=11
+hi String          ctermfg=11
+hi Character       ctermfg=11
+hi Number          ctermfg=11
+hi Boolean         ctermfg=11
+hi Float           ctermfg=11
 
-hi Identifier      ctermfg=217
-hi Function        ctermfg=217
+hi Identifier      ctermfg=3
+hi Function        ctermfg=3
 
-hi Statement       ctermfg=140
-hi Conditional     ctermfg=140
-hi Repeat          ctermfg=140
-hi Label           ctermfg=140
-hi Operator        ctermfg=140
-hi Keyword         ctermfg=140
-hi Exception       ctermfg=140
+hi Statement       ctermfg=5
+hi Conditional     ctermfg=5
+hi Repeat          ctermfg=5
+hi Label           ctermfg=5
+hi Operator        ctermfg=5
+hi Keyword         ctermfg=5
+hi Exception       ctermfg=5
 
-hi PreProc         ctermfg=178
-hi Include         ctermfg=178
-hi Define          ctermfg=178
-hi Macro           ctermfg=178
-hi PreCondit       ctermfg=178
+hi PreProc         ctermfg=12
+hi Include         ctermfg=12
+hi Define          ctermfg=12
+hi Macro           ctermfg=12
+hi PreCondit       ctermfg=12
 
-hi Type            ctermfg=62
-hi StorageClass    ctermfg=62
-hi Structure       ctermfg=62
-hi Typedef         ctermfg=62
+hi Type            ctermfg=1
+hi StorageClass    ctermfg=1
+hi Structure       ctermfg=1
+hi Typedef         ctermfg=1
 
-hi Special         ctermfg=24
-hi SpecialChar     ctermfg=24
-hi Tag             ctermfg=24
-hi Delimiter       ctermfg=24
-hi SpecialComment  ctermfg=24
-hi Debug           ctermfg=24
+hi Special         ctermfg=2
+hi SpecialChar     ctermfg=2
+hi Tag             ctermfg=2
+hi Delimiter       ctermfg=2
+hi SpecialComment  ctermfg=2
+hi Debug           ctermfg=2
 
 hi Underlined      ctermfg=fg
 hi Ignore          ctermfg=bg
-hi Error           ctermfg=16    ctermbg=43
-hi Todo            ctermfg=101  ctermbg=bg    cterm=none
+hi Error           ctermfg=bg  ctermbg=2
+hi Todo            ctermfg=10  ctermbg=bg    cterm=none
 
 "
 " minor groups
 "
-hi StatusLine      ctermfg=fg     ctermbg=19    cterm=none
-hi StatusLineNC    ctermfg=20   ctermbg=19    cterm=none
+" hi StatusLine       cterm=none ctermfg=fg       ctermbg=6
+hi StatusLine      cterm=none ctermfg=fg       ctermbg=6
+hi StatusLineNC    cterm=none ctermfg=8 ctermbg=6
 
-hi TabLine         ctermfg=fg     ctermbg=19    cterm=none
-hi TabLineSel      ctermfg=159    ctermbg=19    cterm=none
-hi TabLineFill     ctermfg=fg     ctermbg=19    cterm=none
+hi TabLine         cterm=none ctermfg=fg     ctermbg=6
+hi TabLineSel      cterm=none ctermfg=14   ctermbg=6
+hi TabLineFill     cterm=none ctermfg=fg     ctermbg=6
 
-hi Pmenu           ctermfg=fg     ctermbg=19
-hi PmenuSel        ctermfg=23    ctermbg=20
-hi PmenuSbar       ctermfg=23    ctermbg=20
-hi WildMenu        ctermfg=23    ctermbg=20    cterm=none
+hi Pmenu           ctermfg=fg     ctermbg=6
+hi PmenuSel        ctermfg=15    ctermbg=8
+hi PmenuSbar       ctermfg=15    ctermbg=8
+hi WildMenu        ctermfg=15    ctermbg=8    cterm=none
 
-hi Visual          ctermfg=bg             ctermbg=217
-hi VisualNOS       ctermfg=bg             ctermbg=236
-hi VertSplit       ctermfg=bg             ctermbg=19    cterm=none
-hi LineNr          ctermfg=20   ctermbg=19
+hi Visual           cterm=none ctermfg=bg   ctermbg=3
+hi VisualNOS        cterm=none ctermfg=bg   ctermbg=13
+hi VertSplit        cterm=none ctermfg=bg  ctermbg=6
+hi LineNr          ctermfg=8   ctermbg=6
 
-hi Title           ctermfg=178
-hi SpecialKey      ctermfg=120
-hi Conceal         ctermfg=101       ctermbg=bg
-hi NonText         ctermfg=20
-hi MatchParen      ctermfg=16     ctermbg=24
-hi Directory       ctermfg=217
+hi Title           ctermfg=12
+hi SpecialKey      ctermfg=10
+hi Conceal         ctermfg=10       ctermbg=bg
+hi NonText         ctermfg=8
+hi MatchParen      ctermfg=bg       ctermbg=2
+hi Directory       ctermfg=3
 
-hi ErrorMsg        ctermfg=43          ctermbg=bg
-hi WarningMsg      ctermfg=62
-hi MoreMsg         ctermfg=140
-hi ModeMsg         ctermfg=24
+hi ErrorMsg        ctermfg=9          ctermbg=bg
+hi WarningMsg      ctermfg=1   ctermbg=bg
+hi MoreMsg         ctermfg=5    ctermbg=bg
+hi ModeMsg         ctermfg=2      ctermbg=bg
 
-hi Search          ctermfg=16     ctermbg=82     cterm=none
-hi IncSearch       ctermfg=16     ctermbg=236     cterm=none
-hi Question        ctermfg=198
+hi Search          ctermfg=bg  ctermbg=11
+hi IncSearch       cterm=none ctermfg=bg  ctermbg=2
+hi Question        ctermfg=12
 
-hi Folded          ctermfg=20     ctermbg=bg
-hi FoldColumn      ctermfg=20     ctermbg=19
-hi SignColumn      ctermfg=20     ctermbg=19
-hi ColorColumn     ctermfg=20     ctermbg=19
+hi Folded          ctermfg=8     ctermbg=bg
+hi FoldColumn      ctermfg=8     ctermbg=6
+hi SignColumn      ctermfg=8     ctermbg=6
+hi ColorColumn     ctermfg=8     ctermbg=6
 
-hi CursorColumn    ctermbg=17    cterm=none
-hi CursorLine      ctermbg=17    cterm=none
+hi CursorColumn    cterm=none ctermbg=6
+hi CursorLine      cterm=none ctermbg=6
 
-hi vimFold         ctermfg=20
+hi vimFold         ctermfg=8
 hi vimCommentTitle ctermfg=fg
-hi helpHyperTextJump ctermfg=178
+hi helpHyperTextJump ctermfg=12
 
-hi htmlTag         ctermfg=217
-hi htmlEndTag      ctermfg=217
-hi htmlTagName     ctermfg=24
-hi htmlString      ctermfg=82
+hi htmlTag         ctermfg=3
+hi htmlEndTag      ctermfg=3
+hi htmlTagName     ctermfg=2
+hi htmlString      ctermfg=11
 
-hi diffFile        ctermfg=20
-hi diffLine        ctermfg=20
-hi diffAdded       ctermfg=101
-hi diffRemoved     ctermfg=24
-hi diffChanged     ctermfg=62
+hi diffFile        ctermfg=8
+hi diffLine        ctermfg=8
+hi diffAdded       ctermfg=10
+hi diffRemoved     ctermfg=2
+hi diffChanged     ctermfg=1
 
-hi diffAdd         ctermfg=16   ctermbg=120
-hi diffDelete      ctermfg=19    ctermbg=20
-hi diffText        ctermfg=16   ctermbg=43
-hi diffChange      ctermfg=16   ctermbg=fg
-hi diffOldLine     ctermfg=217
+hi diffAdd         ctermfg=bg    ctermbg=10
+hi diffDelete      ctermfg=bg    ctermbg=8
+hi diffText        ctermfg=bg    ctermbg=9
+hi diffChange      ctermfg=bg    ctermbg=2
+hi diffOldLine     ctermfg=bg    ctermbg=3
 
-hi SpellBad        ctermfg=43        ctermbg=bg    cterm=underline
-hi SpellCap        ctermfg=24       ctermbg=bg    cterm=underline
-hi SpellRare       ctermfg=217     ctermbg=bg    cterm=underline
-hi SpellLocal      ctermfg=62     ctermbg=bg    cterm=underline
+hi SpellBad        ctermfg=9        ctermbg=bg
+hi SpellCap        ctermfg=2       ctermbg=bg
+hi SpellRare       ctermfg=3     ctermbg=bg
+hi SpellLocal      ctermfg=1     ctermbg=bg
 
-hi mkdCode         ctermfg=20
-hi mkdURL          ctermfg=178
-hi mkdLink         ctermfg=236
+hi mkdCode         ctermfg=8
+hi mkdURL          ctermfg=12
+hi mkdLink         ctermfg=13
 
 hi def link mailSubject Title
 hi def link mailSignature Comment

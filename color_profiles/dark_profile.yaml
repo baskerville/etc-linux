@@ -1,0 +1,30 @@
+background: "#32312E"
+foreground: "#A4A6B1"
+num_colors: 12
+color_chroma: 33
+
+monotones:
+    - name: "bg_floor"
+      relative: "background"
+      delta: -12
+    - name: "bg_pit"
+      relative: "background"
+      delta: -6
+    - name: "bg_dip"
+      relative: "background"
+      delta: -3
+    - name: "bg_bump"
+      relative: "background"
+      delta: 6
+    - name: "bg_jump"
+      relative: "background"
+      delta: 15
+    - name: "fg_comment"
+      relative: "foreground"
+      delta: -15
+    - name: "fg_highlight"
+      relative: "foreground"
+      delta: 15
+    - name: "fg_ceiling"
+      relative: "foreground"
+      delta: 24

@@ -1,15 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<title>home</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <style media="screen" type="text/css">
-        html {
-            background: #999;
-        }
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>home</title>
+    <meta charset="UTF-8">
+    <style>
+      html {
+        background: #D1CCBD;
+      }
     </style>
-</head>
-<body>
-</body>
+  </head>
+  <body>
+  </body>
 </html>

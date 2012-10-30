@@ -1,0 +1,145 @@
+" Vim Color File
+" Name:       raven8.vim
+" Version:    0.2
+" Maintainer: baskerville at lavabit.com
+
+hi clear
+
+if exists("syntax on")
+    syntax reset
+endif
+
+let g:colors_name="raven8"
+
+"
+" preferred groups
+" (:h w18)
+"
+hi Normal          cterm=none ctermfg={{foreground_v}} ctermbg={{background_v}}
+hi Comment         cterm=none ctermfg={{fg_comment_v}}
+
+hi Constant        ctermfg={{yellow_v}}
+hi String          ctermfg={{yellow_v}}
+hi Character       ctermfg={{yellow_v}}
+hi Number          ctermfg={{yellow_v}}
+hi Boolean         ctermfg={{yellow_v}}
+hi Float           ctermfg={{yellow_v}}
+
+hi Identifier      ctermfg={{violet_v}}
+hi Function        ctermfg={{violet_v}}
+
+hi Statement       ctermfg={{teal_v}}
+hi Conditional     ctermfg={{teal_v}}
+hi Repeat          ctermfg={{teal_v}}
+hi Label           ctermfg={{teal_v}}
+hi Operator        ctermfg={{teal_v}}
+hi Keyword         ctermfg={{teal_v}}
+hi Exception       ctermfg={{teal_v}}
+
+hi PreProc         ctermfg={{azure_v}}
+hi Include         ctermfg={{azure_v}}
+hi Define          ctermfg={{azure_v}}
+hi Macro           ctermfg={{azure_v}}
+hi PreCondit       ctermfg={{azure_v}}
+
+hi Type            ctermfg={{orange_v}}
+hi StorageClass    ctermfg={{orange_v}}
+hi Structure       ctermfg={{orange_v}}
+hi Typedef         ctermfg={{orange_v}}
+
+hi Special         ctermfg={{pink_v}}
+hi SpecialChar     ctermfg={{pink_v}}
+hi Tag             ctermfg={{pink_v}}
+hi Delimiter       ctermfg={{pink_v}}
+hi SpecialComment  ctermfg={{pink_v}}
+hi Debug           ctermfg={{pink_v}}
+
+hi Underlined      ctermfg=fg
+hi Ignore          ctermfg=bg
+hi Error           ctermfg=bg  ctermbg={{pink_v}}
+hi Todo            ctermfg={{green_v}}  ctermbg=bg    cterm=none
+
+"
+" minor groups
+"
+" hi StatusLine       cterm=none ctermfg=fg       ctermbg={{bg_bump_v}}
+hi StatusLine      cterm=none ctermfg=fg       ctermbg={{bg_bump_v}}
+hi StatusLineNC    cterm=none ctermfg={{fg_comment_v}} ctermbg={{bg_bump_v}}
+
+hi TabLine         cterm=none ctermfg=fg     ctermbg={{bg_bump_v}}
+hi TabLineSel      cterm=none ctermfg={{cyan_v}}   ctermbg={{bg_bump_v}}
+hi TabLineFill     cterm=none ctermfg=fg     ctermbg={{bg_bump_v}}
+
+hi Pmenu           ctermfg=fg     ctermbg={{bg_bump_v}}
+hi PmenuSel        ctermfg={{fg_highlight_v}}    ctermbg={{fg_comment_v}}
+hi PmenuSbar       ctermfg={{fg_highlight_v}}    ctermbg={{fg_comment_v}}
+hi WildMenu        ctermfg={{fg_highlight_v}}    ctermbg={{fg_comment_v}}    cterm=none
+
+hi Visual           cterm=none ctermfg=bg   ctermbg={{violet_v}}
+hi VisualNOS        cterm=none ctermfg=bg   ctermbg={{magenta_v}}
+hi VertSplit        cterm=none ctermfg=bg  ctermbg={{bg_bump_v}}
+hi LineNr          ctermfg={{fg_comment_v}}   ctermbg={{bg_bump_v}}
+
+hi Title           ctermfg={{azure_v}}
+hi SpecialKey      ctermfg={{green_v}}
+hi Conceal         ctermfg={{green_v}}       ctermbg=bg
+hi NonText         ctermfg={{fg_comment_v}}
+hi MatchParen      ctermfg=bg       ctermbg={{pink_v}}
+hi Directory       ctermfg={{violet_v}}
+
+hi ErrorMsg        ctermfg={{red_v}}          ctermbg=bg
+hi WarningMsg      ctermfg={{orange_v}}   ctermbg=bg
+hi MoreMsg         ctermfg={{teal_v}}    ctermbg=bg
+hi ModeMsg         ctermfg={{pink_v}}      ctermbg=bg
+
+hi Search          ctermfg=bg  ctermbg={{yellow_v}}
+hi IncSearch       cterm=none ctermfg=bg  ctermbg={{pink_v}}
+hi Question        ctermfg={{azure_v}}
+
+hi Folded          ctermfg={{fg_comment_v}}     ctermbg=bg
+hi FoldColumn      ctermfg={{fg_comment_v}}     ctermbg={{bg_bump_v}}
+hi SignColumn      ctermfg={{fg_comment_v}}     ctermbg={{bg_bump_v}}
+hi ColorColumn     ctermfg={{fg_comment_v}}     ctermbg={{bg_bump_v}}
+
+hi CursorColumn    cterm=none ctermbg={{bg_bump_v}}
+hi CursorLine      cterm=none ctermbg={{bg_bump_v}}
+
+hi vimFold         ctermfg={{fg_comment_v}}
+hi vimCommentTitle ctermfg=fg
+hi helpHyperTextJump ctermfg={{azure_v}}
+
+hi htmlTag         ctermfg={{violet_v}}
+hi htmlEndTag      ctermfg={{violet_v}}
+hi htmlTagName     ctermfg={{pink_v}}
+hi htmlString      ctermfg={{yellow_v}}
+
+hi diffFile        ctermfg={{fg_comment_v}}
+hi diffLine        ctermfg={{fg_comment_v}}
+hi diffAdded       ctermfg={{green_v}}
+hi diffRemoved     ctermfg={{pink_v}}
+hi diffChanged     ctermfg={{orange_v}}
+
+hi diffAdd         ctermfg=bg    ctermbg={{green_v}}
+hi diffDelete      ctermfg=bg    ctermbg={{fg_comment_v}}
+hi diffText        ctermfg=bg    ctermbg={{red_v}}
+hi diffChange      ctermfg=bg    ctermbg={{pink_v}}
+hi diffOldLine     ctermfg=bg    ctermbg={{violet_v}}
+
+hi SpellBad        ctermfg={{red_v}}        ctermbg=bg
+hi SpellCap        ctermfg={{pink_v}}       ctermbg=bg
+hi SpellRare       ctermfg={{violet_v}}     ctermbg=bg
+hi SpellLocal      ctermfg={{orange_v}}     ctermbg=bg
+
+hi mkdCode         ctermfg={{fg_comment_v}}
+hi mkdURL          ctermfg={{azure_v}}
+hi mkdLink         ctermfg={{magenta_v}}
+
+hi def link mailSubject Title
+hi def link mailSignature Comment
+hi def link mailQuoted2 mailQuoted1
+hi def link perlSharpBang Comment
+hi def link javaScriptNumber Number
+hi def link markdownCode Comment
+hi def link markdownCodeBlock Comment
+
+" vim: set ft=vim:

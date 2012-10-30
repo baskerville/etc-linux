@@ -101,11 +101,17 @@
 "bspc cycle prev"
     Mod4 + Shift + c
 
-"bspc cycle_desktop next --skip-free"
+"bspc cycle_desktop next"
     Mod4 + bracketright
 
-"bspc cycle_desktop prev --skip-free"
+"bspc cycle_desktop prev"
     Mod4 + bracketleft
+
+"bspc cycle_desktop next --skip-free"
+    Mod4 + Control + bracketright
+
+"bspc cycle_desktop prev --skip-free"
+    Mod4 + Control + bracketleft
 
 "bspc presel left"
     Mod4 + Control + h

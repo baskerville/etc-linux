@@ -1,5 +1,5 @@
 #include "colors/current"
-#include "dzen2_Xresources"
+#include "dzen2_xresources"
 
 URxvt.modifier:             alt
 URxvt.font:                 xft:Inconsolata:pixelsize=16,xft:Droid Sans Mono:pixelsize=13,xft:DejaVu Sans Mono:pixelsize=13,xft:Droid Sans Fallback:pixelsize=13

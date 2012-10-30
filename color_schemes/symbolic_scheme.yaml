@@ -1,0 +1,72 @@
+background_v:   black
+fg_comment_v:   darkgrey
+
+foreground_v:   lightgrey
+fg_highlight_v: white
+
+bg_bump_v:      darkcyan
+cyan_v:         cyan
+
+orange_v:       darkred
+red_v:          red
+
+pink_v:         darkgreen
+green_v:        green
+
+violet_v:       darkyellow
+yellow_v:       yellow
+
+spring_v:       darkblue
+azure_v:        blue
+
+teal_v:         darkmagenta
+magenta_v:      magenta
+
+
+background_c:   "30"
+fg_comment_c:   "1;30"
+
+foreground_c:   "37"
+fg_highlight_c: "1;37"
+
+bg_bump_c:      "36"
+cyan_c:         "1;36"
+
+orange_c:       "31"
+red_c:          "1;31"
+
+pink_c:         "32"
+green_c:        "1;32"
+
+violet_c:       "33"
+yellow_c:       "1;33"
+
+spring_c:       "34"
+azure_c:        "1;34"
+
+teal_c:         "35"
+magenta_c:      "1;35"
+
+background_i:   0
+fg_comment_i:   8
+
+foreground_i:   7
+fg_highlight_i: 15
+
+bg_bump_i:      6
+cyan_i:         14
+
+orange_i:       1
+red_i:          9
+
+pink_i:         2
+green_i:        10
+
+violet_i:       3
+yellow_i:       11
+
+spring_i:       4
+azure_i:        12
+
+teal_i:         5
+magenta_i:      13
