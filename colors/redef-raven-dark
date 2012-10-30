@@ -9,7 +9,7 @@ printf '\033]10;rgb:A4/A6/B1\007'     # foreground
 printf '\033]706;rgb:CE/CF/DB\007'  # bold
 printf '\033]704;rgb:CE/CF/DB\007'  # italic
 printf '\033]707;rgb:CE/CF/DB\007'  # underline
-printf '\033]12;rgb:4C/B6/C3\007'           # cursor
+printf '\033]12;rgb:5E/C6/D4\007'           # cursor
 
 printf '\033]4;0;rgb:32/31/2E\007'    # black
 printf '\033]4;8;rgb:7E/7F/89\007'    # darkgrey
@@ -17,22 +17,22 @@ printf '\033]4;8;rgb:7E/7F/89\007'    # darkgrey
 printf '\033]4;7;rgb:A4/A6/B1\007'    # lightgrey
 printf '\033]4;15;rgb:CE/CF/DB\007' # white
 
-printf '\033]4;1;rgb:CF/9B/73\007'        # darkred
-printf '\033]4;9;rgb:DD/92/8A\007'           # red
+printf '\033]4;1;rgb:E0/AB/83\007'        # darkred
+printf '\033]4;9;rgb:EF/A2/9A\007'           # red
 
-printf '\033]4;3;rgb:B1/9D/DA\007'        # darkyellow
-printf '\033]4;11;rgb:B6/A5/6A\007'       # yellow
+printf '\033]4;3;rgb:C1/AE/EC\007'        # darkyellow
+printf '\033]4;11;rgb:C7/B5/79\007'       # yellow
 
-printf '\033]4;2;rgb:DE/8F/A8\007'          # darkgreen
-printf '\033]4;10;rgb:75/B4/87\007'        # green
+printf '\033]4;2;rgb:EF/9F/B8\007'          # darkgreen
+printf '\033]4;10;rgb:85/C5/97\007'        # green
 
 printf '\033]4;6;rgb:3F/3E/3B\007'       # darkcyan
-printf '\033]4;14;rgb:4C/B6/C3\007'         # cyan
+printf '\033]4;14;rgb:5E/C6/D4\007'         # cyan
 
-printf '\033]4;4;rgb:97/AE/71\007'        # darkblue
-printf '\033]4;12;rgb:62/B1/D9\007'        # blue
+printf '\033]4;4;rgb:A7/BF/81\007'        # darkblue
+printf '\033]4;12;rgb:73/C1/EB\007'        # blue
 
-printf '\033]4;5;rgb:57/B7/A5\007'          # darkmagenta
-printf '\033]4;13;rgb:CE/94/C5\007'      # magenta
+printf '\033]4;5;rgb:68/C8/B5\007'          # darkmagenta
+printf '\033]4;13;rgb:DF/A4/D6\007'      # magenta
 
 printf '\033[?47t'                      # toggle screen buffer

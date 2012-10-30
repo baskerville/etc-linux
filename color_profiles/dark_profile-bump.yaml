@@ -1,8 +1,8 @@
-background: "#FDF6E7"
-foreground: "#71757F"
+background: "#3F3E3B"
+foreground: "#B5B6C1"
 num_colors: 12
-color_chroma: 63
-color_delta: -6
+color_chroma: 33
+color_delta: 6
 color_names:
     - pink
     - red
@@ -20,25 +20,25 @@ color_names:
 monotones:
     - name: "bg_floor"
       relative: "background"
-      delta: 12
+      delta: -12
     - name: "bg_pit"
       relative: "background"
-      delta: 6
+      delta: -6
     - name: "bg_dip"
       relative: "background"
-      delta: 3
+      delta: -3
     - name: "bg_bump"
       relative: "background"
-      delta: -6
+      delta: 6
     - name: "bg_jump"
       relative: "background"
-      delta: -15
+      delta: 15
     - name: "fg_comment"
       relative: "foreground"
-      delta: 15
+      delta: -15
     - name: "fg_highlight"
       relative: "foreground"
-      delta: -15
+      delta: 15
     - name: "fg_ceiling"
       relative: "foreground"
-      delta: -24
+      delta: 24

@@ -2,6 +2,20 @@ background: "#32312E"
 foreground: "#A4A6B1"
 num_colors: 12
 color_chroma: 33
+color_delta: 6
+color_names:
+    - pink
+    - red
+    - orange
+    - yellow
+    - spring
+    - green
+    - teal
+    - cyan
+    - azure
+    - blue
+    - violet
+    - magenta
 
 monotones:
     - name: "bg_floor"

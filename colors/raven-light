@@ -5,7 +5,7 @@
 *colorIT: #4E505A
 *colorUL: #4E505A
 
-*cursorColor: #008CA9
+*cursorColor: #007C99
 
 ! BLK
 *color0: #FDF6E7
@@ -16,25 +16,25 @@
 *color15: #4E505A
 
 ! RED
-*color1: #B15D0E
-*color9: #CB4344
+*color1: #A04F00
+*color9: #B93236
 
 ! YEL
-*color3: #8063D3
-*color11: #877400
+*color3: #6F55C2
+*color11: #776500
 
 ! GRN
-*color2: #CF3778
-*color10: #008A3A
+*color2: #BD2169
+*color10: #007A2C
 
 ! CYN
 *color6: #EAE5D6
-*color14: #008CA9
+*color14: #007C99
 
 ! BLU
-*color4: #4F8200
-*color12: #0086D2
+*color4: #3F7300
+*color12: #0077C1
 
 ! MAG
-*color5: #008D73
-*color13: #B748AC
+*color5: #007D64
+*color13: #A6379C

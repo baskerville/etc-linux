@@ -5,7 +5,7 @@
 *colorIT: #CECFDB
 *colorUL: #CECFDB
 
-*cursorColor: #4CB6C3
+*cursorColor: #5EC6D4
 
 ! BLK
 *color0: #32312E
@@ -16,25 +16,25 @@
 *color15: #CECFDB
 
 ! RED
-*color1: #CF9B73
-*color9: #DD928A
+*color1: #E0AB83
+*color9: #EFA29A
 
 ! YEL
-*color3: #B19DDA
-*color11: #B6A56A
+*color3: #C1AEEC
+*color11: #C7B579
 
 ! GRN
-*color2: #DE8FA8
-*color10: #75B487
+*color2: #EF9FB8
+*color10: #85C597
 
 ! CYN
 *color6: #3F3E3B
-*color14: #4CB6C3
+*color14: #5EC6D4
 
 ! BLU
-*color4: #97AE71
-*color12: #62B1D9
+*color4: #A7BF81
+*color12: #73C1EB
 
 ! MAG
-*color5: #57B7A5
-*color13: #CE94C5
+*color5: #68C8B5
+*color13: #DFA4D6

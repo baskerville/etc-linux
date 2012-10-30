@@ -125,10 +125,10 @@ hi diffText        ctermfg=bg    ctermbg=9
 hi diffChange      ctermfg=bg    ctermbg=2
 hi diffOldLine     ctermfg=bg    ctermbg=3
 
-hi SpellBad        ctermfg=9        ctermbg=bg
-hi SpellCap        ctermfg=2       ctermbg=bg
-hi SpellRare       ctermfg=3     ctermbg=bg
-hi SpellLocal      ctermfg=1     ctermbg=bg
+hi SpellBad        cterm=underline ctermfg=9        ctermbg=bg
+hi SpellCap        cterm=underline ctermfg=2       ctermbg=bg
+hi SpellRare       cterm=underline ctermfg=3     ctermbg=bg
+hi SpellLocal      cterm=underline ctermfg=1     ctermbg=bg
 
 hi mkdCode         ctermfg=8
 hi mkdURL          ctermfg=12
