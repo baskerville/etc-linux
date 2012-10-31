@@ -18,8 +18,8 @@ articlelist-format        " %4i  %f %?T?|%-17T|  ?%t "
 
 color background default default
 color listnormal default default
-color listfocus black cyan
-color info default magenta
+color listfocus black magenta
+color info default cyan
 color article default default
 
 highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
