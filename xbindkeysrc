@@ -95,6 +95,12 @@
 "bspc cycle prev --skip-class-differ"
     Mod4 + Shift + e
 
+"bspc circulate backward"
+    Mod4 + comma
+
+"bspc circulate forward"
+    Mod4 + period
+
 "bspc cycle next"
     Mod4 + c
 

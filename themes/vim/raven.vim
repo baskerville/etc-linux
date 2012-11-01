@@ -119,11 +119,11 @@ hi diffAdded       ctermfg=10
 hi diffRemoved     ctermfg=2
 hi diffChanged     ctermfg=1
 
-hi diffAdd         ctermfg=bg    ctermbg=10
-hi diffDelete      ctermfg=bg    ctermbg=8
-hi diffText        ctermfg=bg    ctermbg=9
-hi diffChange      ctermfg=bg    ctermbg=2
-hi diffOldLine     ctermfg=bg    ctermbg=3
+hi diffAdd         cterm=none    ctermfg=bg    ctermbg=10
+hi diffDelete      cterm=none    ctermfg=bg    ctermbg=9
+hi diffChange      cterm=none    ctermfg=bg    ctermbg=3
+hi diffText        cterm=none    ctermfg=bg    ctermbg=11
+hi diffOldLine     cterm=none    ctermfg=bg    ctermbg=8
 
 hi SpellBad        cterm=underline ctermfg=9        ctermbg=bg
 hi SpellCap        cterm=underline ctermfg=2       ctermbg=bg
