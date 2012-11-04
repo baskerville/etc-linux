@@ -4,8 +4,7 @@ source "$HOME/.coordinates"
 [ -d "$XDG_BIN_DIR" ] && export PATH="$XDG_BIN_DIR:$PATH"
 
 if [ -z "$DISPLAY" -a "$(tty)" = "/dev/tty1" ] ; then
-    startx >& "$HOME/.Xlog"
-    cp "$HOME/.Xlog" "$HOME/.Xlog.bak"
+    startx -- vt08
     logout
 else
     . "$HOME/.bashrc"
