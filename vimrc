@@ -127,7 +127,7 @@ nmap <silent> <F7> :call ToggleWrap()<cr>
 nmap <silent> <F8> :call ToggleSyntax()<cr>
 nmap <silent> <F9> :call ToggleConceal()<cr>
 nmap <silent> <F10> :call ToggleColorColumn()<cr>
-nmap <silent> <F11> :edit<cr>
+nmap <silent> <F11> :call EditSyntax()<cr>
 nmap <silent> <F12> :make<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal tabstop=".v:count1<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>

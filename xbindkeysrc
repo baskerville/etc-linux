@@ -215,18 +215,6 @@
 "bspc ratio 0.9"
     Mod4 + Control + 9
 
-"bspc magnetise top_left"
-    Mod4 + Alt + e
-
-"bspc magnetise top_right"
-    Mod4 + Alt + r
-
-"bspc magnetise bottom_left"
-    Mod4 + Alt + d
-
-"bspc magnetise bottom_right"
-    Mod4 + Alt + f
-
 "bspc use One"
     Mod4 + 1
 
