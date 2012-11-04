@@ -414,9 +414,6 @@
 "focus_or_run notes"
     Mod4 + Control + i
 
-"focus_or_run xlog"
-    Mod4 + Control + x
-
 "dvol status"
     XF86LaunchB
 
