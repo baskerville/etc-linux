@@ -7,3 +7,37 @@
 	prompt = false
 [push]
 	default = simple
+[color]
+	ui = auto
+
+[color "diff"]
+	plain = normal
+	meta = bold
+	frag = cyan bold
+	old = red bold
+	new = green bold
+	commit = yellow bold
+	whitespace = normal red
+
+[color "branch"]
+	current = green bold
+	local = normal
+	remote = red bold
+	plain = normal
+
+[color "status"]
+	header = normal
+	added = red bold
+	updated = green bold
+	changed = yellow bold
+	untracked = magenta bold
+	nobranch = red
+
+[color "grep"]
+	match = yellow bold
+
+[color "interactive"]
+	prompt = normal
+	header = black bold
+	help = magenta bold
+	error = red bold
