@@ -30,7 +30,6 @@ export PROMPT_COMMAND='_prompt_command'
 
 . /etc/profile.d/z.sh
 . "$XDG_CONFIG_HOME"/bash_completion.d/eat
-complete -F _herbstclient_complete hc
 complete -abck i
 complete -c bed
 complete -C finddots dot

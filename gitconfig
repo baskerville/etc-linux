@@ -17,7 +17,7 @@
 	old = red bold
 	new = green bold
 	commit = yellow bold
-	whitespace = normal red
+	whitespace = black red
 
 [color "branch"]
 	current = green bold
