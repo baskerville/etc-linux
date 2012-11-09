@@ -14,13 +14,13 @@ man() {
 }
 
 dbs() {
-    grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /' 
+    grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /'
 }
 
 bnd() {
     pattern=.
     [ $# -gt 0 ] && pattern=$@
-    bind -P | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern" 
+    bind -P | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern"
 }
 
 tgz() {
@@ -76,42 +76,46 @@ Ff() {
 }
 
 fxo() {
-    find . -iname "*$@*" -printf "%P\n" -exec open "{}" \; 
+    find . -iname "*$@*" -printf "%P\n" -exec open "{}" \;
+}
+
+fxr() {
+    find . -iname "*$@*" -printf "%P\n" -exec rm "{}" \;
 }
 
 L() {
-    ls -- *."$@" 
+    ls -- *."$@"
 }
 
 L1() {
-    ls -1 -- *."$@" 
+    ls -1 -- *."$@"
 }
 
 S() {
-    lS -- *."$@" 
+    lS -- *."$@"
 }
 
 N() {
-    n -- *."$@" 
+    n -- *."$@"
 }
 
 N1() {
-    n -1 -- *."$@" 
+    n -1 -- *."$@"
 }
 
 R() {
     while [ $# -gt 0 ] ; do
-        rm -v -- *."$1" 
+        rm -v -- *."$1"
         shift
     done
 }
 
 dud() {
-    du -h -d 1 "$@" | sort -h 
+    du -h -d 1 "$@" | sort -h
 }
 
 dua() {
-    du -ha "$@" | sort -h 
+    du -ha "$@" | sort -h
 }
 
 OO() {
@@ -123,56 +127,56 @@ RR() {
 }
 
 rcd() {
-    # find $PWD/ -maxdepth 1 -type d ! -samefile $PWD/ -exec urxvtc -cd "{}" \; 
-    find $PWD/ -maxdepth 1 -mindepth 1 -type d -exec urxvtc -cd "{}" \; 
+    # find $PWD/ -maxdepth 1 -type d ! -samefile $PWD/ -exec urxvtc -cd "{}" \;
+    find $PWD/ -maxdepth 1 -mindepth 1 -type d -exec urxvtc -cd "{}" \;
 }
 
 count() {
-    l1 $@ | wc -l 
+    l1 $@ | wc -l
 }
 
 weather_location() {
-    wget -qO - "http://xoap.weather.com/search/search?where=$@" | grep 'loc id' 
+    wget -qO - "http://xoap.weather.com/search/search?where=$@" | grep 'loc id'
 }
 
 spell() {
-    echo $@ | hunspell -d en_US | grep '^&' 
+    echo $@ | hunspell -d en_US | grep '^&'
 }
 
 frspell() {
-    echo $@ | hunspell -d fr_FR | grep '^&' 
+    echo $@ | hunspell -d fr_FR | grep '^&'
 }
 
 pb() {
-    wget -U Mozilla -qO - "http://thepiratebay.org/search/'$@'/0/7/0" | grep -o 'http\:\/\/torrents\.thepiratebay\.org\/.*\.torrent' 
+    wget -U Mozilla -qO - "http://thepiratebay.org/search/'$@'/0/7/0" | grep -o 'http\:\/\/torrents\.thepiratebay\.org\/.*\.torrent'
 }
 
 pbg() {
-    pb "$@" | head -n 1 | xargs wget 
+    pb "$@" | head -n 1 | xargs wget
 }
 
 ngfind() {
-    grep -E $@ $XDG_DATA_HOME/nglist.txt | tr -dC '[a-z].\n' 
+    grep -E $@ $XDG_DATA_HOME/nglist.txt | tr -dC '[a-z].\n'
 }
 
 cpmicro() {
-    cp  -Lr "$@" $MICRO/ 
+    cp  -Lr "$@" $MICRO/
 }
 
 cpdata() {
-    cp  -Lr "$@" $DATA/ 
+    cp  -Lr "$@" $DATA/
 }
 
 cptraveler() {
-    cp -Lr "$@" $TRAVELER/ 
+    cp -Lr "$@" $TRAVELER/
 }
 
 cphexagon() {
-    cp  -Lr "$@" $HEXAGON/ 
+    cp  -Lr "$@" $HEXAGON/
 }
 
 cplacie() {
-    cp  -Lr "$@" $LACIE/ 
+    cp  -Lr "$@" $LACIE/
 }
 
 # mm() {
@@ -188,31 +192,31 @@ mkmaildir() {
 }
 
 wiktionary() {
-    curl -s "http://en.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')" 
+    curl -s "http://en.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
 }
 
 wiktionary_fr() {
-    curl -s "http://fr.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')" 
+    curl -s "http://fr.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
 }
 
 def() {
-    wiktionary $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^{|]+ of)\|([^|}]+)[^}]*\}\}/*\U$1\E* $2/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//' 
+    wiktionary $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^{|]+ of)\|([^|}]+)[^}]*\}\}/*\U$1\E* $2/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
 }
 
 def1() {
-    def $@ | head -n 1 
+    def $@ | head -n 1
 }
 
 defr() {
-    wiktionary_fr $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//' 
+    wiktionary_fr $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
 }
 
 defr1() {
-    defr $@ | head -n 1 
+    defr $@ | head -n 1
 }
 
 conj() {
-    w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@" 
+    w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@"
 }
 
 linux_changelog() {
@@ -221,7 +225,7 @@ linux_changelog() {
 }
 
 #swc() {
- #compc -include-sources . -output $@.swc 
+ #compc -include-sources . -output $@.swc
 #}
 
 #airc() {
@@ -233,31 +237,31 @@ linux_changelog() {
 #}
 
 #airr() {
- #airc $@ && adl ${@%.*}-app.xml 
+ #airc $@ && adl ${@%.*}-app.xml
 #}
 
 #asr() {
- #asc $@ && web_browser ${@%.*}.swf 
+ #asc $@ && web_browser ${@%.*}.swf
 #}
 
 #clinst() {
- #cp -r "$@" "$SBCL_SITE/$@" 
+ #cp -r "$@" "$SBCL_SITE/$@"
 #}
 
 #clrefresh() {
- #find "$SBCL_SITE" -name "*.asd" | xargs -I % ln -sf "%" "$SBCL_SYSTEMS" 
+ #find "$SBCL_SITE" -name "*.asd" | xargs -I % ln -sf "%" "$SBCL_SYSTEMS"
 #}
 
 #cllist() {
- #ls $@ "$SBCL_SYSTEMS" 
+ #ls $@ "$SBCL_SYSTEMS"
 #}
 
 #clclean() {
- #rm $SBCL_SYSTEMS/*.asd 
+ #rm $SBCL_SYSTEMS/*.asd
 #}
 
 #ecllink() {
- #find . -name \*.asd -exec ln -s {} . \; 
+ #find . -name \*.asd -exec ln -s {} . \;
 #}
 
 # vim: ft=sh

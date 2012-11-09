@@ -137,7 +137,7 @@ alias pps2pdf='loimpress --nologo --convert-to pdf'
 
 alias subscriptions='grep ":" $HOME/.jnewsrc | awk -F : "{print $1}"'
 alias nu='pgrep -x slrnpull > /dev/null 2>&1 || slrnpull'
-alias dfc='dfc -d'
+alias dfc='dfc -d -c never'
 alias dfcr='dfc -np rootfs'
 alias dfcs='dfc -np /dev/sdc'
 
