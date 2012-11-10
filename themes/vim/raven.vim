@@ -70,10 +70,10 @@ hi TabLine         cterm=none ctermfg=fg     ctermbg=6
 hi TabLineSel      cterm=none ctermfg=14   ctermbg=6
 hi TabLineFill     cterm=none ctermfg=fg     ctermbg=6
 
-hi Pmenu           ctermfg=fg     ctermbg=6
-hi PmenuSel        ctermfg=15    ctermbg=8
-hi PmenuSbar       ctermfg=15    ctermbg=8
-hi WildMenu        ctermfg=15    ctermbg=8    cterm=none
+hi Pmenu           ctermfg=fg    ctermbg=6
+hi PmenuSel        ctermfg=bg    ctermbg=4
+hi PmenuSbar       ctermfg=bg    ctermbg=4
+hi WildMenu        ctermfg=bg    ctermbg=4    cterm=none
 
 hi Visual           cterm=none ctermfg=bg   ctermbg=3
 hi VisualNOS        cterm=none ctermfg=bg   ctermbg=13
