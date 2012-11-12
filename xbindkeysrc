@@ -318,6 +318,27 @@
 "focus_or_run xbindkeys_config"
     Mod4 + Shift + Control + c
 
+"dbright -1"
+    XF86MonBrightnessDown
+
+"dbright -1"
+    XF86MonBrightnessDown
+
+"dbright +1"
+    XF86MonBrightnessUp
+
+"dbright -10"
+    Shift + XF86MonBrightnessDown
+
+"dbright +10"
+    Shift + XF86MonBrightnessUp
+
+"dbright min"
+    Mod4 + XF86MonBrightnessDown
+
+"dbright max"
+    Mod4 + XF86MonBrightnessUp
+
 "dvol toggle"
     XF86AudioMute
 
@@ -372,12 +393,6 @@
 "mpc -q toggle"
     XF86AudioPlay
 
-"focus_or_run ncmpcpp"
-    Mod4 + XF86AudioPlay
-
-"copy_mpd_title"
-    Mod4 + Shift + XF86AudioPlay
-
 "mpc load radios"
     Mod4 + Control + XF86AudioPlay
 
@@ -386,6 +401,12 @@
 
 "mpc seek +1"
     Mod4 + XF86AudioNext
+
+"focus_or_run ncmpcpp"
+    Mod4 + XF86AudioPlay
+
+"copy_mpd_title"
+    Mod4 + Shift + XF86AudioPlay
 
 "copy_primary_to_clipboard"
     Mod4 + Insert
@@ -422,27 +443,6 @@
 
 "dbatt status"
     Mod4 + b
-
-"dbright -1"
-    XF86MonBrightnessDown
-
-"dbright -1"
-    XF86MonBrightnessDown
-
-"dbright +1"
-    XF86MonBrightnessUp
-
-"dbright -10"
-    Shift + XF86MonBrightnessDown
-
-"dbright +10"
-    Shift + XF86MonBrightnessUp
-
-"dbright min"
-    Mod4 + XF86MonBrightnessDown
-
-"dbright max"
-    Mod4 + XF86MonBrightnessUp
 
 "pickcolor"
     Mod4 + Control + g

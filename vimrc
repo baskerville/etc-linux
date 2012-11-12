@@ -56,7 +56,7 @@ call pathogen#infect()
 
 if has("autocmd")
     autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
-    autocmd BufRead,BufEnter .xinitrc set filetype=sh
+    autocmd BufRead,BufEnter *.xinitrc set filetype=sh
     autocmd BufRead,BufEnter *.asd set filetype=lisp
     autocmd BufRead,BufEnter *.as set filetype=actionscript
     autocmd BufRead,BufEnter *.mxml set filetype=mxml
