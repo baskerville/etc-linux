@@ -124,8 +124,8 @@ macro index,pager _ "<save-message>=topics\n" "Move to Topics"
 
 source ~/.mutt/theme
 
-folder-hook !=sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21n  %-80.80s %> %D  %4c"'
-folder-hook =sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21t  %-80.80s %> %D  %4c"'
+folder-hook !=sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21n  %s %> %D  %4c"'
+folder-hook =sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21t  %s %> %D  %4c"'
 
 mailboxes =inbox =lists =arch =herbstluftwm =commandes =paypal =xd =fai =univ
 
