@@ -137,6 +137,7 @@ nmap <silent> <leader>gp :call Paste('primary', 'after')<cr>
 nmap <silent> <leader>gP :call Paste('primary', 'before')<cr>
 nmap <silent> <leader>p :call Paste('clipboard', 'after')<cr>
 nmap <silent> <leader>P :call Paste('clipboard', 'before')<cr>
+vmap <Leader>i c<C-o>:set ri<cr><C-r>"<esc>:set nori<cr>
 nmap <leader>r :source ~/.vimrc<cr>
 nmap <leader>e :e ~/.vimrc<cr>
 nmap <leader>w! :w ! sudo tee %<cr>
