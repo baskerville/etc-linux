@@ -1,12 +1,10 @@
-html,body,h1,h2,h3,h4,h5,h6 {
+* {
     background: #FDF6E7 !important;
     color: #71757F !important;
     font-family: sans-serif !important;
 }
 
-pre,code {
-    background: #FDF6E7 !important;
-    color: #71757F !important;
+pre, code {
     font-family: monospace !important;
 }
 
