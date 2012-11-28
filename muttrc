@@ -115,6 +115,7 @@ macro index,pager gc "<change-folder>=commandes\n" "Go to Commandes"
 macro index,pager gp "<change-folder>=paypal\n" "Go to Paypal"
 macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
 macro index,pager go "<change-folder>=apo\n" "Go to APO"
+macro index,pager gb "<change-folder>=baskerville\n" "Go to Baskerville"
 macro index,pager gx "<change-folder>=xd\n" "Go to XD"
 macro index,pager gr "<change-folder>=starred\n" "Go to Starred"
 macro index,pager gt "<change-folder>=topics\n" "Go to Topics"
@@ -127,6 +128,6 @@ source ~/.mutt/theme
 folder-hook !=sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21n  %s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %?X?•& ?%Z   %-21.21t  %s %> %D  %4c"'
 
-mailboxes =inbox =lists =arch =herbstluftwm =commandes =paypal =xd =fai =univ
+mailboxes =inbox =lists =arch =baskerville =herbstluftwm =commandes =paypal =xd =fai =univ
 
 # my_hdr X-Face: QY}q5L~UF\#6|F|m\"mYo%\;cv!sNfW&aS1{3[Qy\"5\#Ro{m]rI}[h?%lv\#-o/{-8Y]\\Nbjh+4j+iNa@[v5j|v-\'elKt5)jMyT|_j~\$4WP*{N\$ru!TMf7Iw\"8]40>w
