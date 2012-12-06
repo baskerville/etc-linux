@@ -13,8 +13,12 @@ xset r rate 320 35
 # mouse acceleration
 xset m 3/2 6
 
-# DPMS
+# setup DPMS
 xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF
+
+# disable screensaver
+xset s noblank
+xset s off
 
 # neutral mouse cursor
 xsetroot -cursor_name left_ptr
