@@ -10,4 +10,5 @@ pre, code {
 
 a {
     color: #0077C1 !important;
+    outline: none !important;
 }
