@@ -105,6 +105,8 @@ nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bd<cr>
 vmap <leader>t :!titlecase<cr>
+nmap <leader>n :cnf<cr>
+nmap <leader>N :cpf<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>W :!web_browser =expand("<cword>")<cr><cr><cr>
