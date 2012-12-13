@@ -1,8 +1,8 @@
 vo=xv,x11
 ao=alsa
 use-filename-title=yes
-font="Source Sans Pro"
 nojoystick=yes
+font="DejaVu Sans:style=Bold"
 # heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
 # subfont-osd-scale=2
 # subfont-text-scale=2
