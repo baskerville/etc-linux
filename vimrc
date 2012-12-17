@@ -2,6 +2,7 @@ set nocompatible
 set noerrorbells
 set shortmess+=I
 
+set mouse=a
 set encoding=utf-8
 set hidden
 set showmode
