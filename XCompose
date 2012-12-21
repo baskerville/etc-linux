@@ -11,6 +11,25 @@ include "%L"
 <Multi_key> <space> <p> : " " U2008 # PUNCTUATION SPACE
 
 <Multi_key> <asterisk> <asterisk> <asterisk> : "⁂" U2042 # ASTERISM
+<Multi_key> <asterisk> <greater> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key> <greater> <asterisk> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key> <greater> <exclam> : "↑" U2191 # UPWARDS ARROW
+<Multi_key> <less> <exclam> : "↓" U2193 # DOWNWARDS ARROW
+<Multi_key> <percent> <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
+<Multi_key> <plus> <exclam> : "†" U2020 # DAGGER
+<Multi_key> <exclam> <plus> : "†" U2020 # DAGGER
+<Multi_key> <2> <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK
+<Multi_key> <2> <question> : "⁇" U2047 # DOUBLE QUESTION MARK
+<Multi_key> <x> <plus> : "※" U203B # REFERENCE MARK
+<Multi_key> <plus> <x> : "⁜" U205C # DOTTED CROSS
+<Multi_key> <O> <parenleft> : "♀" U2640 # FEMALE SIGN
+<Multi_key> <O> <parenright> : "♂" U2642 # MALE SIGN
+<Multi_key> <asterisk> <o> : "☼" U263C # WHITE SUN WITH RAYS
+<Multi_key> <asterisk> <v> : "☆" U2606 # WHITE STAR
+<Multi_key> <colon> <braceright> : "☻" U263B # BLACK SMILING FACE
+<Multi_key> <p> <p> : "☂" U2602 # UMBRELLA
+<Multi_key> <asciitilde> <3> : "❦" U2766 # FLORAL HEART
+<Multi_key> <8> <x> : "✄" U2704 # WHITE SCISSORS
 
 <Multi_key> <a> <asciitilde> : "∝" U221D
 <Multi_key> <minus> <plus> : "∓" U2213
