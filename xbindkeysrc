@@ -35,6 +35,9 @@
 "bspc toggle_locked"
     Mod4 + x
 
+"bspc toggle_visibility"
+    Mod4 + z
+
 "bspc alternate"
     Mod4 + Return
 
