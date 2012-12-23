@@ -1,5 +1,5 @@
 gtk-theme-name = "Zukitwo"
-gtk-icon-theme-name = "Hicolor"
+gtk-icon-theme-name = "Faenza"
 gtk-key-theme-name = "Emacs"
 gtk-can-change-accels = 1
 #gtk-auto-mnemonics = 1

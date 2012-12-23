@@ -1,0 +1,10 @@
+[Settings]
+gtk-theme-name = Zukitwo
+gtk-key-theme-name = Emacs
+gtk-icon-theme-name = Faenza
+gtk-can-change-accels = true
+gtk-menu-popup-delay = 0
+gtk-button-images = false
+gtk-menu-images = false
+gtk-enable-event-sounds = false
+gtk-enable-input-feedback-sounds = false
