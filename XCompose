@@ -16,8 +16,8 @@ include "%L"
 <Multi_key> <greater> <exclam> : "↑" U2191 # UPWARDS ARROW
 <Multi_key> <less> <exclam> : "↓" U2193 # DOWNWARDS ARROW
 <Multi_key> <percent> <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
-<Multi_key> <plus> <exclam> : "†" U2020 # DAGGER
-<Multi_key> <exclam> <plus> : "†" U2020 # DAGGER
+<Multi_key> <plus> <bar> : "†" U2020 # DAGGER
+<Multi_key> <bar> <plus> : "†" U2020 # DAGGER
 <Multi_key> <2> <exclam> : "‼" U203C # DOUBLE EXCLAMATION MARK
 <Multi_key> <2> <question> : "⁇" U2047 # DOUBLE QUESTION MARK
 <Multi_key> <x> <plus> : "※" U203B # REFERENCE MARK
