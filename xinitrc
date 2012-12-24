@@ -29,9 +29,9 @@ unclutter -noevents &
 xbindkeys
 happy_fs &
 
-exec bspwm
+# exec bspwm
 # exec bspwm -s /tmp/bspwm-fifo
 # exec monsterwm
-# exec wm
+exec wm
 
 # vim: set ft=conf:

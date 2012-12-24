@@ -5,6 +5,9 @@
 "bspc quit"
     Mod4 + Alt + Escape
 
+"bspc quit 1"
+    Mod4 + Alt + Shift + Escape
+
 "bspc close"
     Mod4 + w
 
