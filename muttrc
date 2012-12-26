@@ -25,6 +25,7 @@ unset confirmcreate
 unset wait_key
 set postpone = ask-yes
 set weed
+set beep_new
 # set arrow_cursor
 
 set alias_file = ~/.mutt/aliases
