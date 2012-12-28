@@ -2,7 +2,7 @@
 # bspwm hotkeys
 #
 
-"bspc quit"
+"wm_restart"
     Mod4 + Alt + Escape
 
 "bspc quit 1"
@@ -136,6 +136,18 @@
 
 "bspc presel down"
     Mod4 + Control + j
+
+"bspc presel left 0.33"
+    Mod4 + Control + Shift + h
+
+"bspc presel right 0.66"
+    Mod4 + Control + Shift + l
+
+"bspc presel up 0.33"
+    Mod4 + Control + Shift + k
+
+"bspc presel down 0.66"
+    Mod4 + Control + Shift + j
 
 "bspc cancel"
     Mod4 + BackSpace

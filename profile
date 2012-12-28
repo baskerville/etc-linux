@@ -36,6 +36,7 @@ export HEXAGON=/media/hexagon
 export LACIE=/media/lacie
 
 export BSPWM_SOCKET=/tmp/bspwm-socket
+export BSPWM_BACKUP="$XDG_DATA_HOME/bspwm-backup"
 export EWMHSTATUS_FIFO=/tmp/ewmhstatus-fifo
 export WALLPAPER="$HOME/.wallpaper"
 export PANEL_HEIGHT=24
