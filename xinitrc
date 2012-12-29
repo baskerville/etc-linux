@@ -26,8 +26,9 @@ xsetroot -cursor_name left_ptr
 pgrep -x mpd > /dev/null || mpd
 urxvtd -q -o -f
 unclutter -noevents &
-xbindkeys
+# shkd -c "$HOME/.shkdrc" $(find /dev/input/by-id -name *Keyboard*) &
 happy_fs &
+xbindkeys
 
 # exec bspwm
 # exec bspwm -s /tmp/bspwm-fifo

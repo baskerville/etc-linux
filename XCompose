@@ -25,6 +25,7 @@ include "%L"
 <Multi_key> <O> <parenleft> : "♀" U2640 # FEMALE SIGN
 <Multi_key> <O> <parenright> : "♂" U2642 # MALE SIGN
 <Multi_key> <asterisk> <o> : "☼" U263C # WHITE SUN WITH RAYS
+<Multi_key> <asterisk> <O> : "⚙" U2699 # GEAR
 <Multi_key> <asterisk> <v> : "☆" U2606 # WHITE STAR
 <Multi_key> <colon> <braceright> : "☻" U263B # BLACK SMILING FACE
 <Multi_key> <p> <p> : "☂" U2602 # UMBRELLA

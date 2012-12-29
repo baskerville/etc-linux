@@ -351,11 +351,11 @@
 "dbright +10"
     Shift + XF86MonBrightnessUp
 
-"dbright min"
-    Mod4 + XF86MonBrightnessDown
+# "dbright min"
+#     Mod4 + XF86MonBrightnessDown
 
-"dbright max"
-    Mod4 + XF86MonBrightnessUp
+# "dbright max"
+#     Mod4 + XF86MonBrightnessUp
 
 "dvol toggle"
     XF86AudioMute
