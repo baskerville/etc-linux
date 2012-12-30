@@ -498,4 +498,7 @@ meta + ctrl + ejectcd
 meta + alt + ctrl + ejectcd
     sudo systemctl poweroff
 
+meta + esc
+    pkill -USR1 -x shkd
+
 # vim: set ft=conf:
