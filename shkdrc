@@ -1,0 +1,501 @@
+#
+# bspwm hotkeys
+#
+
+meta + alt + esc
+    wm_restart
+
+meta + alt + shift + esc
+    bspc quit 1
+
+meta + w
+    bspc close
+
+meta + shift + w
+    bspc kill
+
+meta + t
+    bspc cycle_layout
+
+meta + y
+    bspc cycle_layout
+
+meta + r
+    bspc rotate clockwise
+
+meta + shift + r
+    bspc rotate counter_clockwise
+
+meta + u
+    bspc rotate full_cycle
+
+meta + s
+    bspc toggle_floating
+
+meta + f
+    bspc toggle_fullscreen
+
+meta + x
+    bspc toggle_locked
+
+meta + z
+    bspc toggle_visibility
+
+meta + grave
+    bspc alternate
+
+meta + tab
+    bspc alternate_desktop
+
+meta + h
+    bspc focus left
+
+meta + l
+    bspc focus right
+
+meta + k
+    bspc focus up
+
+meta + j
+    bspc focus down
+
+meta + shift + h
+    bspc shift left
+
+meta + shift + l
+    bspc shift right
+
+meta + shift + k
+    bspc shift up
+
+meta + shift + j
+    bspc shift down
+
+meta + o
+    bspc nearest older
+
+meta + i
+    bspc nearest newer
+
+meta + d
+    bspc cycle next --skip-floating
+
+meta + shift + d
+    bspc cycle prev --skip-floating
+
+meta + a
+    bspc cycle next --skip-tiled
+
+meta + shift + a
+    bspc cycle prev --skip-tiled
+
+meta + n
+    bspc cycle next --skip-class-equal
+
+meta + p
+    bspc cycle prev --skip-class-equal
+
+meta + e
+    bspc cycle next --skip-class-differ
+
+meta + shift + e
+    bspc cycle prev --skip-class-differ
+
+meta + comma
+    bspc circulate backward
+
+meta + dot
+    bspc circulate forward
+
+meta + c
+    bspc cycle next
+
+meta + shift + c
+    bspc cycle prev
+
+meta + rightbracket
+    bspc cycle_desktop next
+
+meta + leftbracket
+    bspc cycle_desktop prev
+
+meta + ctrl + rightbracket
+    bspc cycle_desktop next --skip-free
+
+meta + ctrl + leftbracket
+    bspc cycle_desktop prev --skip-free
+
+meta + ctrl + h
+    bspc presel left
+
+meta + ctrl + l
+    bspc presel right
+
+meta + ctrl + k
+    bspc presel up
+
+meta + ctrl + j
+    bspc presel down
+
+meta + ctrl + shift + h
+    bspc presel left 0.33
+
+meta + ctrl + shift + l
+    bspc presel right 0.66
+
+meta + ctrl + shift + k
+    bspc presel up 0.33
+
+meta + ctrl + shift + j
+    bspc presel down 0.66
+
+meta + backspace
+    bspc cancel
+
+meta + alt + h
+    bspc push left
+
+meta + alt + l
+    bspc push right
+
+meta + alt + k
+    bspc push up
+
+meta + alt + j
+    bspc push down
+
+meta + alt + shift + l
+    bspc pull left
+
+meta + alt + shift + h
+    bspc pull right
+
+meta + alt + shift + j
+    bspc pull up
+
+meta + alt + shift + k
+    bspc pull down
+
+meta + alt + ctrl + 1
+    bspc set window_gap 0
+
+meta + alt + ctrl + 2
+    bspc set window_gap 3
+
+meta + alt + ctrl + 3
+    bspc set window_gap 6
+
+meta + alt + ctrl + 4
+    bspc set window_gap 9
+
+meta + alt + ctrl + 5
+    bspc set window_gap 15
+
+meta + alt + ctrl + 6
+    bspc set window_gap 24
+
+meta + alt + ctrl + 7
+    bspc set window_gap 39
+
+meta + alt + ctrl + 8
+    bspc set window_gap 63
+
+meta + alt + ctrl + 9
+    bspc set window_gap 102
+
+meta + alt + ctrl + 0
+    bspc set window_gap 165
+
+meta + ctrl + 1
+    bspc ratio 0.1
+
+meta + ctrl + 2
+    bspc ratio 0.2
+
+meta + ctrl + 3
+    bspc ratio 0.3
+
+meta + ctrl + 4
+    bspc ratio 0.4
+
+meta + ctrl + 5
+    bspc ratio 0.5
+
+meta + ctrl + 6
+    bspc ratio 0.6
+
+meta + ctrl + 7
+    bspc ratio 0.7
+
+meta + ctrl + 8
+    bspc ratio 0.8
+
+meta + ctrl + 9
+    bspc ratio 0.9
+
+meta + 1
+    bspc use One
+
+meta + 2
+    bspc use Two
+
+meta + 3
+    bspc use Three
+
+meta + 4
+    bspc use Four
+
+meta + 5
+    bspc use Five
+
+meta + 6
+    bspc use Six
+
+meta + 7
+    bspc use Seven
+
+meta + 8
+    bspc use Eight
+
+meta + 9
+    bspc use Nine
+
+meta + 0
+    bspc use Ten
+
+meta + shift + 1
+    bspc send_to One
+
+meta + shift + 2
+    bspc send_to Two
+
+meta + shift + 3
+    bspc send_to Three
+
+meta + shift + 4
+    bspc send_to Four
+
+meta + shift + 5
+    bspc send_to Five
+
+meta + shift + 6
+    bspc send_to Six
+
+meta + shift + 7
+    bspc send_to Seven
+
+meta + shift + 8
+    bspc send_to Eight
+
+meta + shift + 9
+    bspc send_to Nine
+
+meta + shift + 0
+    bspc send_to Ten
+
+#
+# wm independent hotkeys
+#
+
+meta + ctrl + slash
+    urxvtc
+
+meta + ctrl + shift + slash
+    urxvtc -cd "$HOME/incoming"
+
+meta + space
+    dmenu_launch
+
+meta + ctrl + comma
+    focus_or_run dwb
+
+meta + ctrl + shift + comma
+    focus_or_run dwb_restore
+
+meta + ctrl + dot
+    focus_or_run mutt
+
+meta + ctrl + shift + dot
+    focus_or_run slrn
+
+meta + apostrophe
+    lasso
+
+meta + shift + apostrophe
+    small_lasso
+
+meta + semicolon
+    glean_primary
+
+meta + shift + semicolon
+    glean_clipboard
+
+meta + ctrl + c
+    focus_or_run bspwm_config
+
+meta + shift + ctrl + c
+    focus_or_run xbindkeys_config
+
+brightnessdown
+    dbright -1
+
+brightnessdown
+    dbright -1
+
+brightnessup
+    dbright +1
+
+shift + brightnessdown
+    dbright -10
+
+shift + brightnessup
+    dbright +10
+
+# meta + brightnessdown
+#     dbright min
+
+# meta + brightnessup
+#     dbright max
+
+mute
+    dvol toggle
+
+volumedown
+    dvol lower
+
+volumeup
+    dvol raise
+
+shift + volumedown
+    dvol strong_lower
+
+shift + volumeup
+    dvol strong_raise
+
+meta + alt + 0
+    mpc -q seek 0%
+
+meta + alt + 1
+    mpc -q seek 10%
+
+meta + alt + 2
+    mpc -q seek 20%
+
+meta + alt + 3
+    mpc -q seek 30%
+
+meta + alt + 4
+    mpc -q seek 40%
+
+meta + alt + 5
+    mpc -q seek 50%
+
+meta + alt + 6
+    mpc -q seek 60%
+
+meta + alt + 7
+    mpc -q seek 70%
+
+meta + alt + 8
+    mpc -q seek 80%
+
+meta + alt + 9
+    mpc -q seek 90%
+
+previoussong
+    mpc -q prev
+
+nextsong
+    mpc -q next
+
+playpause
+    mpc -q toggle
+
+meta + ctrl + playpause
+    mpc load radios
+
+meta + previoussong
+    mpc seek -1
+
+meta + nextsong
+    mpc seek +1
+
+meta + playpause
+    focus_or_run ncmpcpp
+
+meta + shift + playpause
+    copy_mpd_title
+
+meta + insert
+    copy_primary_to_clipboard
+
+meta + shift + insert
+    copy_clipboard_to_primary
+
+meta + ctrl + p
+    dash -c "printf $(pwgen -nc) | xsel -bi"
+
+meta + equal
+    mosaic "$HOME/incoming"
+
+meta + shift + equal
+    mosaic "$HOME/image"
+
+meta + ctrl + a
+    focus_or_run accounts
+
+meta + ctrl + shift + a
+    focus_or_run boards
+
+meta + ctrl + t
+    focus_or_run htop
+
+meta + ctrl + i
+    focus_or_run notes
+
+dashboard
+    dvol status
+
+shift + dashboard
+    dbright status
+
+meta + b
+    dbatt status
+
+meta + ctrl + g
+    pickcolor
+
+meta + scale
+    scrot
+
+meta + shift + scale
+    scrot -s
+
+kbdillumdown
+    togglethm dark
+
+kbdillumup
+    togglethm light
+
+meta + kbdillumdown
+    updatethm
+
+meta + kbdillumup
+    reloadpanel
+
+shift + ejectcd
+    wodim -eject
+
+meta + ejectcd
+    dpms_standby
+
+meta + alt + ejectcd
+    sudo systemctl suspend
+
+meta + ctrl + ejectcd
+    sudo systemctl reboot
+
+meta + alt + ctrl + ejectcd
+    sudo systemctl poweroff
+
+# vim: set ft=conf:
