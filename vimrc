@@ -105,7 +105,7 @@ nmap <leader>k :bp<cr>
 nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bd<cr>
-vmap <leader>t :!titlecase<cr>
+vmap <leader>T :!titlecase<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>W :!web_browser =expand("<cword>")<cr><cr><cr>
@@ -135,6 +135,7 @@ nmap <silent> <F11> :call EditSyntax()<cr>
 nmap <silent> <F12> :make<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal tabstop=".v:count1<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>
+nmap <silent> <leader>y yiw:call YankClip()<cr>
 nmap <silent> <leader>yy yy:call YankClip()<cr>
 vmap <silent> <leader>gy y:call Yank()<cr>
 nmap <silent> <leader>gp :call Paste('primary', 'after')<cr>
