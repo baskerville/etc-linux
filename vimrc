@@ -32,7 +32,7 @@ set ignorecase
 set smartcase
 
 let g:xdefaults_no_if0 = 1
-let g:main_ff = substitute(&ffs, ',.*', '', '')
+" let g:main_ff = substitute(&ffs, ',.*', '', '')
 set statusline=
 set statusline+=%F%m%r%h%w
 set statusline+=\ %=%Y
@@ -149,6 +149,7 @@ nmap <leader>w! :w ! sudo tee %<cr>
 xmap <leader>c \\
 nmap <leader>c \\
 nmap <leader>cc \\\
+nmap <leader>cu \\u
 
 function! CleanMuttHeader()
     " remove signature
