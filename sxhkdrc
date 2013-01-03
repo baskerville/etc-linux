@@ -337,7 +337,7 @@ super + ctrl + c
     focus_or_run bspwm_config
 
 super + shift + ctrl + c
-    focus_or_run xbindkeys_config
+    focus_or_run sxhkd_config
 
 MonBrightnessDown
     dbright -1
