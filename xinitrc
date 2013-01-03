@@ -1,6 +1,5 @@
 setxkbmap -option terminate:ctrl_alt_bksp
 xmodmap "$HOME/.xmodmaprc"
-kdlaunch &
 xrdb -merge "$HOME/.Xresources"
 
 # reload fonts
@@ -26,12 +25,10 @@ xsetroot -cursor_name left_ptr
 pgrep -x mpd > /dev/null || mpd
 urxvtd -q -o -f
 unclutter -noevents &
-# shkd -c "$HOME/.shkdrc" $(find /dev/input/by-id -name *Keyboard*) &
+sxhkd &
 happy_fs &
-xbindkeys
 
 # exec bspwm
-# exec bspwm -s /tmp/bspwm-fifo
 # exec monsterwm
 exec wm
 

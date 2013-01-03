@@ -4,7 +4,8 @@
 clear Lock
 clear Control
 
-keycode 66 = Control_L
+keycode 66 = Control_L Return
 keycode 37 = Multi_key Caps_Lock
+keycode 36 = Control_R Return
 
 add Control = Control_L Control_R

@@ -108,7 +108,8 @@ nmap <leader>d :bd<cr>
 vmap <leader>T :!titlecase<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
-nmap <leader>W :!web_browser =expand("<cword>")<cr><cr><cr>
+nmap <leader>w :!web_browser =expand("<cword>")<cr><cr><cr>
+vmap <leader>w y:!web_browser "<cr>
 nmap <leader>[ :cp<cr>
 nmap <leader>] :cn<cr>
 nmap <leader>} :cnf<cr>
@@ -145,11 +146,12 @@ nmap <silent> <leader>P :call Paste('clipboard', 'before')<cr>
 vmap <Leader>i c<C-o>:set ri<cr><C-r>"<esc>:set nori<cr>
 nmap <leader>r :source ~/.vimrc<cr>
 nmap <leader>e :e ~/.vimrc<cr>
-nmap <leader>w! :w ! sudo tee %<cr>
+nmap <leader>! :w ! sudo tee %<cr>
 xmap <leader>c \\
 nmap <leader>c \\
 nmap <leader>cc \\\
 nmap <leader>cu \\u
+nmap <leader>cp vip\\
 
 function! CleanMuttHeader()
     " remove signature
