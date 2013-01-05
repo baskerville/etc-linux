@@ -109,7 +109,7 @@ vmap <leader>T :!titlecase<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>w :!web_browser =expand("<cword>")<cr><cr><cr>
-vmap <leader>w y:!web_browser "<cr>
+vmap <leader>w y:!web_browser "<cr><cr>
 nmap <leader>[ :cp<cr>
 nmap <leader>] :cn<cr>
 nmap <leader>} :cnf<cr>

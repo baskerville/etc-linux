@@ -20,9 +20,6 @@ super + shift + w
 super + t
     bspc cycle_layout
 
-super + y
-    bspc cycle_layout
-
 super + r
     bspc rotate clockwise
 
@@ -32,16 +29,10 @@ super + shift + r
 super + u
     bspc rotate full_cycle
 
-super + s
-    bspc toggle_floating
+super + {s,f,x,z}
+    bspc toggle_{floating,fullscreen,locked,visibility}
 
-super + f
-    bspc toggle_fullscreen
-
-super + x
-    bspc toggle_locked
-
-super + z
+button8
     bspc toggle_visibility
 
 super + Return
@@ -50,35 +41,14 @@ super + Return
 super + Tab
     bspc alternate_desktop
 
-super + h
-    bspc focus left
+super + {h,j,k,l}
+    bspc focus {left,down,up,right}
 
-super + l
-    bspc focus right
+super + shift + {h,j,k,l}
+    bspc shift {left,down,up,right}
 
-super + k
-    bspc focus up
-
-super + j
-    bspc focus down
-
-super + shift + h
-    bspc shift left
-
-super + shift + l
-    bspc shift right
-
-super + shift + k
-    bspc shift up
-
-super + shift + j
-    bspc shift down
-
-super + o
-    bspc nearest older
-
-super + i
-    bspc nearest newer
+super + {o,i}
+    bspc nearest {older,newer}
 
 super + d
     bspc cycle next --skip-floating
@@ -86,29 +56,14 @@ super + d
 super + shift + d
     bspc cycle prev --skip-floating
 
-super + a
-    bspc cycle next --skip-tiled
+super + {a,grave,e}
+    bspc cycle next {--skip-tiled,--skip-class-equal,--skip-class-differ}
 
-super + shift + a
-    bspc cycle prev --skip-tiled
+super + shift + {a,grave,e}
+    bspc cycle prev {--skip-tiled,--skip-class-equal,--skip-class-differ}
 
-super + grave
-    bspc cycle next --skip-class-equal
-
-super + shift + grave
-    bspc cycle prev --skip-class-equal
-
-super + e
-    bspc cycle next --skip-class-differ
-
-super + shift + e
-    bspc cycle prev --skip-class-differ
-
-super + comma
-    bspc circulate backward
-
-super + period
-    bspc circulate forward
+super + {comma,period}
+    bspc circulate {backward,forward}
 
 super + c
     bspc cycle next
@@ -116,185 +71,38 @@ super + c
 super + shift + c
     bspc cycle prev
 
-super + bracketright
-    bspc cycle_desktop next
+super + bracket{left,right}
+    bspc cycle_desktop {prev,next}
 
-super + bracketleft
-    bspc cycle_desktop prev
+super + ctrl + bracket{left,right}
+    bspc cycle_desktop {prev,next} --skip-free
 
-super + ctrl + bracketright
-    bspc cycle_desktop next --skip-free
+super + ctrl + {h,j,k,l}
+    bspc presel {left,down,up,right}
 
-super + ctrl + bracketleft
-    bspc cycle_desktop prev --skip-free
-
-super + ctrl + h
-    bspc presel left
-
-super + ctrl + l
-    bspc presel right
-
-super + ctrl + k
-    bspc presel up
-
-super + ctrl + j
-    bspc presel down
-
-super + ctrl + shift + h
-    bspc presel left 0.33
-
-super + ctrl + shift + l
-    bspc presel right 0.66
-
-super + ctrl + shift + k
-    bspc presel up 0.33
-
-super + ctrl + shift + j
-    bspc presel down 0.66
+super + ctrl + shift + {h,j,k,l}
+    bspc presel {left 0.33,down 0.66,up 0.33,right 0.66}
 
 super + BackSpace
     bspc cancel
 
-super + alt + h
-    bspc push left
+super + alt + {h,j,k,l}
+    bspc push {left,down,up,right}
 
-super + alt + l
-    bspc push right
+super + alt + shift {h,j,k,l}
+    bspc pull {right,up,down,left}
 
-super + alt + k
-    bspc push up
+super + alt + ctrl + {1-9,0}
+    bspc set window_gap {0,3,6,9,15,24,39,63,102,165}
 
-super + alt + j
-    bspc push down
+super + ctrl + {1-9}
+    bspc ratio 0.{1-9}
 
-super + alt + shift + l
-    bspc pull left
+super + {1-9,0}
+    bspc use {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
 
-super + alt + shift + h
-    bspc pull right
-
-super + alt + shift + j
-    bspc pull up
-
-super + alt + shift + k
-    bspc pull down
-
-super + alt + ctrl + 1
-    bspc set window_gap 0
-
-super + alt + ctrl + 2
-    bspc set window_gap 3
-
-super + alt + ctrl + 3
-    bspc set window_gap 6
-
-super + alt + ctrl + 4
-    bspc set window_gap 9
-
-super + alt + ctrl + 5
-    bspc set window_gap 15
-
-super + alt + ctrl + 6
-    bspc set window_gap 24
-
-super + alt + ctrl + 7
-    bspc set window_gap 39
-
-super + alt + ctrl + 8
-    bspc set window_gap 63
-
-super + alt + ctrl + 9
-    bspc set window_gap 102
-
-super + alt + ctrl + 0
-    bspc set window_gap 165
-
-super + ctrl + 1
-    bspc ratio 0.1
-
-super + ctrl + 2
-    bspc ratio 0.2
-
-super + ctrl + 3
-    bspc ratio 0.3
-
-super + ctrl + 4
-    bspc ratio 0.4
-
-super + ctrl + 5
-    bspc ratio 0.5
-
-super + ctrl + 6
-    bspc ratio 0.6
-
-super + ctrl + 7
-    bspc ratio 0.7
-
-super + ctrl + 8
-    bspc ratio 0.8
-
-super + ctrl + 9
-    bspc ratio 0.9
-
-super + 1
-    bspc use One
-
-super + 2
-    bspc use Two
-
-super + 3
-    bspc use Three
-
-super + 4
-    bspc use Four
-
-super + 5
-    bspc use Five
-
-super + 6
-    bspc use Six
-
-super + 7
-    bspc use Seven
-
-super + 8
-    bspc use Eight
-
-super + 9
-    bspc use Nine
-
-super + 0
-    bspc use Ten
-
-super + shift + 1
-    bspc send_to One
-
-super + shift + 2
-    bspc send_to Two
-
-super + shift + 3
-    bspc send_to Three
-
-super + shift + 4
-    bspc send_to Four
-
-super + shift + 5
-    bspc send_to Five
-
-super + shift + 6
-    bspc send_to Six
-
-super + shift + 7
-    bspc send_to Seven
-
-super + shift + 8
-    bspc send_to Eight
-
-super + shift + 9
-    bspc send_to Nine
-
-super + shift + 0
-    bspc send_to Ten
+super + shift + {1-9,0}
+    bspc send_to {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
 
 #
 # wm independent hotkeys
@@ -309,17 +117,11 @@ super + ctrl + shift + slash
 super + space
     dmenu_launch
 
-super + ctrl + comma
-    focus_or_run dwb
+super + ctrl + {comma,period}
+    focus_or_run {dwb,mutt}
 
-super + ctrl + shift + comma
-    focus_or_run dwb_restore
-
-super + ctrl + period
-    focus_or_run mutt
-
-super + ctrl + shift + period
-    focus_or_run slrn
+super + ctrl + shift + {comma,period}
+    focus_or_run {dwb_restore,slrn}
 
 super + apostrophe
     lasso
@@ -339,68 +141,26 @@ super + ctrl + c
 super + shift + ctrl + c
     focus_or_run sxhkd_config
 
-MonBrightnessDown
-    dbright -1
+MonBrightness{Down,Up}
+    dbright {-1,+1}
 
-MonBrightnessUp
-    dbright +1
-
-shift + MonBrightnessDown
-    dbright -10
-
-shift + MonBrightnessUp
-    dbright +10
+shift + MonBrightness{Down,Up}
+    dbright {-10,+10}
 
 AudioMute
     dvol toggle
 
-AudioLowerVolume
-    dvol lower
+Audio{Lower,Raise}Volume
+    dvol {lower,raise}
 
-AudioRaiseVolume
-    dvol raise
+shift + Audio{Lower,Raise}Volume
+    dvol strong_{lower,raise}
 
-shift + AudioLowerVolume
-    dvol strong_lower
+super + alt + {0,1,2,3,4,5,6,7,8,9}
+    mpc -q seek {0,1,2,3,4,5,6,7,8,9}0%
 
-shift + AudioRaiseVolume
-    dvol strong_raise
-
-super + alt + 0
-    mpc -q seek 0%
-
-super + alt + 1
-    mpc -q seek 10%
-
-super + alt + 2
-    mpc -q seek 20%
-
-super + alt + 3
-    mpc -q seek 30%
-
-super + alt + 4
-    mpc -q seek 40%
-
-super + alt + 5
-    mpc -q seek 50%
-
-super + alt + 6
-    mpc -q seek 60%
-
-super + alt + 7
-    mpc -q seek 70%
-
-super + alt + 8
-    mpc -q seek 80%
-
-super + alt + 9
-    mpc -q seek 90%
-
-AudioPrev
-    mpc -q prev
-
-AudioNext
-    mpc -q next
+Audio{Prev,Next}
+    mpc -q {prev,next}
 
 AudioPlay
     mpc -q toggle
@@ -408,11 +168,8 @@ AudioPlay
 super + ctrl + AudioPlay
     mpc load radios
 
-super + AudioPrev
-    mpc seek -1
-
-super + AudioNext
-    mpc seek +1
+super + Audio{Prev,Next}
+    mpc seek {-1,+1}
 
 super + AudioPlay
     focus_or_run ncmpcpp
@@ -435,17 +192,11 @@ super + equal
 super + shift + equal
     mosaic "$HOME/image"
 
-super + ctrl + a
-    focus_or_run accounts
+super + ctrl + {a,t,i}
+    focus_or_run {accounts,htop,notes}
 
 super + ctrl + shift + a
     focus_or_run boards
-
-super + ctrl + t
-    focus_or_run htop
-
-super + ctrl + i
-    focus_or_run notes
 
 LaunchB
     dvol status
@@ -465,17 +216,11 @@ super + LaunchA
 super + shift + @LaunchA
     scrot -s
 
-KbdBrightnessDown
-    togglethm dark
+KbdBrightness{Down,Up}
+    togglethm {dark,light}
 
-KbdBrightnessUp
-    togglethm light
-
-super + KbdBrightnessDown
-    updatethm
-
-super + KbdBrightnessUp
-    reloadpanel
+super + KbdBrightness{Down,Up}
+    {updatethm,reloadpanel}
 
 shift + Eject
     wodim -eject
