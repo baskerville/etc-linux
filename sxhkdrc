@@ -5,34 +5,22 @@
 super + Escape
     pkill -USR1 -x sxhkd
 
-super + alt + Escape
-    wm_restart
+super + alt + {Escape,shift + Escape}
+    {wm_restart,bspc quit 1}
 
-super + alt + shift + Escape
-    bspc quit 1
-
-super + w
-    bspc close
-
-super + shift + w
-    bspc kill
+super + {w,shift + w}
+    bspc {close,kill}
 
 super + t
     bspc cycle_layout
 
-super + r
-    bspc rotate clockwise
-
-super + shift + r
-    bspc rotate counter_clockwise
-
-super + u
-    bspc rotate full_cycle
+super + {r,shift + r,u}
+    bspc rotate {clockwise,counter_clockwise,full_cycle}
 
 super + {s,f,x,z}
     bspc toggle_{floating,fullscreen,locked,visibility}
 
-super + Return
+super + grave
     bspc alternate
 
 super + Tab
@@ -47,26 +35,20 @@ super + shift + {h,j,k,l}
 super + {o,i}
     bspc nearest {older,newer}
 
-super + d
-    bspc cycle next --skip-floating
+super + {d,shift + d}
+    bspc cycle {next,prev} --skip-floating
 
-super + shift + d
-    bspc cycle prev --skip-floating
-
-super + {a,grave,e}
+super + {a,backslash,e}
     bspc cycle next {--skip-tiled,--skip-class-equal,--skip-class-differ}
 
-super + shift + {a,grave,e}
+super + shift + {a,backslash,e}
     bspc cycle prev {--skip-tiled,--skip-class-equal,--skip-class-differ}
 
 super + {comma,period}
     bspc circulate {backward,forward}
 
-super + c
-    bspc cycle next
-
-super + shift + c
-    bspc cycle prev
+super + {c,shift + c}
+    bspc cycle {next,prev}
 
 super + bracket{left,right}
     bspc cycle_desktop {prev,next}
@@ -117,11 +99,8 @@ button8
 # wm independent hotkeys
 #
 
-super + ctrl + slash
-    urxvtc
-
-super + ctrl + shift + slash
-    urxvtc -cd "$HOME/incoming"
+super + ctrl + {slash,shift + slash}
+    {urxvtc,urxvtc -cd "$HOME/incoming"}
 
 super + space
     dmenu_launch
@@ -132,23 +111,14 @@ super + ctrl + {comma,period}
 super + ctrl + shift + {comma,period}
     focus_or_run {dwb_restore,slrn}
 
-super + apostrophe
-    lasso
+super + {apostrophe,shift + apostrophe}
+    {lasso,small_lasso}
 
-super + shift + apostrophe
-    small_lasso
+super + {semicolon,shift + semicolon}
+    glean_{primary,clipboard}
 
-super + semicolon
-    glean_primary
-
-super + shift + semicolon
-    glean_clipboard
-
-super + ctrl + c
-    focus_or_run bspwm_config
-
-super + shift + ctrl + c
-    focus_or_run sxhkd_config
+super + ctrl + {c,shift + c}
+    focus_or_run {bspwm,sxhkd}_config
 
 MonBrightness{Down,Up}
     dbright {-1,+1}
@@ -180,38 +150,20 @@ super + ctrl + AudioPlay
 super + Audio{Prev,Next}
     mpc seek {-1,+1}
 
-super + AudioPlay
-    focus_or_run ncmpcpp
-
-super + shift + AudioPlay
-    copy_mpd_title
-
-super + Insert
-    copy_primary_to_clipboard
-
-super + shift + Insert
-    copy_clipboard_to_primary
+super + {AudioPlay,shift + AudioPlay}
+    {focus_or_run ncmpcpp,copy_mpd_title}
 
 super + ctrl + p
     dash -c "printf $(pwgen -nc) | xsel -bi"
 
-super + equal
-    mosaic "$HOME/incoming"
+super + {equal,shift + equal}
+    mosaic "$HOME/{incoming,image}"
 
-super + shift + equal
-    mosaic "$HOME/image"
+super + ctrl + {a,shift + a,t,i}
+    focus_or_run {accounts,boards,htop,notes}
 
-super + ctrl + {a,t,i}
-    focus_or_run {accounts,htop,notes}
-
-super + ctrl + shift + a
-    focus_or_run boards
-
-LaunchB
-    dvol status
-
-shift + LaunchB
-    dbright status
+{LaunchB,shift + LaunchB}
+    {dvol,dbright} status
 
 super + b
     dbatt status
@@ -219,11 +171,8 @@ super + b
 super + ctrl + g
     pickcolor
 
-super + LaunchA
-    scrot
-
-super + shift + @LaunchA
-    scrot -s
+super + {LaunchA,shift + @LaunchA}
+    scrot {-e,-s -e} 'image_viewer $f'
 
 KbdBrightness{Down,Up}
     togglethm {dark,light}
@@ -237,13 +186,7 @@ shift + Eject
 super + Eject
     dpms_standby
 
-super + alt + Eject
-    sudo systemctl suspend
-
-super + ctrl + Eject
-    sudo systemctl reboot
-
-super + alt + ctrl + Eject
-    sudo systemctl poweroff
+super + {alt,ctrl,alt + ctrl} + Eject
+    sudo systemctl {suspend,reboot,poweroff}
 
 # vim: set ft=conf:
