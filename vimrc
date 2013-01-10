@@ -11,6 +11,7 @@ set wildmenu
 " set cursorline
 
 set backspace=indent,eol,start
+set foldmethod=marker
 set linebreak
 set autoindent
 set smartindent

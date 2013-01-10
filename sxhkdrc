@@ -192,4 +192,4 @@ super + Eject
 super + {alt,ctrl,alt + ctrl} + Eject
     sudo systemctl {suspend,reboot,poweroff}
 
-# vim: set ft=conf:
+# vim: set ft=sxhkdrc:
