@@ -123,37 +123,37 @@ super + {semicolon,shift + semicolon}
 super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}_config
 
-MonBrightness{Down,Up}
+XF86MonBrightness{Down,Up}
     dbright {-1,+1}
 
-shift + MonBrightness{Down,Up}
+shift + XF86MonBrightness{Down,Up}
     dbright {-10,+10}
 
-AudioMute
+XF86AudioMute
     dvol toggle
 
-Audio{Lower,Raise}Volume
+XF86Audio{Lower,Raise}Volume
     dvol {lower,raise}
 
-shift + Audio{Lower,Raise}Volume
+shift + XF86Audio{Lower,Raise}Volume
     dvol strong_{lower,raise}
 
 super + alt + {0,1,2,3,4,5,6,7,8,9}
     mpc -q seek {0,1,2,3,4,5,6,7,8,9}0%
 
-Audio{Prev,Next}
+XF86Audio{Prev,Next}
     mpc -q {prev,next}
 
-AudioPlay
+XF86AudioPlay
     mpc -q toggle
 
-super + ctrl + AudioPlay
+super + ctrl + XF86AudioPlay
     mpc load radios
 
-super + Audio{Prev,Next}
+super + XF86Audio{Prev,Next}
     mpc seek {-1,+1}
 
-super + {AudioPlay,shift + AudioPlay}
+super + {XF86AudioPlay,shift + XF86AudioPlay}
     {focus_or_run ncmpcpp,copy_mpd_title}
 
 super + ctrl + p
@@ -165,7 +165,7 @@ super + {equal,shift + equal}
 super + ctrl + {a,shift + a,t,i}
     focus_or_run {accounts,boards,htop,notes}
 
-{LaunchB,shift + LaunchB}
+{XF86LaunchB,shift + XF86LaunchB}
     {dvol,dbright} status
 
 super + b
@@ -174,22 +174,22 @@ super + b
 super + ctrl + g
     pickcolor
 
-super + {LaunchA,shift + @LaunchA}
+super + {XF86LaunchA,shift + @XF86LaunchA}
     scrot {-e,-s -e} 'image_viewer $f'
 
-KbdBrightness{Down,Up}
+XF86KbdBrightness{Down,Up}
     togglethm {dark,light}
 
-super + KbdBrightness{Down,Up}
+super + XF86KbdBrightness{Down,Up}
     {updatethm,reloadpanel}
 
-shift + Eject
+shift + XF86Eject
     wodim -eject
 
-super + Eject
+super + XF86Eject
     dpms_standby
 
-super + {alt,ctrl,alt + ctrl} + Eject
+super + {alt,ctrl,alt + ctrl} + XF86Eject
     sudo systemctl {suspend,reboot,poweroff}
 
 # vim: set ft=sxhkdrc:
