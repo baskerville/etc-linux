@@ -32,7 +32,7 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l}
     bspc shift {left,down,up,right}
 
-super + ctrl + space
+super + shift + Return
     bspc swap
 
 super + {o,i}
@@ -85,6 +85,9 @@ super + {1-9,0}
 
 super + shift + {1-9,0}
     bspc send_to {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
+
+super + shift + bracket{left,right}
+    bspc drop_to {prev,next}
 
 super + button{1,2,3}
     bspc grab_pointer {move,focus,resize}
