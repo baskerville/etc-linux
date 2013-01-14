@@ -160,7 +160,7 @@ super + {XF86AudioPlay,shift + XF86AudioPlay}
     {focus_or_run ncmpcpp,copy_mpd_title}
 
 super + ctrl + p
-    dash -c "printf $(pwgen -nc) | xsel -bi"
+    printf $(pwgen -nc) | xsel -bi
 
 super + {equal,shift + equal}
     mosaic "$HOME/{incoming,image}"
