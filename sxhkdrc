@@ -166,7 +166,7 @@ super + {equal,shift + equal}
     mosaic "$HOME/{incoming,image}"
 
 super + ctrl + {a,shift + a,t,i}
-    focus_or_run {accounts,boards,htop,notes}
+    focus_or_run {accounts,boards,top,notes}
 
 {XF86LaunchB,shift + XF86LaunchB}
     {dvol,dbright} status
