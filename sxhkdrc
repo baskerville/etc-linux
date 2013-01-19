@@ -20,11 +20,8 @@ super + {r,shift + r,u}
 super + {s,f,x,z}
     bspc toggle_{floating,fullscreen,locked,visibility}
 
-super + grave
-    bspc alternate
-
-super + Tab
-    bspc alternate_desktop
+super + {grave,Tab}
+    bspc {alternate,alternate_desktop}
 
 super + {h,j,k,l}
     bspc focus {left,down,up,right}
