@@ -21,6 +21,7 @@ alias rgrep='grep -r'
 alias chbin='chmod 755'
 alias chord='chmod 644'
 alias octalrights='stat -c %a'
+alias cal='cal -m'
 
 alias scf='. $SHELL_CONFIG'
 alias ecf='editor $SHELL_CONFIG'
