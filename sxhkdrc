@@ -129,6 +129,9 @@ XF86MonBrightness{Down,Up}
 shift + XF86MonBrightness{Down,Up}
     dbright {-10,+10}
 
+super + XF86MonBrightness{Down,Up}
+    dbright {min,max}
+
 XF86AudioMute
     dvol toggle
 
