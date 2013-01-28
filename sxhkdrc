@@ -103,7 +103,7 @@ button8
 #
 
 super + ctrl + {slash,shift + slash}
-    {urxvtc,urxvtc -cd "$HOME/incoming"}
+    {urxvtc,urxvtc -cd "$XDG_DOWNLOAD_DIR"}
 
 super + space
     dmenu_launch
@@ -163,7 +163,7 @@ super + ctrl + p
     pwgen -nc | tr -d '\n' | xsel -bi
 
 super + {equal,shift + equal}
-    mosaic "$HOME/{incoming,image}"
+    mosaic "{$XDG_DOWNLOAD_DIR,$HOME/image}"
 
 super + ctrl + {a,shift + a,t,i}
     focus_or_run {accounts,boards,top,notes}
