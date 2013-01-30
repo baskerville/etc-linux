@@ -62,7 +62,7 @@ super + ctrl + {h,j,k,l}
 super + ctrl + shift + {h,j,k,l}
     bspc presel {left 0.33,down 0.66,up 0.33,right 0.66}
 
-super + BackSpace
+super + ctrl + u
     bspc cancel
 
 super + alt + {h,j,k,l}
