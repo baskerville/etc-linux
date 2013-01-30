@@ -95,7 +95,13 @@ super + !button{1,3}
 super + @button{1,3}
     bspc {ungrab_pointer,ungrab_pointer}
 
-button8
+super + button{4,5}
+    bspc rotate {clockwise,counter_clockwise}
+
+super + button{6,7}
+    bspc circulate {backward,forward}
+
+super + button8
     bspc toggle_visibility
 
 #
