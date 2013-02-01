@@ -17,14 +17,18 @@ _prompt_command() {
 }
 
 _git_branch() {
-    git branch --no-color --contains HEAD 2> /dev/null | sed 's/\* \(.*\)/\1 /'
+    git branch --no-color --contains HEAD 2> /dev/null | sed 's/\* \(.*\)/ \1>/'
 }
 
-_exit_status() {
-    [ $? -ne 0 ] && printf "! "
+_exit_status_color() {
+    if [ $? -eq 0 ] ; then
+        printf '\e[1;35m'
+    else
+        printf '\e[1;31m'
+    fi
 }
 
-export PS1='\e[1;37m$(_exit_status)\e[1;30m$(_git_branch)\e[1;35m\$\e[0m '
+export PS1='$(_exit_status_color)\$\e[1;30m$(_git_branch)\e[0m '
 export PROMPT_COMMAND='_prompt_command'
 
 [ -r "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
