@@ -1,9 +1,3 @@
-# if tty -s; then
-#     stty -ixon
-#     stty -ixoff
-#     stty susp undef
-# fi
-
 shopt -s checkwinsize
 shopt -s no_empty_cmd_completion
 shopt -s histappend cmdhist
@@ -22,7 +16,11 @@ _prompt_command() {
     tput ed
 }
 
-export PS1='\[\e[1;35m\]\$\[\e[0m\] '
+_git_branch() {
+    git branch --no-color --contains HEAD 2> /dev/null | sed 's/\* \(.*\)/\1 /'
+}
+
+export PS1='\e[1;30m$(_git_branch)\e[1;35m\$\e[0m '
 export PROMPT_COMMAND='_prompt_command'
 
 [ -r "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
