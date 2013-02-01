@@ -20,11 +20,7 @@ _git_branch() {
     git branch --no-color --contains HEAD 2> /dev/null | sed 's/\* \(.*\)/├ \1 /' | sed 's/ master / /'
 }
 
-_last_exit_status() {
-    [ $? -ne 0 ] && printf '! '
-}
-
-export PS1='\[\e[1;37m\]$(_last_exit_status)\[\e[1;30m\]$(_git_branch)\[\e[1;35m\]\$\[\e[0m\] '
+export PS1='\[\e[1;30m\]$(_git_branch)\[\e[1;35m\]\$\[\e[0m\] '
 export PROMPT_COMMAND='_prompt_command'
 
 [ -r "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
