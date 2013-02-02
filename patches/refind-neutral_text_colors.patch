@@ -1,0 +1,27 @@
+From 27ff84947a20082f275440547e279caffedb07df Mon Sep 17 00:00:00 2001
+From: Bastien Dejean <nihilhill@gmail.com>
+Date: Mon, 14 Jan 2013 14:49:54 +0100
+Subject: [PATCH] Neutral banner/error colors
+
+---
+ refind/screen.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/refind/screen.h b/refind/screen.h
+index 2647fc7..7e9943a 100644
+--- a/refind/screen.h
++++ b/refind/screen.h
+@@ -53,8 +53,8 @@
+ #define DONT_CHANGE_TEXT_MODE 1024 /* textmode # that's a code to not change the text mode */
+ 
+ #define ATTR_BASIC (EFI_LIGHTGRAY | EFI_BACKGROUND_BLACK)
+-#define ATTR_ERROR (EFI_YELLOW | EFI_BACKGROUND_BLACK)
+-#define ATTR_BANNER (EFI_WHITE | EFI_BACKGROUND_BLUE)
++#define ATTR_ERROR (EFI_LIGHTRED | EFI_BACKGROUND_BLACK)
++#define ATTR_BANNER (EFI_DARKGRAY | EFI_BACKGROUND_BLACK)
+ #define ATTR_CHOICE_BASIC ATTR_BASIC
+ #define ATTR_CHOICE_CURRENT (EFI_WHITE | EFI_BACKGROUND_GREEN)
+ #define ATTR_SCROLLARROW (EFI_LIGHTGREEN | EFI_BACKGROUND_BLACK)
+-- 
+1.8.1
+
