@@ -2,7 +2,8 @@ background: "#3F3E3B"
 foreground: "#B5B6C1"
 num_colors: 12
 color_chroma: 33
-color_delta: 6
+color_deltas: [6, -15]
+delta_prefixes: ['light', 'dark']
 color_names:
     - pink
     - red

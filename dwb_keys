@@ -249,6 +249,10 @@ group_show=as
 group_tag=am
 group_toggle=at
 
+reload_bookmarks= 
+reload_quickmarks= 
+print_preview= 
+
 [-p]
 save_search_field=gs
 add_view=ga
