@@ -10,13 +10,13 @@ _prompt_command() {
     builtin history -a
     case "$TERM" in
         rxvt* | xterm*)
-            echo -en "\e]0;terminal ${PWD//$HOME/~}\a"
+            echo -en "\e]0;Terminal ${PWD//$HOME/~}$(git branch --no-color --contains HEAD 2> /dev/null | sed 's/\* \(.*\)/ (\1)/')\a"
             ;;
     esac
     tput ed
 }
 
-export PS1='\[\e[1;35m\]\$\[\e[0m\] '
+export PS1='\[\e[1;35m\]>\[\e[0m\] '
 export PROMPT_COMMAND='_prompt_command'
 
 [ -r "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
