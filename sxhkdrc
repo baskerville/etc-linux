@@ -89,6 +89,12 @@ super + shift + bracket{left,right}
 super + button{1,2,3}
     bspc grab_pointer {move,focus,resize}
 
+super + alt + button{1,3}
+    bspc grab_pointer {move_tiled,resize_tiled}
+
+super + alt + !button{1,3}
+    bspc {track_pointer,track_pointer} %i %i
+
 super + !button{1,3}
     bspc {track_pointer,track_pointer} %i %i
 
