@@ -62,7 +62,6 @@ hi Todo            ctermfg=green  ctermbg=bg    cterm=none
 "
 " minor groups
 "
-" hi StatusLine       cterm=none ctermfg=fg       ctermbg=darkcyan
 hi StatusLine      cterm=none ctermfg=fg       ctermbg=darkcyan
 hi StatusLineNC    cterm=none ctermfg=darkgrey ctermbg=darkcyan
 

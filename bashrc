@@ -10,7 +10,7 @@ _prompt_command() {
     builtin history -a
     case "$TERM" in
         rxvt* | xterm*)
-            echo -en "\e]0;Terminal ${PWD//$HOME/~}$(git branch --no-color --contains HEAD 2> /dev/null | sed 's/\* \(.*\)/ (\1)/')\a"
+            echo -en "\e]0;Terminal ${PWD//$HOME/~}$(git branch --no-color 2> /dev/null | grep '^\*' | sed 's/\* \(.*\)/ (\1)/')\a"
             ;;
     esac
     tput ed
@@ -31,9 +31,9 @@ complete -C finddots dot
 
 eval $(dircolors -b ~/.dircolors)
 
-if [ "$TERM" = "linux" ] ; then
-    "$XDG_DOTFILES_DIR"/colors/redef_console-current
-fi
+# if [ "$TERM" = "linux" ] ; then
+#     "$XDG_DOTFILES_DIR"/colors/redef_console-current
+# fi
 
 if [ -f "/usr/lib/libstderred.so" ]; then
     export LD_PRELOAD="/usr/lib/libstderred.so"
