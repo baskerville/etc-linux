@@ -28,8 +28,8 @@ unclutter -noevents &
 sxhkd &
 happy_fs &
 
+exec wm
 # exec bspwm
 # exec monsterwm
-exec wm
 
 # vim: set ft=conf:

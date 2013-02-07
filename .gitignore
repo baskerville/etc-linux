@@ -6,3 +6,4 @@ dzen2_xresources
 override.css
 dwb_keys.*
 dwb_config.*
+__pycache__

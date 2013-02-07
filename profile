@@ -39,6 +39,7 @@ export BSPWM_SOCKET=/tmp/bspwm-socket
 export BSPWM_BACKUP="$XDG_DATA_HOME/bspwm-backup"
 export SXHKD_SHELL=/bin/dash
 export EWMHSTATUS_FIFO=/tmp/ewmhstatus-fifo
+export TRTPL_FILTERS_DIR="$XDG_DOTFILES_DIR/filters"
 export WALLPAPER="$HOME/.wallpaper"
 export PANEL_HEIGHT=24
 
