@@ -96,7 +96,7 @@ alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
 alias et='editor -p'
 alias vd='vimdiff'
 alias s='sr duckduckgo'
-alias cb='checkbashisms -f'
+alias checkbashisms='checkbashisms -f'
 alias ms='mpc search any'
 alias ma='mpc add'
 
