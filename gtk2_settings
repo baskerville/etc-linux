@@ -11,3 +11,9 @@ gtk-button-images = 0
 gtk-menu-images = 0
 gtk-enable-event-sounds = 0
 gtk-enable-input-feedback-sounds = 0
+
+style "gvimquirk" {
+    bg[NORMAL] = "#242424"
+}
+
+widget "vim-main-window.*GtkForm" style "gvimquirk"
