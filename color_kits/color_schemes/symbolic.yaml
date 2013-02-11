@@ -47,7 +47,7 @@ background_n:    black
 fg_comment_n:    darkgrey
 
 foreground_n:    lightgrey
-fg_highlight_n:  white
+fg_peak_n:       white
 
 darkred_n:       darkred
 red_n:           red

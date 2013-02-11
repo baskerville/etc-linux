@@ -25,113 +25,113 @@ hi Number          ctermfg=yellow
 hi Boolean         ctermfg=yellow
 hi Float           ctermfg=yellow
 
-hi Identifier      ctermfg=
-hi Function        ctermfg=
+hi Identifier      ctermfg=magenta
+hi Function        ctermfg=magenta
 
-hi Statement       ctermfg=
-hi Conditional     ctermfg=
-hi Repeat          ctermfg=
-hi Label           ctermfg=
-hi Operator        ctermfg=
-hi Keyword         ctermfg=
-hi Exception       ctermfg=
+hi Statement       ctermfg=green
+hi Conditional     ctermfg=green
+hi Repeat          ctermfg=green
+hi Label           ctermfg=green
+hi Operator        ctermfg=green
+hi Keyword         ctermfg=green
+hi Exception       ctermfg=green
 
-hi PreProc         ctermfg=
-hi Include         ctermfg=
-hi Define          ctermfg=
-hi Macro           ctermfg=
-hi PreCondit       ctermfg=
+hi PreProc         ctermfg=blue
+hi Include         ctermfg=blue
+hi Define          ctermfg=blue
+hi Macro           ctermfg=blue
+hi PreCondit       ctermfg=blue
 
-hi Type            ctermfg=
-hi StorageClass    ctermfg=
-hi Structure       ctermfg=
-hi Typedef         ctermfg=
+hi Type            ctermfg=cyan
+hi StorageClass    ctermfg=cyan
+hi Structure       ctermfg=cyan
+hi Typedef         ctermfg=cyan
 
-hi Special         ctermfg=
-hi SpecialChar     ctermfg=
-hi Tag             ctermfg=
-hi Delimiter       ctermfg=
-hi SpecialComment  ctermfg=
-hi Debug           ctermfg=
+hi Special         ctermfg=red
+hi SpecialChar     ctermfg=red
+hi Tag             ctermfg=red
+hi Delimiter       ctermfg=red
+hi SpecialComment  ctermfg=red
+hi Debug           ctermfg=red
 
 hi Underlined      ctermfg=fg
 hi Ignore          ctermfg=bg
-hi Error           ctermfg=bg  ctermbg=
+hi Error           ctermfg=bg  ctermbg=red
 hi Todo            ctermfg=green  ctermbg=bg    cterm=none
 
 "
 " minor groups
 "
-hi StatusLine      cterm=none ctermfg=fg       ctermbg=
-hi StatusLineNC    cterm=none ctermfg=darkgrey ctermbg=
+hi StatusLine        cterm=none ctermfg=white
+hi StatusLineNC      cterm=none ctermfg=darkgrey
 
-hi TabLine         cterm=none ctermfg=fg     ctermbg=
-hi TabLineSel      cterm=none ctermfg=cyan   ctermbg=
-hi TabLineFill     cterm=none ctermfg=fg     ctermbg=
+" hi TabLine         cterm=none ctermfg=fg     ctermbg=
+" hi TabLineSel      cterm=none ctermfg=cyan   ctermbg=
+" hi TabLineFill     cterm=none ctermfg=fg     ctermbg=
 
-hi Pmenu           ctermfg=fg     ctermbg=
-hi PmenuSel        ctermfg=white    ctermbg=darkgrey
-hi PmenuSbar       ctermfg=white    ctermbg=darkgrey
-hi WildMenu        ctermfg=white    ctermbg=darkgrey    cterm=none
+" hi Pmenu           ctermfg=fg     ctermbg=
+" hi PmenuSel        ctermfg=    ctermbg=darkgrey
+" hi PmenuSbar       ctermfg=    ctermbg=darkgrey
+" hi WildMenu        ctermfg=    ctermbg=darkgrey    cterm=none
 
-hi Visual           cterm=none ctermfg=bg   ctermbg=
-hi VisualNOS        cterm=none ctermfg=bg   ctermbg=magenta
-hi VertSplit        cterm=none ctermfg=bg  ctermbg=
-hi LineNr          ctermfg=darkgrey   ctermbg=
+" hi Visual           cterm=none ctermfg=bg   ctermbg=
+" hi VisualNOS        cterm=none ctermfg=bg   ctermbg=magenta
+" hi VertSplit        cterm=none ctermfg=bg  ctermbg=
+" hi LineNr          ctermfg=darkgrey   ctermbg=
 
-hi Title           ctermfg=
-hi SpecialKey      ctermfg=green
-hi Conceal         ctermfg=green       ctermbg=bg
-hi NonText         ctermfg=darkgrey
-hi MatchParen      ctermfg=bg       ctermbg=
-hi Directory       ctermfg=
+" hi Title           ctermfg=
+" hi SpecialKey      ctermfg=green
+" hi Conceal         ctermfg=green       ctermbg=bg
+" hi NonText         ctermfg=darkgrey
+" hi MatchParen      ctermfg=bg       ctermbg=magenta
+" hi Directory       ctermfg=
 
-hi ErrorMsg        ctermfg=red          ctermbg=bg
-hi WarningMsg      ctermfg=   ctermbg=bg
-hi MoreMsg         ctermfg=    ctermbg=bg
-hi ModeMsg         ctermfg=      ctermbg=bg
+" hi ErrorMsg        ctermfg=red          ctermbg=bg
+" hi WarningMsg      ctermfg=   ctermbg=bg
+" hi MoreMsg         ctermfg=    ctermbg=bg
+" hi ModeMsg         ctermfg=magenta      ctermbg=bg
 
-hi Search          ctermfg=bg  ctermbg=yellow
-hi IncSearch       cterm=none ctermfg=bg  ctermbg=
-hi Question        ctermfg=
+" hi Search          ctermfg=bg  ctermbg=yellow
+" hi IncSearch       cterm=none ctermfg=bg  ctermbg=magenta
+" hi Question        ctermfg=
 
-hi Folded          ctermfg=darkgrey     ctermbg=bg
-hi FoldColumn      ctermfg=darkgrey     ctermbg=
-hi SignColumn      ctermfg=darkgrey     ctermbg=
-hi ColorColumn     ctermfg=darkgrey     ctermbg=
+" hi Folded          ctermfg=darkgrey     ctermbg=bg
+" hi FoldColumn      ctermfg=darkgrey     ctermbg=
+" hi SignColumn      ctermfg=darkgrey     ctermbg=
+" hi ColorColumn     ctermfg=darkgrey     ctermbg=
 
-hi CursorColumn    cterm=none ctermbg=
-hi CursorLine      cterm=none ctermbg=
+" hi CursorColumn    cterm=none ctermbg=
+" hi CursorLine      cterm=none ctermbg=
 
-hi vimFold         ctermfg=darkgrey
-hi vimCommentTitle ctermfg=fg
-hi helpHyperTextJump ctermfg=
+" hi vimFold         ctermfg=darkgrey
+" hi vimCommentTitle ctermfg=fg
+" hi helpHyperTextJump ctermfg=
 
-hi htmlTag         ctermfg=
-hi htmlEndTag      ctermfg=
-hi htmlTagName     ctermfg=
-hi htmlString      ctermfg=yellow
+" hi htmlTag         ctermfg=
+" hi htmlEndTag      ctermfg=
+" hi htmlTagName     ctermfg=magenta
+" hi htmlString      ctermfg=yellow
 
-hi diffFile        ctermfg=darkgrey
-hi diffLine        ctermfg=darkgrey
-hi diffAdded       ctermfg=green
-hi diffRemoved     ctermfg=
-hi diffChanged     ctermfg=
+" hi diffFile        ctermfg=darkgrey
+" hi diffLine        ctermfg=darkgrey
+" hi diffAdded       ctermfg=green
+" hi diffRemoved     ctermfg=magenta
+" hi diffChanged     ctermfg=
 
-hi diffAdd         ctermfg=bg    ctermbg=green
-hi diffDelete      ctermfg=bg    ctermbg=darkgrey
-hi diffText        ctermfg=bg    ctermbg=red
-hi diffChange      ctermfg=bg    ctermbg=
-hi diffOldLine     ctermfg=bg    ctermbg=
+" hi diffAdd         ctermfg=bg    ctermbg=green
+" hi diffDelete      ctermfg=bg    ctermbg=darkgrey
+" hi diffText        ctermfg=bg    ctermbg=red
+" hi diffChange      ctermfg=bg    ctermbg=magenta
+" hi diffOldLine     ctermfg=bg    ctermbg=
 
-hi SpellBad        ctermfg=bg    ctermbg=red        
-hi SpellCap        ctermfg=bg    ctermbg=       
-hi SpellRare       ctermfg=bg    ctermbg=     
-hi SpellLocal      ctermfg=bg    ctermbg=     
+" hi SpellBad        ctermfg=bg    ctermbg=red
+" hi SpellCap        ctermfg=bg    ctermbg=magenta
+" hi SpellRare       ctermfg=bg    ctermbg=
+" hi SpellLocal      ctermfg=bg    ctermbg=
 
-hi mkdCode         ctermfg=darkgrey
-hi mkdURL          ctermfg=
-hi mkdLink         ctermfg=magenta
+" hi mkdCode         ctermfg=darkgrey
+" hi mkdURL          ctermfg=
+" hi mkdLink         ctermfg=magenta
 
 hi def link mailSubject Title
 hi def link mailSignature Comment

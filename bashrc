@@ -31,9 +31,9 @@ complete -C finddots dot
 
 eval $(dircolors -b ~/.dircolors)
 
-# if [ "$TERM" = "linux" ] ; then
-#     "$XDG_DOTFILES_DIR"/colors/redef_console-current
-# fi
+if [ "$TERM" = "linux" ] ; then
+    "$XDG_COLORS_DIR"/redef_console
+fi
 
 if [ -f "/usr/lib/libstderred.so" ]; then
     export LD_PRELOAD="/usr/lib/libstderred.so"
