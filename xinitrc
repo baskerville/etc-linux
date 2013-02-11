@@ -19,7 +19,7 @@ xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF
 xset s noblank
 xset s off
 
-# neutral mouse cursor
+# neutral pointer
 xsetroot -cursor_name left_ptr
 
 pgrep -x mpd > /dev/null || mpd

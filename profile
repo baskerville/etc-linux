@@ -10,7 +10,7 @@ export HISTCONTROL=ignoreboth
 
 export XDG_DOWNLOAD_DIR="$HOME/incoming"
 export XDG_DOTFILES_DIR="$HOME/.dotfiles"
-export XDG_COLORS_DIR="$XDG_DOTFILES_DIR/colors"
+export XDG_COLORS_DIR="$XDG_DOTFILES_DIR/terminal_colors"
 export XDG_TRASH_DIR="$HOME/.trash"
 export XDG_BIN_DIR="$HOME/bin"
 export XDG_TMP_DIR="$HOME/tmp"
@@ -50,7 +50,7 @@ export DPMS_OFF=480
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blinking
 export LESS_TERMCAP_md=$'\e[1;35m'     # begin bold
 export LESS_TERMCAP_me=$'\e[0m'        # end mode
-export LESS_TERMCAP_so=$'\e[1;46;36m'  # begin standout - info box
+export LESS_TERMCAP_so=$'\e[40;37m'    # begin standout - info box
 export LESS_TERMCAP_se=$'\e[0m'        # end standout
 export LESS_TERMCAP_us=$'\e[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\e[0m'        # end underline

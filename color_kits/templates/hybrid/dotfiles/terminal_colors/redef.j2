@@ -1,0 +1,83 @@
+#! /bin/dash
+
+printf '\033[?47t'                                # toggle screen buffer
+printf '\033[2J'                                  # clear screen
+
+printf '\033]11;{{background|slashedhex}}\007'    # background
+printf '\033]708;{{background|slashedhex}}\007'   # border
+printf '\033]10;{{foreground|slashedhex}}\007'    # foreground
+printf '\033]706;{{fg_highlight|slashedhex}}\007' # bold
+printf '\033]704;{{fg_highlight|slashedhex}}\007' # italic
+printf '\033]707;{{fg_highlight|slashedhex}}\007' # underline
+printf '\033]12;{{cyan|slashedhex}}\007'          # cursor
+
+printf '\033]4;8;{{fg_comment|slashedhex}}\007'   # dark grey
+printf '\033]4;0;{{bg_jump|slashedhex}}\007'      # black
+
+printf '\033]4;15;{{fg_peak|slashedhex}}\007'     # white
+printf '\033]4;7;{{fg_highlight|slashedhex}}\007' # light grey
+
+printf '\033]4;9;{{red|slashedhex}}\007'          # red
+printf '\033]4;1;{{darkred|slashedhex}}\007'      # dark red
+
+printf '\033]4;11;{{yellow|slashedhex}}\007'      # yellow
+printf '\033]4;3;{{darkyellow|slashedhex}}\007'   # dark yellow
+
+printf '\033]4;10;{{green|slashedhex}}\007'       # green
+printf '\033]4;2;{{darkgreen|slashedhex}}\007'    # dark green
+
+printf '\033]4;14;{{cyan|slashedhex}}\007'        # cyan
+printf '\033]4;6;{{darkcyan|slashedhex}}\007'     # dark cyan
+
+printf '\033]4;12;{{blue|slashedhex}}\007'        # blue
+printf '\033]4;4;{{darkblue|slashedhex}}\007'     # dark blue
+
+printf '\033]4;13;{{magenta|slashedhex}}\007'     # magenta
+printf '\033]4;5;{{darkmagenta|slashedhex}}\007'  # dark magenta
+
+printf '\033]4;16;{{red|slashedhex}}\007'
+printf '\033]4;17;{{darkred|slashedhex}}\007'
+
+printf '\033]4;18;{{orange|slashedhex}}\007'
+printf '\033]4;19;{{darkorange|slashedhex}}\007'
+
+printf '\033]4;20;{{yellow|slashedhex}}\007'
+printf '\033]4;21;{{darkyellow|slashedhex}}\007'
+
+printf '\033]4;22;{{spring|slashedhex}}\007'
+printf '\033]4;23;{{darkspring|slashedhex}}\007'
+
+printf '\033]4;24;{{green|slashedhex}}\007'
+printf '\033]4;25;{{darkgreen|slashedhex}}\007'
+
+printf '\033]4;26;{{teal|slashedhex}}\007'
+printf '\033]4;27;{{darkteal|slashedhex}}\007'
+
+printf '\033]4;28;{{cyan|slashedhex}}\007'
+printf '\033]4;29;{{darkcyan|slashedhex}}\007'
+
+printf '\033]4;30;{{azure|slashedhex}}\007'
+printf '\033]4;31;{{darkazure|slashedhex}}\007'
+
+printf '\033]4;32;{{blue|slashedhex}}\007'
+printf '\033]4;33;{{darkblue|slashedhex}}\007'
+
+printf '\033]4;34;{{violet|slashedhex}}\007'
+printf '\033]4;35;{{darkviolet|slashedhex}}\007'
+
+printf '\033]4;36;{{magenta|slashedhex}}\007'
+printf '\033]4;37;{{darkmagenta|slashedhex}}\007'
+
+printf '\033]4;38;{{pink|slashedhex}}\007'
+printf '\033]4;39;{{darkpink|slashedhex}}\007'
+
+printf '\033]4;40;{{bg_dip|slashedhex}}\007'
+printf '\033]4;41;{{background|slashedhex}}\007'
+printf '\033]4;42;{{bg_bump|slashedhex}}\007'
+printf '\033]4;43;{{bg_jump|slashedhex}}\007'
+printf '\033]4;44;{{fg_comment|slashedhex}}\007'
+printf '\033]4;45;{{foreground|slashedhex}}\007'
+printf '\033]4;46;{{fg_highlight|slashedhex}}\007'
+printf '\033]4;47;{{fg_peak|slashedhex}}\007'
+
+printf '\033[?47t'                                # toggle screen buffer

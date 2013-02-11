@@ -9,6 +9,7 @@ URxvt.boldItalicFont:       xft:Inconsolata:pixelsize=16,xft:Droid Sans Mono:pix
 URxvt.geometry:             80x24
 URxvt.internalBorder:       9
 URxvt.iso14755:             false
+URxvt.iso14755_52:          false
 URxvt.scrollBar:            false
 URxvt.mouseWheelScrollPage: true
 URxvt.saveLines:            32767

@@ -1,6 +1,6 @@
 * {
-    background: #FDF6E7 !important;
-    color: #71757F !important;
+    background: #FEF9EC !important;
+    color: #6D727E !important;
     font-family: sans-serif !important;
 }
 
@@ -9,5 +9,5 @@ pre, code {
 }
 
 a {
-    color: #0077C1 !important;
+    color: #0071BB !important;
 }

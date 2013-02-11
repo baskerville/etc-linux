@@ -3,7 +3,6 @@ general {
     output_format = "none"
 }
 
-# order += "disk /"
 order += "wireless wlan0"
 order += "time"
 

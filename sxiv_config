@@ -14,11 +14,11 @@ static const char * const BAR_FONT = "-*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*"
 /* colors:
  * (see X(7) section "COLOR NAMES" for valid values)
  */
-static const char * const WIN_FS_COLOR = "#2B2B28";
-static const char * const WIN_BG_COLOR = "#2B2B28";
-static const char * const SEL_COLOR    = "#85C597";
-static const char * const BAR_BG_COLOR = "#3F3E3B";
-static const char * const BAR_FG_COLOR = "#A4A6B1";
+static const char * const WIN_FS_COLOR = "#272621";
+static const char * const WIN_BG_COLOR = "#272621";
+static const char * const SEL_COLOR    = "#82C896";
+static const char * const BAR_BG_COLOR = "#34322E";
+static const char * const BAR_FG_COLOR = "#A4A6AB";
 
 #endif
 #ifdef _IMAGE_CONFIG

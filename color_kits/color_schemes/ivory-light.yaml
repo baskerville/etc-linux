@@ -1,0 +1,40 @@
+#
+# Ivory Light
+# Color space: LCHab
+#
+
+background:   [98,  7,  90]
+foreground:   [48,  7, 270]
+
+bg_dip:       [100, 7,  90]
+bg_bump:      [95,  7,  90]
+bg_jump:      [78,  7,  90]
+
+fg_comment:   [68,  7, 270]
+fg_highlight: [28,  7, 270]
+fg_peak:      [18,  7, 270]
+
+red:          [41, 63,  30]
+darkred:      [58, 63,  30]
+orange:       [41, 63,  60]
+darkorange:   [58, 63,  60]
+yellow:       [41, 63,  90]
+darkyellow:   [58, 63,  90]
+spring:       [41, 63, 120]
+darkspring:   [58, 63, 120]
+green:        [41, 63, 150]
+darkgreen:    [58, 63, 150]
+teal:         [41, 63, 180]
+darkteal:     [58, 63, 180]
+cyan:         [41, 63, 210]
+darkcyan:     [58, 63, 210]
+azure:        [41, 63, 240]
+darkazure:    [58, 63, 240]
+blue:         [41, 63, 270]
+darkblue:     [58, 63, 270]
+violet:       [41, 63, 300]
+darkviolet:   [58, 63, 300]
+magenta:      [41, 63, 330]
+darkmagenta:  [58, 63, 330]
+pink:         [41, 63,   0]
+darkpink:     [58, 63,   0]

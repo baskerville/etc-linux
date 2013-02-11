@@ -8,6 +8,7 @@ set hidden
 set showmode
 set showcmd
 set wildmenu
+set wildignore=*.o,*.png,*.jpg
 " set cursorline
 
 set backspace=indent,eol,start
@@ -48,25 +49,29 @@ syntax on
 filetype plugin on
 filetype indent on
 
-if &t_Co < 256
-    colorscheme raven8
-else
+if has("gui_running")
     colorscheme raven
+else
+    if &t_Co >= 256
+        colorscheme raven256
+    else
+        colorscheme raven8
+    endif
 endif
 
 call pathogen#infect()
 
 if has("autocmd")
+    " autocmd BufRead,BufEnter *.asd set filetype=lisp
+    " autocmd BufRead,BufEnter *.as set filetype=actionscript
+    " autocmd BufRead,BufEnter *.mxml set filetype=mxml
+    " autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
+    " autocmd BufRead,BufEnter *.nfo set filetype=nfo
+    " autocmd BufRead,BufEnter *.ck set filetype=ck
+    " autocmd BufRead,BufEnter *keydoublerc set filetype=xmodmap
     autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
     autocmd BufRead,BufEnter *.xinitrc set filetype=sh
-    autocmd BufRead,BufEnter *.asd set filetype=lisp
-    autocmd BufRead,BufEnter *.as set filetype=actionscript
-    autocmd BufRead,BufEnter *.mxml set filetype=mxml
-    autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
-    autocmd BufRead,BufEnter *.nfo set filetype=nfo
-    autocmd BufRead,BufEnter *.ck set filetype=ck
     autocmd BufRead,BufEnter *.j2 set filetype=htmljinja
-    autocmd BufRead,BufEnter *keydoublerc set filetype=xmodmap
     autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
 
     autocmd FileType mail silent! call CleanMuttHeader()

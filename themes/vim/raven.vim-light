@@ -1,0 +1,144 @@
+" Vim Color File
+" Name:       raven.vim
+" Version:    0.1
+" Maintainer: baskerville@lavabit.com
+
+hi clear
+
+if exists("syntax on")
+    syntax reset
+endif
+
+let g:colors_name="raven"
+
+"
+" preferred groups
+" (:h w18)
+"
+hi Normal          guifg=#6D727E guibg=#FEF9EC    gui=none
+hi Comment         guifg=#A1A6B2    gui=none
+
+hi Constant        guifg=#715F00    gui=none
+hi String          guifg=#715F00    gui=none
+hi Character       guifg=#715F00    gui=none
+hi Number          guifg=#715F00    gui=none
+hi Boolean         guifg=#715F00    gui=none
+hi Float           guifg=#715F00    gui=none
+
+hi Identifier      guifg=#694FBC    gui=none
+hi Function        guifg=#694FBC    gui=none
+
+hi Statement       guifg=#00775F    gui=none
+hi Conditional     guifg=#00775F    gui=none
+hi Repeat          guifg=#00775F    gui=none
+hi Label           guifg=#00775F    gui=none
+hi Operator        guifg=#00775F    gui=none
+hi Keyword         guifg=#00775F    gui=none
+hi Exception       guifg=#00775F    gui=none
+
+hi PreProc         guifg=#0071BB    gui=none
+hi Include         guifg=#0071BB    gui=none
+hi Define          guifg=#0071BB    gui=none
+hi Macro           guifg=#0071BB    gui=none
+hi PreCondit       guifg=#0071BB    gui=none
+
+hi Type            guifg=#994900    gui=none
+hi StorageClass    guifg=#994900    gui=none
+hi Structure       guifg=#994900    gui=none
+hi Typedef         guifg=#994900    gui=none
+
+hi Special         guifg=#B71764    gui=none
+hi SpecialChar     guifg=#B71764    gui=none
+hi Tag             guifg=#B71764    gui=none
+hi Delimiter       guifg=#B71764    gui=none
+hi SpecialComment  guifg=#B71764    gui=none
+hi Debug           guifg=#B71764    gui=none
+
+hi Underlined      guifg=fg    gui=none
+hi Ignore          guifg=bg    gui=none
+hi Error           guifg=bg  guibg=#B71764    gui=none
+hi Todo            guifg=#007427  guibg=bg        gui=none
+
+"
+" minor groups
+"
+hi StatusLine      guifg=fg       guibg=#F5F0E3    gui=none
+hi StatusLineNC    guifg=#A1A6B2 guibg=#F5F0E3    gui=none
+
+hi TabLine         guifg=fg     guibg=#F5F0E3    gui=none
+hi TabLineSel      guifg=#007693   guibg=#F5F0E3    gui=none
+hi TabLineFill     guifg=fg     guibg=#F5F0E3    gui=none
+
+hi Pmenu           guifg=fg    guibg=#F5F0E3    gui=none
+hi PmenuSel        guifg=bg    guibg=#396D00    gui=none
+hi PmenuSbar       guifg=bg    guibg=#396D00    gui=none
+hi WildMenu        guifg=bg    guibg=#396D00        gui=none
+
+hi Visual          guifg=bg   guibg=#694FBC    gui=none
+hi VisualNOS       guifg=bg   guibg=#A03196    gui=none
+hi VertSplit       guifg=bg  guibg=#F5F0E3    gui=none
+hi LineNr          guifg=#A1A6B2   guibg=#F5F0E3    gui=none
+
+hi Title           guifg=#0071BB    gui=none
+hi SpecialKey      guifg=#007427    gui=none
+hi Conceal         guifg=#007427       guibg=bg    gui=none
+hi NonText         guifg=#A1A6B2    gui=none
+hi MatchParen      guifg=bg       guibg=#B71764    gui=none
+hi Directory       guifg=#694FBC    gui=none
+
+hi ErrorMsg        guifg=#B22B31          guibg=bg    gui=none
+hi WarningMsg      guifg=#994900   guibg=bg    gui=none
+hi MoreMsg         guifg=#00775F    guibg=bg    gui=none
+hi ModeMsg         guifg=#B71764      guibg=bg    gui=none
+
+hi Search          guifg=bg  guibg=#715F00    gui=none
+hi IncSearch       guifg=bg  guibg=#B71764    gui=none
+hi Question        guifg=#0071BB    gui=none
+
+hi Folded          guifg=#A1A6B2     guibg=bg    gui=none
+hi FoldColumn      guifg=#A1A6B2     guibg=#F5F0E3    gui=none
+hi SignColumn      guifg=#A1A6B2     guibg=#F5F0E3    gui=none
+hi ColorColumn     guifg=#A1A6B2     guibg=#F5F0E3    gui=none
+
+hi CursorColumn    guibg=#F5F0E3    gui=none
+hi CursorLine      guibg=#F5F0E3    gui=none
+
+hi vimFold         guifg=#A1A6B2    gui=none
+hi vimCommentTitle guifg=fg    gui=none
+hi helpHyperTextJump guifg=#0071BB    gui=none
+
+hi htmlTag         guifg=#694FBC    gui=none
+hi htmlEndTag      guifg=#694FBC    gui=none
+hi htmlTagName     guifg=#B71764    gui=none
+hi htmlString      guifg=#715F00    gui=none
+
+hi diffFile        guifg=#A1A6B2    gui=none
+hi diffLine        guifg=#A1A6B2    gui=none
+hi diffAdded       guifg=#007427    gui=none
+hi diffRemoved     guifg=#B71764    gui=none
+hi diffChanged     guifg=#994900    gui=none
+
+hi diffAdd         guifg=bg    guibg=#007427    gui=none
+hi diffDelete      guifg=bg    guibg=#B22B31    gui=none
+hi diffChange      guifg=bg    guibg=#694FBC    gui=none
+hi diffText        guifg=bg    guibg=#715F00    gui=none
+hi diffOldLine     guifg=bg    guibg=#A1A6B2    gui=none
+
+hi SpellBad        guifg=#B22B31        guibg=bg    gui=none
+hi SpellCap        guifg=#B71764       guibg=bg    gui=none
+hi SpellRare       guifg=#694FBC     guibg=bg    gui=none
+hi SpellLocal      guifg=#994900     guibg=bg    gui=none
+
+hi mkdCode         guifg=#A1A6B2    gui=none
+hi mkdURL          guifg=#0071BB    gui=none
+hi mkdLink         guifg=#A03196    gui=none
+
+hi def link mailSubject Title
+hi def link mailSignature Comment
+hi def link mailQuoted2 mailQuoted1
+hi def link perlSharpBang Comment
+hi def link javaScriptNumber Number
+hi def link markdownCode Comment
+hi def link markdownCodeBlock Comment
+
+" vim: set ft=vim:

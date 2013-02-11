@@ -1,0 +1,68 @@
+bg_dip_i:        40
+background_i:    41
+bg_bump_i:       42
+bg_jump_i:       43
+fg_comment_i:    44
+foreground_i:    45
+fg_highlight_i:  46
+fg_peak_i:       47
+
+red_i:           16
+darkred_i:       17
+
+orange_i:        18
+darkorange_i:    19
+
+yellow_i:        20
+darkyellow_i:    21
+
+spring_i:        22
+darkspring_i:    23
+
+green_i:         24
+darkgreen_i:     25
+
+teal_i:          26
+darkteal_i:      27
+
+cyan_i:          28
+darkcyan_i:      29
+
+azure_i:         30
+darkazure_i:     31
+
+blue_i:          32
+darkblue_i:      33
+
+violet_i:        34
+darkviolet_i:    35
+
+magenta_i:       36
+darkmagenta_i:   37
+
+pink_i:          38
+darkpink_i:      39
+
+background_n:    black
+fg_comment_n:    darkgrey
+
+foreground_n:    lightgrey
+fg_highlight_n:  white
+
+darkred_n:       darkred
+red_n:           red
+
+darkyellow_n:    darkyellow
+yellow_n:        yellow
+
+darkgreen_n:     darkgreen
+green_n:         green
+
+darkcyan_n:      darkcyan
+cyan_n:          cyan
+
+darkblue_n:      darkblue
+blue_n:          blue
+
+darkmagenta_n:   darkmagenta
+magenta_n:       magenta

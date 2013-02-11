@@ -1,9 +1,11 @@
-tint2rc
-colors/current
-colors/redef-current
-colors/redef_console-current
+terminal_colors/xresources
+terminal_colors/redef
+terminal_colors/redef_console
+themes/vim/raven.vim
+gtk2_gvim
 dzen2_xresources
 override.css
 dwb_keys.*
 dwb_config.*
 __pycache__
+tint2rc

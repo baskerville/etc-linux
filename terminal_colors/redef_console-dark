@@ -1,0 +1,27 @@
+#! /bin/dash
+
+printf "\033]P02D2C28"   # black
+printf "\033]P8707277"   # dark grey
+
+printf "\033]P7A4A6AB"   # light grey
+printf "\033]PFF7F9FF"      # white
+
+printf "\033]P6019BAA"     # dark cyan
+printf "\033]PE53CAD9"         # cyan
+
+printf "\033]P1C4756E"      # dark red
+printf "\033]P9F6A299"          # red
+
+printf "\033]P2559A6A"    # dark green
+printf "\033]PA82C896"        # green
+
+printf "\033]P39B8A4B"   # dark yellow
+printf "\033]PBCAB775"       # yellow
+
+printf "\033]P46A8DCA"     # dark blue
+printf "\033]PC98BBFB"         # blue
+
+printf "\033]P5B577AC"  # dark magenta
+printf "\033]PDE5A4DB"      # magenta
+
+clear

@@ -1,0 +1,85 @@
+*background:  #FEF9EC
+*foreground:  #6D727E
+
+*colorBD:     #3E424D
+*colorIT:     #3E424D
+*colorUL:     #3E424D
+
+*cursorColor: #007693
+
+! BLACK
+*color0:      #C5C1B4
+*color8:      #A1A6B2
+
+! WHITE
+*color7:      #3E424D
+*color15:     #282C36
+
+! RED
+*color1:      #E75C58
+*color9:      #B22B31
+
+! YELLOW
+*color3:      #A08A00
+*color11:     #715F00
+
+! GREEN
+*color2:      #00A250
+*color10:     #007427
+
+! CYAN
+*color6:      #00A4C1
+*color14:     #007693
+
+! BLUE
+*color4:      #208FFB
+*color12:     #0065CA
+
+! MAGENTA
+*color5:      #D160C4
+*color13:     #A03196
+
+*color40:     #FFFFF1
+*color41:     #FEF9EC
+*color42:     #F5F0E3
+*color43:     #C5C1B4
+*color44:     #A1A6B2
+*color45:     #6D727E
+*color46:     #3E424D
+*color47:     #282C36
+
+*color16:     #B22B31
+*color17:     #E75C58
+
+*color18:     #994900
+*color19:     #CC7428
+
+*color20:     #715F00
+*color21:     #A08A00
+
+*color22:     #396D00
+*color23:     #67991A
+
+*color24:     #007427
+*color25:     #00A250
+
+*color26:     #00775F
+*color27:     #00A589
+
+*color28:     #007693
+*color29:     #00A4C1
+
+*color30:     #0071BB
+*color31:     #009DEB
+
+*color32:     #0065CA
+*color33:     #208FFB
+
+*color34:     #694FBC
+*color35:     #987AEC
+
+*color36:     #A03196
+*color37:     #D160C4
+
+*color38:     #B71764
+*color39:     #EA528E
