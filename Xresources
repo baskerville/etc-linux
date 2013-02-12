@@ -1,4 +1,4 @@
-#include "colors/current"
+#include "terminal_colors/xresources"
 #include "dzen2_xresources"
 
 URxvt.modifier:             alt
