@@ -39,7 +39,7 @@ export BSPWM_SOCKET=/tmp/bspwm-socket
 export BSPWM_BACKUP="$XDG_DATA_HOME/bspwm-backup"
 export SXHKD_SHELL=/bin/dash
 export EWMHSTATUS_FIFO=/tmp/ewmhstatus-fifo
-export JINJA2_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja2_filters"
+export JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
 export WALLPAPER="$HOME/.wallpaper"
 export PANEL_HEIGHT=24
 
