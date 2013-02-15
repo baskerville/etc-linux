@@ -18,6 +18,16 @@ def raw_rgb(hex_color):
     rgb_color.set_from_rgb_hex(hex_color)
     return '{} {} {}'.format(*rgb_color.get_value_tuple())
 
+def scaled_rgb(hex_color, component=None, factor=1.0):
+    rgb_color = RGBColor()
+    rgb_color.set_from_rgb_hex(hex_color)
+    values = list(map(lambda x: factor * (x / 255), rgb_color.get_value_tuple()))
+    if component is None:
+        return '{} {} {}'.format(*rgb_color.get_value_tuple())
+    else:
+        comp_idx = ('R', 'G', 'B').index(component)
+        return '{}'.format(values[comp_idx])
+
 def alter_lch(hex_color, value, component='L', relative=True):
     rgb_color = RGBColor()
     rgb_color.set_from_rgb_hex(hex_color)
@@ -50,6 +60,7 @@ def set_hue(hex_color, value):
 custom_filters['slashedhex'] = slashed_hex
 custom_filters['rawhex'] = raw_hex
 custom_filters['rawrgb'] = raw_rgb
+custom_filters['scaledrgb'] = scaled_rgb
 custom_filters['L'] = tune_lightness
 custom_filters['_L'] = set_lightness
 custom_filters['C'] = tune_chroma

@@ -80,6 +80,7 @@ if has("autocmd")
     autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
     autocmd FileType xdefaults setlocal commentstring=!%s
     autocmd FileType sxhkdrc setlocal commentstring=#%s
+    autocmd FileType lilypond setlocal commentstring=%%s
     autocmd FileType slrnrc setlocal commentstring=%%s
     autocmd FileType slang setlocal commentstring=%%s
     autocmd FileType html,xhtml,htmljinja setlocal shiftwidth=2 softtabstop=2
