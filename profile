@@ -12,7 +12,7 @@ export XDG_DOWNLOAD_DIR="$HOME/incoming"
 export XDG_DOTFILES_DIR="$HOME/.dotfiles"
 export XDG_COLORS_DIR="$XDG_DOTFILES_DIR/terminal_colors"
 export XDG_TRASH_DIR="$HOME/.trash"
-export XDG_BIN_DIR="$HOME/bin"
+export XDG_BIN_DIR="$HOME/.bin"
 export XDG_TMP_DIR="$HOME/tmp"
 export XDG_AUR_HOME="$HOME/src/aur"
 
