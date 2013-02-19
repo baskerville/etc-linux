@@ -100,10 +100,10 @@ alias checkbashisms='checkbashisms -f'
 alias ms='mpc search any'
 alias ma='mpc add'
 
-alias primi='xsel -pi'
-alias primo='xsel -po'
-alias clipi='xsel -bi'
-alias clipo='xsel -bo'
+alias primi='xclip -i'
+alias primo='xclip -o'
+alias clipi='xclip -selection clipboard -i'
+alias clipo='xclip -selection clipboard -o'
 
 alias mdur="mediainfo '--Inform=General;%Duration/String%'"
 alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"
