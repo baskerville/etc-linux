@@ -102,8 +102,8 @@ alias ma='mpc add'
 
 alias primi='xclip -i'
 alias primo='xclip -o'
-alias clipi='xclip -selection clipboard -i'
-alias clipo='xclip -selection clipboard -o'
+alias clipi='xclip -sel clip -i'
+alias clipo='xclip -sel clip -o'
 
 alias mdur="mediainfo '--Inform=General;%Duration/String%'"
 alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"

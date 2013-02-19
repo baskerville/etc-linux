@@ -14,8 +14,8 @@ export XDG_COLORS_DIR="$XDG_DOTFILES_DIR/terminal_colors"
 export XDG_TRASH_DIR="$HOME/.trash"
 export XDG_BIN_DIR="$HOME/.bin"
 export XDG_TMP_DIR="$HOME/tmp"
-export XDG_AUR_HOME="$HOME/src/aur"
 
+export OWL_AUR_HOME="$HOME/src/aur"
 export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export GREP_COLORS='ms=1;33:mc=1;33:sl=:cx=:fn=1;32:ln=1;36:bn=36:se=1;30'
