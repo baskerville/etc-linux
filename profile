@@ -16,6 +16,7 @@ export XDG_BIN_DIR="$HOME/.bin"
 export XDG_TMP_DIR="$HOME/tmp"
 
 export OWL_AUR_HOME="$HOME/src/aur"
+export OWL_ABS_HOME="$HOME/src/abs"
 export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export GREP_COLORS='ms=1;33:mc=1;33:sl=:cx=:fn=1;32:ln=1;36:bn=36:se=1;30'
