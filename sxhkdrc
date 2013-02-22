@@ -62,7 +62,7 @@ super + ctrl + {h,j,k,l}
 super + ctrl + shift + {h,j,k,l}
     bspc presel {left 0.33,down 0.66,up 0.33,right 0.66}
 
-super + ctrl + u
+super + ctrl + space
     bspc cancel
 
 super + alt + {h,j,k,l}
@@ -115,7 +115,7 @@ super + button8
 #
 
 super + ctrl + {slash,shift + slash}
-    {urxvtc,urxvtc -cd "$XDG_DOWNLOAD_DIR"}
+    {terminal,terminal -cd "$XDG_DOWNLOAD_DIR"}
 
 super + space
     dmenu_launch

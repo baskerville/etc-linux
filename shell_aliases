@@ -111,6 +111,7 @@ alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"
 alias ivz='iv -Z'
 alias ivzr='ivz -tr'
 alias ivr='iv -tr'
+alias ir='ivzr .'
 
 alias p="clipo | editor -"
 alias gp="primo | editor -"
