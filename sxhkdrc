@@ -17,6 +17,9 @@ super + t
 super + {r,shift + r,u}
     bspc rotate {clockwise,counter_clockwise,full_cycle}
 
+super + {backslash,shift + backslash}
+    bspc flip {vertical,horizontal}
+
 super + {s,f,x,z}
     bspc toggle_{floating,fullscreen,locked,visibility}
 
@@ -38,10 +41,10 @@ super + {o,i}
 super + {d,shift + d}
     bspc cycle {next,prev} --skip-floating
 
-super + {a,backslash,e}
+super + {a,v,e}
     bspc cycle next {--skip-tiled,--skip-class-equal,--skip-class-differ}
 
-super + shift + {a,backslash,e}
+super + shift + {a,v,e}
     bspc cycle prev {--skip-tiled,--skip-class-equal,--skip-class-differ}
 
 super + {comma,period}

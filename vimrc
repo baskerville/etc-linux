@@ -100,7 +100,7 @@ endif
 let mapleader = " "
 
 map Q <nop>
-map <C-z> <nop>
+" map <C-z> <nop>
 nnoremap q: <nop>
 
 nmap <leader>s :%s/
@@ -160,14 +160,6 @@ nmap <leader>c \\
 nmap <leader>cc \\\
 nmap <leader>cu \\u
 nmap <leader>cp vip\\
-
-function! CleanMuttHeader()
-    " remove signature
-    exec '%s/^>\+ *-- \n\_.*//e'
-    " remove unwanted headers
-    exec '%s/^\(Reply-To\|Bcc\): \n//e'
-    normal! 3j
-endfunction
 
 function! Define(word, lang)
     if (a:lang == "en")
@@ -282,6 +274,14 @@ function! Paste(which_buffer, paste_where)
         normal! "qP
     endif
     let @q = at_q
+endfunction
+
+function! CleanMuttHeader()
+    " remove signature
+    exec '%s/^>\+ *-- \n\_.*//e'
+    " remove unwanted headers
+    exec '%s/^\(Reply-To\|Bcc\): \n//e'
+    normal! 3j
 endfunction
 
 function! CompleteMuttAliases(findstart, base)
