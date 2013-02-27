@@ -6,6 +6,7 @@ set visible-stats              on
 set bind-tty-special-chars     off
 
 "\C-w": backward-kill-word
+"\ew": copy-backward-word
 "\C-p": history-search-backward
 "\C-n": history-search-forward
 "\C-\M-p": dynamic-complete-history
