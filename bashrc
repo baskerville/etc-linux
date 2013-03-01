@@ -5,6 +5,9 @@ shopt -s globstar
 
 complete -cf sudo
 complete -cf man
+complete -abck i
+complete -c bed
+complete -C finddots dot
 
 _prompt_command() {
     builtin history -a
@@ -20,21 +23,11 @@ export PS1='\[\e[1;35m\]>\[\e[0m\] '
 export PS2='\[\e[1;30m\]>\[\e[0m\] '
 export PROMPT_COMMAND='_prompt_command'
 
-[ -r "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
-[ -r "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
-
+[ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
+[ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
+[ -e "/usr/lib/libstderred.so" ] && export LD_PRELOAD="/usr/lib/libstderred.so"
 . /etc/profile.d/z.sh
 . "$XDG_CONFIG_HOME"/bash_completion.d/eat
-complete -abck i
-complete -c bed
-complete -C finddots dot
 
-eval $(dircolors -b ~/.dircolors)
-
-if [ "$TERM" = "linux" ] ; then
-    "$XDG_COLORS_DIR"/redef_console
-fi
-
-if [ -f "/usr/lib/libstderred.so" ]; then
-    export LD_PRELOAD="/usr/lib/libstderred.so"
-fi
+eval $(dircolors -b "$HOME/.dircolors")
+[ "$TERM" = "linux" ] && "$XDG_COLORS_DIR"/redef_console

@@ -90,35 +90,20 @@ super + shift + bracket{left,right}
     bspc drop_to {prev,next}
 
 super + button{1,2,3}
-    bspc grab_pointer {move,focus,resize}
+    bspc grab_pointer {move,resize_side,resize_corner}
 
-super + alt + button{1,3}
-    bspc grab_pointer {move_tiled,resize_tiled}
+super + !button{1,2,3}
+    bspc {track_pointer,track_pointer,track_pointer} %i %i
 
-super + alt + !button{1,3}
-    bspc {track_pointer,track_pointer} %i %i
-
-super + !button{1,3}
-    bspc {track_pointer,track_pointer} %i %i
-
-super + @button{1,3}
-    bspc {ungrab_pointer,ungrab_pointer}
-
-super + button{4,5}
-    bspc rotate {clockwise,counter_clockwise}
-
-super + button{6,7}
-    bspc circulate {backward,forward}
-
-super + button8
-    bspc toggle_visibility
+super + @button{1,2,3}
+    bspc {ungrab_pointer,ungrab_pointer,ungrab_pointer}
 
 #
 # wm independent hotkeys
 #
 
 super + ctrl + {slash,shift + slash}
-    {terminal,terminal -cd "$XDG_DOWNLOAD_DIR"}
+    {terminal,terminal -cd "$HOME"}
 
 super + space
     dmenu_launch

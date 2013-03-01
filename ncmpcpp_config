@@ -11,7 +11,7 @@ playlist_disable_highlight_delay = "3"
 message_delay_time = "3"
 
 song_list_format = "{%n }{%a - }{%t}|{$8%f$9}$R{%l}"
-song_status_format = "{{$3%a$9}{ $2•$9 $4%t$9}{ $2•$9 $5%b$9}{ $2•$9 $6%y$9}}|{$8%f$9}"
+song_status_format = "{{$0%a$9}{ $2•$9 $0%t$9}{ $2•$9 $0%b$9}{ $2•$9 $0%y$9}}|{$0%f$9}"
 song_columns_list_format = "(5f)[blue]{nE} (20)[cyan]{aE} (40)[blue]{t|f} (20)[cyan]{bE} (5f)[blue]{yE} (7f)[cyan]{lE}"
 
 playlist_display_mode = "columns"
