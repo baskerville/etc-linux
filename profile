@@ -8,9 +8,9 @@ export SAVEHIST=$HISTSIZE
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoreboth
 
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
-export XDG_DATA_HOME=${XDG_DATA_HOME:-"$HOME/.local/share"}
-export XDG_CACHE_HOME=${XDG_CACHE_HOME:-"$HOME/.cache"}
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 export XDG_DOWNLOAD_DIR="$HOME/incoming"
 export XDG_DOTFILES_DIR="$HOME/.dotfiles"
@@ -21,10 +21,9 @@ export XDG_TMP_DIR="$HOME/tmp"
 
 export OWL_AUR_HOME="$HOME/src/aur"
 export OWL_ABS_HOME="$HOME/src/abs"
+
 export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
-export GREP_COLORS='ms=1;33:mc=1;33:sl=:cx=:fn=1;32:ln=1;36:bn=36:se=1;30'
-export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
 export NNTPSERVER='news.orange.fr'
 export SLRNPULL_ROOT="$HOME/.slrnpull"
 export _Z_NO_RESOLVE_SYMLINKS=1
@@ -52,6 +51,8 @@ export DPMS_STANDBY=180
 export DPMS_SUSPEND=360
 export DPMS_OFF=480
 
+export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
+export GREP_COLORS='ms=1;33:mc=1;33:sl=:cx=:fn=1;32:ln=1;36:bn=36:se=1;30'
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blinking
 export LESS_TERMCAP_md=$'\e[1;34m'     # begin bold
 export LESS_TERMCAP_me=$'\e[0m'        # end mode
