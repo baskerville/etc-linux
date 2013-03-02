@@ -85,6 +85,7 @@ alias tl='crontab -l'
 alias vpx='vp -vo x11'
 alias am='alsamixer -g'
 alias fp='cp -t $HOME/.fonts'
+alias af='fortune "$XDG_DATA_HOME/fortune"'
 alias allprops='xdotool search --class . | xargs -I % xprop -id %'
 
 alias i='type -a'

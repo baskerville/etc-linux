@@ -34,7 +34,7 @@ set uncollapse_threads 1
 % With the example settings, it would read "John Doe <john@doe.com>"
 
 set username "tom"
-set hostname "sawyer.com"
+set hostname "void.nil"
 set realname "Tom Sawyer"
 
 % Set this if you want replies to your articles to go to a address different

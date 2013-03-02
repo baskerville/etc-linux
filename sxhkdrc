@@ -103,7 +103,7 @@ super + @button{1,2,3}
 #
 
 super + ctrl + {slash,shift + slash}
-    {terminal,terminal -cd "$HOME"}
+    {terminal -cd "$HOME",terminal}
 
 super + space
     dmenu_launch
