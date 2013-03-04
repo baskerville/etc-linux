@@ -89,6 +89,9 @@ super + shift + {1-9,0}
 super + shift + bracket{left,right}
     bspc drop_to {prev,next}
 
+super + ctrl + button1
+    bspc grab_pointer focus
+
 super + button{1,2,3}
     bspc grab_pointer {move,resize_side,resize_corner}
 
