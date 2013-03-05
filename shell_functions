@@ -42,17 +42,15 @@ msa() {
 }
 
 g() {
-    grep -r --color=auto "$@" .
+    local pat=$1
+    local dir=${2:-.}
+    grep -r --color=auto "$pat" "$dir"
 }
 
 f() {
-    find . -maxdepth 1 -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
-}
-
-ff() {
-    dir=$1
-    shift
-    find "$dir" -iregex ".*$@.*" -printf '%p\0' | xargs -r0 ls --color=auto -1d
+    local pat=$1
+    local dir=${2:-.}
+    find "$dir" -maxdepth 1 -iregex ".*${pat}.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
 }
 
 F() {
@@ -156,7 +154,7 @@ pbg() {
 }
 
 ngfind() {
-    grep -E $@ $XDG_DATA_HOME/nglist.txt | tr -dC '[a-z].\n'
+    grep -E $@ $XDG_DATA_HOME/newsgroups.txt
 }
 
 cpmicro() {

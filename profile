@@ -52,7 +52,7 @@ export DPMS_SUSPEND=360
 export DPMS_OFF=480
 
 export STDERRED_ESC_CODE=$(echo -e "\e[1;31m")
-export GREP_COLORS='ms=1;33:mc=1;33:sl=:cx=:fn=1;32:ln=1;36:bn=36:se=1;30'
+export GREP_COLORS='ms=1;37:mc=1;37:sl=:cx=:fn=1;33:ln=1;36:bn=1;35:se=1;30'
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blinking
 export LESS_TERMCAP_md=$'\e[1;34m'     # begin bold
 export LESS_TERMCAP_me=$'\e[0m'        # end mode
