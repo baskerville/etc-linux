@@ -187,7 +187,7 @@ XF86KbdBrightness{Down,Up}
     togglethm {dark,light}
 
 super + XF86KbdBrightness{Down,Up}
-    {updatethm,reloadpanel}
+    {reloadpanel,killpanel}
 
 shift + XF86Eject
     wodim -eject
