@@ -48,7 +48,6 @@ alias n1='n -1'
 alias nn='n1 | tail -n 1'
 alias NN='n1 | tail -n'
 alias nA='n -A'
-alias nl='n -l'
 alias nAl='nA -l'
 
 alias on='open "$(nn)"'
