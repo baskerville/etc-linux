@@ -92,6 +92,7 @@ bind pager B bounce-message
 bind index,pager,attach,compose Q exit
 
 macro compose a "<attach-file><kill-line>$XDG_DOWNLOAD_DIR/"
+macro index,pager Y ":set pipe_decode\n<pipe-message>xclip -sel clip -i\n:unset pipe_decode\n"
 macro index,pager A "<pipe-message>view_attachments\n"
 macro index,pager , "<pipe-message>yank_from\n"
 macro index,pager \ef "<pipe-message>mutt_show_xface\n"

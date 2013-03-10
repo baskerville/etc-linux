@@ -169,7 +169,7 @@ super + ctrl + p
     pwgen -nc | tr -d '\n' | xsel -bi
 
 super + {equal,shift + equal}
-    mosaic "{$XDG_DOWNLOAD_DIR,$HOME/image}"
+    {mosaic "$XDG_DOWNLOAD_DIR",sxiv -dbt "$XDG_DOWNLOAD_DIR/"dl*_*/*}
 
 super + ctrl + {a,shift + a,t,i}
     focus_or_run {accounts,boards,top,notes}
