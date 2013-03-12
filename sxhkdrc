@@ -174,11 +174,11 @@ super + {equal,shift + equal}
 super + ctrl + {a,shift + a,t,i}
     focus_or_run {accounts,boards,top,notes}
 
-{XF86LaunchB,shift + XF86LaunchB}
-    {dvol,dbright} status
+{XF86LaunchB,shift + XF86LaunchB,alt + shift + XF86LaunchB}
+    {dvol,dbright,dbatt} status
 
 super + b
-    dbatt status
+    bspc balance
 
 super + ctrl + g
     pickcolor
