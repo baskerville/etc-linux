@@ -20,6 +20,9 @@ super + {r,shift + r,u}
 super + {backslash,shift + backslash}
     bspc flip {vertical,horizontal}
 
+super + b
+    bspc balance
+
 super + {s,f,x,z}
     bspc toggle_{floating,fullscreen,locked,visibility}
 
@@ -176,9 +179,6 @@ super + ctrl + {a,shift + a,t,i}
 
 {XF86LaunchB,shift + XF86LaunchB,alt + shift + XF86LaunchB}
     {dvol,dbright,dbatt} status
-
-super + b
-    bspc balance
 
 super + ctrl + g
     pickcolor
