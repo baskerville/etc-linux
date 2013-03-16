@@ -24,7 +24,7 @@ export OWL_ABS_HOME="$HOME/src/abs"
 
 export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
-export NNTPSERVER='news.orange.fr'
+export NNTPSERVER='snews://nntp.aioe.org'
 export SLRNPULL_ROOT="$HOME/.slrnpull"
 export _Z_NO_RESOLVE_SYMLINKS=1
 
