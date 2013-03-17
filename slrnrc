@@ -1,141 +1,37 @@
-% -*- slang -*-
+set username "tom"
+set hostname "void.nil"
+set realname "Tom Sawyer"
+set organization "Ultimate Insanity"
+% set signature ".signature"
 
-%% This is a sample startup file for the slrn newsreader and meant as a
-%% template for your personal startup file; it is not a full reference
-%% of slrn's config options -- please see the reference manual for this.
-
-%% The percent character is used for comments.
-
-%
-%% 0. misc
-%
-
+set auto_mark_article_as_read 0
+set uncollapse_threads 1
 set write_newsrc_flags 0
-set use_slrnpull 1
 set query_read_group_cutoff 0
 set confirm_actions 0 
 set query_next_group 0
 set query_next_article 0
+set use_localtime 3
 set top_status_line " %n"
 set group_status_line "%D %-20g -- %L (%P)"
 set header_status_line "%p [%r/%t] %-20g -- %L (%P)"
 set art_status_line "%p %s %-20g -- %L (%P)"
 set overview_date_format "%Y/%m/%d %H:%M"
 header_display_format 0 "%F%B  %21r  %T%s %-26g %D  %-5c"
-set use_localtime 3
-set uncollapse_threads 1
-% set auto_mark_article_as_read 0
 
-%
-%% 1. Tell slrn about your identity (name, email address and such)
-%
-
-% The "From:" header will be generated from the following three variables.
-% With the example settings, it would read "John Doe <john@doe.com>"
-
-set username "tom"
-set hostname "void.nil"
-set realname "Tom Sawyer"
-
-% Set this if you want replies to your articles to go to a address different
-% from the one in "From:".
-%set replyto  "John Doe <jdoe@something.com>"
-
-% What to put into the "Organization:" header line.
-set organization "Ultimate Insanity"
-
-% The name of your signature file.  If "", no signature is added.
-% set signature ".signature"
-
-%
-%% 2. Server specific settings
-%
-
-% Tell slrn which newsrc file it should use for which server.
-% Note: This does *not* set the default server; you need to set the
-%       NNTPSERVER environment variable for this.
 server "localhost" ".newsgroups"
-
-% If a server requires authentication, add a nnrpaccess line for it.
-% If you leave username and/or password empty, slrn will prompt for it.
-%nnrpaccess "news.doe.com" "john" "secret"
-
-% Some servers require authentication, but don't ask for it.
-% To offer your authentication data "voluntarily", set this variable to 1.
-%set force_authentication 0
-
-% This can either be set to "nntp" (read online) or "spool" (use local spool)
-%set server_object "nntp"
-
-% This can be "nntp" (post directly to the server), "inews" (use external
-% program for posting) or "slrnpull" (spool message for slrnpull to send).
-%set post_object "nntp"
-
-% Set this to zero if you want to leave Message-ID generation to your server
-% or your system does not have a proper unique hostname.
-%set generate_message_id 1
-
-% If non-zero, slrn reads the active file on each startup.  You might want to
-% use this if your network connection is fast or the server has few groups.
-%set read_active 0
-
-% The following variables are only meaningful when using spool mode:
-
-% Basic directory settings
-% set spool_inn_root	".slrnpull"
-% set spool_root	".slrnpull/news"
-% set spool_nov_root	".slrnpull/news"
-
-% These are relative to spool_inn_root unless they start with "/".
-%set spool_active_file "data/active"
-%set spool_activetimes_file "data/active.times"
-%set spool_newsgroups_file "data/newsgroups"
-
-% This value is relative to the directories under spool_nov_root:
-%set spool_nov_file ".overview"
-
-% Whether to check for each article when reading an overview file (slower,
-% but may save you from lots of "article not available" errors).
-%set spool_check_up_on_nov 0
-
-%
-%% 3. Which external programs do you want to use?
-%
-
-% Note OS/2 and Win32 users: 
-%   To separate directories you can either use a single '/' or
-%   double '\\'. Single backslashes are not supported.  For example, use
-%   "C:\\home\\file.txt" or "C:/home/file.txt" but NOT "C:\home\file.txt"
 
 % Set your favourite editor.  Use %s for the file name and %d for the line
 % where the cursor should be placed (usually at the beginning of the body).
 %set editor_command "jed '%s' -g %d -tmp"
 set editor_command "editor -c %d '%s'"
-
-% You can have separate commands for editing posts, mail, and score files.
-%set mail_editor_command "jed '%s' -g %d -tmp --mail-mode"
-%set post_editor_command "jed '%s' -g %d -tmp --mail-mode"
-%set score_editor_command "jed '%s' -g %d -tmp --score-arrange-score"
-
-% If non-zero, abort posting or email operation if the file was not modified
-% by the editor.
 set abort_unmodified_edits 1
 
-% In case we need metamail to display an article:
-%set metamail_command "metamail"
-
-% WWW browser to use. Xbrowser is used when the DISPLAY environment variable
-% is set; non_Xbrowser otherwise.
 %set non_Xbrowser "lynx '%s'"
 set Xbrowser "open '%s' &"
 
-% Command to use for printing
-% Note: On Win32, this variable defines the name of the printer queue to use.
 set printer_name "lpr -Plp"
 
-% In case you want to use another mailer than sendmail.  Be sure that it
-% implements the same interface, though!
-%set sendmail_command "/usr/lib/sendmail -oi -t -oem -odb"
 set sendmail_command "/usr/bin/msmtp -t"
 
 % Set this to one if you want the "From:" header in e-mails to be generated
@@ -143,49 +39,21 @@ set sendmail_command "/usr/bin/msmtp -t"
 % Note: Not all MTAs are configured to allow this.
 set generate_email_from 1
 
-%
-%% 4. Directory / file names
-%
-
-% Note: All filenames in this section are relative to HOME unless they start
-%       with a '/'.
-
-% Filename where articles / email you sent are archived.
-% Note: If these are unset, slrn does not keep a copy of outgoing messages.
 set save_posts ".slrn/sent"
 set save_replies ".slrn/sent"
-
-% File where failed posts are appended.  Use "" to disable saving.
 set failed_posts_file ".slrn/dead.letter"
-
-% Name of score file.
 set scorefile ".slrn/scorefile"
-
-% Name of directory where decoded files are placed.
 %set decode_directory "News"
-  
-% Directory where macros are placed.
 set macro_directory ".slrn/macros"
-
-% Directory where all other files are saved.
 set save_directory ".slrn"
-
-% Directory where postponed articles are placed. Please make sure it exists.
 set postpone_directory ".slrn/postponed"
 
 % Whether to put temporary files for postings, followups and replies in the
 % directory specified by the TMPDIR environment variable or /tmp.
 %set use_tmpdir 0
 
-%
-%% 5. Attribution lines / custom headers
-%
-
-% This sets the attribution lines for follow-ups and replies.  The following
-% format specifiers are recognized:
 %  %d:date, %D:date (formatted), %r:real name, %R:first name,
 %  %f:email address, %s:subject, %m:msgid, %n:newsgroups, %%: percent
-%set followup_string "On %D, %r <%f> wrote:"
 set followup_string "%r:"
 set reply_string "%n:"
 
@@ -200,10 +68,6 @@ set reply_string "%n:"
 
 % This is inserted when sending email CCs of your postings.
 %set cc_post_string "[This message has also been posted to %n.]"
-
-%
-%% 6. Character mapping / MIME support
-%
 
 % Character set used for the display or terminal; valid values include:
 %   utf8, iso-8859-1, ibm850, ibm852, koi8,
