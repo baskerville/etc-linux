@@ -59,6 +59,9 @@ super + bracket{left,right}
 super + ctrl + bracket{left,right}
     bspc cycle_desktop {prev,next} --skip-free
 
+super + alt + bracket{left,right}
+    bspc cycle_desktop {prev,next} --skip-occupied
+
 super + ctrl + {h,j,k,l}
     bspc presel {left,down,up,right}
 
