@@ -50,7 +50,7 @@ g() {
 f() {
     local pat=$1
     local dir=${2:-.}
-    find "$dir" -maxdepth 1 -iregex ".*${pat}.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
+    find "$dir" -maxdepth 1 -iregex ".*${pat}.*" -printf '%p\0' | xargs -r0 ls --color=auto -1d
 }
 
 F() {

@@ -54,7 +54,7 @@ set organization "Ultimate Insanity"
 % Tell slrn which newsrc file it should use for which server.
 % Note: This does *not* set the default server; you need to set the
 %       NNTPSERVER environment variable for this.
-%server "news.doe.com" ".jnewsrc-doe"
+server "localhost" ".newsgroups"
 
 % If a server requires authentication, add a nnrpaccess line for it.
 % If you leave username and/or password empty, slrn will prompt for it.
@@ -82,9 +82,9 @@ set organization "Ultimate Insanity"
 % The following variables are only meaningful when using spool mode:
 
 % Basic directory settings
-set spool_inn_root	".slrnpull"
-set spool_root		".slrnpull/news"
-set spool_nov_root	".slrnpull/news"
+% set spool_inn_root	".slrnpull"
+% set spool_root	".slrnpull/news"
+% set spool_nov_root	".slrnpull/news"
 
 % These are relative to spool_inn_root unless they start with "/".
 %set spool_active_file "data/active"

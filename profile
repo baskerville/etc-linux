@@ -21,11 +21,11 @@ export XDG_TMP_DIR="$HOME/tmp"
 
 export OWL_AUR_HOME="$HOME/src/aur"
 export OWL_ABS_HOME="$HOME/src/abs"
+export OWL_CHANGELOG_DB="$XDG_DATA_HOME/changelog_db"
 
 export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
-export NNTPSERVER='snews://nntp.aioe.org'
-export SLRNPULL_ROOT="$HOME/.slrnpull"
+export NNTPSERVER=localhost
 export _Z_NO_RESOLVE_SYMLINKS=1
 
 export SHELL_CONFIG="$HOME/.bashrc"
