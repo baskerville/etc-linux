@@ -1,10 +1,6 @@
-set username "tom"
-set hostname "void.nil"
-set realname "Tom Sawyer"
-set organization "Ultimate Insanity"
-% set signature ".signature"
+include ".usenet_id"
 
-set auto_mark_article_as_read 0
+set auto_mark_article_as_read 1
 set uncollapse_threads 1
 set write_newsrc_flags 0
 set query_read_group_cutoff 0
