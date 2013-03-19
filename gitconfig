@@ -1,6 +1,10 @@
 [user]
 	name = Bastien Dejean
 	email = nihilhill@gmail.com
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
 [diff]
 	tool = vimdiff
 [difftool]
