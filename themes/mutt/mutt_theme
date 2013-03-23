@@ -1,6 +1,6 @@
 color   normal       default         default
 color   status       white           black
-color   indicator    brightwhite     cyan
+color   indicator    color41         color28
 color   markers      brightred       magenta
 color   tilde        brightblack     default
 color   tree         brightblack     default

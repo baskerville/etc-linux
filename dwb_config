@@ -166,3 +166,4 @@ tab-protected-color=#E068D0
 private-color=#505050
 hsts=true
 max-visible-completions=11
+passthrough-keys=webkit
