@@ -23,6 +23,7 @@ export OWL_AUR_HOME="$HOME/src/aur"
 export OWL_ABS_HOME="$HOME/src/abs"
 export OWL_CHANGELOG_DB="$XDG_DATA_HOME/changelog_db"
 
+export SDL_AUDIODRIVER=alsa
 export PYTHONIOENCODING='utf-8'
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER=localhost
