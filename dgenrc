@@ -1,0 +1,8 @@
+# int_soundrate = 22050
+int_soundrate = 44100
+joy_pad1_a = "joystick0-button0"
+joy_pad1_b = "joystick0-button1"
+joy_pad1_c = "joystick0-button2"
+joy_pad1_x = "joystick0-button3"
+joy_pad1_y = "joystick0-button4"
+joy_pad1_z = "joystick0-button5"
