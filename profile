@@ -43,10 +43,11 @@ export LACIE=/media/lacie
 export BSPWM_SOCKET=/tmp/bspwm-socket
 export BSPWM_BACKUP="$XDG_DATA_HOME/bspwm-backup"
 export SXHKD_SHELL=/bin/dash
-export EWMHSTATUS_FIFO=/tmp/ewmhstatus-fifo
 export JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
 export DIANA_DOWNLOAD_DIR=$XDG_TMP_DIR
 export WALLPAPER="$HOME/.wallpaper"
+export PANEL_FIFO=/tmp/panel-fifo
+export PANEL_PID=/tmp/panel-pid
 export PANEL_HEIGHT=24
 
 export DPMS_STANDBY=180
