@@ -17,7 +17,9 @@ alias ngrep='grep -n'
 alias ingrep='grep -in'
 alias cingrep='grep -in --color=auto'
 alias rgrep='grep -r'
+
 alias pgx='pgrep -x'
+alias pkx='pkill -x'
 
 alias chbin='chmod 755'
 alias chord='chmod 644'
