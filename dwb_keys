@@ -253,6 +253,8 @@ reload_bookmarks=
 reload_quickmarks= 
 print_preview= 
 
+tabdo= 
+
 [-p]
 save_search_field=gs
 add_view=ga
