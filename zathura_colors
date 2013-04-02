@@ -6,6 +6,6 @@ set statusbar-bg '#F5F0E3'
 set statusbar-fg '#6D727E'
 set recolor-darkcolor '#6D727E'
 set recolor-lightcolor '#FEF9EC'
-set highlight-color '#FFFF00'
-set highlight-active-color '#00FFFF'
-set highlight-transparency 0.33
+set highlight-color '#FFFB37'
+set highlight-active-color '#62FFFF'
+set highlight-transparency 0.3
