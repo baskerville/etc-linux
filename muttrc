@@ -24,6 +24,7 @@ unset confirmappend
 unset confirmcreate
 unset wait_key
 set postpone = ask-yes
+set reply_to
 set weed
 set beep_new
 # set arrow_cursor
