@@ -157,24 +157,30 @@ ngfind() {
     grep -E $@ $XDG_DATA_HOME/newsgroups.txt
 }
 
+cplr() {
+    local dest=$1
+    shift
+    cp  -Lr "$@" "$dest"/
+}
+
 cpmicro() {
-    cp  -Lr "$@" $MICRO/
+    cplr "$MICRO" "$@"
 }
 
 cpdata() {
-    cp  -Lr "$@" $DATA/
+    cplr "$DATA" "$@"
 }
 
 cptraveler() {
-    cp -Lr "$@" $TRAVELER/
+    cplr "$TRAVELER" "$@"
 }
 
 cphexagon() {
-    cp  -Lr "$@" $HEXAGON/
+    cplr "$HEXAGON" "$@"
 }
 
 cplacie() {
-    cp  -Lr "$@" $LACIE/
+    cplr "$LACIE" "$@"
 }
 
 # mm() {

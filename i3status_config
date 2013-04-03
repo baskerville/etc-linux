@@ -7,12 +7,12 @@ order += "wireless wlan0"
 order += "time"
 
 wireless wlan0 {
-    format_up = "◉"
-    format_down = "○"
+    format_up = "S⇅ %essid"
+    format_down = "S^fg(red)☹"
 }
 
 time {
-    format = "%A %H:%M"
+    format = "◷ %a %H:%M"
 }
 
 disk "/" {
