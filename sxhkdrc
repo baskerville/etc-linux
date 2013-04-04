@@ -38,6 +38,9 @@ super + shift + Return
 super + {m,y}
     bspc swap {biggest,smallest}
 
+super + g
+    togglepanel
+
 super + {o,i}
     bspc nearest {older,newer}
 
