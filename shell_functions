@@ -225,7 +225,7 @@ conj() {
 
 linux_changelog() {
     local uri="http://www.kernel.org/pub/linux/kernel/v${@%%.*}.0/ChangeLog-$@"
-    curl -s "$uri" | grep -A 2 '^Date:' | grep ' \+[^:]\+: ' | sed 's/^ \+//'
+    wget -qO - "$uri" | grep -A 2 '^Date:' | grep ' \+[^:]\+: ' | sed 's/^ \+//'
 }
 
 #swc() {

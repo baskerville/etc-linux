@@ -32,8 +32,11 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l}
     bspc shift {left,down,up,right}
 
-super + shift + {Return, alt + Return, ctrl + alt + Return}
-    bspc {swap,swap biggest,swap smallest}
+super + shift + Return
+    bspc swap
+
+super + {m,y}
+    bspc swap {biggest,smallest}
 
 super + {o,i}
     bspc nearest {older,newer}
