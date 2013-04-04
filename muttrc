@@ -27,7 +27,6 @@ set postpone = ask-yes
 set reply_to
 set weed
 set beep_new
-# set arrow_cursor
 
 set alias_file = ~/.mutt/aliases
 set sort_alias = alias
@@ -35,7 +34,6 @@ set reverse_alias
 source $alias_file
 
 hdr_order From To Cc Subject
-# hdr_order Date From To Cc
 alternative_order text/plain text/enriched text/html
 
 ignore *
@@ -104,7 +102,6 @@ macro index,attach { "<first-entry>"
 macro index,attach } "<last-entry>"
 macro index M "<tag-pattern>.\n<clear-flag>N<clear-flag>O<clear-flag>*" "Mark all messages as read"
 
-# TODO: \'x instead of gx
 macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
 macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
@@ -127,11 +124,10 @@ macro index,pager * "<save-message>=starred\n" "Move to Starred"
 macro index,pager _ "<save-message>=topics\n" "Move to Topics"
 macro pager \ee ":unset display_filter<enter><exit><display-message>" "Clear display filter"
 macro pager \er ":set display_filter=\"/usr/bin/tr 'A-Za-z' 'N-ZA-Mn-za-m'\"<enter><exit><display-message>" "Rot13 display filter"
+
 source ~/.mutt/theme
 
 folder-hook !=sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21n  %s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21t  %s %> %D  %4c"'
 
-mailboxes =inbox =bspwm =baskerville =lists =arch =urxvt =herbstluftwm =commandes =paypal =xd =fai =univ
-
-# my_hdr X-Face: QY}q5L~UF\#6|F|m\"mYo%\;cv!sNfW&aS1{3[Qy\"5\#Ro{m]rI}[h?%lv\#-o/{-8Y]\\Nbjh+4j+iNa@[v5j|v-\'elKt5)jMyT|_j~\$4WP*{N\$ru!TMf7Iw\"8]40>w
+mailboxes =inbox =bspwm =baskerville =lists =arch =urxvt =commandes =paypal =xd =fai =univ

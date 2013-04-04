@@ -123,11 +123,8 @@ super + ctrl + {slash,shift + slash}
 super + space
     dmenu_launch
 
-super + ctrl + {comma,period}
-    focus_or_run {dwb,mutt}
-
-super + ctrl + shift + {comma,period}
-    focus_or_run {dwb_restore,slrn}
+super + ctrl + {comma,shift + comma,period}
+    focus_or_run {dwb,dwb_restore,mutt}
 
 super + {apostrophe,shift + apostrophe}
     {lasso,small_lasso}
