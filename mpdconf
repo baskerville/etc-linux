@@ -8,6 +8,8 @@ log_file            "~/.mpd/mpd.log"
 pid_file            "~/.mpd/pid"
 state_file          "~/.mpd/state"
 
+metadata_to_use	    "artist,album,title,track,name,genre,date,composer,performer,disc,comment"
+
 audio_output { 
     type            "alsa"
     name            "MPD ALSA"
