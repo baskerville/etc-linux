@@ -53,7 +53,7 @@ export PANEL_PID=/tmp/panel-pid
 export PANEL_FONT='DejaDroid Sans'
 export PANEL_FONT_SIZE=11
 export PANEL_ICONS_FONT=Iconic
-export PANEL_ICONS_FONT_SIZE=$((PANEL_SIZE - 4))
+export PANEL_ICONS_FONT_SIZE=$((PANEL_HEIGHT - 4))
 
 export DPMS_STANDBY=180
 export DPMS_SUSPEND=360
