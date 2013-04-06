@@ -46,9 +46,14 @@ export SXHKD_SHELL=/bin/dash
 export JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
 export DIANA_DOWNLOAD_DIR=$XDG_TMP_DIR
 export WALLPAPER="$HOME/.wallpaper"
+
+export PANEL_HEIGHT=24
 export PANEL_FIFO=/tmp/panel-fifo
 export PANEL_PID=/tmp/panel-pid
-export PANEL_HEIGHT=24
+export PANEL_FONT='DejaDroid Sans'
+export PANEL_FONT_SIZE=11
+export PANEL_ICONS_FONT=Iconic
+export PANEL_ICONS_FONT_SIZE=$((PANEL_SIZE - 4))
 
 export DPMS_STANDBY=180
 export DPMS_SUSPEND=360
