@@ -3,20 +3,26 @@ general {
     output_format = "none"
 }
 
+order += "battery 0"
 order += "wireless wlan0"
 order += "time"
 
 wireless wlan0 {
-    format_up = "S⇅ %essid"
-    format_down = "S^fg(red)☹"
+    format_up = "N%quality"
+    format_down = "Ndown"
+}
+
+battery 0 {
+    format = "B%status %percentage"
+    integer_battery_capacity = true
 }
 
 time {
-    format = "◷ %a %H:%M"
+    format = "C%a %H:%M"
 }
 
-disk "/" {
-    format = "%free"
-}
+# disk "/" {
+#     format = "%free"
+# }
 
 # vim: set ft=conf:
