@@ -57,6 +57,7 @@ set smart_wrap
 set tilde
 unset markers
 set status_on_top
+auto_view text/html
 
 set date_format    = "%Y/%m/%d %H:%M"
 set pager_format   = "Message %C of %m %> [%P]"
