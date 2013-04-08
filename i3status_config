@@ -4,6 +4,7 @@ general {
 }
 
 order += "battery 0"
+order += "cpu_usage"
 order += "wireless wlan0"
 order += "time"
 
@@ -15,6 +16,10 @@ wireless wlan0 {
 battery 0 {
     format = "B%status %percentage"
     integer_battery_capacity = true
+}
+
+cpu_usage {
+    format = "P%usage"
 }
 
 time {
