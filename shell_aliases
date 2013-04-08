@@ -26,6 +26,7 @@ alias chord='chmod 644'
 alias octalrights='stat -c %a'
 alias cal='cal -m'
 alias lsync='rsync -aulv --delete'
+alias beep='printf "\a"'
 
 alias scf='. $SHELL_CONFIG'
 alias ecf='editor $SHELL_CONFIG'
