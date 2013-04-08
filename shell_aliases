@@ -70,6 +70,7 @@ alias fq='fc-list : family | grep -i'
 alias fqs='fc-list : family style | grep -i'
 alias fqf='fc-list : family file | grep -i'
 alias dpms='xset q | grep "^ *DPMS is" | awk "{print \$3}" | tr "[:upper:]" "[:lower:]"'
+alias psa='ps axo tty,time,pgrp,ppid,pid,comm'
 
 alias fren='tw www.freetranslation.com.fr-en'
 alias enfr='tw www.freetranslation.com.en-fr'
