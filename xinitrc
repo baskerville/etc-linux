@@ -1,6 +1,7 @@
 setxkbmap -option terminate:ctrl_alt_bksp
 xmodmap "$HOME/.xmodmaprc"
 xrdb -merge "$HOME/.Xresources"
+xcape -e 'Control_R=Return'
 
 # reload fonts
 xset +fp /usr/share/fonts/local
