@@ -32,7 +32,7 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l}
     bspc shift {left,down,up,right}
 
-super + shift + Return
+super + Return
     bspc swap
 
 super + {m,y}
