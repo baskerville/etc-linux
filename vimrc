@@ -8,7 +8,7 @@ set hidden
 set showmode
 set showcmd
 set wildmenu
-set wildignore=*.o,*.png,*.jpg
+set wildignore=*.o,*.jpg,*.png,*.gif
 " set cursorline
 
 set backspace=indent,eol,start
@@ -45,9 +45,28 @@ set laststatus=2
 set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
 
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-repeat'
+Bundle 'msanders/snipmate.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'Glench/Vim-Jinja2-Syntax'
+Bundle 'jnurmine/Zenburn'
+Bundle 'othree/html5.vim'
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'vim-scripts/ck.vim'
+
+Bundle 'baskerville/vim-sxhkdrc'
+Bundle 'baskerville/vim-quirks'
+
 syntax on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 if has("gui_running")
     colorscheme raven
@@ -66,8 +85,6 @@ hi def link perlSharpBang Comment
 hi def link javaScriptNumber Number
 hi def link markdownCode Comment
 hi def link markdownCodeBlock Comment
-
-call pathogen#infect()
 
 if has("autocmd")
     " autocmd BufRead,BufEnter *.asd set filetype=lisp
