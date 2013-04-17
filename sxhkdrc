@@ -101,7 +101,7 @@ super + shift + bracket{left,right}
 super + alt + shift + bracket{left,right}
     bspc drop_to {prev,next} --follow
 
-super + alt + button1
+:button1
     bspc grab_pointer focus
 
 super + button{1,2,3}

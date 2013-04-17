@@ -16,7 +16,7 @@ static const char * const BAR_FONT = "-*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*"
  */
 static const char * const WIN_FS_COLOR = "#272621";
 static const char * const WIN_BG_COLOR = "#272621";
-static const char * const SEL_COLOR    = "#82C896";
+static const char * const SEL_COLOR    = "#707277";
 static const char * const BAR_BG_COLOR = "#34322E";
 static const char * const BAR_FG_COLOR = "#A4A6AB";
 

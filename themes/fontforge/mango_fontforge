@@ -6,12 +6,6 @@ fontforge.FontView.ChangedColor: #cc1f8a
 fontforge.FontView.HintingNeededColor: #8c6bff
 fontforge.FontView.FontSize: 10
 fontforge.FontView.FontFamily: sans-serif
-fontforge.FontView.SerifFamily: serif
-fontforge.FontView.ScriptFamily: serif
-fontforge.FontView.FrakturFamily: serif
-fontforge.FontView.DoubleStruckFamily: serif
-fontforge.FontView.SansFamily: sans-serif
-fontforge.FontView.MonoFamily: terminus
 
 fontforge.CharView.PointColor: #2194ff
 fontforge.CharView.FirstPointColor: #12b5b5
@@ -52,8 +46,10 @@ fontforge.CharView.GridFitOutlineColor: #009800
 fontforge.CharView.BackgroundOutlineColor: #009800
 fontforge.CharView.ForegroundOutlineColor: #000000
 fontforge.CharView.ClipPathColor: #0000ff
+fontforge.CharView.OpenPathColor: #c44294
 fontforge.CharView.BackgroundImageColor: #fe707070
 fontforge.CharView.FillColor: #801a1a1a
+fontforge.CharView.PreviewFillColor: #801a1a1a
 fontforge.CharView.TraceColor: #008000
 fontforge.CharView.RasterColor: #ffa0a0a0
 fontforge.CharView.RasterNewColor: #ff909090
@@ -62,6 +58,13 @@ fontforge.CharView.RasterGridColor: #ffb0b0ff
 fontforge.CharView.RasterDarkColor: #ff606060
 fontforge.CharView.DeltaGridColor: #cc4538
 fontforge.CharView.RulerBigTickColor: #008000
+fontforge.CharView.MeasureToolLineColor: #000000
+fontforge.CharView.MeasureToolPointColor: #ff0000
+fontforge.CharView.MeasureToolPointSnappedColor: #00ff00
+fontforge.CharView.MeasureToolCanvasNumbersColor: #ff0000
+fontforge.CharView.MeasureToolCanvasNumbersSnappedColor: #00ff00
+fontforge.CharView.MeasureToolWindowForeground: #000000
+fontforge.CharView.MeasureToolWindowBackground: #e0e0c0
 
 fontforge.MetricsView.AdvanceWidthColor: #808080
 fontforge.MetricsView.ItalicAdvanceColor: #808080
@@ -186,15 +189,16 @@ Gdraw.GScrollBar.Box.BorderOuter: False
 Gdraw.GScrollBar.Box.NormalForeground: #d9d9d9
 Gdraw.GScrollBar.Box.DisabledForeground: #dbdbdb
 Gdraw.GScrollBar.Box.NormalBackground: #d9d9d9
+Gdraw.GScrollBar.Box.BorderOuterCol: #dbdbdb
 Gdraw.GScrollBar.Box.BorderType: none
 Gdraw.GScrollBar.Box.BorderWidth: 0
 Gdraw.GScrollBar.Box.Padding: 2
 
-Gdraw.GScrollBarThumb.Box.NormalForeground: #cf96fa
-Gdraw.GScrollBarThumb.Box.NormalBackground: #c2c2c2
+Gdraw.GScrollBarThumb.Box.NormalForeground: #828282
+Gdraw.GScrollBarThumb.Box.NormalBackground: #adadad
 Gdraw.GScrollBarThumb.Box.DisabledBackground: #ededed
 Gdraw.GScrollBarThumb.Box.BorderBrightest: #c2c2c2
-Gdraw.GScrollBarThumb.Box.BorderDarkest: #c2c2c2
+Gdraw.GScrollBarThumb.Box.BorderDarkest: #c4c4c4
 Gdraw.GScrollBarThumb.Box.BorderShape: roundrect
 Gdraw.GScrollBarThumb.Box.BorderWidth: 1
 Gdraw.GScrollBarThumb.Box.Padding: 2
@@ -204,8 +208,8 @@ Gdraw.GLine.Box.BorderType: lowered
 Gdraw.GLine.Box.BorderShape: rect
 Gdraw.GLine.Box.Padding: 2
 
-Gdraw.GGroup.Box.NormalBackground: #ffffffff
-Gdraw.GGroup.Box.DisabledBackground: #ffffffff
+Gdraw.GGroup.Box.NormalBackground: #ffffff
+Gdraw.GGroup.Box.DisabledBackground: #ffffff
 Gdraw.GGroup.Box.BorderType: engraved
 Gdraw.GGroup.Box.BorderShape: rect
 Gdraw.GGroup.Box.Padding: 2
@@ -244,4 +248,5 @@ Gdraw.GDrawable.Box.Padding: 2
 
 Gdraw.GTabSet.Box.BorderShape: rect
 Gdraw.GTabSet.Box.BorderWidth: 1
+
 

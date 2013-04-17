@@ -167,3 +167,7 @@ tab-normal-fg-color-2=#6D727E
 tab-number-color=#A1A6B2
 tab-protected-color=#D160C4
 private-color=#FEF9EC
+cookie-expiration=0
+tab-orientation=horizontal
+tab-width=100
+mouse-cycles-through-tabs=true
