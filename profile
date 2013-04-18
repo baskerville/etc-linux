@@ -49,7 +49,6 @@ export WALLPAPER="$HOME/.wallpaper"
 
 export PANEL_HEIGHT=24
 export PANEL_FIFO=/tmp/panel-fifo
-export PANEL_FOOD=/tmp/panel-food
 export PANEL_PGRP=/tmp/panel-pgrp
 export PANEL_FONT_FAMILY='DejaDroid Sans'
 export PANEL_FONT_SIZE=11

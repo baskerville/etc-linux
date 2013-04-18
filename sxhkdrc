@@ -148,13 +148,13 @@ super + XF86MonBrightness{Down,Up}
     dbright {min,max}
 
 XF86AudioMute
-    dvol toggle
+    volume toggle
 
 XF86Audio{Lower,Raise}Volume
-    dvol {lower,raise}
+    volume {lower,raise}
 
 shift + XF86Audio{Lower,Raise}Volume
-    dvol strong_{lower,raise}
+    volume strong_{lower,raise}
 
 super + alt + {0-9}
     mpc -q seek {0-9}0%
@@ -182,9 +182,6 @@ super + {equal,shift + equal}
 
 super + ctrl + {a,shift + a,t,i}
     focus_or_run {accounts,boards,top,notes}
-
-{XF86LaunchB,shift + XF86LaunchB,alt + shift + XF86LaunchB}
-    {dvol,dbright,dbatt} status
 
 super + ctrl + g
     pickcolor
