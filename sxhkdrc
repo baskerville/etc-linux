@@ -3,7 +3,7 @@
 #
 
 super + alt + {Escape,shift + Escape}
-    {wm_restart,bspc quit 1}
+    {bspc list_monitors > "$BSPWM_BACKUP"; bspc quit,bspc quit 1}
 
 super + {w,shift + w}
     bspc {close,kill}
@@ -139,13 +139,13 @@ super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}_config
 
 XF86MonBrightness{Down,Up}
-    dbright {-1,+1}
+    bright {-1,+1}
 
 shift + XF86MonBrightness{Down,Up}
-    dbright {-10,+10}
+    bright {-10,+10}
 
 super + XF86MonBrightness{Down,Up}
-    dbright {min,max}
+    bright {min,max}
 
 XF86AudioMute
     volume toggle
