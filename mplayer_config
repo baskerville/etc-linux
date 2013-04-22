@@ -2,9 +2,11 @@ vo=xv,x11
 ao=alsa
 use-filename-title=yes
 nojoystick=yes
-font="DejaVu Sans:style=Bold"
+font="sans-serif:style=Bold"
+# font="DejaVu Sans:style=Bold"
 # heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
 # subfont-osd-scale=2
 # subfont-text-scale=2
 # zoom=no
 # fs=no
+# vim:set ft=conf:
