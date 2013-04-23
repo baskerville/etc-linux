@@ -1,5 +1,5 @@
 setxkbmap -option terminate:ctrl_alt_bksp
-xmodmap "$HOME/.xmodmaprc"
+xmodmap "$HOME/.Xmodmaprc"
 xrdb -merge "$HOME/.Xresources"
 xcape -e 'Control_R=Return'
 
