@@ -12,8 +12,11 @@ set bind-tty-special-chars     off
 "\C-\M-p": dynamic-complete-history
 "\C-x\C-i": menu-complete
 "\C-x\C-o": menu-complete-backward
+"\ea": alias-expand-line
+"\C-x\C-r": re-read-init-file
 "\C-u": kill-whole-line
 "\C-\M-w": unix-word-rubout
+"\C-\M-d": shell-kill-word
 "\C-\M-f": shell-forward-word
 "\C-\M-b": shell-backward-word
 
