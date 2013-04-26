@@ -18,3 +18,4 @@ F5 switch_ratio 0
 9 seek 90 1
 
 , seek -0.05 0 1
+; get_time_pos

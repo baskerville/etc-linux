@@ -2,7 +2,12 @@ vo=xv,x11
 ao=alsa
 use-filename-title=yes
 nojoystick=yes
+softvol=yes
+softvol-max=200
 font="sans-serif:style=Bold"
+# subfont-blur=0
+# ffactor=10
+# subfont-outline=0
 # font="DejaVu Sans:style=Bold"
 # heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
 # subfont-osd-scale=2
