@@ -4,9 +4,9 @@ use-filename-title=yes
 nojoystick=yes
 softvol=yes
 softvol-max=200
-# subfont-blur=0
-subfont-outline=0
 font="sans-serif:style=Bold"
+# subfont-blur=0
+# subfont-outline=0
 # ffactor=10
 # font="DejaVu Sans:style=Bold"
 # heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
