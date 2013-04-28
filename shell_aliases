@@ -47,7 +47,7 @@ alias llS='ll -rS'
 alias lla='la -l'
 alias lsd='la -d */'
 
-alias le='ls -Q --quoting-style=escape'
+alias le='ls --quoting-style=escape'
 alias le1='le -1'
 alias n='ls -rtc'
 alias n1='n -1'
