@@ -1,5 +1,5 @@
 style "gvim" {
-    bg[NORMAL] = "#FEF9EC"
+    bg[NORMAL] = "#FFF9EC"
 }
 
 widget "vim-main-window.*GtkForm" style "gvim"

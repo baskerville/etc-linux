@@ -1,85 +1,85 @@
-*background:  #2D2C28
-*foreground:  #A4A6AB
+*background:  #2E2C28
+*foreground:  #A3A6AB
 
-*colorBD:     #DBDDE2
-*colorIT:     #DBDDE2
-*colorUL:     #DBDDE2
+*colorBD:     #DADDE2
+*colorIT:     #DADDE2
+*colorUL:     #DADDE2
 
-*cursorColor: #53CAD9
+*cursorColor: #42CAD9
 
 ! BLACK
-*color0:      #5B5955
-*color8:      #707277
+*color0:      #5C5955
+*color8:      #6F7277
 
 ! WHITE
-*color7:      #DBDDE2
-*color15:     #F7F9FF
+*color7:      #DADDE2
+*color15:     #F6F9FF
 
 ! RED
-*color1:      #C4756E
-*color9:      #F6A299
+*color1:      #C7756E
+*color9:      #F9A299
 
 ! YELLOW
-*color3:      #9B8A4B
-*color11:     #CAB775
+*color3:      #9F8A4B
+*color11:     #CFB776
 
 ! GREEN
-*color2:      #559A6A
-*color10:     #82C896
+*color2:      #59996B
+*color10:     #85C796
 
 ! CYAN
-*color6:      #019BAA
-*color14:     #53CAD9
+*color6:      #009BAA
+*color14:     #42CAD9
 
 ! BLUE
-*color4:      #6A8DCA
-*color12:     #98BBFB
+*color4:      #5B8FCA
+*color12:     #8BBCFA
 
 ! MAGENTA
-*color5:      #B577AC
-*color13:     #E5A4DB
+*color5:      #B378AB
+*color13:     #E3A5DA
 
 *color40:     #272621
-*color41:     #2D2C28
+*color41:     #2E2C28
 *color42:     #34322E
-*color43:     #5B5955
-*color44:     #707277
-*color45:     #A4A6AB
-*color46:     #DBDDE2
-*color47:     #F7F9FF
+*color43:     #5C5955
+*color44:     #6F7277
+*color45:     #A3A6AB
+*color46:     #DADDE2
+*color47:     #F6F9FF
 
-*color16:     #F6A299
-*color17:     #C4756E
+*color16:     #F9A299
+*color17:     #C7756E
 
-*color18:     #E6AC80
-*color19:     #B57F55
+*color18:     #EAAB80
+*color19:     #B97E56
 
-*color20:     #CAB775
-*color21:     #9B8A4B
+*color20:     #CFB776
+*color21:     #9F8A4B
 
-*color22:     #A7C17D
-*color23:     #7A9453
+*color22:     #ACC17E
+*color23:     #7F9353
 
-*color24:     #82C896
-*color25:     #559A6A
+*color24:     #85C796
+*color25:     #59996B
 
-*color26:     #60CBB7
-*color27:     #2A9C8A
+*color26:     #5DCBB7
+*color27:     #259C8A
 
-*color28:     #53CAD9
-*color29:     #019BAA
+*color28:     #42CAD9
+*color29:     #009BAA
 
-*color30:     #6CC4F1
-*color31:     #3696C1
+*color30:     #58C5F1
+*color31:     #0497C1
 
-*color32:     #98BBFB
-*color33:     #6A8DCA
+*color32:     #8BBCFA
+*color33:     #5B8FCA
 
-*color34:     #C4AFF2
-*color35:     #9582C2
+*color34:     #BDB0F2
+*color35:     #8E83C2
 
-*color36:     #E5A4DB
-*color37:     #B577AC
+*color36:     #E3A5DA
+*color37:     #B378AB
 
-*color38:     #F69FBA
-*color39:     #C5728D
+*color38:     #F79FBA
+*color39:     #C6728D
