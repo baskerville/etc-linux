@@ -19,3 +19,6 @@ F5 switch_ratio 0
 
 , seek -0.05 0 1
 ; get_time_pos
+
+> volume 1
+< volume -1

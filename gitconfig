@@ -11,6 +11,8 @@
 	prompt = false
 [push]
 	default = simple
+[alias]
+        ls = log --oneline --decorate --graph
 [color]
 	ui = auto
 

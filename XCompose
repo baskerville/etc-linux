@@ -11,8 +11,8 @@ include "%L"
 <Multi_key> <space> <p> : " " U2008 # PUNCTUATION SPACE
 
 <Multi_key> <asterisk> <asterisk> <asterisk> : "⁂" U2042 # ASTERISM
-<Multi_key> <asterisk> <greater> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key> <greater> <asterisk> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key> <asterisk> <greater> : "▶" U25B6 # BLACK RIGHT POINTING TRIANGLE
+<Multi_key> <less> <asterisk> : "◀" U25C0 # BLACK LEFT POINTING TRIANGLE
 <Multi_key> <greater> <exclam> : "↑" U2191 # UPWARDS ARROW
 <Multi_key> <less> <exclam> : "↓" U2193 # DOWNWARDS ARROW
 <Multi_key> <percent> <percent> : "‱" U2031 # PER TEN THOUSAND SIGN

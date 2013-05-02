@@ -19,8 +19,8 @@ _prompt_command() {
     tput ed
 }
 
-export PS1='\[\e[1;35m\]>\[\e[0m\] '
-export PS2='\[\e[1;30m\]>\[\e[0m\] '
+export PS1='\[\e[1;35m\]▶\[\e[0m\] '
+export PS2='\[\e[1;30m\]◀\[\e[0m\] '
 export PROMPT_COMMAND='_prompt_command'
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
