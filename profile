@@ -25,7 +25,7 @@ export OWL_CHANGELOG_DB="$XDG_DATA_HOME/changelog_db"
 
 export SDL_AUDIODRIVER=alsa
 export PYTHONIOENCODING='utf-8'
-export GOPATH="$XDG_DATA_HOME/go"
+export GOPATH="$HOME/.go"
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER=localhost
 export _Z_NO_RESOLVE_SYMLINKS=1
