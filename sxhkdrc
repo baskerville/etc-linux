@@ -3,7 +3,7 @@
 #
 
 super + alt + {Escape,shift + Escape}
-    {bspc list_monitors > "$BSPWM_BACKUP"; bspc quit,bspc quit 1}
+    {bspc list_monitors > "$BSPWM_LAYOUT"; bspc list_history > "$BSPWM_HISTORY"; bspc quit,bspc quit 1}
 
 super + {w,shift + w}
     bspc {close,kill}

@@ -42,7 +42,8 @@ export HEXAGON=/media/hexagon
 export LACIE=/media/lacie
 
 export BSPWM_SOCKET=/tmp/bspwm-socket
-export BSPWM_BACKUP="$XDG_DATA_HOME/bspwm-backup"
+export BSPWM_LAYOUT="$XDG_DATA_HOME/bspwm.layout"
+export BSPWM_HISTORY="$XDG_DATA_HOME/bspwm.history"
 export SXHKD_SHELL=/bin/dash
 export JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
 export DIANA_DOWNLOAD_DIR=$XDG_TMP_DIR
