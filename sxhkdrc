@@ -5,9 +5,6 @@
 super + alt + {Escape,shift + Escape}
     {bspc list_monitors > "$BSPWM_LAYOUT"; bspc list_history > "$BSPWM_HISTORY"; bspc quit,bspc quit 1}
 
-super + {w,shift + w,q}
-    xdo {close,kill,close -dc}
-
 super + t
     bspc cycle_layout
 
@@ -119,6 +116,9 @@ super + @button{1,2,3}
 
 super + Escape
     pkill -USR1 -x sxhkd
+
+super + {w,shift + w,q}
+    xdo {close,kill,close -dc}
 
 super + ctrl + {slash,shift + slash}
     {terminal -cd "$HOME",terminal}
