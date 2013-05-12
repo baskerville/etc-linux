@@ -5,8 +5,8 @@
 super + alt + {Escape,shift + Escape}
     {bspc list_monitors > "$BSPWM_LAYOUT"; bspc list_history > "$BSPWM_HISTORY"; bspc quit,bspc quit 1}
 
-super + {w,shift + w}
-    bspc {close,kill}
+super + {w,shift + w,q}
+    xdo {close,kill,close -dc}
 
 super + t
     bspc cycle_layout
@@ -128,9 +128,6 @@ super + space
 
 super + ctrl + {comma,shift + comma,period}
     focus_or_run {dwb,dwb_restore,mutt}
-
-super + {apostrophe,shift + apostrophe}
-    {lasso,small_lasso}
 
 super + {semicolon,shift + semicolon}
     glean_{primary,clipboard}
