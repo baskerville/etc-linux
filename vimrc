@@ -60,6 +60,7 @@ Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
 Bundle 'jnurmine/Zenburn'
 Bundle 'zeis/vim-kolor'
+Bundle 'nsf/gocode', {'rtp': 'vim/'}
 " Bundle 'kchmck/vim-coffee-script'
 " Bundle 'vim-scripts/ck.vim'
 
@@ -94,7 +95,7 @@ if has("autocmd")
     " autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
     " autocmd BufRead,BufEnter *.nfo set filetype=nfo
     " autocmd BufRead,BufEnter *.ck set filetype=ck
-    " autocmd BufRead,BufEnter *keydoublerc set filetype=xmodmap
+    autocmd BufRead,BufEnter *Xmodmaprc set filetype=xmodmap
     autocmd BufRead,BufEnter *.h set filetype=c
     autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
     autocmd BufRead,BufEnter *.xinitrc set filetype=sh

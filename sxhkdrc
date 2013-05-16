@@ -132,6 +132,9 @@ super + ctrl + {comma,shift + comma,period}
 super + {semicolon,shift + semicolon}
     glean_{primary,clipboard}
 
+super + apostrophe
+    open "$(recent "$XDG_DOWNLOAD_DIR" | head -n 1)"
+
 super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}_config
 

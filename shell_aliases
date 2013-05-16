@@ -49,7 +49,7 @@ alias lsd='la -d */'
 
 alias le='ls --quoting-style=escape'
 alias le1='le -1'
-alias n='ls -rtc'
+alias n='ls -rc'
 alias n1='n -1'
 alias nn='n1 | tail -n 1'
 alias NN='n1 | tail -n'
