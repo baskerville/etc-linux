@@ -1,3 +1,21 @@
+cd() {
+    if [ -z "$1" ] ; then
+        builtin cd
+    elif [ -f "$1" ] ; then
+        builtin cd "$(dirname "$1")"
+    else
+        builtin cd "$1"
+    fi
+}
+
+z() {
+    pushd "$(/usr/bin/z "$@" | head -n 1)" > /dev/null
+}
+
+zx() {
+    /usr/bin/z -d "$PWD"; z "$@"
+}
+
 lc() {
     local start=${1:-1}
     local end=${2:-"$start"}

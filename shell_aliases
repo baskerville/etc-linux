@@ -1,9 +1,11 @@
-alias zl='z -l'
 alias j='jobs'
 alias x='xargs -d "\n"'
 alias cp='cp -i'
 alias mv='mv -i'
 alias cpr='cp -r'
+alias zl=/usr/bin/z
+alias zh='zl -g 756000'
+alias zt='zl -g 1'
 
 alias ig='g -i'
 alias gn='g -n'
@@ -158,9 +160,6 @@ alias M='date "+%B"'
 alias Y='date "+%Y"'
 alias d='date "+%A"'
 alias D='date "+%Y%m%d-%H%M"'
-
-alias zt='z -t'
-alias zr='z -r'
 
 # alias nmt='sudo -u nmt'
 alias clean_files_permissions='find . -type f ! -perm 644 -print -exec chmod 644 {} \;'

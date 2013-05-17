@@ -16,17 +16,17 @@ _prompt_command() {
             echo -en "\e]0;Terminal ${PWD//$HOME/~}$(git branch --no-color 2> /dev/null | grep '^\*' | sed 's/\* \(.*\)/ (\1)/')\a"
             ;;
     esac
+    /usr/bin/z -a "$PWD"
     tput ed
 }
 
 export PS1='\[\e[1;35m\]▶\[\e[0m\] '
 export PS2='\[\e[1;30m\]◀\[\e[0m\] '
-export PROMPT_COMMAND='_prompt_command'
+export PROMPT_COMMAND=_prompt_command
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
 [ -e "/usr/lib/libstderred.so" ] && export LD_PRELOAD="/usr/lib/libstderred.so"
-. /etc/profile.d/z.sh
 . "$XDG_CONFIG_HOME"/bash_completion.d/eat
 
 eval $(dircolors -b "$HOME/.dircolors")
