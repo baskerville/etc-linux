@@ -16,7 +16,7 @@ _prompt_command() {
             echo -en "\e]0;Terminal ${PWD//$HOME/~}$(git branch --no-color 2> /dev/null | grep '^\*' | sed 's/\* \(.*\)/ (\1)/')\a"
             ;;
     esac
-    /usr/bin/z -a "$PWD"
+    [ "$PWD" -ef "$HOME" ] || /usr/bin/z -a "$PWD"
     tput ed
 }
 
