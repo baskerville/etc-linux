@@ -20,8 +20,9 @@ alias cingrep='grep -in --color=auto'
 alias rgrep='grep -r'
 
 alias pgx='pgrep -x'
+alias pgg='pgrep -g'
 alias pkx='pkill -x'
-alias pkxg='pkill -x -g'
+alias pkg='pkill -g'
 
 alias chbin='chmod 755'
 alias chord='chmod 644'
