@@ -68,43 +68,11 @@ g() {
 f() {
     local pat=$1
     local dir=${2:-.}
-    find "$dir" -maxdepth 1 -iregex ".*${pat}.*" -printf '%p\0' | xargs -r0 ls --color=auto -1d
-}
-
-F() {
-    find . -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
-}
-
-Fd() {
-    find . -type d -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
-}
-
-Fl() {
-    find . -type l -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
-}
-
-Fe() {
-    find . -type f -perm /u=x -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
-}
-
-Ff() {
-    find . -type f -iregex ".*$@.*" -printf '%P\0' | xargs -r0 ls --color=auto -1d
-}
-
-fxo() {
-    find . -iname "*$@*" -printf "%P\n" -exec open "{}" \;
-}
-
-fxr() {
-    find . -iname "*$@*" -printf "%P\n" -exec rm "{}" \;
+    find "$dir" -iregex ".*${pat}.*" -printf '%p\0' | xargs -r0 ls --color=auto -1d
 }
 
 L() {
     ls -- *."$@"
-}
-
-L1() {
-    ls -1 -- *."$@"
 }
 
 S() {
@@ -113,10 +81,6 @@ S() {
 
 N() {
     n -- *."$@"
-}
-
-N1() {
-    n -1 -- *."$@"
 }
 
 R() {
@@ -143,7 +107,6 @@ RR() {
 }
 
 rcd() {
-    # find $PWD/ -maxdepth 1 -type d ! -samefile $PWD/ -exec urxvtc -cd "{}" \;
     find $PWD/ -maxdepth 1 -mindepth 1 -type d -exec urxvtc -cd "{}" \;
 }
 
@@ -151,7 +114,7 @@ count() {
     l1 $@ | wc -l
 }
 
-weather_location() {
+weather_loc() {
     wget -qO - "http://xoap.weather.com/search/search?where=$@" | grep 'loc id'
 }
 
@@ -161,14 +124,6 @@ spell() {
 
 frspell() {
     echo $@ | hunspell -d fr_FR | grep '^&'
-}
-
-pb() {
-    wget -U Mozilla -qO - "http://thepiratebay.org/search/'$@'/0/7/0" | grep -o 'http\:\/\/torrents\.thepiratebay\.org\/.*\.torrent'
-}
-
-pbg() {
-    pb "$@" | head -n 1 | xargs wget
 }
 
 ngfind() {
@@ -200,13 +155,6 @@ cphexagon() {
 cplacie() {
     cplr "$LACIE" "$@"
 }
-
-# mm() {
-#     local output="$XDG_TMP_DIR/.mailcheck"
-#     mpop -a | tee $output
-#     local messages_count=$(grep -m 1 -Ech "^retrieving" $output)
-#     [ "$messages_count" -gt 0 ] && m
-# }
 
 mkmaildir() {
     local maildir="$HOME/.maildir"
