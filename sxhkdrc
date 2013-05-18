@@ -117,8 +117,8 @@ super + @button{1,2,3}
 super + Escape
     pkill -USR1 -x sxhkd
 
-super + {w,shift + w,q}
-    xdo {close,kill,close -dc}
+super + {w,shift + w}
+    bspc {close,kill}
 
 super + ctrl + {slash,shift + slash}
     {terminal -cd "$HOME",terminal}
