@@ -1,11 +1,10 @@
-alias j='jobs'
+alias zt='Z -s atime'
+alias zh='Z -s hits'
 alias x='xargs -d "\n"'
 alias cp='cp -i'
 alias mv='mv -i'
 alias cpr='cp -r'
-alias zl=/usr/bin/z
-alias zt='zl -s atime'
-alias zh='zl -s hits'
+alias j='jobs'
 
 alias ig='g -i'
 alias gn='g -n'

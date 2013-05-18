@@ -9,11 +9,11 @@ cd() {
 }
 
 z() {
-    pushd "$(/usr/bin/z "$@" | head -n 1)" > /dev/null
+    pushd "$(Z "$@" | head -n 1)" > /dev/null
 }
 
 zx() {
-    /usr/bin/z -d "$PWD"; z "$@"
+    Z -d "$PWD"; z "$@"
 }
 
 lc() {
