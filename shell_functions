@@ -86,6 +86,10 @@ f() {
     F . "$pat" -maxdepth 1 "$@"
 }
 
+of() {
+    f "$@" | xargs -d "\n" open
+}
+
 L() {
     ls -- *."$@"
 }
