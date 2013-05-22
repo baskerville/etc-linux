@@ -145,7 +145,7 @@ alias csi='rlwrap csi -q'
 alias pmv='pmv -v'
 alias nb='newsbeuter'
 alias python='python -q'
-alias maxima='maxima -q'
+alias maxima='rlwrap maxima -q'
 alias pps2pdf='loimpress --nologo --convert-to pdf'
 
 alias subscriptions='grep ":" $HOME/.jnewsrc | awk -F : "{print $1}"'
