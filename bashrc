@@ -6,6 +6,7 @@ shopt -s globstar
 complete -cf sudo
 complete -cf man
 complete -abck i
+complete -d cd
 complete -c bed
 complete -C finddots dot
 
