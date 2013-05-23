@@ -1,15 +1,20 @@
+_cd() {
+    pushd "$@" > /dev/null 2>&1
+}
+
 cd() {
     if [ -z "$1" ] ; then
-        builtin cd
+        _cd "$HOME"
     elif [ -f "$1" ] ; then
-        builtin cd "$(dirname "$1")"
+        _cd "$(dirname "$1")"
     else
-        builtin cd "$1"
+        _cd "$1"
     fi
 }
 
 z() {
-    pushd "$(Z "$@" | head -n 1)" > /dev/null
+    local dir=$(Z "$@" | head -n 1)
+    _cd "$dir" || Z -d "$dir"
 }
 
 zx() {
