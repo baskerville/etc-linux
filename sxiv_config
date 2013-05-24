@@ -68,7 +68,7 @@ static const keymap_t keys[] = {
 
 	{ false,  XK_r,             it_reload_image,      (arg_t) None },
 	{ false,  XK_R,             t_reload_all,         (arg_t) None },
-	{ false,  XK_D,             it_remove_image,      (arg_t) None },
+	{ false,  XK_d,             it_remove_image,      (arg_t) None },
 
 	{ false,  XK_n,             i_navigate,           (arg_t) +1 },
 	{ false,  XK_space,         i_navigate,           (arg_t) +1 },
@@ -144,7 +144,7 @@ static const keymap_t keys[] = {
 			"jpegtran -rotate 270 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ true,   XK_period,        it_shell_cmd,         (arg_t) \
 			"jpegtran -rotate  90 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
-	{ true,   XK_d,			    it_shell_cmd,         (arg_t) \
+	{ false,  XK_D,			    it_shell_cmd,         (arg_t) \
             "mv \"$SXIV_IMG\" ~/.trash/" },
 	{ true,   XK_c,			    it_shell_cmd,         (arg_t) \
             "catapult copy \"$SXIV_IMG\"" },
