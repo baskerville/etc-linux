@@ -58,6 +58,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
+Bundle 'vim-scripts/oz.vim'
 Bundle 'jnurmine/Zenburn'
 Bundle 'zeis/vim-kolor'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}

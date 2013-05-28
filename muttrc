@@ -86,6 +86,8 @@ bind index gg         first-entry
 bind index G          last-entry
 bind index,pager \Cf  next-page
 bind index,pager \Cb  previous-page
+bind index \Cj        next-thread
+bind index \Ck        previous-thread
 bind index,pager,attach,compose <F3> help
 bind index,pager ? search-reverse
 bind pager b previous-page
