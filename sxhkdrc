@@ -29,11 +29,11 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l}
     bspc shift {left,down,up,right}
 
-super + Return
-    bspc swap
+super + {apostrophe,shift + apostrophe}
+    bspc swap --{keep,swap}-focus
 
-super + {m,y}
-    bspc swap {biggest,smallest}
+super + {Return,shift + Return}
+    wid=$(bspc biggest); [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap} 
 
 super + g
     togglepanel
@@ -131,9 +131,6 @@ super + ctrl + {comma,shift + comma,period}
 
 super + {semicolon,shift + semicolon}
     glean_{primary,clipboard}
-
-super + {apostrophe,shift + apostrophe}
-    open {"$(recent "$XDG_DOWNLOAD_DIR" | head -n 1)","$(xclip -sel clip -o)"}
 
 super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}_config
