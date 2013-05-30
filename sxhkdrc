@@ -117,6 +117,9 @@ super + @button{1,2,3}
 super + Escape
     pkill -USR1 -x sxhkd
 
+super + q
+    bspc list_windows | xargs xdo close -cd
+
 super + {w,shift + w}
     bspc {close,kill}
 
