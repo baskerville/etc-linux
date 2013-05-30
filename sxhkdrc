@@ -33,7 +33,7 @@ super + {apostrophe,shift + apostrophe}
     bspc swap --{keep,swap}-focus
 
 super + {Return,shift + Return}
-    wid=$(bspc biggest); [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap} 
+    wid=$(bspc biggest); [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap}
 
 super + g
     togglepanel
