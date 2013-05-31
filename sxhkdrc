@@ -36,7 +36,7 @@ super + shift + {h,j,k,l}
     bspc shift {left,down,up,right}
 
 super + {apostrophe,shift + apostrophe}
-    bspc swap --{keep,swap}-focus
+    bspc swap --{swap,keep}-focus
 
 super + {m,Return}
     wid=$(bspc biggest); [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap}
