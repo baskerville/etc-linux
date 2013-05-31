@@ -6,7 +6,7 @@ super + alt + {Escape,shift + Escape}
     {bspc list_monitors > "$BSPWM_LAYOUT"; bspc list_history > "$BSPWM_HISTORY"; bspc quit,bspc quit 1}
 
 super + q
-    bspc list_windows | xargs xdo close -cd
+    xdo close -cd
 
 super + {w,shift + w}
     bspc {close,kill}
@@ -38,7 +38,7 @@ super + shift + {h,j,k,l}
 super + {apostrophe,shift + apostrophe}
     bspc swap --{keep,swap}-focus
 
-super + {Return,shift + Return}
+super + {m,Return}
     wid=$(bspc biggest); [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap}
 
 super + g
