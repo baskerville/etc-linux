@@ -5,6 +5,8 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias cpr='cp -r'
 alias j='jobs'
+alias ..='cd ..'
+alias b='cd -'
 
 alias ig='g -i'
 alias gn='g -n'
@@ -168,7 +170,6 @@ alias remove_fatgarbage='find . -name "._*" -print -exec rm {} \;'
 alias remove_dsstore='find . -type f -name .DS_Store -print -exec rm {} \;'
 alias remove_dbthumbs='find . -type f -name Thumbs.db -print -exec rm {} \;'
 
-alias b="acpi -b | grep -o '[0-9]\+%'"
 alias wrp='wr FRXX0076'
 
 alias zdata="cd "$DATA""
