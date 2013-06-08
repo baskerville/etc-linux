@@ -171,3 +171,7 @@ tab-normal-fg-color-2=#6C727E
 tab-number-color=#9FA6B2
 tab-protected-color=#CD63C3
 private-color=#FFF9EC
+hint-offset-top=0
+javascript-api=automatic
+maximum-tabs=0
+hint-offset-left=0
