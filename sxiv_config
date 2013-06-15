@@ -144,6 +144,7 @@ static const keymap_t keys[] = {
 			"jpegtran -rotate 270 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ true,   XK_period,        it_shell_cmd,         (arg_t) \
 			"jpegtran -rotate  90 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
+	{ false,  XK_o,             it_open_with,         (arg_t) "sxiv" },
 	{ true,   XK_d,			    it_shell_cmd,         (arg_t) \
             "mv \"$SXIV_IMG\" ~/.trash/" },
 	{ true,   XK_c,			    it_shell_cmd,         (arg_t) \
