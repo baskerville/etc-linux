@@ -39,7 +39,7 @@ super + shift + {h,j,k,l}
     bspc shift {left,down,up,right}
 
 super + {apostrophe,shift + apostrophe}
-    bspc {swap,swap --keep-focus}
+    bspc {swap,swap --keep-focus }
 
 super + {m,Return}
     wid=$(bspc biggest); \
