@@ -2,8 +2,11 @@
 # bspwm hotkeys
 #
 
-super + alt + {Escape,shift + Escape}
-    {bspc list_monitors > "$BSPWM_LAYOUT"; bspc list_history > "$BSPWM_HISTORY"; bspc quit,bspc quit 1}
+super + alt + {shift + Escape,Escape}
+    {bspc quit 1,\
+    bspc list_monitors > "$BSPWM_LAYOUT"; \
+        bspc list_history > "$BSPWM_HISTORY"; \
+        bspc quit}
 
 super + q
     xdo close -cd
@@ -39,7 +42,8 @@ super + {apostrophe,shift + apostrophe}
     bspc {swap,swap --keep-focus}
 
 super + {m,Return}
-    wid=$(bspc biggest); [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap}
+    wid=$(bspc biggest); \
+    [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap}
 
 super + g
     togglepanel
@@ -107,14 +111,14 @@ super + alt + shift + bracket{left,right}
 :button1
     bspc grab_pointer focus
 
-super + button{1,2,3}
+super + button{1-3}
     bspc grab_pointer {move,resize_side,resize_corner}
 
-super + !button{1,2,3}
-    bspc {track_pointer,track_pointer,track_pointer} %i %i
+super + !button{1-3}
+    bspc track_pointer %i %i
 
-super + @button{1,2,3}
-    bspc {ungrab_pointer,ungrab_pointer,ungrab_pointer}
+super + @button{1-3}
+    bspc ungrab_pointer
 
 #
 # wm independent hotkeys
