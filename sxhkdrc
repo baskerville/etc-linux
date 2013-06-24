@@ -32,18 +32,17 @@ super + {s,f,x,z}
 super + {grave,Tab}
     bspc {alternate,alternate_desktop}
 
-super + {h,j,k,l}
-    bspc focus {left,down,up,right}
-
-super + shift + {h,j,k,l}
-    bspc shift {left,down,up,right}
+super + {_,shift + }{h,j,k,l}
+    bspc {focus,shift} {left,down,up,right}
 
 super + {apostrophe,shift + apostrophe}
     bspc {swap,swap --keep-focus }
 
-super + {m,Return}
+super + {m,Return,shift + Return}
     wid=$(bspc biggest); \
-    [ -n "$wid" ] && {xdo activate $wid,xdo activate $wid && bspc swap}
+    [ -n "$wid" ] && xdo activate $wid{_, \
+        && bspc swap, \
+        && bspc swap --keep-focus}
 
 super + g
     togglepanel
@@ -54,11 +53,8 @@ super + {o,i}
 super + {d,shift + d}
     bspc cycle {next,prev} --skip-floating
 
-super + {a,v,e}
-    bspc cycle next {--skip-tiled,--skip-class-equal,--skip-class-differ}
-
-super + shift + {a,v,e}
-    bspc cycle prev {--skip-tiled,--skip-class-equal,--skip-class-differ}
+super + {_,shift + }{a,v,e}
+    bspc cycle {next,prev} {--skip-tiled,--skip-class-equal,--skip-class-differ}
 
 super + {comma,period}
     bspc circulate {backward,forward}
@@ -84,11 +80,11 @@ super + ctrl + shift + {h,j,k,l}
 super + ctrl + space
     bspc cancel
 
-super + alt + {h,j,k,l}
-    bspc push {left,down,up,right}
+super + alt + {_,shift + }{h,j,k,l}
+    bspc {push,pull} {left,down,up,right}
 
-super + alt + shift + {h,j,k,l}
-    bspc pull {right,up,down,left}
+super + alt + control + {h,j,k,l} ; {0-9}
+    bspc fence_ratio {left,down,up,right} 0.{0-9}
 
 super + alt + ctrl + {1-9,0}
     bspc set window_gap {0,3,6,9,15,24,39,63,102,165}
@@ -96,11 +92,8 @@ super + alt + ctrl + {1-9,0}
 super + ctrl + {1-9}
     bspc ratio 0.{1-9}
 
-super + {1-9,0}
-    bspc use {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
-
-super + shift + {1-9,0}
-    bspc send_to {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
+super + {_,shift + }{1-9,0}
+    bspc {use,send_to} {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
 
 super + shift + bracket{left,right}
     bspc drop_to {prev,next}
@@ -142,23 +135,14 @@ super + {semicolon,shift + semicolon}
 super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}_config
 
-XF86MonBrightness{Down,Up}
-    bright {-1,+1}
-
-shift + XF86MonBrightness{Down,Up}
-    bright {-10,+10}
-
-super + XF86MonBrightness{Down,Up}
-    bright {min,max}
+{_,shift + ,super + }XF86MonBrightness{Down,Up}
+    bright {-1,-10,min,+1,+10,max}
 
 XF86AudioMute
     volume toggle
 
-XF86Audio{Lower,Raise}Volume
-    volume {lower,raise}
-
-shift + XF86Audio{Lower,Raise}Volume
-    volume strong_{lower,raise}
+{_,shift + }XF86Audio{Lower,Raise}Volume
+    volume {_,strong_}{lower,raise}
 
 super + alt + {0-9}
     mpc -q seek {0-9}0%
@@ -199,11 +183,8 @@ XF86KbdBrightness{Down,Up}
 super + XF86KbdBrightness{Down,Up}
     {launchpanel,killpanel}
 
-shift + XF86Eject
-    wodim -eject
-
-super + XF86Eject
-    dpms_standby
+{shift,super} + XF86Eject
+    {wodim -eject,dpms_standby}
 
 super + {alt,ctrl,alt + ctrl} + XF86Eject
     sudo systemctl {suspend,reboot,poweroff}

@@ -132,10 +132,6 @@ static const keymap_t keys[] = {
 	{ true,   XK_g,             it_open_with,         (arg_t) "gimp" },
 
 	/* run shell command line on current file ("$SXIV_IMG"): */
-	{ true,   XK_less,          it_shell_cmd,         (arg_t) \
-			"mogrify -rotate -90 \"$SXIV_IMG\"" },
-	{ true,   XK_greater,       it_shell_cmd,         (arg_t) \
-			"mogrify -rotate +90 \"$SXIV_IMG\"" },
 	{ true,   XK_backslash,         it_shell_cmd,         (arg_t) \
 			"jpegtran -flip horizontal -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ true,   XK_bar,        it_shell_cmd,         (arg_t) \
@@ -144,6 +140,8 @@ static const keymap_t keys[] = {
 			"jpegtran -rotate 270 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ true,   XK_period,        it_shell_cmd,         (arg_t) \
 			"jpegtran -rotate  90 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
+	{ true,   XK_slash,        it_shell_cmd,         (arg_t) \
+			"jpegtran -rotate  180 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ false,  XK_o,             it_open_with,         (arg_t) "sxiv" },
 	{ true,   XK_d,			    it_shell_cmd,         (arg_t) \
             "mv \"$SXIV_IMG\" ~/.trash/" },
@@ -157,7 +155,7 @@ static const keymap_t keys[] = {
             "catapult repeat \"$SXIV_IMG\"" },
 	{ false,  XK_c,             it_shell_cmd,         (arg_t) \
             "copy_args \"$SXIV_IMG\"" },
-	{ false,  XK_slash,         it_shell_cmd,         (arg_t) \
+	{ true,  XK_o,         it_shell_cmd,         (arg_t) \
             "browse_parent \"$SXIV_IMG\"" },
 	{ true,   XK_s,             it_shell_cmd,         (arg_t) \
             "setwallpaper \"$SXIV_IMG\"" },
