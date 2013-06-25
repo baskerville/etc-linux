@@ -2,7 +2,7 @@
 # bspwm hotkeys
 #
 
-super + alt + {shift + Escape,Escape}
+super + alt + {shift + ,_}Escape
     {bspc quit 1,\
     bspc list_monitors > "$BSPWM_LAYOUT"; \
         bspc list_history > "$BSPWM_HISTORY"; \
@@ -42,7 +42,7 @@ super + {m,Return,shift + Return}
     wid=$(bspc biggest); \
     [ -n "$wid" ] && xdo activate $wid{_, \
         && bspc swap, \
-        && bspc swap --keep-focus}
+        && bspc swap --keep-focus }
 
 super + g
     togglepanel
@@ -80,8 +80,11 @@ super + ctrl + shift + {h,j,k,l}
 super + ctrl + space
     bspc cancel
 
-super + alt + {_,shift + }{h,j,k,l}
-    bspc {push,pull} {left,down,up,right}
+super + alt + {h,j,k,l}
+    bspc push {left,down,up,right}
+
+super + alt + shift + {h,j,k,l}
+    bspc pull {right,up,down,left}
 
 super + alt + control + {h,j,k,l} ; {0-9}
     bspc fence_ratio {left,down,up,right} 0.{0-9}
