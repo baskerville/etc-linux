@@ -36,11 +36,12 @@ super + {_,shift + }{h,j,k,l}
     bspc {focus,shift} {left,down,up,right}
 
 super + {apostrophe,shift + apostrophe}
-    bspc {swap,swap --keep-focus }
+    bspc swap{_, --keep-focus }
 
 super + {m,Return,shift + Return}
+    cur=$(xdo id); \
     wid=$(bspc biggest); \
-    [ -n "$wid" ] && xdo activate $wid{_, \
+    [ -n "$wid" -a "$cur" != "$wid" ] && xdo activate $wid{_, \
         && bspc swap, \
         && bspc swap --keep-focus }
 
@@ -77,8 +78,8 @@ super + ctrl + {h,j,k,l}
 super + ctrl + shift + {h,j,k,l}
     bspc presel {left 0.33,down 0.66,up 0.33,right 0.66}
 
-super + ctrl + space
-    bspc cancel
+super + ctrl + {_,shift + }space
+    bspc cancel{_, --all }
 
 super + alt + {h,j,k,l}
     bspc push {left,down,up,right}
