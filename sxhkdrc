@@ -35,8 +35,8 @@ super + {grave,Tab}
 super + {_,shift + }{h,j,k,l}
     bspc {focus,shift} {left,down,up,right}
 
-super + {apostrophe,shift + apostrophe}
-    bspc swap{ --keep-focus,_}
+super + {shift + ,_}apostrophe
+    bspc swap{_, --keep-focus }
 
 super + {m,Return,shift + Return}
     cur=$(xdo id); \
@@ -107,7 +107,6 @@ super + alt + shift + bracket{left,right}
 
 :button1
     bspc grab_pointer focus
-
 super + button{1-3}
     bspc grab_pointer {move,resize_side,resize_corner}
 
