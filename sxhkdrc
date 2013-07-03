@@ -45,8 +45,8 @@ super + {m,Return,shift + Return}
         && bspc swap, \
         && bspc swap --keep-focus }
 
-super + g
-    togglepanel
+super + {_,shift + }g
+    toggle{panel,thm}
 
 super + {o,i}
     bspc nearest {older,newer}
@@ -179,9 +179,6 @@ super + ctrl + g
 
 super + {XF86LaunchA,shift + @XF86LaunchA}
     scrot {-e,-s -e} 'image_viewer $f'
-
-XF86KbdBrightness{Down,Up}
-    togglethm {dark,light}
 
 super + XF86KbdBrightness{Down,Up}
     {launchpanel,killpanel}
