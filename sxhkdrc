@@ -107,14 +107,12 @@ super + alt + shift + bracket{left,right}
 
 :button1
     bspc grab_pointer focus
+
 super + button{1-3}
     bspc grab_pointer {move,resize_side,resize_corner}
 
 super + !button{1-3}
     bspc track_pointer %i %i
-
-super + @button{1-3}
-    bspc ungrab_pointer
 
 #
 # wm independent hotkeys
@@ -188,5 +186,3 @@ super + XF86KbdBrightness{Down,Up}
 
 super + {alt,ctrl,alt + ctrl} + XF86Eject
     sudo systemctl {suspend,reboot,poweroff}
-
-# vim: set ft=sxhkdrc:
