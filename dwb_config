@@ -143,6 +143,7 @@ hint-offset-top=0
 javascript-api=automatic
 maximum-tabs=0
 hint-offset-left=0
+block-insecure-content=false
 active-completion-bg-color=#6C727E
 active-completion-fg-color=#FFF9EC
 background-color=#F7F0E3

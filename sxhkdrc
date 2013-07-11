@@ -4,115 +4,108 @@
 
 super + alt + {shift + ,_}Escape
     {bspc quit 1,\
-    bspc list_monitors > "$BSPWM_LAYOUT"; \
-        bspc list_history > "$BSPWM_HISTORY"; \
+    bspc query -T > "$BSPWM_TREE"; \
+        bspc query -H > "$BSPWM_HISTORY"; \
         bspc quit}
 
 super + q
     xdo close -cd
 
-super + {w,shift + w}
-    bspc {close,kill}
+super + {_,shift + }w
+    bspc window -{c,k}
 
 super + t
-    bspc cycle_layout
+    bspc desktop -l next
 
 super + {r,shift + r,u}
-    bspc rotate {clockwise,counter_clockwise,full_cycle}
+    bspc desktop -R {90,-90,180}
 
 super + {backslash,shift + backslash}
-    bspc flip {vertical,horizontal}
+    bspc desktop -F {vertical,horizontal}
 
 super + b
-    bspc balance
+    bspc desktop -B
 
-super + {s,f,x,z}
-    bspc toggle_{floating,fullscreen,locked,visibility}
+super + {s,f,x}
+    bspc window -t {floating,fullscreen,locked}
+
+super + z
+    bspc control --toggle-visibility
 
 super + {grave,Tab}
-    bspc {alternate,alternate_desktop}
+    bspc {window,desktop} -f last
 
 super + {_,shift + }{h,j,k,l}
-    bspc {focus,shift} {left,down,up,right}
+    bspc window -{f,s} {left,down,up,right}
 
-super + {shift + ,_}apostrophe
-    bspc swap{_, --keep-focus }
+super + {_,shift + }apostrophe
+    bspc window -s last{_, -f last}
 
-super + {m,Return,shift + Return}
-    cur=$(xdo id); \
-    wid=$(bspc biggest); \
-    [ -n "$wid" -a "$cur" != "$wid" ] && xdo activate $wid{_, \
-        && bspc swap, \
-        && bspc swap --keep-focus }
-
-super + {_,shift + }g
-    toggle{panel,thm}
-
-super + {o,i}
-    bspc nearest {older,newer}
+super + {m,Return}
+    bspc window -{f,s} biggest
 
 super + {d,shift + d}
-    bspc cycle {next,prev} --skip-floating
+    bspc window -f {next,prev}.tiled
 
 super + {_,shift + }{a,v,e}
-    bspc cycle {next,prev} {--skip-tiled,--skip-class-equal,--skip-class-differ}
+    bspc window -f {next,prev}.{floating,unlike,like}
 
 super + {comma,period}
-    bspc circulate {backward,forward}
+    bspc desktop -C {backward,forward}
 
 super + {c,shift + c}
-    bspc cycle {next,prev}
+    bspc window -f {next,prev}
 
 super + bracket{left,right}
-    bspc cycle_desktop {prev,next}
+    bspc desktop -f {prev,next}
 
 super + ctrl + bracket{left,right}
-    bspc cycle_desktop {prev,next} --skip-free
+    bspc desktop -f {prev,next}.occupied
 
 super + alt + bracket{left,right}
-    bspc cycle_desktop {prev,next} --skip-occupied
+    bspc desktop -f {prev,next}.free
 
 super + ctrl + {h,j,k,l}
-    bspc presel {left,down,up,right}
+    bspc window -p {left,down,up,right}
 
 super + ctrl + shift + {h,j,k,l}
-    bspc presel {left 0.33,down 0.66,up 0.33,right 0.66}
+    bspc window -p {left 0.33,down 0.66,up 0.33,right 0.66}
 
 super + ctrl + {_,shift + }space
-    bspc cancel{_, --all }
+    bspc {window -p cancel,desktop -c}
 
 super + alt + {h,j,k,l}
-    bspc push {left,down,up,right}
+    bspc window -e {left,down,up,right} push
 
 super + alt + shift + {h,j,k,l}
-    bspc pull {right,up,down,left}
+    bspc window -e {right,up,down,left} pull
 
 super + alt + control + {h,j,k,l} ; {0-9}
-    bspc fence_ratio {left,down,up,right} 0.{0-9}
+    bspc window -e {left,down,up,right} 0.{0-9}
 
 super + alt + ctrl + {1-9,0}
-    bspc set window_gap {0,3,6,9,15,24,39,63,102,165}
+    bspc config window_gap {0,3,6,9,15,24,39,63,102,165}
 
 super + ctrl + {1-9}
-    bspc ratio 0.{1-9}
+    bspc window -r 0.{1-9}
 
 super + {_,shift + }{1-9,0}
-    bspc {use,send_to} {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
+    bspc {desktop -f,window -d} {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
 
 super + shift + bracket{left,right}
-    bspc drop_to {prev,next}
+    bspc window -d {prev,next}.free
 
 super + alt + shift + bracket{left,right}
-    bspc drop_to {prev,next} --follow
+    bspc window -d {prev,next}.free -f
 
 :button1
-    bspc grab_pointer focus
+    bspc pointer -g focus
 
 super + button{1-3}
-    bspc grab_pointer {move,resize_side,resize_corner}
+    bspc pointer -g {move,resize_side,resize_corner}
 
 super + !button{1-3}
-    bspc track_pointer %i %i
+    bspc pointer -t %i %i
 
 #
 # wm independent hotkeys
@@ -135,6 +128,9 @@ super + {semicolon,shift + semicolon}
 
 super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}_config
+
+super + {_,shift + }g
+    toggle{panel,thm}
 
 {_,shift + ,super + }XF86MonBrightness{Down,Up}
     bright {-1,-10,min,+1,+10,max}
