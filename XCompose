@@ -14,7 +14,9 @@ include "%L"
 <Multi_key> <asterisk> <greater> : "▶" U25B6 # BLACK RIGHT POINTING TRIANGLE
 <Multi_key> <less> <asterisk> : "◀" U25C0 # BLACK LEFT POINTING TRIANGLE
 <Multi_key> <greater> <exclam> : "↑" U2191 # UPWARDS ARROW
+<Multi_key> <exclam> <greater> : "↑" U2191 # UPWARDS ARROW
 <Multi_key> <less> <exclam> : "↓" U2193 # DOWNWARDS ARROW
+<Multi_key> <exclam> <less> : "↓" U2193 # DOWNWARDS ARROW
 <Multi_key> <percent> <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
 <Multi_key> <plus> <bar> : "†" U2020 # DAGGER
 <Multi_key> <bar> <plus> : "†" U2020 # DAGGER

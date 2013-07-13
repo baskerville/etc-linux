@@ -35,8 +35,8 @@ super + z
 super + {grave,Tab}
     bspc {window,desktop} -f last
 
-super + {_,shift + }{h,j,k,l}
-    bspc window -{f,s} {left,down,up,right}
+super + {_,shift + ,control + shift + }{h,j,k,l}
+    bspc window -{f,s,w} {left,down,up,right}
 
 super + {_,shift + }apostrophe
     bspc window -s last{_, -f last}
@@ -68,9 +68,6 @@ super + alt + bracket{left,right}
 super + ctrl + {h,j,k,l}
     bspc window -p {left,down,up,right}
 
-super + ctrl + shift + {h,j,k,l}
-    bspc window -p {left 0.33,down 0.66,up 0.33,right 0.66}
-
 super + ctrl + {_,shift + }space
     bspc {window -p cancel,desktop -c}
 
@@ -93,10 +90,10 @@ super + {_,shift + }{1-9,0}
     bspc {desktop -f,window -d} {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
 
 super + shift + bracket{left,right}
-    bspc window -d {prev,next}.free
+    bspc window -d {prev,next}
 
 super + alt + shift + bracket{left,right}
-    bspc window -d {prev,next}.free -f
+    bspc window -d {prev,next} -f
 
 :button1
     bspc pointer -g focus
