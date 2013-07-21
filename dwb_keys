@@ -258,6 +258,9 @@ tabdo=
 adblock_reload_rules= 
 visual_mode= v
 
+tabgrep= 
+repeat= .
+
 [-p]
 save_search_field=gs
 add_view=ga

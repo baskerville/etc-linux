@@ -35,8 +35,8 @@ super + z
 super + {grave,Tab}
     bspc {window,desktop} -f last
 
-super + {_,shift + ,control + shift + }{h,j,k,l}
-    bspc window -{f,s,w} {left,down,up,right}
+super + {_,shift + }{h,j,k,l}
+    bspc window -{f,s} {left,down,up,right}
 
 super + {_,shift + }apostrophe
     bspc window -s last{_, -f last}
@@ -50,6 +50,9 @@ super + {d,shift + d}
 super + {_,shift + }{a,v,e}
     bspc window -f {next,prev}.{floating,unlike,like}
 
+super + {p,n}
+    bspc window -f {next,prev}.urgent
+
 super + {comma,period}
     bspc desktop -C {backward,forward}
 
@@ -59,6 +62,9 @@ super + {c,shift + c}
 super + bracket{left,right}
     bspc desktop -f {prev,next}
 
+super + ctrl + paren{left,right}
+    bspc desktop -f {prev,next}.urgent
+
 super + ctrl + bracket{left,right}
     bspc desktop -f {prev,next}.occupied
 
@@ -67,6 +73,12 @@ super + alt + bracket{left,right}
 
 super + ctrl + {h,j,k,l}
     bspc window -p {left,down,up,right}
+
+super + ctrl + shift + {h,j,k,l}
+    bspc window -p {left 0.33,down 0.66,up 0.33,right 0.66}
+
+super + y
+    bspc window -w last.manual
 
 super + ctrl + {_,shift + }space
     bspc {window -p cancel,desktop -c}

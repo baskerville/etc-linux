@@ -176,3 +176,4 @@ tab-normal-fg-color-2=#6C727E
 tab-number-color=#9FA6B2
 tab-protected-color=#CD63C3
 private-color=#FFF9EC
+enable-ipc=true
