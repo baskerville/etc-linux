@@ -4,7 +4,7 @@
 
 super + alt + {shift + ,_}Escape
     {bspc quit 1,\
-    bspc query -T > "$BSPWM_TREE"; \
+     bspc query -T > "$BSPWM_TREE"; \
         bspc query -H > "$BSPWM_HISTORY"; \
         bspc quit}
 
