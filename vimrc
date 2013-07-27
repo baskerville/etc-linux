@@ -88,6 +88,7 @@ hi def link perlSharpBang Comment
 hi def link javaScriptNumber Number
 hi def link markdownCode Comment
 hi def link markdownCodeBlock Comment
+hi def link rubySharpBang Comment
 
 if has("autocmd")
     " autocmd BufRead,BufEnter *.asd set filetype=lisp
@@ -159,8 +160,8 @@ nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
-nmap <silent> <F1>  :set number!<cr>
-nmap <silent> <F2>  :set hlsearch!<cr>
+nmap <silent> <F1> :set number!<cr>
+nmap <silent> <F2> :set hlsearch!<cr>
 nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " fg<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#") . ">" <cr>
 nmap <silent> <F4> :set list!<cr>
 nmap <silent> <F5> :setlocal spell! spelllang=en<cr>
@@ -180,6 +181,7 @@ nmap <silent> <leader>gp :call Paste('primary', 'after')<cr>
 nmap <silent> <leader>gP :call Paste('primary', 'before')<cr>
 nmap <silent> <leader>p :call Paste('clipboard', 'after')<cr>
 nmap <silent> <leader>P :call Paste('clipboard', 'before')<cr>
+" reverse string
 vmap <Leader>i c<C-o>:set ri<cr><C-r>"<esc>:set nori<cr>
 nmap <leader>r :source ~/.vimrc<cr>
 nmap <leader>e :e ~/.vimrc<cr>

@@ -129,8 +129,8 @@ super + ctrl + {slash,shift + slash}
 super + space
     dmenu_launch
 
-super + ctrl + {comma,shift + comma,period}
-    focus_or_run {dwb,dwb_restore,mutt}
+super + ctrl + {comma,period}
+    focus_or_run {browser,mutt}
 
 super + {semicolon,shift + semicolon}
     glean_{primary,clipboard}

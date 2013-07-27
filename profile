@@ -1,6 +1,6 @@
 export EDITOR=vim
 export PAGER=less
-export BROWSER=dwb
+export BROWSER=chromium
 export MANWIDTH=80
 
 export HISTSIZE=100000
