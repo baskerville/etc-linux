@@ -154,7 +154,6 @@ nmap <leader>} :cnf<cr>
 nmap <leader>{ :cpf<cr>
 nmap <leader>* :vimgrep =expand("<cword>")<cr> *
 nmap <silent> <leader>? :call Define(expand("<cword>"), "en")<cr>
-nmap <silent> <leader>g? :call Define(expand("<cword>"), "fr")<cr>
 nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
 nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
