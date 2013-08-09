@@ -17,7 +17,7 @@ static const char * const BAR_FONT = "sans-serif:pixelsize=12";
  */
 static const char * const WIN_FS_COLOR = "#272621";
 static const char * const WIN_BG_COLOR = "#272621";
-static const char * const SEL_COLOR    = "#6F7277";
+static const char * const SEL_COLOR    = "#ACC17E";
 static const char * const BAR_BG_COLOR = "#34322E";
 static const char * const BAR_FG_COLOR = "#A3A6AB";
 

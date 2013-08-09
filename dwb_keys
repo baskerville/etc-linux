@@ -261,6 +261,10 @@ visual_mode= v
 tabgrep= 
 repeat= .
 
+entry_delete_active=Control d
+jump= '
+mark= `
+
 [-p]
 save_search_field=gs
 add_view=ga

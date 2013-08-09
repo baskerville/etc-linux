@@ -6,7 +6,7 @@ end
 begin
   prog = mplayer
   button = KEY_MENU
-  config = pausing_keep_force osd_show_progression
+  config = osd_show_progression
   repeat = 1
 end
 begin
