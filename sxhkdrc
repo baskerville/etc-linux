@@ -107,7 +107,7 @@ super + shift + bracket{left,right}
 super + alt + shift + bracket{left,right}
     bspc window -d {prev,next} -f
 
-:button1
+~button1
     bspc pointer -g focus
 
 super + button{1-3}
