@@ -92,12 +92,21 @@ f() {
     F . "$pat" -maxdepth 1 "$@"
 }
 
+ox() {
+    cmd=$1
+    shift
+    tmpout=$(mktemp)
+    $cmd "$@" > "$tmpout"
+    xargs -a "$tmpout" -d '\n' open
+    rm "$tmpout"
+}
+
 of() {
-    f "$@" | xargs -d '\n' open
+    ox f "$@"
 }
 
 oF() {
-    F "$@" | xargs -d '\n' open
+    ox F "$@"
 }
 
 L() {
