@@ -99,7 +99,7 @@ super + ctrl + {1-9}
     bspc window -r 0.{1-9}
 
 super + {_,shift + }{1-9,0}
-    bspc {desktop -f,window -d} {One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten}
+    bspc {desktop -f,window -d} ^{1-9,10}
 
 super + shift + bracket{left,right}
     bspc window -d {prev,next}
