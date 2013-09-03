@@ -41,7 +41,6 @@ export TRAVELER=/media/traveler
 export HEXAGON=/media/hexagon
 export LACIE=/media/lacie
 
-export BSPWM_SOCKET=/tmp/bspwm-socket
 export BSPWM_TREE="$XDG_DATA_HOME/bspwm.tree"
 export BSPWM_HISTORY="$XDG_DATA_HOME/bspwm.history"
 export SXHKD_SHELL=/bin/dash
