@@ -43,10 +43,10 @@ bspc config split_ratio       0.52
 
 bspc config borderless_monocle     true
 bspc config gapless_monocle        true
-bspc config apply_shadow_property  true
+bspc config apply_floating_atom    true
 bspc config history_aware_focus    true
 bspc config focus_follows_pointer  false
 bspc config adaptative_raise       false
 
 updatethm
-pgrep -x compton > /dev/null || compton --shadow-exclude '_COMPTON_SHADOW:32c = 0' -bc -t -8 -l -9 -r 6 -o 0.7 -e 0.8
+pgrep -x compton > /dev/null || compton -b
