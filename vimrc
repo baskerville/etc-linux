@@ -143,7 +143,8 @@ nmap <leader>j :bn<cr>
 nmap <leader>k :bp<cr>
 nmap <leader>l gt
 nmap <leader>h gT
-nmap <leader>d :bd<cr>
+nmap <leader>d :bdelete<cr>
+nmap <silent> <leader>D :call delete(expand('%'))<cr>
 vmap <leader>T :!titlecase<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=

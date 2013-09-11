@@ -93,7 +93,7 @@ super + alt + control + {h,j,k,l} ; {0-9}
     bspc window -e {left,down,up,right} 0.{0-9}
 
 super + alt + ctrl + {1-9,0}
-    bspc config window_gap {0,3,6,9,15,24,39,63,102,165}
+    bspc config -d focused window_gap {0,3,6,9,15,24,39,63,102,165}
 
 super + ctrl + {1-9}
     bspc window -r 0.{1-9}
