@@ -20,9 +20,9 @@ bspc monitor -p 24 0 0 0
 # bspc monitor Gamma -a Ten
 # bspc monitor -f Alpha
 
-bspc rule -a Gimp -d Eight --floating --follow
-bspc rule -a Inkscape -d Seven --floating --follow
-bspc rule -a fontforge -d Six --floating --follow
+bspc rule -a Gimp -d ^8 --floating --follow
+bspc rule -a Inkscape -d ^7 --floating --follow
+bspc rule -a fontforge -d ^6 --floating --follow
 bspc rule -a Gifview --floating
 
 bspc config border_width      2
