@@ -34,7 +34,6 @@ bspc config gapless_monocle        true
 bspc config apply_floating_atom    true
 bspc config history_aware_focus    true
 bspc config focus_follows_pointer  false
-bspc config adaptative_raise       false
 
 if [ -e "$BSPWM_TREE" ] ; then
     bspc restore -T "$BSPWM_TREE"
