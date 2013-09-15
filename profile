@@ -50,7 +50,6 @@ export WALLPAPER="$HOME/.wallpaper"
 
 export PANEL_HEIGHT=24
 export PANEL_FIFO=/tmp/panel-fifo
-export PANEL_LOCK=/tmp/panel.lock
 export PANEL_FONT_FAMILY='DejaDroid Sans'
 export PANEL_FONT_SIZE=11
 # export PANEL_ICONS_FONT_FAMILY='DejaVu Sans'

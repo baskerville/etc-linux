@@ -184,7 +184,7 @@ super + {XF86LaunchA,shift + @XF86LaunchA}
     scrot {-e,-s -e} 'image_viewer $f'
 
 super + XF86KbdBrightness{Down,Up}
-    {launchpanel,killpanel}
+    {panel,pkill -x panel}
 
 {shift,super} + XF86Eject
     {wodim -eject,dpms_standby}
