@@ -29,6 +29,9 @@ super + b
 super + {s,f,x}
     bspc window -t {floating,fullscreen,locked}
 
+super + shift + s
+    bspc control --float-upcoming
+
 super + z
     bspc control --toggle-visibility
 
