@@ -5,6 +5,7 @@ shopt -s globstar
 
 complete -cf sudo
 complete -cf man
+complete -cf fork
 complete -abck i
 complete -d cd
 complete -c bed
