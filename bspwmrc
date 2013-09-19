@@ -45,5 +45,10 @@ if [ -e "$BSPWM_HISTORY" ] ; then
     rm "$BSPWM_HISTORY"
 fi
 
-updatethm
+if updatethm ; then
+    reloadthm
+else
+    bspwm_colors
+fi
+
 compton -b

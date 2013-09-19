@@ -47,6 +47,7 @@ export SXHKD_SHELL=/bin/dash
 export JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
 export DIANA_DOWNLOAD_DIR=$XDG_TMP_DIR
 export WALLPAPER="$HOME/.wallpaper"
+export EXTERNAL_CONDITIONS=/tmp/conditions
 
 export PANEL_HEIGHT=24
 export PANEL_FIFO=/tmp/panel-fifo
