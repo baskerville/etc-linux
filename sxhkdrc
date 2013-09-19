@@ -29,8 +29,8 @@ super + b
 super + {s,f,x}
     bspc window -t {floating,fullscreen,locked}
 
-super + shift + s
-    bspc rule -a \* --floating --one-shot
+super + shift + {s,x}
+    bspc rule -a \* {--floating,--locked} --one-shot
 
 super + z
     bspc control --toggle-visibility

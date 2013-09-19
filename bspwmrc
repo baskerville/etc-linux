@@ -49,6 +49,8 @@ if updatethm ; then
     reloadthm
 else
     bspwm_colors
+    reloadwallpaper
+    panel &
 fi
 
 compton -b
