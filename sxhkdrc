@@ -142,7 +142,7 @@ super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}_config
 
 super + {_,shift + }g
-    toggle{panel,thm}
+    {togglepanel,togglethm; reloadthm}
 
 {_,shift + ,super + }XF86MonBrightness{Down,Up}
     bright {-1,-10,min,+1,+10,max}

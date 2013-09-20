@@ -37,6 +37,10 @@ man() {
     /usr/bin/man "$@"
 }
 
+dehdr() {
+    CFLAGS="-Werror -Wfatal-errors" deheader "$@" | sed -n 's/.*: *remove *\(.*\) *from *\(.*\)/\2: \1/p'
+}
+
 dbs() {
     grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /'
 }
