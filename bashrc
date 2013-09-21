@@ -15,7 +15,8 @@ _prompt_command() {
     builtin history -a
     case "$TERM" in
         rxvt* | xterm*)
-            echo -en "\e]0;Terminal ${PWD//$HOME/~}$(git branch --no-color 2> /dev/null | grep '^\*' | sed 's/\* \(.*\)/ (\1)/')\a"
+            echo -en "\e]0;Terminal ${PWD//$HOME/~}$(git branch --no-color 2> /dev/null \
+                | grep '^\*' | sed 's/\* \(.*\)/ (\1)/')\a"
             ;;
     esac
     [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
