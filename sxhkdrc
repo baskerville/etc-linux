@@ -35,6 +35,9 @@ super + shift + {s,x}
 super + z
     bspc control --toggle-visibility
 
+super + alt + p
+    bspc config focus_follows_pointer {true,false}
+
 super + {grave,Tab}
     bspc {window,desktop} -f last
 
