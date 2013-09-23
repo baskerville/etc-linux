@@ -4,19 +4,19 @@ bspc desktop ^1 -n I
 bspc monitor -a II III IV V VI VII VIII IX X
 bspc config -m ^1 top_padding $PANEL_HEIGHT
 
-# bspc monitor Monitor01 -n X
-# bspc desktop Desktop01 -n Y
-# bspc monitor -A Alpha 1920x720+0+0
-# bspc monitor -A Beta 1560x360+0+720
-# bspc monitor -A Gamma 360x360+1560+720
-# bspc desktop Desktop02 -n One
-# bspc monitor Alpha -a Two Three
-# bspc desktop Desktop03 -n Four
-# bspc monitor Beta -a Five Six Seven Eight
-# bspc desktop Desktop04 -n Nine
-# bspc monitor Gamma -a Ten
-# bspc config -m Alpha top_padding 24
-# bspc monitor -f Alpha
+# bspc monitor ^1 -n Y
+# bspc monitor -A ALPHA 1920x720+0+0
+# bspc monitor -A BETA 1560x360+0+720
+# bspc monitor -A GAMMA 360x360+1560+720
+# bspc desktop ^1 -n Z
+# bspc desktop ^2 -n I
+# bspc desktop ^3 -n 1
+# bspc desktop ^4 -n A
+# bspc monitor ALPHA -a II III IV V
+# bspc monitor BETA -a 2 3 4 5 6
+# bspc monitor GAMMA -a B C D
+# bspc config -m ALPHA top_padding $PANEL_HEIGHT
+# bspc monitor -f ALPHA
 
 bspc rule -a Gimp -d ^8 --follow --floating
 bspc rule -a Inkscape -d ^7 --follow --floating
@@ -31,7 +31,6 @@ bspc config borderless_monocle     true
 bspc config gapless_monocle        true
 bspc config apply_floating_atom    true
 bspc config history_aware_focus    true
-bspc config focus_follows_pointer  false
 
 if [ -e "$BSPWM_TREE" ] ; then
     bspc restore -T "$BSPWM_TREE"
@@ -48,7 +47,7 @@ if updatethm ; then
 else
     bspwm_colors
     reloadwallpaper
-    panel &
+    reloadpanel
 fi
 
 compton -b

@@ -65,8 +65,8 @@ super + {comma,period}
 super + {c,shift + c}
     bspc window -f {next,prev}
 
-super + bracket{left,right}
-    bspc desktop -f {prev,next}
+super + {_,alt + }bracket{left,right}
+    bspc {desktop,monitor} -f {prev,next}
 
 super + ctrl + paren{left,right}
     bspc desktop -f {prev,next}.urgent
@@ -142,7 +142,7 @@ super + {semicolon,shift + semicolon}
     glean_{primary,clipboard}
 
 super + ctrl + {c,shift + c}
-    focus_or_run {bspwm,sxhkd}_config
+    focus_or_run {bspwm,sxhkd}rc
 
 super + {_,shift + }g
     {togglepanel,togglethm; reloadthm}
