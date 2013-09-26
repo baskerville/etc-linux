@@ -32,6 +32,9 @@ super + {s,f,x}
 super + shift + {s,x}
     bspc rule -a \* {--floating,--locked} --one-shot
 
+super + alt + {1-9,0}
+    bspc rule -a \* -d ^{1-9,10} --one-shot
+
 super + z
     bspc control --toggle-visibility
 

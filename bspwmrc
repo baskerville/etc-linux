@@ -10,11 +10,11 @@ bspc config -m ^1 top_padding $PANEL_HEIGHT
 # bspc monitor -A GAMMA 360x360+1560+720
 # bspc desktop ^1 -n Z
 # bspc desktop ^2 -n I
-# bspc desktop ^3 -n 1
-# bspc desktop ^4 -n A
-# bspc monitor ALPHA -a II III IV V
-# bspc monitor BETA -a 2 3 4 5 6
-# bspc monitor GAMMA -a B C D
+# bspc desktop ^3 -n V
+# bspc desktop ^4 -n VIII
+# bspc monitor ALPHA -a II III IV
+# bspc monitor BETA -a VI VII
+# bspc monitor GAMMA -a IX X
 # bspc config -m ALPHA top_padding $PANEL_HEIGHT
 # bspc monitor -f ALPHA
 

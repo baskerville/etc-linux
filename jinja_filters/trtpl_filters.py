@@ -6,6 +6,11 @@ custom_filters = {}
 def lch_to_hex(lch_color):
     return lch_color.convert_to('rgb').get_rgb_hex().upper()
 
+def hex_to_lch(hex_color):
+    rgb_color = RGBColor()
+    rgb_color.set_from_rgb_hex(hex_color)
+    return rgb_color.convert_to('lchab')
+
 def raw_hex(hex_color):
     return hex_color[1:]
 
@@ -43,18 +48,24 @@ def tune_lightness(hex_color, value):
     return alter_lch(hex_color, value)
 
 def set_lightness(hex_color, value):
+    if isinstance(value, str):
+        value = hex_to_lch(value).get_value_tuple()[0]
     return alter_lch(hex_color, value, relative=False)
 
 def tune_chroma(hex_color, value):
     return alter_lch(hex_color, value, component='C')
 
 def set_chroma(hex_color, value):
+    if isinstance(value, str):
+        value = hex_to_lch(value).get_value_tuple()[1]
     return alter_lch(hex_color, value, component='C', relative=False)
 
 def tune_hue(hex_color, value):
     return alter_lch(hex_color, value, component='H')
 
 def set_hue(hex_color, value):
+    if isinstance(value, str):
+        value = hex_to_lch(value).get_value_tuple()[2]
     return alter_lch(hex_color, value, component='H', relative=False)
 
 custom_filters['slashedhex'] = slashed_hex
