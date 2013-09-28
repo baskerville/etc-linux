@@ -1,10 +1,13 @@
-ESC vo_fullscreen 0
+q quit
+Q quit_watch_later
 
-F1 switch_ratio 1.3333
-F2 switch_ratio 1.6
-F3 switch_ratio 1.7777
-F4 switch_ratio 1.85
-F5 switch_ratio 0
+ESC cycle fullscreen
+
+F1 set aspect 1.3333
+F2 set aspect 1.6
+F3 set aspect 1.7777
+F4 set aspect 1.85
+F5 set aspect 0
 
 0 seek 00 1
 1 seek 10 1
@@ -17,8 +20,12 @@ F5 switch_ratio 0
 8 seek 80 1
 9 seek 90 1
 
-, seek -0.05 0 1
-; get_time_pos
+. frame_step
+, frame_back_step
 
-> volume 1
-< volume -1
+> add volume 1
+< add volume -1
+] playlist_next
+[ playlist_prev
+
+# vim:set ft=conf:

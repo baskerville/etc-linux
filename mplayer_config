@@ -1,17 +1,9 @@
-vo=xv,x11
+vo=opengl,xv,x11
 ao=alsa
-use-filename-title=yes
-nojoystick=yes
 softvol=yes
 softvol-max=200
-font="sans-serif:style=Bold"
-# subfont-blur=0
-# subfont-outline=0
-# ffactor=10
-# font="DejaVu Sans:style=Bold"
-# heartbeat-cmd="xscreensaver-command -deactivate >&- 2>&- &"
-# subfont-osd-scale=2
-# subfont-text-scale=2
-# zoom=no
-# fs=no
+osd-font="sans-serif:style=Bold"
+keep-open=yes
+joystick=no
+
 # vim:set ft=conf:

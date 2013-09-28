@@ -146,6 +146,7 @@ nmap <leader>h gT
 nmap <leader>d :bdelete<cr>
 nmap <silent> <leader>D :call delete(expand('%'))<cr>
 vmap <leader>T :!titlecase<cr>
+vmap <leader>R :!sort<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>w :!web_browser =expand("<cword>")<cr><cr><cr>
