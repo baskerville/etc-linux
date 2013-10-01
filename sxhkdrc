@@ -6,6 +6,7 @@ super + alt + {shift + ,_}Escape
     {bspc quit 1,\
      bspc query -T > "$BSPWM_TREE"; \
         bspc query -H > "$BSPWM_HISTORY"; \
+        bspc query -S > "$BSPWM_STACK"; \
         bspc quit}
 
 super + q
@@ -26,6 +27,9 @@ super + {backslash,shift + backslash}
 super + b
     bspc desktop -B
 
+super + shift + b
+    bspc config -d focused border_width {0,2}
+
 super + {s,f,x}
     bspc window -t {floating,fullscreen,locked}
 
@@ -42,7 +46,7 @@ super + alt + p
     bspc config focus_follows_pointer {true,false}
 
 super + {grave,Tab}
-    bspc {window,desktop} -f last
+    bspc {window,desktop} last -f
 
 super + {_,shift + }{h,j,k,l}
     bspc window -{f,s} {left,down,up,right}

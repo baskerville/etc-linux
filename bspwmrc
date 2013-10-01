@@ -2,7 +2,7 @@
 
 bspc desktop ^1 -n I
 bspc monitor -a II III IV V VI VII VIII IX X
-bspc config -m ^1 top_padding $PANEL_HEIGHT
+bspc config top_padding $PANEL_HEIGHT
 
 # bspc monitor ^1 -n Y
 # bspc monitor -A ALPHA 1920x720+0+0
@@ -33,13 +33,8 @@ bspc config apply_floating_atom    true
 bspc config history_aware_focus    true
 
 if [ -e "$BSPWM_TREE" ] ; then
-    bspc restore -T "$BSPWM_TREE"
-    rm "$BSPWM_TREE"
-fi
-
-if [ -e "$BSPWM_HISTORY" ] ; then
-    bspc restore -H "$BSPWM_HISTORY"
-    rm "$BSPWM_HISTORY"
+    bspc restore -T "$BSPWM_TREE" -H "$BSPWM_HISTORY" -S "$BSPWM_STACK"
+    rm "$BSPWM_TREE" "$BSPWM_HISTORY" "$BSPWM_STACK"
 fi
 
 if updatethm ; then
