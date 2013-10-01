@@ -1,19 +1,15 @@
 #! /bin/dash
 
-bspc desktop ^1 -n I
-bspc monitor -a II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V VI VII VIII IX X
 bspc config top_padding $PANEL_HEIGHT
 
 # bspc monitor -A ALPHA 1920x720+0+0
 # bspc monitor -A BETA 1560x360+0+720
 # bspc monitor -A GAMMA 360x360+1560+720
 # bspc monitor -R MONITOR01
-# bspc desktop ^1 -n I
-# bspc desktop ^2 -n V
-# bspc desktop ^3 -n VIII
-# bspc monitor ALPHA -a II III IV
-# bspc monitor BETA -a VI VII
-# bspc monitor GAMMA -a IX X
+# bspc monitor ALPHA -d I II III IV
+# bspc monitor BETA -d V VI VII
+# bspc monitor GAMMA -d VIII IX X
 # bspc config -m ALPHA top_padding $PANEL_HEIGHT
 
 bspc rule -a Gimp -d ^8 --follow --floating

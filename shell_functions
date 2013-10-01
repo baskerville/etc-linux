@@ -71,8 +71,8 @@ msa() {
 
 G() {
     local pat=$1
-    local dir=$2
-    shift 2
+    local dir=${2:-.}
+    [ $# -gt 1 ] && shift 2 || shift
     grep "$@" -r --color=auto "$pat" "$dir"
 }
 
@@ -84,16 +84,16 @@ g() {
 }
 
 F() {
-    local dir=$1
-    local pat=$2
-    shift 2
+    local pat=$1
+    local dir=${2:-.}
+    [ $# -gt 1 ] && shift 2 || shift
     find -L "$dir" "$@" -iregex ".*${pat}.*" -printf '%p\0' | xargs -r0 ls --color=auto -1d
 }
 
 f() {
     local pat=$1
     shift
-    F . "$pat" -maxdepth 1 "$@"
+    F "$pat" . -maxdepth 1 "$@"
 }
 
 ox() {
