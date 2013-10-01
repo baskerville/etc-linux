@@ -30,11 +30,11 @@ super + b
 super + shift + b
     bspc config -d focused border_width {0,2}
 
-super + {s,f,x}
-    bspc window -t {floating,fullscreen,locked}
+super + {s,f,x,p}
+    bspc window -t {floating,fullscreen,locked,sticky}
 
-super + shift + {s,x}
-    bspc rule -a \* {--floating,--locked} --one-shot
+super + shift + {s,x,p}
+    bspc rule -a \* {--floating,--locked,--sticky} --one-shot
 
 super + alt + {1-9,0}
     bspc rule -a \* -d ^{1-9,10} --one-shot
