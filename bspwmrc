@@ -2,6 +2,8 @@
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 bspc config top_padding $PANEL_HEIGHT
+bspc tag -e α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ τ υ φ χ ψ ω
+bspc tag -d I -s κ λ π
 
 # bspc monitor -A ALPHA 1920x720+0+0
 # bspc monitor -A BETA 1560x360+0+720

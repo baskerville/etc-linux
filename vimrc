@@ -147,6 +147,7 @@ nmap <leader>d :bdelete<cr>
 nmap <silent> <leader>D :call delete(expand('%'))<cr>
 vmap <leader>T :!titlecase<cr>
 vmap <leader>R :!sort<cr>
+nmap <leader>H vip:!proto %:r.c<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>w :!web_browser =expand("<cword>")<cr><cr><cr>
@@ -162,6 +163,7 @@ nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
+nmap <silent> <leader>C :set cursorline!<cr>
 nmap <silent> <F1> :set number!<cr>
 nmap <silent> <F2> :set hlsearch!<cr>
 nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " fg<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#") . ">" <cr>
