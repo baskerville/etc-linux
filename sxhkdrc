@@ -25,19 +25,22 @@ super + {backslash,shift + backslash}
     bspc desktop -F {vertical,horizontal}
 
 super + b
-    bspc desktop -B
-
-super + shift + b
     bspc config -d focused border_width {0,2}
 
-super + {s,f,x,p}
+super + shift + b
+    bspc desktop -B
+
+super + {s,f,x,X}
     bspc window -t {floating,fullscreen,locked,sticky}
 
-super + shift + {s,x,p}
-    bspc rule -a \* {--floating,--locked,--sticky} --one-shot
+super + alt + {s,f,x,X}
+    bspc rule -a \* {--floating,--fullscreen,--locked,--sticky} --one-shot
 
 super + alt + {1-9,0}
     bspc rule -a \* -d ^{1-9,10} --one-shot
+
+super + alt + space
+    bspc rule -r \*
 
 super + z
     bspc control --toggle-visibility
@@ -54,6 +57,16 @@ super + {_,shift + }{h,j,k,l}
 super + {_,shift + }apostrophe
     bspc window -s last{_, -f last}
 
+super + {_,alt + }{o,i}
+    bspc control --record-history off; \
+    bspc {window,desktop} {older,newer} -f; \
+    bspc control --record-history on
+
+super + {_,alt + }{p,n}
+    bspc control --record-history off; \
+    bspc {window,desktop} {older,newer}.local -f; \
+    bspc control --record-history on
+
 super + {m,Return}
     bspc window -{f,s} biggest
 
@@ -63,17 +76,17 @@ super + {d,shift + d}
 super + {_,shift + }{a,v,e}
     bspc window -f {next,prev}.{floating,unlike,like}
 
-super + {p,n}
-    bspc window -f {next,prev}.urgent
-
 super + {comma,period}
     bspc desktop -C {backward,forward}
 
 super + {c,shift + c}
     bspc window -f {next,prev}
 
-super + {_,alt + }bracket{left,right}
-    bspc {desktop,monitor} -f {prev,next}
+super + bracket{left,right}
+    bspc desktop -f {prev,next}
+
+# super + {_,alt + }bracket{left,right}
+#     bspc {desktop,monitor} -f {prev,next}
 
 super + ctrl + paren{left,right}
     bspc desktop -f {prev,next}.urgent
@@ -169,7 +182,7 @@ XF86AudioMute
 {_,shift + }XF86Audio{Lower,Raise}Volume
     volume {_,strong_}{lower,raise}
 
-super + alt + {0-9}
+super + alt + control + {0-9}
     mpc -q seek {0-9}0%
 
 XF86Audio{Prev,Next}
