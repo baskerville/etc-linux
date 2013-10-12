@@ -30,11 +30,11 @@ super + b
 super + shift + b
     bspc desktop -B
 
-super + {s,f,x,X}
-    bspc window -t {floating,fullscreen,locked,sticky}
+super + {s,f,x,X,m}
+    bspc window -t {floating,fullscreen,locked,sticky,private}
 
-super + alt + {s,f,x,X}
-    bspc rule -a \* {--floating,--fullscreen,--locked,--sticky} --one-shot
+super + alt + {s,f,x,X,m}
+    bspc rule -a \* {--floating,--fullscreen,--locked,--sticky,--private} --one-shot
 
 super + alt + {1-9,0}
     bspc rule -a \* -d ^{1-9,10} --one-shot
@@ -70,7 +70,7 @@ super + {_,alt + }{p,n}
     bspc {window,desktop} {older,newer}.local -f; \
     bspc control --record-history on
 
-super + {m,Return}
+super + {_,shift + }Return
     bspc window -{f,s} biggest
 
 super + {d,shift + d}
