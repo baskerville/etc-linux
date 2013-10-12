@@ -51,6 +51,9 @@ super + alt + p
 super + {grave,Tab}
     bspc {window,desktop} last -f
 
+super + {semicolon,shift + semicolon}
+    bspc {window,desktop} -f last.local
+
 super + {_,shift + }{h,j,k,l}
     bspc window -{f,s} {left,down,up,right}
 
@@ -163,9 +166,6 @@ super + space
 
 super + ctrl + {comma,period}
     focus_or_run {browser,mutt}
-
-super + {semicolon,shift + semicolon}
-    glean_{primary,clipboard}
 
 super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}rc

@@ -92,6 +92,20 @@ hi def link markdownCodeBlock Comment
 hi def link rubySharpBang Comment
 
 if has("autocmd")
+    autocmd FileType mail silent! call CleanMuttHeader()
+    autocmd FileType mail setlocal completefunc=CompleteMuttAliases
+    autocmd FileType mail setlocal commentstring=>%s
+    autocmd FileType xdefaults setlocal commentstring=!%s
+    autocmd FileType sxhkdrc setlocal commentstring=#%s
+    autocmd FileType lilypond setlocal commentstring=%%s
+    autocmd FileType slrnrc setlocal commentstring=%%s
+    autocmd FileType slang setlocal commentstring=%%s
+    autocmd FileType html,xhtml,htmljinja setlocal shiftwidth=2 softtabstop=2
+
+    autocmd FileType perl setlocal keywordprg=perldoc
+    autocmd FileType ruby setlocal keywordprg=ri
+    autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
+
     " autocmd BufRead,BufEnter *.asd set filetype=lisp
     " autocmd BufRead,BufEnter *.as set filetype=actionscript
     " autocmd BufRead,BufEnter *.mxml set filetype=mxml
@@ -104,21 +118,9 @@ if has("autocmd")
     autocmd BufRead,BufEnter *.xinitrc set filetype=sh
     autocmd BufRead,BufEnter *.j2 set filetype=htmljinja
     autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
-
-    autocmd FileType mail silent! call CleanMuttHeader()
-    autocmd FileType mail setlocal completefunc=CompleteMuttAliases
-    autocmd FileType mail setlocal commentstring=>%s
     autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
-    autocmd FileType xdefaults setlocal commentstring=!%s
-    autocmd FileType sxhkdrc setlocal commentstring=#%s
-    autocmd FileType lilypond setlocal commentstring=%%s
-    autocmd FileType slrnrc setlocal commentstring=%%s
-    autocmd FileType slang setlocal commentstring=%%s
-    autocmd FileType html,xhtml,htmljinja setlocal shiftwidth=2 softtabstop=2
 
-    autocmd FileType perl setlocal keywordprg=perldoc
-    autocmd FileType ruby setlocal keywordprg=ri
-    autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
+    autocmd BufReadPost * exe "normal! '\""
 
     if exists("+omnifunc")
         autocmd Filetype *
