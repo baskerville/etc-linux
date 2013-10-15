@@ -123,7 +123,7 @@ super + alt + control + {h,j,k,l} ; {0-9}
 
 super + alt + {equal,minus}
     wg=$(bspc config -d focused window_gap); \
-    bspc config -d focused window_gap $((wg {+,-} 3))
+    bspc config -d focused window_gap $((wg {+,- (wg >= 3) *} 3))
 
 super + ctrl + {1-9}
     bspc window -r 0.{1-9}
