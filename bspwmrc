@@ -12,8 +12,6 @@ bspc config top_padding $PANEL_HEIGHT
 # bspc monitor GAMMA -d VIII IX X
 # bspc config -m ALPHA top_padding $PANEL_HEIGHT
 
-bspc tag -e α β γ δ ε ζ η θ ι κ
-
 bspc rule -a Gimp -d ^8 --follow --floating
 bspc rule -a Inkscape -d ^7 --follow --floating
 bspc rule -a fontforge -d ^6 --follow --floating

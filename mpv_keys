@@ -28,4 +28,11 @@ F5 set aspect 0
 ] playlist_next
 [ playlist_prev
 
+MENU cycle osd
+PLAYPAUSE cycle pause
+NEXT seek 10
+PREV seek -10
+VOLUME_UP add volume 1
+VOLUME_DOWN add volume -1
+
 # vim:set ft=conf:
