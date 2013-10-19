@@ -1,7 +1,8 @@
-q quit
-Q quit_watch_later
+q quit_watch_later
+Q quit
 
 ESC cycle fullscreen
+ENTER show_progress
 
 F1 set aspect 1.3333
 F2 set aspect 1.6
