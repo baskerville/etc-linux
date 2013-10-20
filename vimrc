@@ -34,6 +34,7 @@ set ignorecase
 set smartcase
 
 let g:xdefaults_no_if0 = 1
+let g:rainbow_ctermfgs = [44]
 " let g:main_ff = substitute(&ffs, ',.*', '', '')
 set statusline=
 set statusline+=%F%m%r%h%w
@@ -65,7 +66,8 @@ Bundle 'zeis/vim-kolor'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 " Bundle 'kchmck/vim-coffee-script'
 " Bundle 'vim-scripts/ck.vim'
-
+Bundle 'oblitum/rainbow'
+Bundle 'TagHighlight'
 Bundle 'baskerville/vim-sxhkdrc'
 Bundle 'baskerville/vim-quirks'
 
@@ -101,7 +103,7 @@ if has("autocmd")
     autocmd FileType slrnrc setlocal commentstring=%%s
     autocmd FileType slang setlocal commentstring=%%s
     autocmd FileType html,xhtml,htmljinja setlocal shiftwidth=2 softtabstop=2
-
+    " autocmd FileType c,cpp,objc,objcpp,perl,ruby call rainbow#load()
     autocmd FileType perl setlocal keywordprg=perldoc
     autocmd FileType ruby setlocal keywordprg=ri
     autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
