@@ -7,5 +7,6 @@ set guioptions-=b
 set guioptions-=l
 set guioptions-=L
 set guicursor=a:blinkon0
-set guifont=monospace\ 14px
+" set guifont=Source\ Code\ Pro\ 11
+set guifont=Fira\ Mono\ OT\ 11
 set keywordprg=kwprg_gvim

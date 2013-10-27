@@ -1,7 +1,7 @@
 " Vim Color File
 " Name:       raven.vim
 " Version:    0.1
-" Maintainer: baskerville@lavabit.com
+" Maintainer: baskerville@nihihill.com
 
 hi clear
 
@@ -15,122 +15,124 @@ let g:colors_name="raven"
 " preferred groups
 " (:h w18)
 "
-hi Normal          guifg={{foreground}} guibg={{background}}    gui=none
-hi Comment         guifg={{fg_comment}}    gui=none
+hi Normal           guifg={{foreground}} guibg={{background}}  gui=none
+hi Comment          guifg={{fg_comment}}  gui=none
 
-hi Constant        guifg={{yellow}}    gui=none
-hi String          guifg={{yellow}}    gui=none
-hi Character       guifg={{yellow}}    gui=none
-hi Number          guifg={{yellow}}    gui=none
-hi Boolean         guifg={{yellow}}    gui=none
-hi Float           guifg={{yellow}}    gui=none
+hi Constant        guifg={{yellow}}  gui=none
+hi String          guifg={{yellow}}  gui=none
+hi Character       guifg={{yellow}}  gui=none
+hi Number          guifg={{yellow|H(-15)}}  gui=none
+hi Boolean         guifg={{yellow}}  gui=none
+hi Float           guifg={{yellow|H(-15)}}  gui=none
 
-hi Identifier      guifg={{violet}}    gui=none
-hi Function        guifg={{violet}}    gui=none
+hi Identifier      guifg={{magenta}}  gui=none
+hi Function        guifg={{violet}}  gui=none
 
-hi Statement       guifg={{teal}}    gui=none
-hi Conditional     guifg={{teal}}    gui=none
-hi Repeat          guifg={{teal}}    gui=none
-hi Label           guifg={{teal}}    gui=none
-hi Operator        guifg={{teal}}    gui=none
-hi Keyword         guifg={{teal}}    gui=none
-hi Exception       guifg={{teal}}    gui=none
+hi Statement       guifg={{teal}}  gui=none
+hi Conditional     guifg={{teal}}  gui=none
+hi Repeat          guifg={{teal}}  gui=none
+hi Label           guifg={{teal}}  gui=none
+hi Operator        guifg={{cyan}}  gui=none
+hi Keyword         guifg={{teal}}  gui=none
+hi Exception       guifg={{teal}}  gui=none
 
-hi PreProc         guifg={{azure}}    gui=none
-hi Include         guifg={{azure}}    gui=none
-hi Define          guifg={{azure}}    gui=none
-hi Macro           guifg={{azure}}    gui=none
-hi PreCondit       guifg={{azure}}    gui=none
+hi PreProc         guifg={{azure}}  gui=none
+hi Include         guifg={{azure}}  gui=none
+hi Define          guifg={{azure}}  gui=none
+hi Macro           guifg={{azure}}  gui=none
+hi PreCondit       guifg={{azure}}  gui=none
 
-hi Type            guifg={{orange}}    gui=none
-hi StorageClass    guifg={{orange}}    gui=none
-hi Structure       guifg={{orange}}    gui=none
-hi Typedef         guifg={{orange}}    gui=none
+hi Type            guifg={{orange}}  gui=none
+hi StorageClass    guifg={{orange}}  gui=none
+hi Structure       guifg={{orange}}  gui=none
+hi Typedef         guifg={{orange}}  gui=none
 
-hi Special         guifg={{pink}}    gui=none
-hi SpecialChar     guifg={{pink}}    gui=none
-hi Tag             guifg={{pink}}    gui=none
-hi Delimiter       guifg={{pink}}    gui=none
-hi SpecialComment  guifg={{pink}}    gui=none
-hi Debug           guifg={{pink}}    gui=none
+hi Special         guifg={{pink}}  gui=none
+hi SpecialChar     guifg={{pink}}  gui=none
+hi Tag             guifg={{pink}}  gui=none
+hi Delimiter       guifg={{fg_comment}}  gui=none
+hi SpecialComment  guifg={{pink}}  gui=none
+hi Debug           guifg={{pink}}  gui=none
 
-hi Underlined      guifg=fg    gui=none
-hi Ignore          guifg=bg    gui=none
-hi Error           guifg=bg  guibg={{pink}}    gui=none
-hi Todo            guifg={{green}}  guibg=bg        gui=none
+hi Underlined      guifg=fg  gui=none
+hi Ignore          guifg=bg  gui=none
+hi Error           guifg=bg  guibg={{pink}}  gui=none
+hi Todo            guifg={{green}}  guibg=bg      gui=none
 
 "
 " minor groups
 "
-hi StatusLine      guifg=fg       guibg={{bg_bump}}    gui=none
-hi StatusLineNC    guifg={{fg_comment}} guibg={{bg_bump}}    gui=none
+hi StatusLine       guifg={{fg_highlight}}   guibg={{bg_status}}  gui=none
+hi StatusLineNC     guifg=fg                 guibg={{bg_jump}}  gui=none
 
-hi TabLine         guifg=fg     guibg={{bg_bump}}    gui=none
-hi TabLineSel      guifg={{cyan}}   guibg={{bg_bump}}    gui=none
-hi TabLineFill     guifg=fg     guibg={{bg_bump}}    gui=none
+hi TabLine          guifg=fg                guibg={{bg_jump}}  gui=none
+hi TabLineSel       guifg={{fg_highlight}}  guibg={{bg_jump}}  gui=none
+hi TabLineFill      guibg={{bg_jump}}  gui=none
 
-hi Pmenu           guifg=fg    guibg={{bg_bump}}    gui=none
-hi PmenuSel        guifg=bg    guibg={{spring}}    gui=none
-hi PmenuSbar       guifg=bg    guibg={{spring}}    gui=none
-hi WildMenu        guifg=bg    guibg={{spring}}        gui=none
+hi Pmenu           guifg={{fg_peak}}       guibg={{fg_comment}}  gui=none
+hi PmenuSel        guifg=bg       guibg=fg  gui=none
+hi PmenuSbar       guibg={{fg_comment}}  gui=none
+hi PmenuThumb      guibg=fg  gui=none
+hi WildMenu        guifg=bg       guibg=fg      gui=none
 
-hi Visual          guifg=bg   guibg={{violet}}    gui=none
-hi VisualNOS       guifg=bg   guibg={{magenta}}    gui=none
-hi VertSplit       guifg=bg  guibg={{bg_bump}}    gui=none
-hi LineNr          guifg={{fg_comment}}   guibg={{bg_bump}}    gui=none
+hi Visual           guifg=bg      guibg={{violet}}  gui=none
+hi VisualNOS        guifg=bg      guibg={{magenta}}  gui=none
+hi VertSplit        guifg={{bg_jump}}      guibg={{bg_jump}}  gui=none
+hi LineNr          guifg={{fg_comment}}   guibg={{bg_bump}}  gui=none
+hi CursorLineNr    guifg=fg                 guibg={{bg_bump}}  gui=none
 
-hi Title           guifg={{azure}}    gui=none
-hi SpecialKey      guifg={{green}}    gui=none
-hi Conceal         guifg={{green}}       guibg=bg    gui=none
-hi NonText         guifg={{fg_comment}}    gui=none
-hi MatchParen      guifg=bg       guibg={{pink}}    gui=none
-hi Directory       guifg={{violet}}    gui=none
+hi Title           guifg={{azure}}  gui=bold
+hi SpecialKey      guifg={{green}}  gui=none
+hi Conceal         guifg={{green}}       guibg=bg  gui=none
+hi NonText         guifg={{fg_comment}}  gui=none
+hi MatchParen      guifg=bg       guibg={{pink}}  gui=none
+hi Directory       guifg={{violet}}  gui=none
 
-hi ErrorMsg        guifg={{red}}          guibg=bg    gui=none
-hi WarningMsg      guifg={{orange}}   guibg=bg    gui=none
-hi MoreMsg         guifg={{teal}}    guibg=bg    gui=none
-hi ModeMsg         guifg={{pink}}      guibg=bg    gui=none
+hi ErrorMsg        guifg={{red}}      guibg=bg  gui=none
+hi WarningMsg      guifg={{orange}}   guibg=bg  gui=none
+hi MoreMsg         guifg={{teal}}     guibg=bg  gui=none
+hi ModeMsg         guifg={{pink}}     guibg=bg  gui=none
 
-hi Search          guifg=bg  guibg={{yellow}}    gui=none
-hi IncSearch       guifg=bg  guibg={{pink}}    gui=none
-hi Question        guifg={{azure}}    gui=none
+hi Search          guifg=bg  guibg={{yellow}}  gui=none
+hi IncSearch         guifg=bg  guibg={{pink}}  gui=none
+hi Question        guifg={{azure}}  gui=none
 
-hi Folded          guifg={{fg_comment}}     guibg=bg    gui=none
-hi FoldColumn      guifg={{fg_comment}}     guibg={{bg_bump}}    gui=none
-hi SignColumn      guifg={{fg_comment}}     guibg={{bg_bump}}    gui=none
-hi ColorColumn     guifg={{fg_comment}}     guibg={{bg_bump}}    gui=none
+hi Folded          guifg={{fg_comment}}     guibg={{bg_dip}}  gui=none
+hi FoldColumn      guifg={{fg_comment}}     guibg={{bg_dip}}  gui=none
+hi SignColumn      guifg={{fg_comment}}     guibg={{bg_dip}}  gui=none
+hi ColorColumn     guifg={{fg_comment}}     guibg={{bg_dip}}  gui=none
 
-hi CursorColumn    guibg={{bg_bump}}    gui=none
-hi CursorLine      guibg={{bg_bump}}    gui=none
+hi CursorColumn     guibg={{bg_bump}}  gui=none
+hi CursorLine       guibg={{bg_bump}}  gui=none
 
-hi vimFold         guifg={{fg_comment}}    gui=none
-hi vimCommentTitle guifg=fg    gui=none
-hi helpHyperTextJump guifg={{azure}}    gui=none
+hi vimFold         guifg={{fg_comment}}  gui=none
+hi vimCommentTitle guifg=fg  gui=none
+hi helpHyperTextJump guifg={{azure}}  gui=none
 
-hi htmlTag         guifg={{violet}}    gui=none
-hi htmlEndTag      guifg={{violet}}    gui=none
-hi htmlTagName     guifg={{pink}}    gui=none
-hi htmlString      guifg={{yellow}}    gui=none
+hi htmlTag         guifg={{violet}}  gui=none
+hi htmlEndTag      guifg={{violet}}  gui=none
+hi htmlTagName     guifg={{pink}}  gui=none
+hi htmlString      guifg={{yellow}}  gui=none
 
-hi diffFile        guifg={{fg_comment}}    gui=none
-hi diffLine        guifg={{fg_comment}}    gui=none
-hi diffAdded       guifg={{green}}    gui=none
-hi diffRemoved     guifg={{pink}}    gui=none
-hi diffChanged     guifg={{orange}}    gui=none
+hi diffFile        guifg={{fg_comment}}  gui=none
+hi diffLine        guifg={{fg_comment}}  gui=none
+hi diffAdded       guifg={{green}}  gui=none
+hi diffRemoved     guifg={{pink}}  gui=none
+hi diffChanged     guifg={{orange}}  gui=none
 
-hi diffAdd         guifg=bg    guibg={{green}}    gui=none
-hi diffDelete      guifg=bg    guibg={{red}}    gui=none
-hi diffChange      guifg=bg    guibg={{violet}}    gui=none
-hi diffText        guifg=bg    guibg={{yellow}}    gui=none
-hi diffOldLine     guifg=bg    guibg={{fg_comment}}    gui=none
+hi diffAdd             guifg=bg    guibg={{green}}  gui=none
+hi diffDelete          guifg=bg    guibg={{red}}  gui=none
+hi diffChange          guifg=bg    guibg={{violet}}  gui=none
+hi diffText            guifg=bg    guibg={{yellow}}  gui=none
+hi diffOldLine         guifg=bg    guibg={{fg_comment}}  gui=none
 
-hi SpellBad        guifg={{red}}        guibg=bg    gui=none
-hi SpellCap        guifg={{pink}}       guibg=bg    gui=none
-hi SpellRare       guifg={{violet}}     guibg=bg    gui=none
-hi SpellLocal      guifg={{orange}}     guibg=bg    gui=none
+hi SpellBad         guifg={{red}}        guibg=bg  gui=underline
+hi SpellCap         guifg={{pink}}       guibg=bg  gui=underline
+hi SpellRare        guifg={{violet}}     guibg=bg  gui=underline
+hi SpellLocal       guifg={{orange}}     guibg=bg  gui=underline
 
-hi mkdCode         guifg={{fg_comment}}    gui=none
-hi mkdURL          guifg={{azure}}    gui=none
-hi mkdLink         guifg={{magenta}}    gui=none
+hi mkdCode         guifg={{fg_comment}}  gui=none
+hi mkdURL          guifg={{azure}}  gui=none
+hi mkdLink         guifg={{magenta}}  gui=none
 
 " vim: set ft=vim:

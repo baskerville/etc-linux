@@ -19,8 +19,10 @@ articlelist-format        " %4i  %f %?T?|%-17T|  ?%t "
 color background default default
 color listnormal default default
 color listnormal_unread default default
-color listfocus cyan default bold reverse
-color listfocus_unread cyan default bold reverse
+# color listfocus cyan default bold reverse
+color listfocus default default reverse
+# color listfocus_unread cyan default bold reverse
+color listfocus_unread default default reverse
 color info white black
 color article default default
 

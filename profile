@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=gvim
 export PAGER=less
 export BROWSER=chromium
 export MANWIDTH=80
@@ -29,6 +29,7 @@ export GOPATH="$HOME/.go"
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export NNTPSERVER=localhost
 export _Z_NO_RESOLVE_SYMLINKS=1
+export SLRNPULL_ROOT="$HOME/.usenet"
 
 export SHELL_CONFIG="$HOME/.bashrc"
 export SHELL_PROFILE="$HOME/.bash_profile"

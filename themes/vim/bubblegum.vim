@@ -2,8 +2,6 @@
 " Name:       bubblegum.vim
 " Version:    0.1
 " Maintainer: baskerville <nihilhill *at* gmail *dot* com>
-"
-" Based on xoria256.
 
 set background=dark
 hi clear
@@ -18,7 +16,7 @@ let g:colors_name="bubblegum"
 " preferred groups
 " (see `:h w18`)
 "
-hi Normal          ctermfg=249    ctermbg=236    cterm=none    guifg=#B2B2B2    guibg=#303030    gui=none
+hi Normal          ctermfg=249    ctermbg=235    cterm=none    guifg=#B2B2B2    guibg=#303030    gui=none
 hi Comment         ctermfg=244    guifg=#808080
 
 " yellow
@@ -139,8 +137,3 @@ hi SpellLocal      ctermfg=180    ctermbg=bg      cterm=underline    guifg=#D7AF
 hi mkdCode         ctermfg=244    guifg=#808080
 hi mkdURL          ctermfg=111    guifg=#87AFFF
 hi mkdLink         ctermfg=181    guifg=#D7AFAF
-
-hi def link mailSubject Title
-hi def link mailSignature Comment
-hi def link mailQuoted2 mailQuoted1
-hi def link perlSharpBang Comment

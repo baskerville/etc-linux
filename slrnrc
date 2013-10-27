@@ -16,7 +16,13 @@ set art_status_line "%p %s %-20g -- %L (%P)"
 set overview_date_format "%Y/%m/%d %H:%M"
 header_display_format 0 "%F%B  %21r  %T%s %-26g %D  %-5c"
 
-server "localhost" ".newsgroups"
+% Spool configuration
+% server "localhost" ".newsgroups"
+
+set use_slrnpull 1
+set spool_inn_root   ".slrnpull"
+set spool_root       ".slrnpull/news"
+set spool_nov_root   ".slrnpull/news"
 
 % Set your favourite editor.  Use %s for the file name and %d for the line
 % where the cursor should be placed (usually at the beginning of the body).

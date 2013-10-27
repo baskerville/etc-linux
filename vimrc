@@ -34,8 +34,11 @@ set ignorecase
 set smartcase
 
 let g:xdefaults_no_if0 = 1
-let g:rainbow_ctermfgs = [44]
+" let g:easytags_include_members = 0
+" let g:easytags_dynamic_files = 2
+" let g:easytags_events = ['BufEnter', 'BufWritePost']
 " let g:main_ff = substitute(&ffs, ',.*', '', '')
+
 set statusline=
 set statusline+=%F%m%r%h%w
 set statusline+=\ %=%Y
@@ -55,19 +58,15 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
-Bundle 'tobinvanpelt/vim-coffee-script'
-Bundle 'msanders/snipmate.vim'
 Bundle 'godlygeek/tabular'
+Bundle 'msanders/snipmate.vim'
+Bundle 'tobinvanpelt/vim-coffee-script'
+Bundle 'justinmk/vim-syntax-extra'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
-Bundle 'vim-scripts/oz.vim'
+Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'jnurmine/Zenburn'
 Bundle 'zeis/vim-kolor'
-Bundle 'nsf/gocode', {'rtp': 'vim/'}
-" Bundle 'kchmck/vim-coffee-script'
-" Bundle 'vim-scripts/ck.vim'
-Bundle 'oblitum/rainbow'
-Bundle 'TagHighlight'
 Bundle 'baskerville/vim-sxhkdrc'
 Bundle 'baskerville/vim-quirks'
 
@@ -103,7 +102,6 @@ if has("autocmd")
     autocmd FileType slrnrc setlocal commentstring=%%s
     autocmd FileType slang setlocal commentstring=%%s
     autocmd FileType html,xhtml,htmljinja setlocal shiftwidth=2 softtabstop=2
-    " autocmd FileType c,cpp,objc,objcpp,perl,ruby call rainbow#load()
     autocmd FileType perl setlocal keywordprg=perldoc
     autocmd FileType ruby setlocal keywordprg=ri
     autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>

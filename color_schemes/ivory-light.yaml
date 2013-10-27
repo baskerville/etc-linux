@@ -8,6 +8,7 @@ foreground:   [48,  7, 270]
 
 bg_dip:       [100, 7,  90]
 bg_bump:      [95,  7,  90]
+bg_status:    [87,  7,  90]
 bg_jump:      [78,  7,  90]
 
 fg_comment:   [68,  7, 270]
