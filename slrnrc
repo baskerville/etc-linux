@@ -20,14 +20,14 @@ header_display_format 0 "%F%B  %21r  %T%s %-26g %D  %-5c"
 % server "localhost" ".newsgroups"
 
 set use_slrnpull 1
-set spool_inn_root   ".slrnpull"
-set spool_root       ".slrnpull/news"
-set spool_nov_root   ".slrnpull/news"
+set spool_inn_root   ".usenet"
+set spool_root       ".usenet/news"
+set spool_nov_root   ".usenet/news"
 
 % Set your favourite editor.  Use %s for the file name and %d for the line
 % where the cursor should be placed (usually at the beginning of the body).
 %set editor_command "jed '%s' -g %d -tmp"
-set editor_command "editor -c %d '%s'"
+set editor_command "gvim -f -c %d '%s'"
 set abort_unmodified_edits 1
 
 %set non_Xbrowser "lynx '%s'"
@@ -296,7 +296,7 @@ setkey readline quoted_insert	 "^V"		% Quoted insert
 setkey readline complete	 "<Tab>"	% Complete filename
 setkey readline cycle		 " "		% Cycle among filenames
 
-interpret "hide_cursor.sl"
+% interpret "hide_cursor.sl"
 interpret "next_prev_threads.sl"
 interpret "hide_or_quit.sl"
 interpret "xface.sl"

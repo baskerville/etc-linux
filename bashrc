@@ -20,7 +20,7 @@ _prompt_command() {
             ;;
     esac
     [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
-    tput ed
+    # tput ed
 }
 
 export PS1='\[\e[1;35m\]▶\[\e[0m\] '

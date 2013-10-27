@@ -162,8 +162,8 @@ super + ctrl + {slash,shift + slash}
 super + space
     dmenu_launch
 
-super + ctrl + {comma,period}
-    focus_or_run {browser,mutt}
+super + ctrl + {comma,period,shift + period}
+    focus_or_run {browser,mutt,slrn}
 
 super + ctrl + {c,shift + c}
     focus_or_run {bspwm,sxhkd}rc
