@@ -48,7 +48,6 @@ set mail_check = 60
 set attribution = "%n:"
 
 set editor="gvim -f"
-# set editor = "cp %s %s.tmp; (urxvtc -name mail -e mutt -e 'set editor=editor' -H %s.tmp; rm %s.tmp) &"
 unset pipe_decode
 
 set pager_index_lines = 10
@@ -111,7 +110,6 @@ macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
 macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
 macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
 macro index,pager ga "<change-folder>=arch\n" "Go to Arch"
-macro index,pager gu "<change-folder>=urxvt\n" "Go to URxvt"
 macro index,pager gc "<change-folder>=commandes\n" "Go to Commandes"
 macro index,pager gp "<change-folder>=paypal\n" "Go to Paypal"
 macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
@@ -129,4 +127,4 @@ source ~/.mutt/theme
 folder-hook !=sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21n  %s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21t  %s %> %D  %4c"'
 
-mailboxes =inbox =lists =bspwm =baskerville =urxvt =commandes =paypal =fai =xd
+mailboxes =inbox =lists =bspwm =baskerville =commandes =paypal =fai =xd

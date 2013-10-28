@@ -149,7 +149,7 @@ RR() {
 }
 
 rcd() {
-    find $PWD/ -maxdepth 1 -mindepth 1 -type d -exec urxvtc -cd "{}" \;
+    find $PWD/ -maxdepth 1 -mindepth 1 -type d -exec fork termite -d "{}" \;
 }
 
 count() {

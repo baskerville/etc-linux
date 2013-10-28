@@ -278,7 +278,7 @@ function! GetCharName()
 endfunction
 
 function! TerminalAt(path)
-    let response = system("urxvtc -cd " . a:path)
+    let response = system("fork termite -d " . a:path)
     echo response
 endfunction
 

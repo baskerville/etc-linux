@@ -24,7 +24,6 @@ xset s off
 xsetroot -cursor_name left_ptr
 
 pgrep -x mpd > /dev/null || mpd
-urxvtd -q -o -f
 unclutter -noevents &
 sxhkd -n -r ~/.sxhkd-cmd.log &
 happy_fs &
