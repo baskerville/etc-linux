@@ -134,7 +134,6 @@ alias bcl='bc -ql $HOME/.bcrc'
 alias detox='detox -v'
 alias mp4box='MP4Box'
 alias camshot='shotdev /dev/video0'
-alias vpu='vp --video-unscaled'
 
 alias up='git commit -am Update'
 alias pu='git push'
