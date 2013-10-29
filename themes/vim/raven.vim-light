@@ -50,7 +50,7 @@ hi Typedef         guifg=#9D4900  gui=none
 hi Special         guifg=#B81B63  gui=none
 hi SpecialChar     guifg=#B81B63  gui=none
 hi Tag             guifg=#B81B63  gui=none
-hi Delimiter       guifg=#9FA6B2  gui=none
+hi Delimiter       guifg=#0067C9  gui=none
 hi SpecialComment  guifg=#B81B63  gui=none
 hi Debug           guifg=#B81B63  gui=none
 
