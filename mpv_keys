@@ -29,6 +29,10 @@ F5 set aspect 0
 < add volume -1
 ] playlist_next
 [ playlist_prev
+{ add chapter -1
+} add chapter 1
+( speed_mult 0.5
+) speed_mult 2.0
 
 MENU show_progress
 PLAYPAUSE cycle pause

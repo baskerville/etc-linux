@@ -24,11 +24,13 @@ export OWL_ABS_HOME="$HOME/src/abs"
 export OWL_CHANGELOG_DB="$XDG_DATA_HOME/changelog_db"
 
 export SDL_AUDIODRIVER=alsa
-export PYTHONIOENCODING='utf-8'
+export SDL_VIDEO_X11_DGAMOUSE=0
+
 export GOPATH="$HOME/.go"
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
-export NNTPSERVER=localhost
-export _Z_NO_RESOLVE_SYMLINKS=1
+export PYTHONIOENCODING='utf-8'
+
+export NNTPSERVER=pasdenom.info
 export SLRNPULL_ROOT="$HOME/.usenet"
 
 export SHELL_CONFIG="$HOME/.bashrc"
@@ -46,6 +48,7 @@ export BSPWM_TREE="$XDG_DATA_HOME/bspwm.tree"
 export BSPWM_HISTORY="$XDG_DATA_HOME/bspwm.history"
 export BSPWM_STACK="$XDG_DATA_HOME/bspwm.stack"
 export SXHKD_SHELL=/bin/dash
+
 export JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
 export DIANA_DOWNLOAD_DIR=$XDG_TMP_DIR
 export WALLPAPER="$HOME/.wallpaper"
