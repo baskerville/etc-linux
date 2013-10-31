@@ -2,11 +2,11 @@
 	name = Bastien Dejean
 	email = nihilhill@gmail.com
 [merge]
-	tool = gvimdiff
+	tool = vimdiff
 [mergetool]
 	prompt = false
 [diff]
-	tool = gvimdiff
+	tool = vimdiff
 [difftool]
 	prompt = false
 [push]
@@ -48,4 +48,4 @@
 	help = magenta bold
 	error = red bold
 [core]
-	editor = gvim -f
+	editor = vim

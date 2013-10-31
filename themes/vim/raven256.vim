@@ -25,14 +25,14 @@ hi Number          ctermfg=20
 hi Boolean         ctermfg=20
 hi Float           ctermfg=20
 
-hi Identifier      ctermfg=34
+hi Identifier      ctermfg=36
 hi Function        ctermfg=34
 
 hi Statement       ctermfg=26
 hi Conditional     ctermfg=26
 hi Repeat          ctermfg=26
 hi Label           ctermfg=26
-hi Operator        ctermfg=26
+hi Operator        ctermfg=28
 hi Keyword         ctermfg=26
 hi Exception       ctermfg=26
 
@@ -50,7 +50,7 @@ hi Typedef         ctermfg=18
 hi Special         ctermfg=38
 hi SpecialChar     ctermfg=38
 hi Tag             ctermfg=38
-hi Delimiter       ctermfg=38
+hi Delimiter       ctermfg=32
 hi SpecialComment  ctermfg=38
 hi Debug           ctermfg=38
 
@@ -135,12 +135,4 @@ hi mkdCode         ctermfg=44
 hi mkdURL          ctermfg=30
 hi mkdLink         ctermfg=36
 
-hi def link mailSubject Title
-hi def link mailSignature Comment
-hi def link mailQuoted2 mailQuoted1
-hi def link perlSharpBang Comment
-hi def link javaScriptNumber Number
-hi def link markdownCode Comment
-hi def link markdownCodeBlock Comment
-
-" vim: set ft=vim:
+" vim: set ft=vim

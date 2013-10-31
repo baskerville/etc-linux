@@ -1,4 +1,4 @@
-export EDITOR=gvim
+export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
 export MANWIDTH=80

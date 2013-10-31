@@ -135,4 +135,4 @@ hi mkdCode         guifg=#9FA6B2  gui=none
 hi mkdURL          guifg=#0073BA  gui=none
 hi mkdLink         guifg=#9D3595  gui=none
 
-" vim: set ft=vim:
+" vim: set ft=vim
