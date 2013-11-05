@@ -14,10 +14,10 @@ urgent_on_bell = true
 clickable_url = true
 
 # "system", "on" or "off"
-cursor_blink = on
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
-cursor_shape = underline
+cursor_shape = block
 
 # $BROWSER is used by default
 #browser =
