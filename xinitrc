@@ -23,9 +23,10 @@ xset s off
 # neutral pointer
 xsetroot -cursor_name left_ptr
 
-pgrep -x mpd > /dev/null || mpd
 unclutter -noevents &
-sxhkd -n -r ~/.sxhkd-cmd.log &
+pgrep -x mpd > /dev/null || mpd
+rulc -l > /dev/null || ruld &
+sxhkd -n &
 happy_fs &
 
 exec wm

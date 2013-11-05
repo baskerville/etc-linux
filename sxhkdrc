@@ -34,13 +34,13 @@ super + {s,f,x,X,m}
     bspc window -t {floating,fullscreen,locked,sticky,private}
 
 super + alt + {s,f,x,X,m}
-    bspc rule -a \* {--floating,--fullscreen,--locked,--sticky,--private} --one-shot
+    rulc -a true '{floating,fullscreen,locked,sticky,private}=on' 'duration=1'
 
 super + alt + {1-9,0}
-    bspc rule -a \* -d ^{1-9,10} --one-shot
+    rulc -a true 'desktop=^{1-9,10}' 'duration=1'
 
 super + alt + space
-    bspc rule -r \*
+    rulc -r true
 
 super + z
     bspc control --toggle-visibility
