@@ -1,11 +1,12 @@
 bg_dip_i:        40
 background_i:    41
-bg_bump_i:       42
-bg_jump_i:       43
-fg_comment_i:    44
-foreground_i:    45
-fg_highlight_i:  46
-fg_peak_i:       47
+bg_status_i:     42
+bg_bump_i:       43
+bg_jump_i:       44
+fg_comment_i:    45
+foreground_i:    46
+fg_highlight_i:  47
+fg_peak_i:       48
 
 red_i:           16
 darkred_i:       17
