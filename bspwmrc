@@ -22,7 +22,7 @@ bspc config apply_floating_atom    true
 bspc config history_aware_focus    true
 bspc config ignore_ewmh_focus      true
 
-bspc config rule_command "xwinfo -cints 0x%X | xargs -d '\n' rulc -t"
+bspc config rule_command "$XDG_BIN_DIR/rule_command"
 
 if [ -e "$BSPWM_TREE" ] ; then
     bspc restore -T "$BSPWM_TREE" -H "$BSPWM_HISTORY" -S "$BSPWM_STACK"

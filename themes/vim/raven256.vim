@@ -77,7 +77,7 @@ hi WildMenu        ctermfg=bg       ctermbg=fg    cterm=none
 
 hi Visual          cterm=none ctermfg=bg      ctermbg=34
 hi VisualNOS       cterm=none ctermfg=bg      ctermbg=36
-hi VertSplit       cterm=none ctermfg=44      ctermbg=44
+hi VertSplit       cterm=none ctermfg=42      ctermbg=42
 hi LineNr          ctermfg=45   ctermbg=43
 hi CursorLineNr    ctermfg=fg                 ctermbg=43
 
