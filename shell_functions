@@ -38,7 +38,9 @@ man() {
 }
 
 dehdr() {
-    CFLAGS="-Werror -Wfatal-errors" deheader "$@" | sed -n 's/.*: *remove *\(.*\) *from *\(.*\)/\2: \1/p'
+    for s in *.c ; do
+        CFLAGS="-Werror -Wfatal-errors" deheader "$@" -i "${s%.*}\.h" "$s" | sed -n 's/.*: *remove *\(.*\) *from *\(.*\)/\2: \1/p'
+    done
 }
 
 dbs() {
