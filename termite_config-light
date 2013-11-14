@@ -12,6 +12,7 @@ allow_bold = false
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
+geometry = 800x800+0+0
 
 # "system", "on" or "off"
 cursor_blink = off

@@ -4,6 +4,7 @@ Q quit
 ESC cycle fullscreen
 ENTER show_progress
 Ctrl+1 cycle video-unscaled
+Ctrl+d run "remove '${path}'"
 
 F1 set aspect 1.3333
 F2 set aspect 1.6
