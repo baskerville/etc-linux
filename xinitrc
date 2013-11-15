@@ -25,7 +25,6 @@ xsetroot -cursor_name left_ptr
 
 unclutter -noevents &
 pgrep -x mpd > /dev/null || mpd
-rulc -l > /dev/null || fork ruld
 sxhkd -n &
 happy_fs &
 
