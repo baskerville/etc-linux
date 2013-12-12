@@ -33,7 +33,7 @@ set sort_alias = alias
 set reverse_alias
 source $alias_file
 
-hdr_order From To Cc Subject
+hdr_order From To Cc Bcc Subject
 alternative_order text/plain text/enriched text/html
 
 ignore *
@@ -109,6 +109,7 @@ macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
 macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
 macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
+macro index,pager gk "<change-folder>=suckless\n" "Go to Suckless"
 macro index,pager ga "<change-folder>=arch\n" "Go to Arch"
 macro index,pager gc "<change-folder>=commandes\n" "Go to Commandes"
 macro index,pager gp "<change-folder>=paypal\n" "Go to Paypal"

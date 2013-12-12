@@ -22,7 +22,11 @@ bspc config apply_floating_atom    true
 bspc config history_aware_focus    true
 bspc config ignore_ewmh_focus      true
 
-bspc config rule_command "$XDG_BIN_DIR/rule_command"
+bspc rule -a Gimp desktop=^8 floating=on follow=on
+bspc rule -a Inkscape desktop=^7 floating=on follow=on
+bspc rule -a fontforge desktop=^6 floating=on follow=on
+bspc rule -a Gifview floating=on
+bspc rule -a Termite center=on
 
 if [ -e "$BSPWM_TREE" ] ; then
     bspc restore -T "$BSPWM_TREE" -H "$BSPWM_HISTORY" -S "$BSPWM_STACK"
@@ -37,5 +41,4 @@ else
     reloadpanel
 fi
 
-bspwm_rules
 compton -b

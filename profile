@@ -29,6 +29,7 @@ export SDL_VIDEO_X11_DGAMOUSE=0
 export GOPATH="$HOME/.go"
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 export PYTHONIOENCODING='utf-8'
+export CHROME_BIN=$(which chromium)
 
 export NNTPSERVER=pasdenom.info
 export SLRNPULL_ROOT="$HOME/.usenet"
