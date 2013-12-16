@@ -19,9 +19,9 @@ export XDG_TRASH_DIR="$HOME/.trash"
 export XDG_BIN_DIR="$HOME/.bin"
 export XDG_TMP_DIR="$HOME/tmp"
 
-export OWL_AUR_HOME="$HOME/src/aur"
-export OWL_ABS_HOME="$HOME/src/abs"
-export OWL_CHANGELOG_DB="$XDG_DATA_HOME/changelog_db"
+export OWLMAN_AUR_HOME="$HOME/src/aur"
+export OWLMAN_ABS_HOME="$HOME/src/abs"
+export OWLMAN_CHANGELOG_DB="$XDG_DATA_HOME/changelog_db"
 
 export SDL_AUDIODRIVER=alsa
 export SDL_VIDEO_X11_DGAMOUSE=0
