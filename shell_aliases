@@ -112,10 +112,10 @@ alias checkbashisms='checkbashisms -f'
 alias ms='mpc search any'
 alias ma='mpc add'
 
-alias primi='xclip -i'
-alias primo='xclip -o'
-alias clipi='xclip -sel clip -i'
-alias clipo='xclip -sel clip -o'
+alias primi='xcmenu -pi'
+alias primo='xcmenu -p'
+alias clipi='xcmenu -ci'
+alias clipo='xcmenu -c'
 
 alias mdur="mediainfo '--Inform=General;%Duration/String%'"
 alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"
@@ -151,7 +151,7 @@ alias pps2pdf='loimpress --nologo --convert-to pdf'
 alias subscriptions='grep ":" $HOME/.jnewsrc | awk -F : "{print $1}"'
 alias nu='pgrep -x fetchnews > /dev/null 2>&1 || sudo -u news fetchnews -vv'
 alias dfc='dfc -d -c never'
-alias dfcr='dfc -np rootfs'
+alias dfcr='dfc -nt ext4'
 alias dfcs='dfc -np /dev/sdc'
 
 alias t='date "+%H:%M"'

@@ -6,6 +6,8 @@ clear Control
 
 keycode 66 = Control_L
 keycode 37 = Multi_key Caps_Lock
+
+! keycode 36 = Return
 keycode 36 = Control_R
 keycode any = Return
 
