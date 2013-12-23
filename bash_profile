@@ -9,4 +9,4 @@ else
     . "$HOME/.bashrc"
 fi
 
-# vim: set ft=sh
+# vim: ft=sh
