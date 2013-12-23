@@ -28,4 +28,4 @@ color article default default
 
 highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
 
-# vim: set ft=conf:
+# vim: ft=conf

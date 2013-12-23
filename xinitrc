@@ -32,4 +32,4 @@ exec wm
 # exec bspwm
 # exec monsterwm
 
-# vim: set ft=conf:
+# vim: ft=conf

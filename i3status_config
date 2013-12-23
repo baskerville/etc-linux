@@ -30,4 +30,4 @@ time {
 #     format = "%free"
 # }
 
-# vim: set ft=conf:
+# vim: ft=conf

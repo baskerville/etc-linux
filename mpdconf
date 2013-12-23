@@ -23,4 +23,4 @@ audio_output {
     format          "44100:16:1"
 }
 
-# vim: set ft=conf:
+# vim: ft=conf

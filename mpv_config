@@ -7,4 +7,4 @@ osd-font="sans-serif:style=Bold"
 keep-open=yes
 joystick=no
 
-# vim:set ft=conf:
+# vim: ft=conf

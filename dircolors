@@ -81,4 +81,4 @@ TERM xterm-88color
 TERM xterm-color
 TERM xterm-debian
 
-# vim: set ft=conf:
+# vim: ft=conf

@@ -41,4 +41,4 @@ visualizer_color = "cyan"
 empty_tag_color = "red"
 default_tag_editor_pattern = "%n - $2%t$9"
 
-# vim: set ft=conf:
+# vim: ft=conf
