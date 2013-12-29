@@ -25,16 +25,21 @@ super + {backslash,shift + backslash}
     bspc desktop -F {vertical,horizontal}
 
 super + b
-    bspc config -d focused border_width {0,2}
+    W=$(sres -W); \
+    H=$(sres -H); \
+    xdo resize -w $((3 * W / 5)) -h $((2 * H / 3))
+
+super + alt + b
+    xdo resize -w 640 -h 480
 
 super + shift + b
     bspc desktop -B
 
-super + {s,f,x,X,m}
-    bspc window -t {floating,fullscreen,locked,sticky,private}
+super + {shift+s,s,f,x,X,m}
+    bspc window -t {pseudo_tiled,floating,fullscreen,locked,sticky,private}
 
-super + alt + {s,f,x,X,m}
-    bspc rule -a \* -o {floating,fullscreen,locked,sticky,private}=on
+super + alt + {shift+s,s,f,x,X,m}
+    bspc rule -a \* -o {pseudo_tiled,floating,fullscreen,locked,sticky,private}=on
 
 super + alt + {1-9,0}
     bspc rule -a \* -o desktop=^{1-9,10}
@@ -112,11 +117,17 @@ super + y
 super + ctrl + {_,shift + }space
     bspc {window -p cancel,desktop -c}
 
+super + {Left,Right,Up,Down}
+    xdo move {-x -20,-x +20,-y -20,-y +20}
+
+super + alt + {Left,Right,Up,Down}
+    xdo resize {-w -20,-w +20,-h -20,-h +20}
+
 super + alt + {h,j,k,l}
-    bspc window -e {left,down,up,right} push
+    bspc window -e {left -10,down +10,up -10,right +10}
 
 super + alt + shift + {h,j,k,l}
-    bspc window -e {right,up,down,left} pull
+    bspc window -e {right -10,up +10,down -10,left +10}
 
 super + alt + control + {h,j,k,l} ; {0-9}
     bspc window -e {left,down,up,right} 0.{0-9}

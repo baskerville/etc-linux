@@ -206,4 +206,4 @@ static const button_t buttons[] = {
 
 #endif
 
-/* vim: ft=c */
+/* vim: set ft=c: */
