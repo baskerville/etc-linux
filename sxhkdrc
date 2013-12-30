@@ -27,7 +27,7 @@ super + {backslash,shift + backslash}
 super + b
     W=$(sres -W); \
     H=$(sres -H); \
-    xdo resize -w $((3 * W / 5)) -h $((2 * H / 3))
+    xdo resize -w $((W / 2)) -h $((2 * H / 3))
 
 super + alt + b
     xdo resize -w 640 -h 480
