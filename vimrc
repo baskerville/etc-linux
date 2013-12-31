@@ -132,10 +132,6 @@ endif
 
 let mapleader = " "
 
-map Q <nop>
-" map <C-z> <nop>
-nnoremap q: <nop>
-
 nmap j gj
 nmap k gk
 nmap <leader>s :%s/
