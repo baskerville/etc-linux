@@ -50,8 +50,11 @@ super + alt + space
 super + z
     bspc control --toggle-visibility
 
-super + shift + f
+super + shift + p
     bspc config focus_follows_pointer {true,false}
+
+super + shift + f
+    bspc config ignore_ewmh_focus {true,false}
 
 super + {grave,Tab}
     bspc {window,desktop} last -f
@@ -124,10 +127,10 @@ super + alt + {Left,Right,Up,Down}
     xdo resize {-w -20,-w +20,-h -20,-h +20}
 
 super + alt + {h,j,k,l}
-    bspc window -e {left -10,down +10,up -10,right +10}
+    bspc window -e {left -20,down +20,up -20,right +20}
 
 super + alt + shift + {h,j,k,l}
-    bspc window -e {right -10,up +10,down -10,left +10}
+    bspc window -e {right -20,up +20,down -20,left +20}
 
 super + alt + control + {h,j,k,l} ; {0-9}
     bspc window -e {left,down,up,right} 0.{0-9}
@@ -172,6 +175,9 @@ super + ctrl + {slash,shift + slash}
 
 super + space
     dmenu_launch
+
+super + alt + Return
+    simpleswitcher -now
 
 super + ctrl + {comma,period,shift + period}
     focus_or_run {browser,mutt,slrn}

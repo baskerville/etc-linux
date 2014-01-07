@@ -2,7 +2,8 @@ include zathura_colors
 
 map q quit
 map Q quit
-map <S-Space> scroll full-up
+map <Space> scroll half-down
+map <S-Space> scroll half-up
 map <A-1> set "pages-per-row 1"
 map <A-2> set "pages-per-row 2"
 map <A-b> set "page-padding 3"

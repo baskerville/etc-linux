@@ -1,5 +1,6 @@
 #include "terminal_colors/xresources"
 #include "dzen2_xresources"
+#include "simpleswitcher_xresources"
 
 URxvt.modifier:             alt
 URxvt.font:                 xft:Inconsolata:pixelsize=14,xft:Droid Sans Mono:pixelsize=14,xft:DejaVu Sans Mono:pixelsize=14,xft:Droid Sans Fallback:pixelsize=14,xft:FreeSans:pixelsize=14,xft:FreeSans:pixelsize=14

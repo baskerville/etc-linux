@@ -95,7 +95,7 @@ alias yd='youtube-dl -t'
 alias te='crontab -e'
 alias tl='crontab -l'
 alias am='alsamixer -g'
-alias fp='cp -t $HOME/.fonts'
+alias fp='cp -t "$HOME"/.fonts'
 alias af='fortune "$XDG_DATA_HOME/fortune"'
 alias allprops='xdotool search --class . | xargs -I % xprop -id %'
 
