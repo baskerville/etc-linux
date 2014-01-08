@@ -26,7 +26,6 @@ set style line 21 lc rgb '#007ccc' lw 2
 set style line 22 lc rgb '#59b0ff' lw 2
 set style line 23 lc rgb '#ae652c' lw 2
 set style line 24 lc rgb '#ea985d' lw 2
-
 set style increment user
 
 set xtics font myFont
