@@ -2,6 +2,6 @@ simpleswitcher.font:       sans-serif:pixelsize=24
 simpleswitcher.background: #2E2C28
 simpleswitcher.foreground: #A3A6AB
 simpleswitcher.bordercolor: #272621
-simpleswitcher.borderwidth: 16
 simpleswitcher.highlightbg: #006776
 simpleswitcher.highlightfg: #DADDE2
+simpleswitcher.borderwidth: 6

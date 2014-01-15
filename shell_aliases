@@ -154,11 +154,9 @@ alias dfc='dfc -d -c never'
 alias dfcr='dfc -nt ext4'
 alias dfcs='dfc -np /dev/sdc'
 
-alias t='date "+%H:%M"'
-alias T='date "+%S"'
+alias T='date "+%H:%M"'
 alias M='date "+%B"'
 alias Y='date "+%Y"'
-alias d='date "+%A"'
 alias D='date "+%Y%m%d-%H%M"'
 
 # alias nmt='sudo -u nmt'
