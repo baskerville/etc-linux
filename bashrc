@@ -32,5 +32,6 @@ export PROMPT_COMMAND=_prompt_command
 [ -e "/usr/lib/libstderred.so" ] && export LD_PRELOAD="/usr/lib/libstderred.so"
 . "$XDG_CONFIG_HOME"/bash_completion.d/eat
 
+tabs -3 && clear
 eval $(dircolors -b "$HOME/.dircolors")
 [ "$TERM" = "linux" ] && "$XDG_COLORS_DIR"/redef_console

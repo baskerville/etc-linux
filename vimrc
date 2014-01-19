@@ -16,10 +16,10 @@ set foldmethod=marker
 set linebreak
 set autoindent
 set smartindent
-set tabstop=8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 set smarttab
 
 set nobackup
@@ -146,6 +146,7 @@ nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bdelete<cr>
 nmap <silent> <leader>D :call delete(expand('%'))<cr>
+nmap <leader>t :%retab!<cr>
 vmap <leader>T :!titlecase<cr>
 vmap <leader>R :!sort<cr>
 nmap <leader>H vip:!proto %:r.c<cr>
