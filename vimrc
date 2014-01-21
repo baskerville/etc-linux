@@ -14,13 +14,16 @@ set wildignore=*.o,*.jpg,*.png,*.gif
 set backspace=indent,eol,start
 set foldmethod=marker
 set linebreak
-set autoindent
-set smartindent
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 set smarttab
+set autoindent
+set smartindent
+set preserveindent
+set copyindent
 
 set nobackup
 set nowritebackup

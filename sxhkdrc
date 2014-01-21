@@ -3,238 +3,238 @@
 #
 
 super + alt + {shift + ,_}Escape
-    {bspc quit 1,\
-     bspc query -T > "$BSPWM_TREE"; \
-        bspc query -H > "$BSPWM_HISTORY"; \
-        bspc query -S > "$BSPWM_STACK"; \
-        bspc quit}
+	{bspc quit 1,\
+	 bspc query -T > "$BSPWM_TREE"; \
+	    bspc query -H > "$BSPWM_HISTORY"; \
+	    bspc query -S > "$BSPWM_STACK"; \
+	    bspc quit}
 
 super + q
-    xdo close -cd
+	xdo close -cd
 
 super + {_,shift + }w
-    bspc window -{c,k}
+	bspc window -{c,k}
 
 super + t
-    bspc desktop -l next
+	bspc desktop -l next
 
 super + {r,shift + r,u}
-    bspc desktop -R {90,-90,180}
+	bspc desktop -R {90,-90,180}
 
 super + {backslash,shift + backslash}
-    bspc desktop -F {vertical,horizontal}
+	bspc desktop -F {vertical,horizontal}
 
 super + b
-    W=$(sres -W); \
-    H=$(sres -H); \
-    xdo resize -w $((W / 2)) -h $((2 * H / 3))
+	W=$(sres -W); \
+	H=$(sres -H); \
+	xdo resize -w $((W / 2)) -h $((2 * H / 3))
 
 super + alt + b
-    xdo resize -w 640 -h 480
+	xdo resize -w 640 -h 480
 
 super + shift + b
-    bspc desktop -B
+	bspc desktop -B
 
 super + {shift+s,s,f,x,X,m}
-    bspc window -t {pseudo_tiled,floating,fullscreen,locked,sticky,private}
+	bspc window -t {pseudo_tiled,floating,fullscreen,locked,sticky,private}
 
 super + alt + {shift+s,s,f,x,X,m}
-    bspc rule -a \* -o {pseudo_tiled,floating,fullscreen,locked,sticky,private}=on
+	bspc rule -a \* -o {pseudo_tiled,floating,fullscreen,locked,sticky,private}=on
 
 super + alt + {1-9,0}
-    bspc rule -a \* -o desktop=^{1-9,10}
+	bspc rule -a \* -o desktop=^{1-9,10}
 
 super + alt + space
-    bspc rule -r \*
+	bspc rule -r \*
 
 super + z
-    bspc control --toggle-visibility
+	bspc control --toggle-visibility
 
 super + shift + p
-    bspc config focus_follows_pointer {true,false}
+	bspc config focus_follows_pointer {true,false}
 
 super + shift + f
-    bspc config ignore_ewmh_focus {true,false}
+	bspc config ignore_ewmh_focus {true,false}
 
 super + {grave,Tab}
-    bspc {window,desktop} last -f
+	bspc {window,desktop} last -f
 
 super + {semicolon,shift + semicolon}
-    bspc {window,desktop} -f last.local
+	bspc {window,desktop} -f last.local
 
 super + {_,shift + }{h,j,k,l}
-    bspc window -{f,s} {left,down,up,right}
+	bspc window -{f,s} {left,down,up,right}
 
 super + {_,shift + }apostrophe
-    bspc window -s last{_, -f last}
+	bspc window -s last{_, -f last}
 
 super + {_,alt + }{o,i}
-    bspc control --record-history off; \
-    bspc {window,desktop} {older,newer} -f; \
-    bspc control --record-history on
+	bspc control --record-history off; \
+	bspc {window,desktop} {older,newer} -f; \
+	bspc control --record-history on
 
 super + {_,alt + }{p,n}
-    bspc control --record-history off; \
-    bspc {window,desktop} {older,newer}.local -f; \
-    bspc control --record-history on
+	bspc control --record-history off; \
+	bspc {window,desktop} {older,newer}.local -f; \
+	bspc control --record-history on
 
 super + {_,shift + }Return
-    bspc window -{f,s} biggest
+	bspc window -{f,s} biggest
 
 super + {d,shift + d}
-    bspc window -f {next,prev}.tiled
+	bspc window -f {next,prev}.tiled
 
 super + {_,shift + }{a,v,e}
-    bspc window -f {next,prev}.{floating,unlike,like}
+	bspc window -f {next,prev}.{floating,unlike,like}
 
 super + {comma,period}
-    bspc desktop -C {backward,forward}
+	bspc desktop -C {backward,forward}
 
 super + {c,shift + c}
-    bspc window -f {next,prev}
+	bspc window -f {next,prev}
 
 super + bracket{left,right}
-    bspc desktop -f {prev,next}
+	bspc desktop -f {prev,next}
 
 # super + {_,alt + }bracket{left,right}
-#     bspc {desktop,monitor} -f {prev,next}
+#	  bspc {desktop,monitor} -f {prev,next}
 
 super + ctrl + paren{left,right}
-    bspc desktop -f {prev,next}.urgent
+	bspc desktop -f {prev,next}.urgent
 
 super + ctrl + bracket{left,right}
-    bspc desktop -f {prev,next}.occupied
+	bspc desktop -f {prev,next}.occupied
 
 super + alt + bracket{left,right}
-    bspc desktop -f {prev,next}.free
+	bspc desktop -f {prev,next}.free
 
 super + ctrl + {h,j,k,l}
-    bspc window -p {left,down,up,right}
+	bspc window -p {left,down,up,right}
 
 super + ctrl + shift + {h,j,k,l}
-    bspc window -p {left 0.33,down 0.66,up 0.33,right 0.66}
+	bspc window -p {left 0.33,down 0.66,up 0.33,right 0.66}
 
 super + y
-    bspc window -w last.manual
+	bspc window -w last.manual
 
 super + ctrl + {_,shift + }space
-    bspc {window -p cancel,desktop -c}
+	bspc {window -p cancel,desktop -c}
 
 super + {Left,Right,Up,Down}
-    xdo move {-x -20,-x +20,-y -20,-y +20}
+	xdo move {-x -20,-x +20,-y -20,-y +20}
 
 super + alt + {Left,Right,Up,Down}
-    xdo resize {-w -20,-w +20,-h -20,-h +20}
+	xdo resize {-w -20,-w +20,-h -20,-h +20}
 
 super + alt + {h,j,k,l}
-    bspc window -e {left -20,down +20,up -20,right +20}
+	bspc window -e {left -20,down +20,up -20,right +20}
 
 super + alt + shift + {h,j,k,l}
-    bspc window -e {right -20,up +20,down -20,left +20}
+	bspc window -e {right -20,up +20,down -20,left +20}
 
 super + alt + control + {h,j,k,l} ; {0-9}
-    bspc window -e {left,down,up,right} 0.{0-9}
+	bspc window -e {left,down,up,right} 0.{0-9}
 
 super + alt + {equal,minus}
-    wg=$(bspc config -d focused window_gap); \
-    bspc config -d focused window_gap $((wg {+,- (wg >= 3) *} 3))
+	wg=$(bspc config -d focused window_gap); \
+	bspc config -d focused window_gap $((wg {+,- (wg >= 3) *} 3))
 
 super + ctrl + {1-9}
-    bspc window -r 0.{1-9}
+	bspc window -r 0.{1-9}
 
 super + {_,shift + }{1-9,0}
-    bspc {desktop -f,window -d} ^{1-9,10}
+	bspc {desktop -f,window -d} ^{1-9,10}
 
 super + shift + bracket{left,right}
-    bspc window -d {prev,next}
+	bspc window -d {prev,next}
 
 super + alt + shift + bracket{left,right}
-    bspc window -d {prev,next} -f
+	bspc window -d {prev,next} -f
 
 ~button1
-    bspc pointer -g focus
+	bspc pointer -g focus
 
 super + button{1-3}
-    bspc pointer -g {move,resize_side,resize_corner}
+	bspc pointer -g {move,resize_side,resize_corner}
 
 super + !button{1-3}
-    bspc pointer -t %i %i
+	bspc pointer -t %i %i
 
 super + @button{1-3}
-    bspc pointer -u
+	bspc pointer -u
 
 #
 # wm independent hotkeys
 #
 
 super + Escape
-    pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd
 
 super + ctrl + {slash,shift + slash}
-    {terminal "$HOME",terminal}
+	{terminal "$HOME",terminal}
 
 super + space
-    dmenu_launch
+	dmenu_launch
 
 super + alt + Return
-    simpleswitcher -now
+	simpleswitcher -now
 
 super + ctrl + {comma,period,shift + period}
-    focus_or_run {browser,mutt,slrn}
+	focus_or_run {browser,mutt,slrn}
 
 super + ctrl + {c,shift + c}
-    focus_or_run {bspwm,sxhkd}rc
+	focus_or_run {bspwm,sxhkd}rc
 
 super + {_,shift + }g
-    {togglepanel,togglethm; reloadthm}
+	{togglepanel,togglethm; reloadthm}
 
 {_,shift + ,super + }XF86MonBrightness{Down,Up}
-    bright {-1,-10,min,+1,+10,max}
+	bright {-1,-10,min,+1,+10,max}
 
 XF86AudioMute
-    volume toggle
+	volume toggle
 
 {_,shift + }XF86Audio{Lower,Raise}Volume
-    volume {_,strong_}{lower,raise}
+	volume {_,strong_}{lower,raise}
 
 super + alt + control + {0-9}
-    mpc -q seek {0-9}0%
+	mpc -q seek {0-9}0%
 
 XF86Audio{Prev,Next}
-    mpc -q {prev,next}
+	mpc -q {prev,next}
 
 XF86AudioPlay
-    mpc -q toggle
+	mpc -q toggle
 
 super + ctrl + XF86AudioPlay
-    mpc load radios
+	mpc load radios
 
 super + XF86Audio{Prev,Next}
-    mpc seek {-1,+1}
+	mpc seek {-1,+1}
 
 super + {XF86AudioPlay,shift + XF86AudioPlay}
-    {focus_or_run ncmpcpp,copy_mpd_title}
+	{focus_or_run ncmpcpp,copy_mpd_title}
 
 super + ctrl + p
-    pwgen -nc | tr -d '\n' | xsel -bi
+	pwgen -nc | tr -d '\n' | xsel -bi
 
 super + {equal,shift + equal}
-    {mosaic "$XDG_DOWNLOAD_DIR",sxiv -dbt "$XDG_DOWNLOAD_DIR/"dl*_*/*}
+	{mosaic "$XDG_DOWNLOAD_DIR",sxiv -dbt "$XDG_DOWNLOAD_DIR/"dl*_*/*}
 
 super + ctrl + {a,shift + a,t,i}
-    focus_or_run {accounts,boards,top,notes}
+	focus_or_run {accounts,boards,top,notes}
 
 super + ctrl + g
-    pickcolor
+	pickcolor
 
 super + {XF86LaunchA,shift + @XF86LaunchA}
-    scrot {-e,-s -e} 'image_viewer $f'
+	scrot {-e,-s -e} 'image_viewer $f'
 
 super + XF86KbdBrightness{Down,Up}
-    {panel,pkill -x panel}
+	{panel,pkill -x panel}
 
 {shift,super} + XF86Eject
-    {wodim -eject,dpms_standby}
+	{wodim -eject,dpms_standby}
 
 super + {alt,ctrl,alt + ctrl} + XF86Eject
-    sudo systemctl {suspend,reboot,poweroff}
+	sudo systemctl {suspend,reboot,poweroff}
