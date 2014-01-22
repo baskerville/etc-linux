@@ -148,7 +148,7 @@ static const keymap_t keys[] = {
 	{ 0,            XK_question,      i_rotate,             (arg_t) DEGREE_180 },
 
 	{ 0,            XK_backslash,     i_flip,               (arg_t) FLIP_HORIZONTAL },
-	{ 0,            XK_underscore,    i_flip,               (arg_t) FLIP_VERTICAL },
+	{ 0,            XK_bar,           i_flip,               (arg_t) FLIP_VERTICAL },
 
 	{ 0,            XK_s,             i_slideshow,          (arg_t) None },
 
