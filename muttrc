@@ -128,4 +128,4 @@ source ~/.mutt/theme
 folder-hook !=sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21n  %s %> %D  %4c"'
 folder-hook =sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21t  %s %> %D  %4c"'
 
-mailboxes =inbox =lists =bspwm =baskerville =commandes =paypal =fai =xd
+mailboxes =inbox =lists =bspwm =sxhkd =baskerville =commandes =paypal =fai =xd

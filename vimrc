@@ -68,6 +68,7 @@ Bundle 'tobinvanpelt/vim-coffee-script'
 Bundle 'justinmk/vim-syntax-extra'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'jnurmine/Zenburn'
 Bundle 'zeis/vim-kolor'
@@ -113,7 +114,7 @@ if has("autocmd")
     " autocmd BufRead,BufEnter *.asd set filetype=lisp
     " autocmd BufRead,BufEnter *.as set filetype=actionscript
     " autocmd BufRead,BufEnter *.mxml set filetype=mxml
-    " autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
+    autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
     " autocmd BufRead,BufEnter *.nfo set filetype=nfo
     " autocmd BufRead,BufEnter *.ck set filetype=ck
     autocmd BufRead,BufEnter *Xmodmaprc set filetype=xmodmap
@@ -181,7 +182,7 @@ nmap <silent> <F9> :call ToggleConceal()<cr>
 nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :call EditSyntax()<cr>
 nmap <silent> <F12> :make<cr>
-nmap <silent> <leader><Tab> :<C-u>exe "setlocal tabstop=".v:count1<cr>
+nmap <silent> <leader><Tab> :<C-u>exe "setlocal ts=".v:count1." sw=".v:count1<cr>
 vmap <silent> <leader>y y:call YankClip()<cr>
 nmap <silent> <leader>y yiw:call YankClip()<cr>
 nmap <silent> <leader>yy yy:call YankClip()<cr>
