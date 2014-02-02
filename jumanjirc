@@ -1,0 +1,5 @@
+set developer_extras true
+script ~/.config/jumanji/scripts/hints.js
+set stylesheet file:///home/ice/.config/jumanji/style.css
+set homepage http://www.google.com
+searchengine g http://www.google.com/search?q=%s
