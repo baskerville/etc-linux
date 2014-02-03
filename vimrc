@@ -106,7 +106,6 @@ if has("autocmd")
     autocmd FileType lilypond setlocal commentstring=%%s
     autocmd FileType slrnrc setlocal commentstring=%%s
     autocmd FileType slang setlocal commentstring=%%s
-    autocmd FileType html,xhtml,htmljinja setlocal shiftwidth=2 softtabstop=2
     autocmd FileType perl setlocal keywordprg=perldoc
     autocmd FileType ruby setlocal keywordprg=ri
     autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
@@ -114,7 +113,7 @@ if has("autocmd")
     " autocmd BufRead,BufEnter *.asd set filetype=lisp
     " autocmd BufRead,BufEnter *.as set filetype=actionscript
     " autocmd BufRead,BufEnter *.mxml set filetype=mxml
-    autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
+    " autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
     " autocmd BufRead,BufEnter *.nfo set filetype=nfo
     " autocmd BufRead,BufEnter *.ck set filetype=ck
     autocmd BufRead,BufEnter *Xmodmaprc set filetype=xmodmap
@@ -122,8 +121,8 @@ if has("autocmd")
     autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
     autocmd BufRead,BufEnter *.xinitrc set filetype=sh
     autocmd BufRead,BufEnter *.j2 set filetype=htmljinja
-    autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
-    autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
+    " autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
+    " autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
 
     autocmd BufReadPost * exe "normal! '\""
 
