@@ -53,9 +53,6 @@ super + z
 super + shift + p
 	bspc config focus_follows_pointer {true,false}
 
-super + shift + f
-	bspc config ignore_ewmh_focus {true,false}
-
 super + {grave,Tab}
 	bspc {window,desktop} last -f
 
