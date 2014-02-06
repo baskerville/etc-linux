@@ -20,6 +20,7 @@ bspc config borderless_monocle     true
 bspc config gapless_monocle        true
 bspc config apply_floating_atom    true
 bspc config history_aware_focus    true
+bspc config ignore_ewmh_focus      true
 
 bspc rule -a Gimp desktop=^8 floating=on follow=on
 bspc rule -a Inkscape desktop=^7 floating=on
