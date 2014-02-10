@@ -22,7 +22,6 @@ set noexpandtab
 set smarttab
 set autoindent
 set smartindent
-set preserveindent
 set copyindent
 
 set nobackup
