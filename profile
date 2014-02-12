@@ -25,7 +25,8 @@ export OWLMAN_CHANGELOG_DB="$XDG_DATA_HOME/changelog_db"
 
 export SDL_AUDIODRIVER=alsa
 export SDL_VIDEO_X11_DGAMOUSE=0
-export GTK_IM_MODULE=xim
+export GTK_IM_MODULE=uim
+export TZ=Europe/Paris
 
 export GOPATH="$HOME/.go"
 export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
