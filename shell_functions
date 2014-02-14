@@ -53,12 +53,6 @@ bnd() {
     bind -P | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern"
 }
 
-tgz() {
-    local name=$1
-    shift
-    tar cvzf "${name}.tgz" "$@"
-}
-
 mil() {
     mediainfo --Info-Parameters
 }
