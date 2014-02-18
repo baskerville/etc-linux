@@ -33,7 +33,7 @@ super + alt + b
 	xdo resize -w 640 -h 480
 
 super + shift + b
-	bspc desktop -B
+	bspc config -w focused border_width {0,2}
 
 super + {shift+s,s,f,x,X,m}
 	bspc window -t {pseudo_tiled,floating,fullscreen,locked,sticky,private}
