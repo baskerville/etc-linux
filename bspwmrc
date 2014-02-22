@@ -40,4 +40,4 @@ else
     reloadpanel
 fi
 
-compton -b
+compton &
