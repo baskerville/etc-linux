@@ -106,7 +106,7 @@ if has("autocmd")
     autocmd FileType slrnrc setlocal commentstring=%%s
     autocmd FileType slang setlocal commentstring=%%s
     autocmd FileType perl setlocal keywordprg=perldoc
-    autocmd FileType ruby setlocal keywordprg=ri
+    autocmd FileType ruby setlocal keywordprg=ri ts=2 sw=2 expandtab
     autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
     " autocmd BufRead,BufEnter *.asd set filetype=lisp
@@ -148,6 +148,7 @@ nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader>d :bdelete<cr>
 nmap <silent> <leader>D :call delete(expand('%'))<cr>
+nmap <leader>E :set expandtab!<cr>
 nmap <leader>t :%retab!<cr>
 vmap <leader>T :!titlecase<cr>
 vmap <leader>R :!sort<cr>
