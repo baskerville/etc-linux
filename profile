@@ -2,6 +2,7 @@ export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
 export MANWIDTH=80
+export HISTSIZE=100000
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
