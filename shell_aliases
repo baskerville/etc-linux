@@ -1,37 +1,26 @@
 alias zt='Z -s atime'
 alias zh='Z -s hits'
-alias x='xargs -d "\n"'
+
+alias x='| tr "\n" "\0" | xargs -0'
+
 alias cp='cp -i'
 alias mv='mv -i'
 alias cpr='cp -r'
-alias j='jobs'
-alias ..='cd ..'
-alias b='cd -'
 
-alias ig='g -i'
-alias gn='g -n'
-alias ign='g -in'
-alias gcn='g -nC 1'
-
-alias cgrep='grep --color=auto'
-alias igrep='grep -i'
-alias icgrep='grep --color=auto -i'
-alias ngrep='grep -n'
-alias ingrep='grep -in'
-alias cingrep='grep -in --color=auto'
-alias rgrep='grep -r'
-
-alias pgx='pgrep -x'
-alias pgg='pgrep -g'
-alias pkx='pkill -x'
-alias pkg='pkill -g'
+alias i='type -a'
+alias y='file -b'
+alias mt='file -b --mime-type'
+alias me='file -b --mime-encoding'
+alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
+alias p="clipo | editor -"
+alias h="xxd -l 256"
+alias ms='mpc search any'
+alias ma='mpc add'
 
 alias chbin='chmod 755'
-alias chord='chmod 644'
-alias octalrights='stat -c %a'
-alias cal='cal -m'
+alias chreg='chmod 644'
+alias operm='stat -c %a'
 alias lsync='rsync -aulv --delete'
-alias beep='printf "\a"'
 
 alias scf='. $SHELL_CONFIG'
 alias ecf='editor $SHELL_CONFIG'
@@ -39,44 +28,25 @@ alias epf='editor $SHELL_PROFILE'
 alias eal='editor $SHELL_ALIASES'
 alias efu='editor $SHELL_FUNCTIONS'
 
-alias ls='ls -h --color=auto'
-alias l='ls --group-directories-first'
-alias l1='ls -1'
+alias ls='ls -h'
+alias l='ls'
 alias lS='ls -LrsS'
-alias ll='ls -l'
-alias lA='ls -A'
-alias la='ls -a'
 alias lr='ls -R'
-alias llS='ll -rS'
-alias lla='la -l'
-alias lsd='la -d */'
 
-alias le='ls --quoting-style=escape'
-alias le1='le -1'
 alias n='ls -rc'
-alias n1='n -1'
-alias nn='n1 | tail -n 1'
-alias NN='n1 | tail -n'
-alias nA='n -A'
-alias nAl='nA -l'
-
+alias nn='n -1 | tail -n 1'
 alias on='open "$(nn)"'
+alias so='ls -1 | xargs open'
 alias gin='fileinfo "$(nn)"'
-alias any='le1 | shuf -n 1'
-alias so='any | xargs open'
 
 alias rmrf='rm -rf'
 alias rmnn='rm -iv -- "$(nn)"'
 alias rmrfnn='rmrf -v -- "$(nn)"'
 alias ded='find . -type d -empty -print -delete'
-alias duffr='duff -f "%n" -r .'
+# alias duffr='duff -f "%n" -r .'
+alias bcl='bc -ql $HOME/.bcrc'
 
-alias mo='mosaic .'
-alias fq='fc-list : family | grep -i'
-alias fqs='fc-list : family style | grep -i'
-alias fqf='fc-list : family file | grep -i'
-alias dpms='xset q | grep "^ *DPMS is" | awk "{print \$3}" | tr "[:upper:]" "[:lower:]"'
-alias psa='ps -Ao tty,pgrp,ppid,pid,comm'
+alias yd='youtube-dl -t'
 
 alias fren='translate {fr=en}'
 alias enfr='translate {en=fr}'
@@ -91,49 +61,15 @@ alias enja='translate {en=ja}'
 alias elen='translate {el=en}'
 alias enel='translate {en=el}'
 
-alias yd='youtube-dl -t'
-alias te='crontab -e'
-alias tl='crontab -l'
-alias am='alsamixer -g'
-alias fp='cp -t "$HOME"/.fonts'
-alias af='fortune "$XDG_DATA_HOME/fortune"'
-alias allprops='xdotool search --class . | xargs -I % xprop -id %'
-
-alias i='type -a'
-alias y='file -b'
-alias mt='file -b --mime-type'
-alias me='file -b --mime-encoding'
-alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
-
 alias et='editor -p'
 alias vd='vimdiff'
 alias s='sr duckduckgo'
-alias checkbashisms='checkbashisms -f'
-alias ms='mpc search any'
-alias ma='mpc add'
-
-alias primi='xcmenu -pi'
-alias primo='xcmenu -p'
-alias clipi='xcmenu -ci'
-alias clipo='xcmenu -c'
 
 alias mdur="mediainfo '--Inform=General;%Duration/String%'"
-alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"
-
-alias ivz='iv -Z'
-alias ivzr='ivz -tr'
-alias ivr='iv -tr'
-alias ir='ivzr .'
-
-alias p="clipo | editor -"
-alias gp="primo | editor -"
-
-alias h="xxd -l 256"
-alias bcl='bc -ql $HOME/.bcrc'
+# alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"
 
 alias detox='detox -v'
 alias mp4box='MP4Box'
-alias camshot='shotdev /dev/video0'
 
 alias up='git commit -am Update'
 alias pu='git push'
@@ -141,38 +77,21 @@ alias upu='up && pu'
 
 alias gdb='rlwrap gdb -q'
 alias irb='irb --simple-prompt'
-alias csi='rlwrap csi -q'
-alias pmv='pmv -v'
+# alias csi='rlwrap csi -q'
 alias nb='newsbeuter'
 alias python='python -q'
 alias maxima='rlwrap maxima -q'
-alias pps2pdf='loimpress --nologo --convert-to pdf'
+# alias pps2pdf='loimpress --nologo --convert-to pdf'
+alias wrp='wr FRXX0076'
 
-alias subscriptions='grep ":" $HOME/.jnewsrc | awk -F : "{print $1}"'
-alias nu='pgrep -x fetchnews > /dev/null 2>&1 || sudo -u news fetchnews -vv'
-alias dfc='dfc -d -c never'
-alias dfcr='dfc -nt ext4'
-alias dfcs='dfc -np /dev/sdc'
+# alias dfc='dfc -d -c never'
+# alias dfcr='dfc -nt ext4'
+# alias dfcs='dfc -np /dev/sdc'
 
+alias D='date "+%Y%m%d-%H%M"'
 alias T='date "+%H:%M"'
 alias M='date "+%B"'
 alias Y='date "+%Y"'
-alias D='date "+%Y%m%d-%H%M"'
-
-# alias nmt='sudo -u nmt'
-alias clean_files_permissions='find . -type f ! -perm 644 -print -exec chmod 644 {} \;'
-alias clean_dirs_permissions='find . -type d ! -perm 755 -print -exec chmod 755 {} \;'
-alias remove_fatgarbage='find . -name "._*" -print -exec rm {} \;'
-alias remove_dsstore='find . -type f -name .DS_Store -print -exec rm {} \;'
-alias remove_dbthumbs='find . -type f -name Thumbs.db -print -exec rm {} \;'
-
-alias wrp='wr FRXX0076'
-
-alias zdata="cd "$DATA""
-alias zmicro="cd "$MICRO""
-alias ztraveler="cd "$TRAVELER""
-alias zhexagon="cd "$HEXAGON""
-alias zlacie="cd "$LACIE""
 
 alias hal='hestia list'
 alias haa='hestia add'
@@ -213,17 +132,17 @@ alias dapr='diana preview'
 alias daf='diana files'
 alias dae='diana errors'
 
-alias lp='lp -o fitplot'
+# alias lp='lp -o fitplot'
 # alias lpb='lp -o StpFullBleed=True -o StpiShrinkOutput=Crop'
-alias lpm='lp -o MediaType=PhotopaperMatte -o Resolution=603x600dpi'
-alias lpp='lp -o MediaType=PhotopaperPlus -o Resolution=603x600dpi'
-alias dlp='lp -o Duplex=DuplexNoTumble'
-alias lp6='lp -o Resolution=600dpi'
-alias dlp6='lp6 -o Duplex=DuplexNoTumble'
-alias lpb='lp -o scaling=103'
-alias dlpb='lpb -o Duplex=DuplexNoTumble'
-alias lpb6='lpb -o Resolution=600dpi'
-alias dlpb6='lpb6 -o Duplex=DuplexNoTumble'
+# alias lpm='lp -o MediaType=PhotopaperMatte -o Resolution=603x600dpi'
+# alias lpp='lp -o MediaType=PhotopaperPlus -o Resolution=603x600dpi'
+# alias dlp='lp -o Duplex=DuplexNoTumble'
+# alias lp6='lp -o Resolution=600dpi'
+# alias dlp6='lp6 -o Duplex=DuplexNoTumble'
+# alias lpb='lp -o scaling=103'
+# alias dlpb='lpb -o Duplex=DuplexNoTumble'
+# alias lpb6='lpb -o Resolution=600dpi'
+# alias dlpb6='lpb6 -o Duplex=DuplexNoTumble'
 # alias nzd='nzbget -D'
 # alias nzl='nzbget -L'
 # alias nzq='nzbget -Q'

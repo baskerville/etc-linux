@@ -1,54 +1,60 @@
-export EDITOR=vim
-export PAGER=less
-export BROWSER='open -g'
-export MANWIDTH=80
+EDITOR=vim
+PAGER=less
+BROWSER=open
+export EDITOR PAGER BROWSER
 
-export HISTSIZE=100000
-export SAVEHIST=$HISTSIZE
-export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoreboth
+LANG="en_US.UTF-8"
+LC_CTYPE="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
+TZ=Europe/Paris
+export LANG LC_CTYPE LC_ALL TZ
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_DATA_HOME="$HOME/.local/share"
+XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME XDG_DATA_HOME XDG_CACHE_HOME
 
-export XDG_DOWNLOAD_DIR="$HOME/incoming"
-export XDG_DOTFILES_DIR="$HOME/.dotfiles"
-export XDG_COLORS_DIR="$XDG_DOTFILES_DIR/terminal_colors"
-export XDG_TRASH_DIR="$HOME/.trash"
-export XDG_BIN_DIR="$HOME/.bin"
-export XDG_TMP_DIR="$HOME/tmp"
+XDG_DOWNLOAD_DIR="$HOME/incoming"
+XDG_DOTFILES_DIR="$HOME/.dotfiles"
+XDG_COLORS_DIR="$XDG_DOTFILES_DIR/terminal_colors"
+XDG_TRASH_DIR="$HOME/.trash"
+XDG_BIN_DIR="$HOME/.bin"
+XDG_TMP_DIR="$HOME/tmp"
+export XDG_DOWNLOAD_DIR XDG_DOTFILES_DIR XDG_COLORS_DIR XDG_TRASH_DIR XDG_BIN_DIR XDG_TMP_DIR
 
-export TZ=Europe/Paris
-export GOPATH="$HOME/.go"
-export TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
-export PYTHONIOENCODING='utf-8'
+GOPATH="$HOME/.go"
+TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
+PYTHONIOENCODING='utf-8'
+export GOPATH TEXINPUTS PYTHONIOENCODING
 
-export NNTPSERVER=pasdenom.info
-export SLRNPULL_ROOT="$HOME/.usenet"
+NNTPSERVER=pasdenom.info
+SLRNPULL_ROOT="$HOME/.usenet"
+export NNTPSERVER SLRNPULL_ROOT
 
-export SHELL_CONFIG="$HOME/.bashrc"
-export SHELL_PROFILE="$HOME/.bash_profile"
-export SHELL_ALIASES="$HOME/.shell_aliases"
-export SHELL_FUNCTIONS="$HOME/.shell_functions"
+SHELL_CONFIG="$HOME/.bashrc"
+SHELL_PROFILE="$HOME/.bash_profile"
+SHELL_ALIASES="$HOME/.shell_aliases"
+SHELL_FUNCTIONS="$HOME/.shell_functions"
+export SHELL_CONFIG SHELL_PROFILE SHELL_ALIASES SHELL_FUNCTIONS
 
-export MICRO=/Volumes/micro
-export DATA=/Volumes/data
-export TRAVELER=/Volumes/traveler
-export HEXAGON=/Volumes/hexagon
-export LACIE=/Volumes/lacie
+JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
+DIANA_DOWNLOAD_DIR=$XDG_TMP_DIR
+EXTERNAL_CONDITIONS=/tmp/conditions
+export JINJA_FILTERS_DIR DIANA_DOWNLOAD_DIR EXTERNAL_CONDITIONS
 
-export JINJA_FILTERS_DIR="$XDG_DOTFILES_DIR/jinja_filters"
-export DIANA_DOWNLOAD_DIR=$XDG_TMP_DIR
-export EXTERNAL_CONDITIONS=/tmp/conditions
+CLICOLOR=1
+LSCOLORS=ExDxCxcxBxGxgxHxHxFxfx
+GREP_OPTIONS='--color=auto'
+GREP_COLORS='ms=1;37:mc=1;37:sl=:cx=:fn=1;33:ln=1;36:bn=1;35:se=1;30'
+export CLICOLOR LSCOLORS GREP_OPTIONS GREP_COLORS
 
-export GREP_COLORS='ms=1;37:mc=1;37:sl=:cx=:fn=1;33:ln=1;36:bn=1;35:se=1;30'
-export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blinking
-export LESS_TERMCAP_md=$'\e[1;34m'     # begin bold
-export LESS_TERMCAP_me=$'\e[0m'        # end mode
-export LESS_TERMCAP_so=$'\e[40;37m'    # begin standout - info box
-export LESS_TERMCAP_se=$'\e[0m'        # end standout
-export LESS_TERMCAP_us=$'\e[1;33m'     # begin underline
-export LESS_TERMCAP_ue=$'\e[0m'        # end underline
+LESS_TERMCAP_mb=$'\e[1;31m'
+LESS_TERMCAP_md=$'\e[1;34m'
+LESS_TERMCAP_me=$'\e[0m'
+LESS_TERMCAP_so=$'\e[40;37m'
+LESS_TERMCAP_se=$'\e[0m'
+LESS_TERMCAP_us=$'\e[1;33m'
+LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_mb LESS_TERMCAP_md LESS_TERMCAP_me LESS_TERMCAP_so LESS_TERMCAP_se LESS_TERMCAP_us LESS_TERMCAP_ue
 
 # vim: ft=sh

@@ -22,5 +22,3 @@ export PROMPT_COMMAND=_prompt_command
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
-
-eval $(dircolors -b "$HOME/.dircolors")

@@ -29,12 +29,7 @@ lc() {
 }
 
 yc() {
-    lc $@ | xsel -bi
-}
-
-man() {
-    title "man $@"
-    /usr/bin/man "$@"
+    lc $@ | pbcopy
 }
 
 dehdr() {
@@ -164,34 +159,10 @@ frspell() {
     echo $@ | hunspell -d fr_FR | grep '^&'
 }
 
-ngfind() {
-    grep -E $@ $XDG_DATA_HOME/newsgroups.txt
-}
-
 cplr() {
-    local dest=$1
+    local label=$1
     shift
-    cp  -Lr "$@" "$dest"/
-}
-
-cpmicro() {
-    cplr "$MICRO" "$@"
-}
-
-cpdata() {
-    cplr "$DATA" "$@"
-}
-
-cptraveler() {
-    cplr "$TRAVELER" "$@"
-}
-
-cphexagon() {
-    cplr "$HEXAGON" "$@"
-}
-
-cplacie() {
-    cplr "$LACIE" "$@"
+    cp  -Lr "$@" /Volumes/"$label"/
 }
 
 mkmaildir() {
@@ -211,10 +182,6 @@ def() {
     wiktionary $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^{|]+ of)\|([^|}]+)[^}]*\}\}/*\U$1\E* $2/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
 }
 
-def1() {
-    def $@ | head -n 1
-}
-
 defr() {
     wiktionary_fr $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
 }
@@ -225,11 +192,6 @@ defr1() {
 
 conj() {
     w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@"
-}
-
-linux_changelog() {
-    local uri="http://www.kernel.org/pub/linux/kernel/v${@%%.*}.0/ChangeLog-$@"
-    wget -qO - "$uri" | grep -A 2 '^Date:' | grep ' \+[^:]\+: ' | sed 's/^ \+//'
 }
 
 #swc() {

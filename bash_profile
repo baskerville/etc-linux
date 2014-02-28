@@ -1,5 +1,11 @@
-. "$HOME/.profile"
 . "$HOME/.coordinates"
+. "$HOME/.profile"
 . "$HOME/.bashrc"
+
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+HISTFILESIZE=$HISTSIZE
+HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE SAVEHIST HISTFILESIZE HISTCONTROL
 
 # vim: ft=sh
