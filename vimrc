@@ -70,6 +70,8 @@ Bundle 'othree/html5.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'jnurmine/Zenburn'
+Bundle 'morhetz/gruvbox'
+Bundle 'noahfrederick/hemisu'
 Bundle 'zeis/vim-kolor'
 Bundle 'baskerville/vim-sxhkdrc'
 Bundle 'baskerville/vim-quirks'

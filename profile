@@ -3,11 +3,6 @@ export PAGER=less
 export BROWSER=chromium
 export MANWIDTH=80
 
-export HISTSIZE=100000
-export SAVEHIST=$HISTSIZE
-export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoreboth
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"

@@ -1,6 +1,11 @@
 . "$HOME/.profile"
 . "$HOME/.coordinates"
 
+export HISTSIZE=100000
+export SAVEHIST=$HISTSIZE
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoreboth
+
 export PATH="$XDG_BIN_DIR:$HOME/.local/bin:$GOPATH/bin:$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 
 if [ -z "$DISPLAY" -a $XDG_VTNR -eq 1 ] ; then
