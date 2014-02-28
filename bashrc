@@ -29,7 +29,6 @@ export PROMPT_COMMAND=_prompt_command
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
-[ -e "/usr/lib/libstderred.so" ] && export LD_PRELOAD="/usr/lib/libstderred.so"
 . "$XDG_CONFIG_HOME"/bash_completion.d/eat
 
 tabs -5 && clear
