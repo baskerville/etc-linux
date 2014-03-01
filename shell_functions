@@ -1,21 +1,7 @@
-_cd() {
-    pushd "$@" > /dev/null
-}
-
-cd() {
-    if [ -z "$1" ] ; then
-        _cd "$HOME"
-    elif [ -f "$1" ] ; then
-        _cd "$(dirname "$1")"
-    else
-        _cd "$1"
-    fi
-}
-
 z() {
     local dir=$(Z "$@" | head -n 1)
     [ -z "$dir" ] && return 1
-    _cd "$dir" || Z -d "$dir"
+    cd "$dir" || Z -d "$dir"
 }
 
 zx() {
@@ -78,7 +64,7 @@ F() {
     local pat=$1
     local dir=${2:-.}
     [ $# -gt 1 ] && shift 2 || shift
-    find -L "$dir" "$@" -iregex ".*${pat}.*" -printf '%p\0' | xargs -r0 ls --color=auto -1d
+    find -L "$dir" "$@" -iregex ".*${pat}.*" -print0 | xargs -0 ls --color=auto -1d
 }
 
 f() {
@@ -137,10 +123,6 @@ OO() {
 
 RR() {
     tail -n "$@" | xargs -d '\n' -I % rm -v "%"
-}
-
-rcd() {
-    find $PWD/ -maxdepth 1 -mindepth 1 -type d -exec fork termite -d "{}" \;
 }
 
 count() {

@@ -79,15 +79,16 @@ Bundle 'baskerville/vim-quirks'
 syntax on
 filetype plugin indent on
 
-if has("gui_running")
-    colorscheme raven
-else
-    if &t_Co >= 256
-        colorscheme raven256
-    else
-        colorscheme raven8
-    endif
-endif
+colorscheme hemisu
+" if has("gui_running")
+"     colorscheme raven
+" else
+"     if &t_Co >= 256
+"         colorscheme raven256
+"     else
+"         colorscheme raven8
+"     endif
+" endif
 
 hi def link mailSubject Title
 hi def link mailSignature Comment
@@ -165,8 +166,8 @@ nmap <leader>} :cnf<cr>
 nmap <leader>{ :cpf<cr>
 nmap <leader>* :vimgrep =expand("<cword>")<cr> *
 nmap <silent> <leader>? :call Define(expand("<cword>"), "en")<cr>
-nmap <silent> <leader>. :call YankClip(expand("%"))<cr>
-nmap <silent> <leader>/ :call YankClip(expand("%:p"))<cr>
+nmap <silent> <leader>. :call Yank(expand("%"))<cr>
+nmap <silent> <leader>/ :call Yank(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
@@ -184,14 +185,10 @@ nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :call EditSyntax()<cr>
 nmap <silent> <F12> :make<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal ts=".v:count1." sw=".v:count1<cr>
-vmap <silent> <leader>y y:call YankClip()<cr>
-nmap <silent> <leader>y yiw:call YankClip()<cr>
-nmap <silent> <leader>yy yy:call YankClip()<cr>
-vmap <silent> <leader>gy y:call Yank()<cr>
-nmap <silent> <leader>gp :call Paste('primary', 'after')<cr>
-nmap <silent> <leader>gP :call Paste('primary', 'before')<cr>
-nmap <silent> <leader>p :call Paste('clipboard', 'after')<cr>
-nmap <silent> <leader>P :call Paste('clipboard', 'before')<cr>
+vmap <silent> <leader>y y:call Yank()<cr>
+nmap <silent> <leader>y yiw:call Yank()<cr>
+nmap <silent> <leader>p :call Paste('after')<cr>
+nmap <silent> <leader>P :call Paste('before')<cr>
 " reverse string
 vmap <Leader>i c<C-o>:set ri<cr><C-r>"<esc>:set nori<cr>
 nmap <leader>r :source ~/.vimrc<cr>
@@ -282,34 +279,22 @@ function! GetCharName()
     let @" = clip
 endfunction
 
-function! TerminalAt(path)
-    let response = system("fork termite -d " . a:path)
-    echo response
-endfunction
+" function! TerminalAt(path)
+"     let response = system("fork termite -d " . a:path)
+"     echo response
+" endfunction
 
 function! Yank(...)
     if a:0
-        let response = system("xsel -pi", a:1)
+        let response = system("pbcopy", a:1)
     else
-        let response = system("xsel -pi", @")
+        let response = system("pbcopy", @")
     endif
 endfunction
 
-function! YankClip(...)
-    if a:0
-        let response = system("xsel -bi", a:1)
-    else
-        let response = system("xsel -bi", @")
-    endif
-endfunction
-
-function! Paste(which_buffer, paste_where)
+function! Paste(paste_where)
     let at_q = @q
-    if a:which_buffer == 'primary' 
-        let @q = system("xsel -po")
-    elseif a:which_buffer == 'clipboard'
-        let @q = system("xsel -bo")
-    endif
+	let @q = system("pbpaste")
     if a:paste_where == 'after'
         normal! "qp
     elseif a:paste_where == 'before'
