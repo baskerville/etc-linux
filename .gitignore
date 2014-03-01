@@ -1,13 +1,5 @@
 terminal_colors/xresources
 terminal_colors/redef
 terminal_colors/redef_console
-termite_config
 themes/vim/raven.vim
-gtk2_gvim
-dzen2_xresources
-simpleswitcher_xresources
-override.css
-dwb_keys.*
-dwb_config.*
 __pycache__
-tint2rc
