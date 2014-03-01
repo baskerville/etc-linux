@@ -5,10 +5,7 @@ shopt -s histappend cmdhist
 
 complete -cf sudo
 complete -cf man
-complete -cf fork
 complete -c bed
-complete -C finddots dot
-complete -d cd
 complete -abck i
 
 _prompt_command() {

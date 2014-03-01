@@ -1,9 +1,8 @@
-vo=opengl,xv,x11
-ao=alsa
+# vo=opengl,xv,x11
 osc=yes
 softvol=yes
 softvol-max=200
-osd-font="sans-serif:style=Bold"
+# osd-font="sans-serif:style=Bold"
 keep-open=yes
 joystick=no
 
