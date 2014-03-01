@@ -50,21 +50,21 @@ G() {
     local pat=$1
     local dir=${2:-.}
     [ $# -gt 1 ] && shift 2 || shift
-    grep "$@" -r --color=auto "$pat" "$dir"
+    grep "$@" -r "$pat" "$dir"
 }
 
 g() {
     local pat=$1
     local dir=${2:-.}
     [ $# -gt 1 ] && shift 2 || shift
-    grep "$@" -r --color=auto "$pat" "$dir"
+    grep "$@" -r "$pat" "$dir"
 }
 
 F() {
     local pat=$1
     local dir=${2:-.}
     [ $# -gt 1 ] && shift 2 || shift
-    find -L "$dir" "$@" -iregex ".*${pat}.*" -print0 | xargs -0 ls --color=auto -1d
+    find -L "$dir" "$@" -iregex ".*${pat}.*" -print0 | xargs -0 ls -1d
 }
 
 f() {
