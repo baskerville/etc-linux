@@ -6,6 +6,9 @@
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
+# Disable startup chime
+sudo nvram SystemAudioVolume=" "
+
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write -g AppleFontSmoothing -int 2
 
