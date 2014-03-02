@@ -110,11 +110,11 @@ R() {
 }
 
 dud() {
-    du -h -d 1 "$@" | sort -h
+    du -Lh -d 1 "$@"
 }
 
 dua() {
-    du -ha "$@" | sort -h
+    du -Lha "$@"
 }
 
 OO() {

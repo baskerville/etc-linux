@@ -30,7 +30,7 @@ brew install tree gifsicle libicns
 # brew install pdfgrep
 
 brew install python python3 ruby
-pip3 install numpy colormath misaka Jinja2
+pip3 install numpy colormath Pillow misaka Jinja2
 pip install docutils PyPDF2
 gem install chronic gpgme sup
 

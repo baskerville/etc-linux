@@ -34,7 +34,7 @@ defaults write -g AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
