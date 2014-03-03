@@ -1,4 +1,5 @@
 . "$HOME/.coordinates"
+. "$HOME/.github_api_token"
 . "$HOME/.profile"
 . "$HOME/.bashrc"
 
