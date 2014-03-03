@@ -6,11 +6,4 @@
 		<identifier>private.return_to_control_return</identifier>
 		<autogen>__KeyOverlaidModifierWithRepeat__ KeyCode::RETURN, KeyCode::CONTROL_R, KeyCode::RETURN</autogen>
 	</item>
-	<item>
-		<name>Shift to Shift</name>
-		<appendix>(Shift alone sends F19)</appendix>
-		<identifier>private.shift_to_shift_help</identifier>
-		<autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::F19</autogen>
-		<autogen>__KeyOverlaidModifier__ KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::F19</autogen>
-	</item>
 </root>

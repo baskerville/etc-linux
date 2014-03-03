@@ -79,7 +79,14 @@ Bundle 'baskerville/vim-quirks'
 syntax on
 filetype plugin indent on
 
-colorscheme hemisu
+let bgtype = system("cat ~/.conditions")
+if bgtype == "Dark"
+	set bg=dark
+	colorscheme smyck
+else
+	set bg=light
+	colorscheme hemisu
+endif
 " if has("gui_running")
 "     colorscheme raven
 " else
@@ -165,7 +172,7 @@ nmap <leader>] :cn<cr>
 nmap <leader>} :cnf<cr>
 nmap <leader>{ :cpf<cr>
 nmap <leader>* :vimgrep =expand("<cword>")<cr> *
-nmap <silent> <leader>? :call Define(expand("<cword>"), "en")<cr>
+nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :call Yank(expand("%"))<cr>
 nmap <silent> <leader>/ :call Yank(expand("%:p"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
@@ -200,12 +207,8 @@ nmap <leader>cc \\\
 nmap <leader>cu \\u
 nmap <leader>cp vip\\
 
-function! Define(word, lang)
-    if (a:lang == "en")
-        let response = system("wn " . a:word)
-    elseif (lang == "fr")
-        let response = system("defr " . a:word)
-    endif
+function! Define(word)
+	let response = system("wn " . a:word)
     echo response
 endfunction
 

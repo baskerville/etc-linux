@@ -8,7 +8,7 @@ set postponed = +/drafts
 set record = +/sent
 set header_cache = ~/.hcache
 
-set sendmail = /usr/bin/msmtp
+set sendmail = /usr/local/bin/msmtp
 set sendmail_wait = -1
 set copy
 

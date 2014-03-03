@@ -35,7 +35,7 @@ set Xbrowser "open '%s' &"
 
 set printer_name "lpr -Plp"
 
-set sendmail_command "/usr/bin/msmtp -t"
+set sendmail_command "/usr/local/bin/msmtp -t"
 
 % Set this to one if you want the "From:" header in e-mails to be generated
 % from the hostname / username / realname variable.
