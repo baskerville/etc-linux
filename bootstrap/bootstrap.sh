@@ -45,6 +45,7 @@ brew cask install secrets keyremap4macbook quicksilver
 brew cask install shiftit burn gimp
 # brew cask install xquartz
 # brew cask install inkscape audacity mactex
+# sudo chown -R "$USER":admin /usr/local
 
 brew tap caskroom/fonts
 brew cask install font-dejavu font-fira-sans
