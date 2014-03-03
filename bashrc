@@ -9,13 +9,17 @@ complete -c bed
 complete -abck i
 
 _prompt_command() {
-    builtin history -a
-    [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
+	builtin history -a
+	local SEARCH=' '
+	local REPLACE='%20'
+	local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+	printf '\e]7;%s\a' "$PWD_URL"
+	[ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
 }
 
 export PS1='\[\e[1;35m\]▶\[\e[0m\] '
 export PS2='\[\e[1;30m\]◀\[\e[0m\] '
-export PROMPT_COMMAND="_prompt_command; $PROMPT_COMMAND"
+export PROMPT_COMMAND="_prompt_command"
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
