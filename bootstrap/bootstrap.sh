@@ -36,7 +36,8 @@ gem install chronic gpgme sup
 
 brew tap mpv-player/mpv
 brew install --HEAD mpv-player/mpv/libass-ct
-brew install mpv
+brew install --HEAD --with-bundle --with-bluray-support --with-libdvdread --with-libquvi --with-little-cms2 --with-lua mpv
+brew linkapps
 
 brew tap phinze/cask
 brew install brew-cask
@@ -53,3 +54,5 @@ brew cask install font-dejavu font-fira-sans
 brew tap baskerville/formulae
 brew install z-go paps-bskv deheader mldonkey-bskv lhasa unlzx ppsei
 brew install --HEAD google-translate-cli spdf
+
+open http://d.pr/f/4zTK http://www.freesmug.org/chromium

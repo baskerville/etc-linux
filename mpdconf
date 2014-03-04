@@ -11,9 +11,9 @@ state_file          "~/.mpd/state"
 metadata_to_use	    "artist,album,title,track,name,genre,date,composer,performer,disc,comment"
 
 audio_output { 
-    type            "alsa"
-    name            "MPD ALSA"
-    mixer_control   "Master"
+    type            "osx"
+    name            "Audio Output"
+    mixer_typs      "software"
 }
 
 audio_output {
