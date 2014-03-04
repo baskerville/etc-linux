@@ -19,7 +19,7 @@ alias ma='mpc add'
 
 alias chbin='chmod 755'
 alias chreg='chmod 644'
-alias operm='stat -c %a'
+alias operm='stat -f %p'
 alias lsync='rsync -aulv --delete'
 
 alias scf='. $SHELL_CONFIG'

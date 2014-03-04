@@ -165,8 +165,8 @@ vmap <leader>R :!sort<cr>
 nmap <leader>H vip:!proto %:r.c<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
-nmap <leader>w :!web_browser =expand("<cword>")<cr><cr><cr>
-vmap <leader>w y:!web_browser "<cr><cr>
+nmap <leader>w :!open =expand("<cword>")<cr><cr><cr>
+vmap <leader>w y:!open "<cr><cr>
 nmap <leader>[ :cp<cr>
 nmap <leader>] :cn<cr>
 nmap <leader>} :cnf<cr>

@@ -1,0 +1,17 @@
+enable-colors = yes
+hide-cursor = 3
+welcome-screen-list = no
+color background = none
+color title = white
+color title-bold = white,bold
+color line = black,bold
+# color line-flags = white,bold
+color list = cyan
+color list-bold = cyan,bold
+color browser-directory = blue
+color browser-playlist = yellow
+color progressbar = black,bold
+color status-state = white
+color status-song  = magenta,bold
+color status-time  = magenta
+color alert = red,bold
