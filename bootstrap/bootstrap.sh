@@ -10,7 +10,7 @@ read
 
 brew update
 brew upgrade
-# brew install osxfuse ext2fuse
+brew install osxfuse ext4fuse
 brew install wget tmux openssl
 brew install vim ctags rename rlwrap
 brew install lua go ghc
@@ -56,3 +56,4 @@ brew install z-go paps-bskv deheader mldonkey-bskv lhasa unlzx ppsei
 brew install --HEAD google-translate-cli spdf
 
 open http://d.pr/f/4zTK http://www.freesmug.org/chromium
+# sudo dseditgroup -o edit -a ice -t user operator
