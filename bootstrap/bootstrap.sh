@@ -57,3 +57,8 @@ brew install --HEAD google-translate-cli spdf
 
 open http://d.pr/f/4zTK http://www.freesmug.org/chromium
 # sudo dseditgroup -o edit -a ice -t user operator
+
+mkdir "$HOME"/Library/LaunchAgents
+for s in "$HOME"/.dotfiles/Library/LaunchAgents/* ; do
+	plutil -convert xml1 -o "$HOME"/Library/LaunchAgents/"${s%.*}".plist "$s"
+done
