@@ -76,10 +76,7 @@ f() {
 ox() {
     cmd=$1
     shift
-    tmpout=$(mktemp)
-    $cmd "$@" > "$tmpout"
-    xargs -a "$tmpout" -d '\n' open
-    rm "$tmpout"
+    $cmd "$@" | tr '\n' '\0' | xargs -0 open
 }
 
 of() {
@@ -118,11 +115,7 @@ dua() {
 }
 
 OO() {
-    tail -n "$@" | xargs -d '\n' open
-}
-
-RR() {
-    tail -n "$@" | xargs -d '\n' -I % rm -v "%"
+    tail -n "$@" | x open
 }
 
 count() {

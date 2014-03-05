@@ -1,8 +1,7 @@
 alias zt='Z -s atime'
 alias zh='Z -s hits'
 
-alias x='| tr "\n" "\0" | xargs -0'
-
+alias x='tr "\n" "\0" | xargs -0'
 alias cp='cp -i'
 alias mv='mv -i'
 alias cpr='cp -r'
@@ -39,7 +38,7 @@ alias lr='ls -R'
 alias n='ls -rtc'
 alias nn='n -1 | tail -n 1'
 alias on='open "$(nn)"'
-alias so='ls -1 | xargs open'
+alias so='open "$(rf)"'
 alias gin='fileinfo "$(nn)"'
 
 alias rmrf='rm -rf'

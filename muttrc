@@ -47,7 +47,7 @@ set send_charset = "utf-8"
 set mail_check = 60
 set attribution = "%n:"
 
-set editor=editor
+set editor=e
 unset pipe_decode
 
 set pager_index_lines = 10
