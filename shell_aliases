@@ -23,10 +23,10 @@ alias operm='stat -f %p'
 alias lsync='rsync -aulv --delete'
 
 alias scf='. $SHELL_CONFIG'
-alias ecf='editor $SHELL_CONFIG'
-alias epf='editor $SHELL_PROFILE'
-alias eal='editor $SHELL_ALIASES'
-alias efu='editor $SHELL_FUNCTIONS'
+alias ecf='e $SHELL_CONFIG'
+alias epf='e $SHELL_PROFILE'
+alias eal='e $SHELL_ALIASES'
+alias efu='e $SHELL_FUNCTIONS'
 
 alias ls='ls -h'
 alias l='ls'
@@ -64,10 +64,7 @@ alias enja='translate {en=ja}'
 alias elen='translate {el=en}'
 alias enel='translate {en=el}'
 
-alias et='editor -p'
-alias vd='vimdiff'
 alias s='sr duckduckgo'
-
 alias mdur="mediainfo '--Inform=General;%Duration/String%'"
 # alias vdim="mediainfo '--Inform=Video;%Width%x%Height%'"
 
