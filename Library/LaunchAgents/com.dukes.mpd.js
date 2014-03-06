@@ -1,8 +1,7 @@
 {
 	"Label": "com.dukes.mpd",
 	"ProgramArguments": [
-		"/usr/local/bin/mpd",
-		"--no-daemon"
+		"/usr/local/bin/mpd"
 	],
 	"RunAtLoad": true
 }
