@@ -116,3 +116,6 @@ defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
+
+# Skim: auto-hide closed side panels in fullscreen mode
+defaults write -app Skim SKHideClosedFullScreenSidePanels -integer 1

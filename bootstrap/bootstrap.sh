@@ -14,7 +14,8 @@ brew upgrade
 brew install git tmux
 brew install reattach-to-user-namespace
 brew install wget openssl
-brew install vim ctags rename rlwrap
+brew install vim deheader ctags
+brew install rename rlwrap lhasa
 brew install lua go ghc
 brew install node mongodb
 brew install mpop msmtp mpack
@@ -56,7 +57,8 @@ brew tap caskroom/fonts
 brew cask install font-dejavu font-fira-sans
 
 brew tap baskerville/formulae
-brew install z-go paps-bskv deheader mldonkey-bskv lhasa unlzx ppsei
+brew install z-go paps-bskv unlzx ppsei
+brew install --with-minimal mldonkey-bskv
 brew install --HEAD google-translate-cli spdf
 
 open http://d.pr/f/4zTK http://www.freesmug.org/chromium
