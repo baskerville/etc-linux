@@ -12,6 +12,7 @@ brew update
 brew upgrade
 # brew install osxfuse ext4fuse
 brew install git tmux
+brew install reattach-to-user-namespace
 brew install wget openssl
 brew install vim ctags rename rlwrap
 brew install lua go ghc
@@ -45,7 +46,7 @@ brew tap phinze/cask
 brew install brew-cask
 # brew cask install chromium
 brew cask install secrets keyremap4macbook
-brew cask install flux quicksilver
+brew cask install flux caffeine spectacle quicksilver
 brew cask install burn gimp
 # brew cask install xquartz
 # brew cask install inkscape audacity mactex

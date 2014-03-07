@@ -1,6 +1,9 @@
 enable-colors = yes
+auto-center = yes
 hide-cursor = 3
+find-wrap = yes
 welcome-screen-list = no
+screen-list = playlist browse artist search
 color background = none
 color title = white
 color title-bold = white,bold
