@@ -1,7 +1,7 @@
 shopt -s checkwinsize
 shopt -s no_empty_cmd_completion
 shopt -s histappend cmdhist
-# shopt -s globstar
+shopt -s globstar
 
 complete -cf sudo
 complete -cf man

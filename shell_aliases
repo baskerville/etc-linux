@@ -29,9 +29,10 @@ alias efu='e $SHELL_FUNCTIONS'
 
 alias ls='ls -h'
 alias l='ls'
-alias la='l -a'
-alias ll='l -l'
-alias lal='l -al'
+alias l1='ls -1'
+alias la='ls -a'
+alias ll='ls -l'
+alias lal='ls -al'
 alias lS='ls -LrsS'
 alias lr='ls -R'
 

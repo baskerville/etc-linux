@@ -13,6 +13,7 @@ brew upgrade
 # brew install osxfuse ext4fuse
 brew install git tmux
 brew install reattach-to-user-namespace
+brew install bash zsh
 brew install wget openssl
 brew install vim deheader ctags
 brew install rename rlwrap lhasa
@@ -21,14 +22,16 @@ brew install node mongodb
 brew install mpop msmtp mpack
 brew install --HEAD --with-s-lang mutt
 brew install --HEAD slrn
+brew install newsbeuter
 brew install base64 hunspell
 brew install potrace sdl
 brew install youtube-dl mediainfo 
-brew install imagemagick ffmpeg flac
+brew install imagemagick ffmpeg
+brew install flac shntool cuetools
 brew install aria2 mp4box pngnq
 brew install detox duff catdoc ranger
 brew install surfraw w3m elinks
-brew install dict wordnet
+brew install dict wordnet pwgen
 brew install tree gifsicle libicns
 # brew install ghostscript
 # brew install pdfgrep
@@ -55,6 +58,9 @@ brew cask install burn gimp
 
 brew tap caskroom/fonts
 brew cask install font-dejavu font-fira-sans
+
+brew tap telemachus/homebrew-desc
+brew install brew-desc
 
 brew tap baskerville/formulae
 brew install z-go paps-bskv unlzx ppsei
