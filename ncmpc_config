@@ -1,3 +1,5 @@
+list-format = "%name%|[%album% - ][%artist% - ]%title%|%file%"
+status-format = "[%artist% - ]%title%|%shortfile%"
 enable-colors = yes
 auto-center = yes
 hide-cursor = 3

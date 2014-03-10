@@ -16,7 +16,7 @@ brew install reattach-to-user-namespace
 brew install bash zsh
 brew install wget openssl
 brew install vim deheader ctags
-brew install rename rlwrap lhasa
+brew install rename urlview rlwrap
 brew install lua go ghc
 brew install node mongodb
 brew install mpop msmtp mpack
@@ -24,7 +24,7 @@ brew install --HEAD --with-s-lang mutt
 brew install --HEAD slrn
 brew install newsbeuter
 brew install base64 hunspell
-brew install potrace sdl
+brew install potrace sdl lhasa
 brew install youtube-dl mediainfo 
 brew install imagemagick ffmpeg
 brew install flac shntool cuetools
