@@ -137,7 +137,7 @@ frspell() {
 cplr() {
     local label=$1
     shift
-    cp  -Lr "$@" /Volumes/"$label"/
+    cp -LR "$@" /Volumes/"$label"/
 }
 
 mkmaildir() {

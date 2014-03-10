@@ -16,7 +16,7 @@ brew install reattach-to-user-namespace
 brew install bash zsh
 brew install wget openssl
 brew install vim deheader ctags
-brew install rename trash urlview rlwrap
+brew install rename trash duti urlview rlwrap
 brew install node mongodb lua go ghc
 brew install mpop msmtp mpack
 brew install --HEAD --with-s-lang mutt
