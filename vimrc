@@ -220,7 +220,7 @@ function! TransparentlyExecute(command)
 endfunction
 
 function! EditSyntax()
-    let filename = substitute(system("findvimsyntax " . &filetype), "\n$", "", "")
+    let filename = substitute(system("find_vim_syntax " . &filetype), "\n$", "", "")
     exec 'e ' . fnameescape(filename)
 endfunction
 
