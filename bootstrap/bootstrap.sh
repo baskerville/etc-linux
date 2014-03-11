@@ -11,7 +11,8 @@ read
 brew update
 brew upgrade
 # brew install osxfuse ext4fuse
-brew install git tmux
+brew install git
+brew install --build-from-source tmux
 brew install reattach-to-user-namespace
 brew install bash zsh
 brew install wget openssl
@@ -56,7 +57,7 @@ brew cask install burn gimp
 # sudo chown -R "$USER":admin /usr/local
 
 brew tap caskroom/fonts
-brew cask install font-dejavu font-fira-sans
+brew cask install font-dejavu
 
 brew tap telemachus/homebrew-desc
 brew install brew-desc
