@@ -186,7 +186,7 @@ conj() {
 #}
 
 #asr() {
- #asc $@ && web_browser ${@%.*}.swf
+ #asc $@ && open ${@%.*}.swf
 #}
 
 #clinst() {

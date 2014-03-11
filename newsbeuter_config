@@ -1,4 +1,4 @@
-browser web_browser
+browser "open -g %u"
 # html-renderer "w3m -dump -T text/html"
 html-renderer "elinks -dump -force-html"
 

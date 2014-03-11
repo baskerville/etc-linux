@@ -1,8 +1,6 @@
-# text/html; web_browser %s; description="HTML Text"; nametemplate=%s.html; needsterminal
-# text/html; w3m -dump -T %t %s; copiousoutput
 text/html; elinks -dump -default-mime-type %t %s; copiousoutput
-application/pdf; document_reader %s
-image/*; image_viewer %s
-video/*; video_player %s
-audio/*; audio_player %s
+application/pdf; dr %s
+image/*; iv %s
+video/*; vp %s
+audio/*; ap %s
 application/msword; catdoc -s cp1252 %s; copiousoutput
