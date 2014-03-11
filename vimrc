@@ -68,6 +68,7 @@ Bundle 'justinmk/vim-syntax-extra'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tejr/vim-tmux'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'jnurmine/Zenburn'
 Bundle 'noahfrederick/vim-hemisu'
