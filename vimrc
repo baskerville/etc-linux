@@ -50,6 +50,7 @@ set statusline+=\ %l,%v\ %p%%
 set laststatus=2
 set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
+digraphs ,: 8230
 
 filetype off
 set rtp+=~/.vim/bundle/vundle
