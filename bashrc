@@ -10,12 +10,9 @@ complete -abck i
 
 _prompt_command() {
 	builtin history -a
-	local SEARCH=' '
-	local REPLACE='%20'
-	local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
-	printf '\e]7;%s\a' "$PWD_URL"
-	tput ed
+	[ -n "$TMUX" ] && printf '\033]2;%s\a' "$(from_home "$PWD")"
 	[ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
+	tput ed
 }
 
 export PS1='\[\e[1;35m\]▶\[\e[0m\] '
