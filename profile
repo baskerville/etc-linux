@@ -55,4 +55,7 @@ LESS_TERMCAP_us=$'\e[1;33m'
 LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_mb LESS_TERMCAP_md LESS_TERMCAP_me LESS_TERMCAP_so LESS_TERMCAP_se LESS_TERMCAP_us LESS_TERMCAP_ue
 
+PATH="$XDG_BIN_DIR:$HOME/.local/bin:$GOPATH/bin:$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+export PATH
+
 # vim: ft=sh

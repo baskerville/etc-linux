@@ -20,7 +20,7 @@ export PS2='\[\e[1;30m\]◀\[\e[0m\] '
 export PROMPT_COMMAND="_prompt_command"
 
 [ -n "$TMUX" ] && export TERM=screen-256color
-# [ -n "$ITERM_PROFILE" ] && printf '\033]50;SetProfile='$(cat ~/.conditions)'\a' > $(tty)
+# [ -n "$ITERM_PROFILE" ] && togglethm $(cat ~/.conditions)
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"

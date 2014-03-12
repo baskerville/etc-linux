@@ -3,7 +3,6 @@
 . "$HOME/.profile"
 . "$HOME/.bashrc"
 
-export PATH="$XDG_BIN_DIR:$HOME/.local/bin:$GOPATH/bin:$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 . $(brew --prefix)/etc/bash_completion
 
 HISTSIZE=100000
