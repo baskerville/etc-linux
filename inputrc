@@ -5,10 +5,10 @@ set show-all-if-unmodified     on
 set visible-stats              on
 set bind-tty-special-chars     off
 
-"\C-w": backward-kill-word
-"\ew": copy-backward-word
 "\C-p": history-search-backward
 "\C-n": history-search-forward
+"\C-w": backward-kill-word
+"\ew": copy-backward-word
 "\C-\M-p": dynamic-complete-history
 "\C-x\C-i": menu-complete
 "\C-x\C-o": menu-complete-backward

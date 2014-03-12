@@ -33,7 +33,7 @@ alias l1='ls -1'
 alias la='ls -a'
 alias ll='ls -l'
 alias lal='ls -al'
-alias lS='ls -LrsS'
+alias lS='ls -LrksS'
 alias lr='ls -R'
 
 alias n='ls -rtc'
@@ -47,7 +47,7 @@ alias rmnn='rm -iv -- "$(nn)"'
 alias rmrfnn='rmrf -v -- "$(nn)"'
 alias ded='find . -type d -empty -print -delete'
 # alias duffr='duff -f "%n" -r .'
-alias bcl='bc -ql $HOME/.bcrc'
+alias bcl='bc -ql'
 
 alias yd='youtube-dl -t'
 

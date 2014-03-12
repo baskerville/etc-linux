@@ -1,5 +1,0 @@
-/* Copy to ~/Library/KeyBindings/ */
-{
-	"^w" = ("deleteWordBackward:");
-	"^u" = ("moveToBeginningOfParagraph:", "deleteToEndOfParagraph:");
-}

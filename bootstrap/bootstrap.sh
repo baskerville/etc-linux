@@ -15,7 +15,7 @@ brew install git
 brew install --build-from-source tmux
 brew install reattach-to-user-namespace
 brew install bash zsh
-brew install wget openssl
+brew install wget openssl lftp
 brew install vim deheader ctags
 brew install rename trash duti urlview rlwrap
 brew install node mongodb lua go ghc
@@ -27,7 +27,7 @@ brew install base64 hunspell
 brew install potrace sdl lhasa
 brew install youtube-dl mediainfo 
 brew install imagemagick ffmpeg
-brew install flac shntool cuetools
+brew install flac cdrtools shntool cuetools
 brew install aria2 mp4box pngnq
 brew install detox duff catdoc ranger
 brew install surfraw w3m elinks
@@ -37,7 +37,7 @@ brew install tree gifsicle libicns
 # brew install pdfgrep
 
 brew install python python3 ruby
-pip3 install numpy colormath Pillow misaka Jinja2
+pip3 install numpy colormath Pillow PyYAML misaka Jinja2
 pip install docutils PyPDF2
 gem install chronic gpgme sup
 
@@ -57,7 +57,7 @@ brew cask install burn gimp
 # sudo chown -R "$USER":admin /usr/local
 
 brew tap caskroom/fonts
-brew cask install font-dejavu
+brew cask install font-dejavu font-courier-prime
 
 brew tap telemachus/homebrew-desc
 brew install brew-desc
