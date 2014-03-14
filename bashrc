@@ -10,19 +10,25 @@ complete -abck i
 
 _prompt_command() {
 	builtin history -a
-	[ -n "$TMUX" ] && printf '\033]2;%s\a' "$(from_home "$PWD")"
+	if [ -n "$TMUX" ] ; then
+		pane_title=''
+		[ -d "$PWD"/.git ] && pane_title="$(git rev-parse --abbrev-ref HEAD):"
+		pane_title="${pane_title}$(from_home "$PWD")"
+		printf '\033]2;%s\a' "$pane_title"
+	fi
 	[ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
 	tput ed
 }
 
-export PS1='\[\e[1;35m\]▶\[\e[0m\] '
-export PS2='\[\e[1;30m\]◀\[\e[0m\] '
-export PROMPT_COMMAND="_prompt_command"
+PS1='\[\e[1;35m\]▶\[\e[0m\] '
+PS2='\[\e[1;30m\]◀\[\e[0m\] '
+PROMPT_COMMAND="_prompt_command"
+export PS1 PS2 PROMPT_COMMAND
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
 [ -n "$TMUX" ] && export TERM=screen-256color
 if [ -n "$ITERM_PROFILE" ] ; then
 	bgtype=$(cat "$HOME"/.conditions)
-	[ "$bgtype" != "$ITERM_PROFILE" ] && togglethm $(cat ~/.conditions)
+	[ "$bgtype" != "$ITERM_PROFILE" ] && togglethm $bgtype
 fi

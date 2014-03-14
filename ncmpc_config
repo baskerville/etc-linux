@@ -1,10 +1,12 @@
-list-format = "%name%|[%album% - ][%artist% - ]%title%|%file%"
-status-format = "[%artist% - ]%title%|%shortfile%"
+list-format = "%name%|[[%album% - ][%artist% - ]%title%]|%file%"
+status-format = "[[%artist% - ]%title%]|%shortfile%"
 enable-colors = yes
 auto-center = yes
 hide-cursor = 3
+find-show-last = yes
 find-wrap = yes
 welcome-screen-list = no
+search-mode=4
 screen-list = playlist browse artist search
 color background = none
 color title = white

@@ -72,9 +72,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'tejr/vim-tmux'
 Bundle 'nsf/gocode', {'rtp': 'vim/'}
 Bundle 'jnurmine/Zenburn'
-Bundle 'noahfrederick/vim-hemisu'
-Bundle 'morhetz/gruvbox'
-Bundle 'zeis/vim-kolor'
+Bundle 'noahfrederick/hemisu'
 Bundle 'baskerville/vim-sxhkdrc'
 Bundle 'baskerville/vim-quirks'
 
