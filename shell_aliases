@@ -38,8 +38,8 @@ alias lr='ls -R'
 
 alias n='ls -rtc'
 alias nn='n -1 | tail -n 1'
-alias on='open "$(nn)"'
-alias so='open "$(rndfp)"'
+alias on='o "$(nn)"'
+alias so='o "$(rndfp)"'
 alias gin='fileinfo "$(nn)"'
 
 alias rmrf='rm -rf'

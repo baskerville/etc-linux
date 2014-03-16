@@ -2,6 +2,7 @@
 {
 	"^w" = "deleteWordBackward:";
 	"^u" = ("moveToBeginningOfParagraph:", "deleteToEndOfParagraph:");
+	"^j" = "insertNewline:";
 	"~f" = "moveWordForward:";
 	"~b" = "moveWordBackward:";
 	"~d" = "deleteWordForward:";
