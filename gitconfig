@@ -49,3 +49,4 @@
 	error = red bold
 [core]
 	editor = vim
+	excludesfile = /Users/ice/.gitignore
