@@ -1,3 +1,6 @@
+. ~/.coordinates
+. ~/.github_api_token
+
 EDITOR=vim
 PAGER=less
 BROWSER=open

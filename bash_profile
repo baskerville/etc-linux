@@ -1,6 +1,4 @@
-. "$HOME/.coordinates"
-. "$HOME/.github_api_token"
-. "$HOME/.profile"
+. "$HOME/.environment"
 . "$HOME/.bashrc"
 
 . $(brew --prefix)/etc/bash_completion

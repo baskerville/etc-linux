@@ -1,42 +1,46 @@
-autoload -U compinit
-compinit
+. ~/.shell_aliases
+. ~/.shell_functions
+
+autoload -U compinit && compinit
+autoload -U colors && colors
+# autoload -U zmv
+autoload -U edit-command-line
+# autoload -U insert-composed-char
+zle -N edit-command-line
+# zle -N insert-composed-char
 
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-
-[ $ITERM_PROFILE ] && bindkey "\e[3~" delete-char
-
-# Enable regex moving
-autoload -U zmv
+bindkey '\e[3~' delete-char
+bindkey '\ee' edit-command-line
+# bindkey '\e[15~' insert-composed-char
 
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-# Case insensitive globing
-setopt no_case_glob
-
-# Don't show duplicate history entries
-setopt hist_find_no_dups
-
-# Remove unnecessary blanks from history
-setopt hist_reduce_blanks
-
-# Share history between instances
+setopt prompt_subst
+setopt no_case_glob extended_glob
+setopt hist_find_no_dups hist_reduce_blanks
 setopt share_history
-
-# Don't hang up background jobs
 setopt no_hup
 
-# Expand parameters, commands and aritmatic in prompts
-setopt prompt_subst
+PROMPT='%{$fg_bold[magenta]%}%(?.▶.▷) %{$reset_color%}'
+PROMPT2='%{$fg_bold[black]%}◀ %{$reset_color%}'
 
-# Colorful prompt with Git and Subversion branch
-autoload -U colors && colors
+setpanetitle() {
+	local pane_title=''
+	[ -d "$PWD"/.git ] && pane_title="$(git rev-parse --abbrev-ref HEAD):"
+	pane_title="${pane_title}$(from_home "$PWD")"
+	printf '\033]2;%s\a' "$pane_title"
+}
 
-PS1='%{$fg_bold[magenta]%}%(?.▶.▷) %{$reset_color%}'
-PS2='%{$fg_bold[black]%}◀ %{$reset_color%}'
+if [ -n "$TMUX" ] ; then
+	export TERM=screen-256color
+	setpanetitle
+fi
 
 chpwd() {
     [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
+    [ -n "$TMUX" ] && setpanetitle
 }

@@ -46,6 +46,9 @@ brew install --HEAD mpv-player/mpv/libass-ct
 brew install --HEAD --with-bundle --with-bluray-support --with-libdvdread --with-libquvi --with-little-cms2 --with-lua mpv
 brew linkapps
 
+brew tap homebrew/science
+brew install maxima
+
 brew tap phinze/cask
 brew install brew-cask
 # brew cask install chromium
