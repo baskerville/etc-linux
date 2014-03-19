@@ -27,7 +27,6 @@ export PS1 PS2 PROMPT_COMMAND
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
-[ -n "$TMUX" ] && export TERM=screen-256color
 if [ -n "$ITERM_PROFILE" ] ; then
 	bgtype=$(cat "$HOME"/.conditions)
 	[ "$bgtype" != "$ITERM_PROFILE" ] && togglethm $bgtype

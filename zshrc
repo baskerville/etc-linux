@@ -35,10 +35,7 @@ setpanetitle() {
 	printf '\033]2;%s\a' "$pane_title"
 }
 
-if [ -n "$TMUX" ] ; then
-	export TERM=screen-256color
-	setpanetitle
-fi
+[ -n "$TMUX" ] && setpanetitle
 
 chpwd() {
     [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
