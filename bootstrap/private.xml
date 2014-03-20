@@ -8,8 +8,8 @@
 	</item>
 	<item>
 		<name>Control_L to Control_L</name>
-		<appendix>(Control_L alone sends Home)</appendix>
-		<identifier>private.control_to_control_home</identifier>
-		<autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_L, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::CONTROL_L, KeyCode::HOME</autogen>
+		<appendix>(Control_L alone sends F13)</appendix>
+		<identifier>private.control_to_control_f13</identifier>
+		<autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_L, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::CONTROL_L, KeyCode::F13</autogen>
 	</item>
 </root>

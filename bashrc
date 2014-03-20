@@ -25,6 +25,9 @@ PS2='\[\e[1;30m\]◀\[\e[0m\] '
 PROMPT_COMMAND="_prompt_command"
 export PS1 PS2 PROMPT_COMMAND
 
+PATH="$XDG_BIN_DIR:$HOME/.local/bin:$GOPATH/bin:$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+export PATH
+
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
 if [ -n "$ITERM_PROFILE" ] ; then
