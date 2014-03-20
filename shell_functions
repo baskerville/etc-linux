@@ -31,7 +31,7 @@ dbs() {
 bnd() {
     pattern=.
     [ $# -gt 0 ] && pattern=$@
-    bind -P | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern"
+    bindkey -L | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern"
 }
 
 mil() {

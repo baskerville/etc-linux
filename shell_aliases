@@ -21,9 +21,6 @@ alias chreg='chmod 644'
 alias operm='stat -f %p'
 alias lsync='rsync -vau --delete'
 
-alias scf='. $SHELL_CONFIG'
-alias ecf='e $SHELL_CONFIG'
-alias epf='e $SHELL_PROFILE'
 alias eal='e $SHELL_ALIASES'
 alias efu='e $SHELL_FUNCTIONS'
 

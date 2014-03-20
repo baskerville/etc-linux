@@ -5,16 +5,16 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 # autoload -U zmv
 autoload -U edit-command-line
-# autoload -U insert-composed-char
+autoload -U insert-composed-char
 zle -N edit-command-line
-# zle -N insert-composed-char
+zle -N insert-composed-char
 
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '\e[3~' delete-char
 bindkey '\ee' edit-command-line
-# bindkey '\e[15~' insert-composed-char
+bindkey '\e[31~' insert-composed-char
 
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'

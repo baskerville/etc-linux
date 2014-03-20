@@ -207,6 +207,11 @@ nmap <leader>cc \\\
 nmap <leader>cu \\u
 nmap <leader>cp vip\\
 
+" Enable F17
+set t_F7=[31~
+" Map F17 to digraph input
+imap <F17> 
+
 function! Define(word)
 	let response = system("wn " . a:word)
     echo response
