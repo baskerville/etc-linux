@@ -25,7 +25,6 @@ setopt hist_find_no_dups hist_reduce_blanks
 setopt share_history
 setopt no_hup
 
-# PROMPT='%{$fg_bold[magenta]%}%(?.▶.▷) %{$reset_color%}'
 PROMPT='%(?.%{$fg_bold[magenta]%}▶.%{$fg[red]%}●) %{$reset_color%}'
 PROMPT2='%{$fg_bold[black]%}◾ %{$reset_color%}'
 
