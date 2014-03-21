@@ -19,6 +19,7 @@ bindkey '\e[31~' insert-composed-char
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+setopt brace_ccl
 setopt prompt_subst
 setopt no_case_glob extended_glob
 setopt hist_find_no_dups hist_reduce_blanks
