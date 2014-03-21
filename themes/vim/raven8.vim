@@ -133,12 +133,4 @@ hi StatusLineNC      cterm=none ctermfg=darkgrey
 " hi mkdURL          ctermfg=
 " hi mkdLink         ctermfg=magenta
 
-hi def link mailSubject Title
-hi def link mailSignature Comment
-hi def link mailQuoted2 mailQuoted1
-hi def link perlSharpBang Comment
-hi def link javaScriptNumber Number
-hi def link markdownCode Comment
-hi def link markdownCodeBlock Comment
-
 " vim: set ft=vim:
