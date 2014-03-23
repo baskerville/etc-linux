@@ -70,7 +70,7 @@ brew install z-go paps-bskv unlzx ppsei
 brew install --with-minimal mldonkey-bskv
 brew install --HEAD google-translate-cli spdf
 
-open http://d.pr/f/4zTK http://www.freesmug.org/chromium
+open http://www.freesmug.org/chromium
 open http://rapidshare.com/files/2591591009/Inkscape-r-10.7%2B-x86_64_RC5.dmg
 # sudo dseditgroup -o edit -a ice -t user operator
 
