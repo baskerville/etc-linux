@@ -32,7 +32,7 @@ brew install aria2 mp4box pngnq
 brew install detox duff catdoc ranger
 brew install surfraw w3m elinks
 brew install dict wordnet pwgen
-brew install tree gifsicle libicns
+brew install tree pstree gifsicle libicns
 # brew install ghostscript
 # brew install pdfgrep
 
