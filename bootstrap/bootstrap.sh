@@ -14,7 +14,7 @@ brew upgrade
 brew install git
 brew install --build-from-source tmux
 brew install reattach-to-user-namespace
-brew install bash zsh
+brew install bash zsh jshon
 brew install wget openssl lftp
 brew install vim deheader ctags
 brew install rename trash duti urlview rlwrap
@@ -37,7 +37,7 @@ brew install tree pstree gifsicle libicns
 # brew install pdfgrep
 
 brew install python python3 ruby
-pip3 install numpy colormath Pillow PyYAML misaka Jinja2 beautifulsoup4
+pip3 install numpy colormath Pillow PyYAML misaka Jinja2 beautifulsoup4 ephem
 pip install docutils PyPDF2
 gem install chronic gpgme sup
 
