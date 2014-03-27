@@ -55,6 +55,7 @@ brew install brew-cask
 brew cask install secrets keyremap4macbook
 brew cask install flux caffeine spectacle quicksilver
 brew cask install burn gimp
+brew cask install flash
 # brew cask install xquartz
 # brew cask install inkscape audacity mactex
 # sudo chown -R "$USER":admin /usr/local
