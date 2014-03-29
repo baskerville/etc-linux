@@ -82,7 +82,7 @@ filetype plugin indent on
 let bgtype = system("cat ~/.conditions")
 if bgtype == "Dark"
 	set bg=dark
-	colorscheme smyck
+	colorscheme bubblegum
 else
 	set bg=light
 	colorscheme hemisu
