@@ -67,6 +67,7 @@ alias mdur="mediainfo '--Inform=General;%Duration/String%'"
 
 alias detox='detox -v'
 alias mp4box='MP4Box'
+alias df='df -H'
 
 alias up='git commit -am Update'
 alias pu='git push'
