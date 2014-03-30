@@ -36,6 +36,7 @@ set ignorecase
 set smartcase
 
 let g:xdefaults_no_if0 = 1
+let g:is_posix = 1
 " let g:easytags_include_members = 0
 " let g:easytags_dynamic_files = 2
 " let g:easytags_events = ['BufEnter', 'BufWritePost']
@@ -147,9 +148,11 @@ let mapleader = " "
 
 nmap j gj
 nmap k gk
-nmap <leader>s :%s/
-vmap <leader>s :s/
-nmap <leader>S :s/
+nmap <leader>s :%s/\v
+vmap <leader>s :s/\v
+nmap <leader>S :s/\v
+nnoremap / /\v
+vnoremap / /\v
 nmap <leader>o o<esc>k
 nmap <leader>O O<esc>j
 nmap <leader>j :bn<cr>
