@@ -15,6 +15,7 @@ bindkey '^n' history-search-forward
 bindkey '\e[3~' delete-char
 bindkey '\ee' edit-command-line
 bindkey '\e[31~' insert-composed-char
+bindkey '^[[Z' reverse-menu-complete
 
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
