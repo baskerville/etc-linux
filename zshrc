@@ -12,7 +12,7 @@ zle -N insert-composed-char
 bindkey -e
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
-bindkey '\es' history-incremental-search-forward
+bindkey '\er' history-incremental-search-forward
 bindkey '\e[3~' delete-char
 bindkey '\ee' edit-command-line
 bindkey '\e[31~' insert-composed-char
