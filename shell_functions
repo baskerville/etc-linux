@@ -76,7 +76,7 @@ f() {
 ox() {
     cmd=$1
     shift
-    $cmd "$@" | tr '\n' '\0' | xargs -0 open
+    $cmd "$@" | tr '\n' '\0' | xargs -0 o
 }
 
 of() {
@@ -115,7 +115,7 @@ dua() {
 }
 
 OO() {
-    tail -n "$@" | x open
+    tail -n "$@" | x o
 }
 
 count() {
@@ -186,7 +186,7 @@ conj() {
 #}
 
 #asr() {
- #asc $@ && open ${@%.*}.swf
+ #asc $@ && o ${@%.*}.swf
 #}
 
 #clinst() {
