@@ -1,6 +1,7 @@
 browser "open -g %u"
 # html-renderer "w3m -dump -T text/html"
 html-renderer "elinks -dump -force-html"
+max-items 100
 
 bind-key ^B pageup
 bind-key ^F pagedown
