@@ -1,172 +1,172 @@
 z() {
-    local dir=$(Z "$@" | head -n 1)
-    [ -z "$dir" ] && return 1
-    cd "$dir" || Z -d "$dir"
+	local dir="$(Z "$@" | head -n 1)"
+	[ -z "$dir" ] && return 1
+	cd "$dir" || Z -d "$dir"
 }
 
 zx() {
-    Z -d "$PWD"; z "$@"
+	Z -d "$PWD"; z "$@"
 }
 
 lc() {
-    local start=${1:-1}
-    local end=${2:-"$start"}
-    fc -ln -$start -$end | sed 's/^[[:space:]]*//'
+	local start=${1:-1}
+	local end=${2:-"$start"}
+	fc -ln -$start -$end | sed 's/^[[:space:]]*//'
 }
 
 yc() {
-    lc $@ | pbcopy
+	lc $@ | pbcopy
 }
 
 dehdr() {
-    for s in *.c ; do
-        CFLAGS="-Werror -Wfatal-errors" deheader "$@" -i "${s%.*}\.h" "$s" | sed -n 's/.*: *remove *\(.*\) *from *\(.*\)/\2: \1/p'
-    done
+	for s in *.c ; do
+		CFLAGS="-Werror -Wfatal-errors" deheader "$@" -i "${s%.*}\.h" "$s" | sed -n 's/.*: *remove *\(.*\) *from *\(.*\)/\2: \1/p'
+	done
 }
 
 dbs() {
-    grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /'
+	grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /'
 }
 
 bnd() {
-    pattern=.
-    [ $# -gt 0 ] && pattern=$@
-    bindkey -L | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern"
+	pattern=.
+	[ $# -gt 0 ] && pattern=$@
+	bindkey -L | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern"
 }
 
 mil() {
-    mediainfo --Info-Parameters
+	mediainfo --Info-Parameters
 }
 
 mi() {
-    mediainfo "--Inform=General;%$@%"
+	mediainfo "--Inform=General;%$@%"
 }
 
 msa() {
-    ms "$@" | ma
+	ms "$@" | ma
 }
 
 G() {
-    local pat=$1
-    local dir=${2:-.}
-    [ $# -gt 1 ] && shift 2 || shift
-    grep "$@" -r "$pat" "$dir"
+	local pat=$1
+	local dir=${2:-.}
+	[ $# -gt 1 ] && shift 2 || shift
+	grep "$@" -r "$pat" "$dir"
 }
 
 g() {
-    local pat=$1
-    local dir=${2:-.}
-    [ $# -gt 1 ] && shift 2 || shift
-    grep "$@" -r "$pat" "$dir"
+	local pat=$1
+	local dir=${2:-.}
+	[ $# -gt 1 ] && shift 2 || shift
+	grep "$@" -r "$pat" "$dir"
 }
 
 F() {
-    local pat=$1
-    local dir=${2:-.}
-    [ $# -gt 1 ] && shift 2 || shift
-    find -L "$dir" "$@" -iregex ".*${pat}.*" -print0 | xargs -0 ls -1d
+	local pat=$1
+	local dir=${2:-.}
+	[ $# -gt 1 ] && shift 2 || shift
+	find -L "$dir" "$@" -iregex ".*${pat}.*" -print0 | xargs -0 ls -1d
 }
 
 f() {
-    local pat=$1
-    shift
-    F "$pat" . -maxdepth 1 "$@"
+	local pat=$1
+	shift
+	F "$pat" . -maxdepth 1 "$@"
 }
 
 ox() {
-    cmd=$1
-    shift
-    $cmd "$@" | tr '\n' '\0' | xargs -0 o
+	cmd=$1
+	shift
+	$cmd "$@" | tr '\n' '\0' | xargs -0 o
 }
 
 of() {
-    ox f "$@"
+	ox f "$@"
 }
 
 oF() {
-    ox F "$@"
+	ox F "$@"
 }
 
 L() {
-    ls -d -- *."$@"
+	ls -d -- *."$@"
 }
 
 S() {
-    lS -d -- *."$@"
+	lS -d -- *."$@"
 }
 
 N() {
-    n -d -- *."$@"
+	n -d -- *."$@"
 }
 
 R() {
-    while [ $# -gt 0 ] ; do
-        rm -v -- *."$1"
-        shift
-    done
+	while [ $# -gt 0 ] ; do
+		rm -v -- *."$1"
+		shift
+	done
 }
 
 dud() {
-    du -Lh -d 1 "$@"
+	du -Lh -d 1 "$@"
 }
 
 dua() {
-    du -Lha "$@"
+	du -Lha "$@"
 }
 
 OO() {
-    tail -n "$@" | x o
+	tail -n "$@" | x o
 }
 
 count() {
-    l1 $@ | wc -l
+	l1 $@ | wc -l
 }
 
 weather_loc() {
-    wget -qO - "http://xoap.weather.com/search/search?where=$@" | grep 'loc id'
+	wget -qO - "http://xoap.weather.com/search/search?where=$@" | grep 'loc id'
 }
 
 spell() {
-    echo $@ | hunspell -d en_US | grep '^&'
+	echo $@ | hunspell -d en_US | grep '^&'
 }
 
 frspell() {
-    echo $@ | hunspell -d fr_FR | grep '^&'
+	echo $@ | hunspell -d fr_FR | grep '^&'
 }
 
 cplr() {
-    local label=$1
-    shift
-    cp -LR "$@" /Volumes/"$label"/
+	local label=$1
+	shift
+	cp -LR "$@" /Volumes/"$label"/
 }
 
 mkmaildir() {
-    local maildir="$HOME/.maildir"
-    mkdir -p $maildir/$@/{cur,new,tmp}
+	local maildir="$HOME/.maildir"
+	mkdir -p $maildir/$@/{cur,new,tmp}
 }
 
 wiktionary() {
-    curl -s "http://en.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
+	curl -s "http://en.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
 }
 
 wiktionary_fr() {
-    curl -s "http://fr.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
+	curl -s "http://fr.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
 }
 
 def() {
-    wiktionary $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^{|]+ of)\|([^|}]+)[^}]*\}\}/*\U$1\E* $2/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
+	wiktionary $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^{|]+ of)\|([^|}]+)[^}]*\}\}/*\U$1\E* $2/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
 }
 
 defr() {
-    wiktionary_fr $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
+	wiktionary_fr $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
 }
 
 defr1() {
-    defr $@ | head -n 1
+	defr $@ | head -n 1
 }
 
 conj() {
-    w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@"
+	w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@"
 }
 
 #swc() {
@@ -174,11 +174,11 @@ conj() {
 #}
 
 #airc() {
-    #if [ -d lib ] ; then
-        #amxmlc -library-path+=lib $@ 2>&1
-    #else
-        #amxmlc $@ 2>&1
-    #fi
+	#if [ -d lib ] ; then
+		#amxmlc -library-path+=lib $@ 2>&1
+	#else
+		#amxmlc $@ 2>&1
+	#fi
 #}
 
 #airr() {
