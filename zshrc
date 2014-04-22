@@ -9,6 +9,13 @@ autoload -U insert-composed-char
 zle -N edit-command-line
 zle -N insert-composed-char
 
+zstyle ':completion:most-recent-file:*' match-original both
+zstyle ':completion:most-recent-file:*' file-sort change
+zstyle ':completion:most-recent-file:*' file-patterns '*:all\ files'
+zstyle ':completion:most-recent-file:*' hidden all
+zstyle ':completion:most-recent-file:*' completer _files
+zle -C most-recent-file menu-complete _generic
+
 bindkey -e
 bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
@@ -17,6 +24,7 @@ bindkey '\e[3~' delete-char
 bindkey '\ee' edit-command-line
 bindkey '\e[31~' insert-composed-char
 bindkey '^[[Z' reverse-menu-complete
+bindkey '\e,' most-recent-file
 
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
