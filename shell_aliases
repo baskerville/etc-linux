@@ -80,6 +80,7 @@ alias nb='newsbeuter'
 alias maxima='rlwrap maxima -q'
 alias python='python3 -q'
 # alias pps2pdf='loimpress --nologo --convert-to pdf'
+alias dfc='dfc -p /dev'
 alias wrp='wr FRXX0076'
 alias slrn='slrn --spool'
 
