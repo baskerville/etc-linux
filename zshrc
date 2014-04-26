@@ -53,7 +53,7 @@ if [ -n "$ITERM_PROFILE" ] ; then
 	[ "$bgtype" != "$ITERM_PROFILE" ] && togglethm $bgtype
 fi
 
-chpwd() {
+precmd() {
     [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
     [ -n "$TMUX" ] && setpanetitle
 }
