@@ -27,7 +27,7 @@ bindkey '^[[Z' reverse-menu-complete
 bindkey '\e,' most-recent-file
 
 # Case insensitive completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 setopt brace_ccl
 setopt prompt_subst
