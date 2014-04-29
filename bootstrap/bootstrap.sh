@@ -17,6 +17,7 @@ brew install reattach-to-user-namespace
 brew install bash zsh jshon
 brew install wget openssl lftp
 brew install vim deheader ctags
+brew install asciidoc docbook docbook-xsl
 brew install rename trash duti urlview rlwrap
 brew install node mongodb lua go ghc
 brew install mpop msmtp mpack
