@@ -89,13 +89,13 @@ else
 	colorscheme hemisu
 endif
 " if has("gui_running")
-"     colorscheme raven
+"	  colorscheme raven
 " else
-"     if &t_Co >= 256
-"         colorscheme raven256
-"     else
-"         colorscheme raven8
-"     endif
+"	  if &t_Co >= 256
+"		  colorscheme raven256
+"	  else
+"		  colorscheme raven8
+"	  endif
 " endif
 
 hi def link mailSubject Title
@@ -108,40 +108,40 @@ hi def link markdownCodeBlock Comment
 hi def link rubySharpBang Comment
 
 if has("autocmd")
-    autocmd FileType mail silent! call CleanMuttHeader()
-    autocmd FileType mail setlocal completefunc=CompleteMuttAliases
-    autocmd FileType mail setlocal commentstring=>%s
-    autocmd FileType xdefaults setlocal commentstring=!%s
-    autocmd FileType sxhkdrc setlocal commentstring=#%s
-    autocmd FileType lilypond setlocal commentstring=%%s
-    autocmd FileType slrnrc setlocal commentstring=%%s
-    autocmd FileType slang setlocal commentstring=%%s
-    autocmd FileType perl setlocal keywordprg=perldoc
-    autocmd FileType ruby setlocal keywordprg=ri ts=2 sw=2 expandtab
-    autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
+	autocmd FileType mail silent! call CleanMuttHeader()
+	autocmd FileType mail setlocal completefunc=CompleteMuttAliases
+	autocmd FileType mail setlocal commentstring=>%s
+	autocmd FileType xdefaults setlocal commentstring=!%s
+	autocmd FileType sxhkdrc setlocal commentstring=#%s
+	autocmd FileType lilypond setlocal commentstring=%%s
+	autocmd FileType slrnrc setlocal commentstring=%%s
+	autocmd FileType slang setlocal commentstring=%%s
+	autocmd FileType perl setlocal keywordprg=perldoc
+	autocmd FileType ruby setlocal keywordprg=ri ts=2 sw=2 expandtab
+	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
-    " autocmd BufRead,BufEnter *.asd set filetype=lisp
-    " autocmd BufRead,BufEnter *.as set filetype=actionscript
-    " autocmd BufRead,BufEnter *.mxml set filetype=mxml
-    " autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
-    " autocmd BufRead,BufEnter *.nfo set filetype=nfo
-    " autocmd BufRead,BufEnter *.ck set filetype=ck
-    autocmd BufRead,BufEnter *Xmodmaprc set filetype=xmodmap
-    autocmd BufRead,BufEnter *.h set filetype=c
-    autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
-    autocmd BufRead,BufEnter *.xinitrc set filetype=sh
-    autocmd BufRead,BufEnter *.j2 set filetype=htmljinja
-    " autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
-    " autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
+	" autocmd BufRead,BufEnter *.asd set filetype=lisp
+	" autocmd BufRead,BufEnter *.as set filetype=actionscript
+	" autocmd BufRead,BufEnter *.mxml set filetype=mxml
+	" autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
+	" autocmd BufRead,BufEnter *.nfo set filetype=nfo
+	" autocmd BufRead,BufEnter *.ck set filetype=ck
+	autocmd BufRead,BufEnter *Xmodmaprc set filetype=xmodmap
+	autocmd BufRead,BufEnter *.h set filetype=c
+	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
+	autocmd BufRead,BufEnter *.xinitrc set filetype=sh
+	autocmd BufRead,BufEnter *.j2 set filetype=htmljinja
+	" autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
+	" autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
 
-    autocmd BufReadPost * exe "normal! '\""
+	autocmd BufReadPost * exe "normal! '\""
 
-    if exists("+omnifunc")
-        autocmd Filetype *
-                    \   if &omnifunc == "" |
-                    \       setlocal omnifunc=syntaxcomplete#Complete |
-                    \   endif
-    endif
+	if exists("+omnifunc")
+		autocmd Filetype *
+		\	if &omnifunc == "" |
+		\		setlocal omnifunc=syntaxcomplete#Complete |
+		\	endif
+	endif
 endif
 
 let mapleader = " "
@@ -195,6 +195,7 @@ nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :call EditSyntax()<cr>
 nmap <silent> <F12> :make<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal ts=".v:count1." sw=".v:count1<cr>
+nmap <silent> <leader>V :call ToggleViewMode()<cr>
 vmap <silent> <leader>y y:call Yank()<cr>
 nmap <silent> <leader>y yiw:call Yank()<cr>
 nmap <silent> <leader>p :call Paste('after')<cr>
@@ -217,127 +218,139 @@ imap <F17> 
 
 function! Define(word)
 	let response = system("wn " . a:word)
-    echo response
+	echo response
 endfunction
 
 function! TransparentlyExecute(command)
-    let w = winsaveview()
-    execute a:command
-    call winrestview(w)
+	let w = winsaveview()
+	execute a:command
+	call winrestview(w)
 endfunction
 
 function! EditSyntax()
-    let filename = substitute(system("find_vim_syntax " . &filetype), "\n$", "", "")
-    exec 'e ' . fnameescape(filename)
+	let filename = substitute(system("find_vim_syntax " . &filetype), "\n$", "", "")
+	exec 'e ' . fnameescape(filename)
 endfunction
 
 function! EditColorScheme()
-    exec 'e ' . fnameescape($HOME . "/.vim/colors/" . g:colors_name . ".vim")
+	exec 'e ' . fnameescape($HOME . "/.vim/colors/" . g:colors_name . ".vim")
 endfunction
 
 function! ToggleSyntax()
-    if exists("g:syntax_on")
-        syntax off
-    else
-        syntax enable
-    endif
+	if exists("g:syntax_on")
+		syntax off
+	else
+		syntax enable
+	endif
 endfunction
 
 function! ToggleColorColumn()
-    if &colorcolumn
-        set colorcolumn=0
-    else
-        set colorcolumn=80
-    endif
+	if &colorcolumn
+		set colorcolumn=0
+	else
+		set colorcolumn=80
+	endif
 endfunction
 
 function! ToggleConceal()
-    if &conceallevel
-        set conceallevel=0
-        echomsg "conceallevel disabled"
-    else
-        set conceallevel=2
-        echomsg "conceallevel enabled"
-    endif
+	if &conceallevel
+		set conceallevel=0
+		echomsg "conceallevel disabled"
+	else
+		set conceallevel=2
+		echomsg "conceallevel enabled"
+	endif
 endfunction
 
 function! ToggleWrap()
-    if (&wrap == 1)
-        if (&linebreak == 0)
-            set linebreak
-        else
-            set nowrap
-        endif
-    else
-        set wrap
-        set nolinebreak
-    endif
+	if (&wrap == 1)
+		if (&linebreak == 0)
+			set linebreak
+		else
+			set nowrap
+		endif
+	else
+		set wrap
+		set nolinebreak
+	endif
 endfunction
 
 function! ToggleBar()
-    if (&laststatus == 0)
-        set laststatus=2
-    else
-        set laststatus=0
-    endif
+	if (&laststatus == 0)
+		set laststatus=2
+	else
+		set laststatus=0
+	endif
 endfunction
 
 function! GetCharName()
-    let clip = @"
-    normal! yl
-    let response = system("uniname", @")
-    echomsg response
-    let @" = clip
+	let clip = @"
+	normal! yl
+	let response = system("uniname", @")
+	echomsg response
+	let @" = clip
 endfunction
 
+function! ToggleViewMode()
+	if (&foldcolumn != 12)
+		set foldcolumn=12
+		set laststatus=0
+		hi FoldColumn ctermbg=bg guibg=bg
+	else
+		set foldcolumn=0
+		set laststatus=2
+		execute 'colorscheme ' . g:colors_name
+	endif
+endfunc
+
 " function! TerminalAt(path)
-"     let response = system("fork termite -d " . a:path)
-"     echo response
+"	  let response = system("fork termite -d " . a:path)
+"	  echo response
 " endfunction
 
 function! Yank(...)
-    if a:0
-        let response = system("pbcopy", a:1)
-    else
-        let response = system("pbcopy", @")
-    endif
+	if a:0
+		let response = system("pbcopy", a:1)
+	else
+		let response = system("pbcopy", @")
+	endif
 endfunction
 
 function! Paste(paste_where)
-    let at_q = @q
+	let at_q = @q
 	let @q = system("pbpaste")
-    if a:paste_where == 'after'
-        normal! "qp
-    elseif a:paste_where == 'before'
-        normal! "qP
-    endif
-    let @q = at_q
+	if a:paste_where == 'after'
+		normal! "qp
+	elseif a:paste_where == 'before'
+		normal! "qP
+	endif
+	let @q = at_q
 endfunction
 
 function! CleanMuttHeader()
-    " remove signature
-    exec '%s/^>\+ *-- \n\_.*//e'
-    " remove unwanted headers
-    exec '%s/^\(Reply-To\|Bcc\): \n//e'
-    normal! 3j
+	" remove signature
+	exec '%s/^>\+ *-- \n\_.*//e'
+	" remove unwanted headers
+	exec '%s/^\(Reply-To\|Bcc\): \n//e'
+	normal! 3j
 endfunction
 
 function! CompleteMuttAliases(findstart, base)
-    if a:findstart
-        " locate the start of the word
-        let line = getline('.')
-        let start = col('.') - 1
-        while start > 0 && line[start - 1] =~ '\a'
-            let start -= 1
-        endwhile
-        return start
-    else
-        " call mutt with the appropriate parameters
-        let result = []
-        if strlen(a:base)
-            let query_response = system("mutt_alias_query " . a:base)
-            let result = split(query_response, '\n')
-        endif
-        return result
-    endif
+	if a:findstart
+		" locate the start of the word
+		let line = getline('.')
+		let start = col('.') - 1
+		while start > 0 && line[start - 1] =~ '\a'
+			let start -= 1
+		endwhile
+		return start
+	else
+		" call mutt with the appropriate parameters
+		let result = []
+		if strlen(a:base)
+			let query_response = system("mutt_alias_query " . a:base)
+			let result = split(query_response, '\n')
+		endif
+		return result
+	endif
 endfunction
