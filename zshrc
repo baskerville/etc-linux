@@ -23,6 +23,7 @@ bindkey '\er' history-incremental-search-forward
 bindkey '\e[3~' delete-char
 bindkey '\ee' edit-command-line
 bindkey '\e[31~' insert-composed-char
+bindkey '\e^b' copy-prev-word
 bindkey '^[[Z' reverse-menu-complete
 bindkey '\e,' most-recent-file
 

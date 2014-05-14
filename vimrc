@@ -89,15 +89,6 @@ else
 	set bg=light
 	colorscheme hemisu
 endif
-" if has("gui_running")
-"	  colorscheme raven
-" else
-"	  if &t_Co >= 256
-"		  colorscheme raven256
-"	  else
-"		  colorscheme raven8
-"	  endif
-" endif
 
 hi def link mailSubject Title
 hi def link mailSignature Comment
