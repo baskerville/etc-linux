@@ -40,7 +40,7 @@ ignore *
 unignore date from subject to cc
 
 set sort = threads
-set sort_browser = date
+set sort_browser = reverse-date
 set sort_aux = reverse-last-date-received
 
 set charset = "utf-8"
