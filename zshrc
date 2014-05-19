@@ -26,6 +26,8 @@ bindkey '\e[31~' insert-composed-char
 bindkey '\e^b' copy-prev-word
 bindkey '^[[Z' reverse-menu-complete
 bindkey '\e,' most-recent-file
+bindkey '\e[' vi-find-prev-char
+bindkey '\e]' vi-find-next-char
 
 # Case insensitive completion
 # zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
