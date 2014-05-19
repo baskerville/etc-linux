@@ -97,7 +97,7 @@ charset outgoing utf8
 % If 10, sort by date with most recent last.
 % If 11, thread then sort by date with most recent last.
 % If 12, use the value of the custom_sort_order variable.
-set sorting_method 11
+set sorting_method 9
 
 % If non-zero, a header with a new subject will start a new thread.
 %set new_subject_breaks_threads 0
