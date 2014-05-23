@@ -4,6 +4,11 @@ z() {
 	cd "$dir" || Z -d "$dir"
 }
 
+oz() {
+	local fp="$(Z -i "$XDG_DATA_HOME"/open.db "$@" | head -n 1)"
+	[ -e "$fp" ] && o "$fp"
+}
+
 zx() {
 	Z -d "$PWD"; z "$@"
 }
