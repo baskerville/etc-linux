@@ -1,0 +1,14 @@
+diff -ru a/src/libpaps.c b/src/libpaps.c
+--- a/src/libpaps.c	2014-05-25 14:16:27.000000000 +0200
++++ b/src/libpaps.c	2014-05-25 14:17:25.000000000 +0200
+@@ -25,8 +25,8 @@
+ 
+ #include <pango/pango.h>
+ #include <pango/pangoft2.h>
+-#include <freetype/ftglyph.h>
+-#include <freetype/ftoutln.h>
++#include <freetype2/ftglyph.h>
++#include <freetype2/ftoutln.h>
+ #include <errno.h>
+ #include <stdlib.h>
+ #include <stdio.h>
