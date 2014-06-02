@@ -25,7 +25,7 @@ brew install --HEAD --with-s-lang mutt
 brew install --HEAD slrn
 brew install newsbeuter
 brew install base64 hunspell
-brew install potrace sdl lhasa
+brew install potrace graphviz lhasa
 brew install youtube-dl mediainfo 
 brew install imagemagick ffmpeg
 brew install flac cdrtools shntool cuetools
