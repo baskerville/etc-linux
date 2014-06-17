@@ -1,2 +1,5 @@
 [ui]
 username = baskerville <nihilhill@gmail.com>
+
+[extensions]
+shelve=
