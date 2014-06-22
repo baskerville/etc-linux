@@ -56,28 +56,29 @@ digraphs ,: 8230
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/go/libexec/misc/vim
-call vundle#rc()
 
-Bundle 'gmarik/Vundle.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-repeat'
-Bundle 'suy/vim-context-commentstring'
-Bundle 'pangloss/vim-javascript'
-Bundle 'godlygeek/tabular'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tobinvanpelt/vim-coffee-script'
-Bundle 'justinmk/vim-syntax-extra'
-Bundle 'Glench/Vim-Jinja2-Syntax'
-Bundle 'othree/html5.vim'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'tejr/vim-tmux'
-Bundle 'nsf/gocode', {'rtp': 'vim/'}
-Bundle 'jnurmine/Zenburn'
-Bundle 'noahfrederick/hemisu'
-Bundle 'baskerville/vim-sxhkdrc'
-Bundle 'baskerville/vim-quirks'
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'suy/vim-context-commentstring'
+Plugin 'pangloss/vim-javascript'
+Plugin 'godlygeek/tabular'
+Plugin 'msanders/snipmate.vim'
+Plugin 'tobinvanpelt/vim-coffee-script'
+Plugin 'justinmk/vim-syntax-extra'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'othree/html5.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'tejr/vim-tmux'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'jnurmine/Zenburn'
+Plugin 'noahfrederick/hemisu'
+Plugin 'baskerville/vim-sxhkdrc'
+Plugin 'baskerville/vim-quirks'
+call vundle#end()
 
 syntax on
 filetype plugin indent on
