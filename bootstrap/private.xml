@@ -4,7 +4,7 @@
 		<name>Return to Control_R</name>
 		<appendix>(Return alone sends Return)</appendix>
 		<identifier>private.return_to_control_return</identifier>
-		<autogen>__KeyOverlaidModifierWithRepeat__ KeyCode::RETURN, KeyCode::CONTROL_R, KeyCode::RETURN</autogen>
+		<autogen>__KeyOverlaidModifier__ KeyCode::RETURN, KeyCode::CONTROL_R, KeyCode::RETURN</autogen>
 	</item>
 	<item>
 		<name>Control_L to Control_L</name>
