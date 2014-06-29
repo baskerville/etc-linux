@@ -54,7 +54,7 @@ set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp
 digraphs ,: 8230
 
 if !exists('g:loaded_matchit')
-  runtime! macros/matchit.vim
+	runtime! macros/matchit.vim
 endif
 
 filetype off
