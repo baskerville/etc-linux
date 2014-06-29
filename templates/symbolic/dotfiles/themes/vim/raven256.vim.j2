@@ -1,7 +1,7 @@
 " Vim Color File
 " Name:       raven256.vim
 " Version:    0.2
-" Maintainer: baskerville at lavabit.com
+" Maintainer: nihilhill at gmail.com
 
 hi clear
 
