@@ -43,6 +43,11 @@ pip3 install numpy colormath Pillow PyYAML misaka Jinja2 beautifulsoup4 ephem
 pip install docutils PyPDF2
 gem install chronic gpgme sup
 
+brew tap baskerville/formulae
+brew install z-go paps-bskv unlzx ppsei
+brew install --with-minimal mldonkey-bskv
+brew install --HEAD google-translate-cli spdf
+
 brew tap mpv-player/mpv
 brew install --HEAD mpv-player/mpv/libass-ct
 brew install --HEAD --with-bundle --with-bluray-support --with-libdvdread --with-libquvi --with-little-cms2 --with-lua mpv
@@ -53,14 +58,12 @@ brew install maxima
 
 brew tap phinze/cask
 brew install brew-cask
-# brew cask install chromium
-brew cask install secrets keyremap4macbook
-brew cask install flux caffeine spectacle quicksilver
-brew cask install burn gimp
-brew cask install ichm djview flash
-# brew cask install xquartz
-# brew cask install inkscape audacity mactex
-# sudo chown -R "$USER":admin /usr/local
+brew cask install chromium flash
+brew cask install quicksilver caffeine spectacle
+brew cask install skim ichm djview
+brew cask install secrets karabiner
+brew cask install gimp inkscape burn
+# sudo chown -R "$USER" /usr/local
 
 brew tap caskroom/fonts
 brew cask install font-dejavu font-courier-prime
@@ -68,13 +71,8 @@ brew cask install font-dejavu font-courier-prime
 brew tap telemachus/homebrew-desc
 brew install brew-desc
 
-brew tap baskerville/formulae
-brew install z-go paps-bskv unlzx ppsei
-brew install --with-minimal mldonkey-bskv
-brew install --HEAD google-translate-cli spdf
-
-open http://www.freesmug.org/chromium
-open http://rapidshare.com/files/2591591009/Inkscape-r-10.7%2B-x86_64_RC5.dmg
+# open http://www.freesmug.org/chromium
+# open http://rapidshare.com/files/2591591009/Inkscape-r-10.7%2B-x86_64_RC5.dmg
 # sudo dseditgroup -o edit -a ice -t user operator
 
 mkdir "$HOME"/Library/LaunchAgents
