@@ -12,18 +12,18 @@ brew update
 brew upgrade
 # brew install osxfuse ext4fuse
 brew install git
-brew install --build-from-source tmux
+brew install tmux
 brew install reattach-to-user-namespace
 brew install bash zsh jshon
 brew install wget openssl lftp
-brew install --disable-nls --without-ruby vim
+brew install --disable-nls --without-ruby --build-bottle vim
 brew install deheader ctags
 brew install asciidoc docbook docbook-xsl
 brew install rename trash duti urlview rlwrap
 brew install node mongodb lua go ghc
 brew install mpop msmtp mpack
-brew install --HEAD --with-s-lang mutt
-brew install --HEAD slrn
+brew install --HEAD --with-s-lang --build-bottle mutt
+brew install --HEAD --build-bottle slrn
 brew install newsbeuter
 brew install base64 hunspell
 brew install potrace graphviz lhasa
@@ -49,9 +49,11 @@ brew install --with-minimal mldonkey-bskv
 brew install --HEAD google-translate-cli spdf
 
 brew tap mpv-player/mpv
-brew install --HEAD mpv-player/mpv/libass-ct
-brew install --HEAD --with-bundle --with-bluray-support --with-libdvdread --with-libquvi --with-little-cms2 --with-lua mpv
+brew install --HEAD --build-bottle mpv-player/mpv/libass-ct
+brew install --HEAD --with-bundle --with-bluray-support --with-libdvdread --with-libquvi --with-little-cms2 --with-lua --build-bottle mpv
 brew linkapps
+
+brew bottle vim mutt slrn libass-ct mpv
 
 brew tap homebrew/science
 brew install maxima
