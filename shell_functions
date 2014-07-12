@@ -5,7 +5,7 @@ z() {
 }
 
 oz() {
-	local fp="$(Z -i "$XDG_DATA_HOME"/open.db "$@" | head -n 1)"
+	local fp="$(Z -i "$XDG_DATA_HOME"/open.z "$@" | head -n 1)"
 	[ -e "$fp" ] && o "$fp"
 }
 
