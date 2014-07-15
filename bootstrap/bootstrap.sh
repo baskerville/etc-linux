@@ -15,6 +15,7 @@ brew install git
 brew install tmux
 brew install reattach-to-user-namespace
 brew install bash zsh jshon
+brew install unrar p7zip
 brew install wget openssl lftp
 brew install --disable-nls --without-ruby --build-bottle vim
 brew install deheader ctags
@@ -60,7 +61,7 @@ brew install maxima
 
 brew tap phinze/cask
 brew install brew-cask
-brew cask install chromium flash
+brew cask install iterm2 chromium flash
 brew cask install quicksilver caffeine spectacle
 brew cask install skim ichm djview
 brew cask install secrets karabiner
