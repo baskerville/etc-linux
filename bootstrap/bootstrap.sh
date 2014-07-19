@@ -32,6 +32,7 @@ brew install youtube-dl mediainfo
 brew install imagemagick ffmpeg
 brew install flac cdrtools shntool cuetools
 brew install aria2 mp4box pngnq
+brew install mpd ncmpc streamripper
 brew install detox duff catdoc ranger
 brew install surfraw w3m elinks
 brew install dict wordnet pwgen
