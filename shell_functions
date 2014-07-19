@@ -1,21 +1,21 @@
-_cd() {
-    pushd "$@" > /dev/null
-}
+# _cd() {
+#     pushd "$@" > /dev/null
+# }
 
-cd() {
-    if [ -z "$1" ] ; then
-        _cd "$HOME"
-    elif [ -f "$1" ] ; then
-        _cd "$(dirname "$1")"
-    else
-        _cd "$1"
-    fi
-}
+# cd() {
+#     if [ -z "$1" ] ; then
+#         _cd "$HOME"
+#     elif [ -f "$1" ] ; then
+#         _cd "$(dirname "$1")"
+#     else
+#         _cd "$1"
+#     fi
+# }
 
 z() {
     local dir=$(Z "$@" | head -n 1)
     [ -z "$dir" ] && return 1
-    _cd "$dir" || Z -d "$dir"
+    cd "$dir" || Z -d "$dir"
 }
 
 zx() {

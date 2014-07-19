@@ -1,5 +1,5 @@
 [options]
-font = Fira Mono OT 11
+font = Fira Mono 10
 scrollback_lines = 10000
 scroll_on_output = false
 scroll_on_keystroke = true
@@ -73,51 +73,51 @@ color12 = #0067C9
 color5 = #CD63C3
 color13 = #9D3595
 
-color40 = #FFFEF1
-color41 = #FFF9EC
-color42 = #E0D9CD
-color43 = #F7F0E3
-color44 = #C7C0B4
-color45 = #9FA6B2
-color46 = #6C727E
-color47 = #3C434D
-color48 = #262C36
+# color40 = #FFFEF1
+# color41 = #FFF9EC
+# color42 = #E0D9CD
+# color43 = #F7F0E3
+# color44 = #C7C0B4
+# color45 = #9FA6B2
+# color46 = #6C727E
+# color47 = #3C434D
+# color48 = #262C36
 
-color16 = #B52C30
-color17 = #EA5C58
+# color16 = #B52C30
+# color17 = #EA5C58
 
-color18 = #9D4900
-color19 = #D17328
+# color18 = #9D4900
+# color19 = #D17328
 
-color20 = #765F00
-color21 = #A68900
+# color20 = #765F00
+# color21 = #A68900
 
-color22 = #426C00
-color23 = #6F981E
+# color22 = #426C00
+# color23 = #6F981E
 
-color24 = #007328
-color25 = #00A151
+# color24 = #007328
+# color25 = #00A151
 
-color26 = #00775F
-color27 = #00A58A
+# color26 = #00775F
+# color27 = #00A58A
 
-color28 = #007793
-color29 = #00A4C1
+# color28 = #007793
+# color29 = #00A4C1
 
-color30 = #0073BA
-color31 = #009FEA
+# color30 = #0073BA
+# color31 = #009FEA
 
-color32 = #0067C9
-color33 = #0092FA
+# color32 = #0067C9
+# color33 = #0092FA
 
-color34 = #5953BB
-color35 = #897DEB
+# color34 = #5953BB
+# color35 = #897DEB
 
-color36 = #9D3595
-color37 = #CD63C3
+# color36 = #9D3595
+# color37 = #CD63C3
 
-color38 = #B81B63
-color39 = #EB548E
+# color38 = #B81B63
+# color39 = #EB548E
 
 [hints]
 font = Monospace 8

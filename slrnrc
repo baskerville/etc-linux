@@ -35,7 +35,7 @@ set Xbrowser "open '%s' &"
 
 set printer_name "lpr -Plp"
 
-set sendmail_command "/usr/bin/msmtp -t"
+set sendmail_command "/usr/local/bin/msmtp -t"
 
 % Set this to one if you want the "From:" header in e-mails to be generated
 % from the hostname / username / realname variable.
@@ -97,7 +97,7 @@ charset outgoing utf8
 % If 10, sort by date with most recent last.
 % If 11, thread then sort by date with most recent last.
 % If 12, use the value of the custom_sort_order variable.
-set sorting_method 11
+set sorting_method 9
 
 % If non-zero, a header with a new subject will start a new thread.
 %set new_subject_breaks_threads 0

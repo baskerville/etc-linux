@@ -52,41 +52,38 @@ set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
 
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-repeat'
-Bundle 'pangloss/vim-javascript'
-Bundle 'godlygeek/tabular'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tobinvanpelt/vim-coffee-script'
-Bundle 'justinmk/vim-syntax-extra'
-Bundle 'Glench/Vim-Jinja2-Syntax'
-Bundle 'othree/html5.vim'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'nsf/gocode', {'rtp': 'vim/'}
-Bundle 'jnurmine/Zenburn'
-Bundle 'morhetz/gruvbox'
-Bundle 'noahfrederick/hemisu'
-Bundle 'zeis/vim-kolor'
-Bundle 'baskerville/vim-sxhkdrc'
-Bundle 'baskerville/vim-quirks'
+call vundle#begin()
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'pangloss/vim-javascript'
+Plugin 'godlygeek/tabular'
+Plugin 'msanders/snipmate.vim'
+Plugin 'tobinvanpelt/vim-coffee-script'
+Plugin 'justinmk/vim-syntax-extra'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'othree/html5.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'jnurmine/Zenburn'
+Plugin 'morhetz/gruvbox'
+Plugin 'noahfrederick/hemisu'
+Plugin 'zeis/vim-kolor'
+Plugin 'baskerville/vim-sxhkdrc'
+Plugin 'baskerville/vim-quirks'
+call vundle#end()
 
 syntax on
 filetype plugin indent on
 
-if has("gui_running")
-    colorscheme raven
+if &t_Co < 256
+	colorscheme raven8
 else
-    if &t_Co >= 256
-        colorscheme raven256
-    else
-        colorscheme raven8
-    endif
+	colorscheme bubblegum
 endif
 
 hi def link mailSubject Title

@@ -32,12 +32,12 @@ if [ -e "$BSPWM_TREE" ] ; then
     rm "$BSPWM_TREE" "$BSPWM_HISTORY" "$BSPWM_STACK"
 fi
 
-if updatethm ; then
-    reloadthm
-else
-    bspwm_colors
-    reloadwallpaper
-    reloadpanel
-fi
+# if updatethm ; then
+#     reloadthm
+# else
+#     bspwm_colors
+#     reloadwallpaper
+#     reloadpanel
+# fi
 
-compton &
+# compton &

@@ -1,7 +1,7 @@
 setxkbmap -option terminate:ctrl_alt_bksp
 xmodmap "$HOME/.Xmodmaprc"
 xrdb -merge "$HOME/.Xresources"
-xcape -e 'Control_R=Return'
+# xcape -e 'Control_R=Return'
 
 # reload fonts
 xset +fp /usr/share/fonts/local
@@ -14,19 +14,19 @@ xset r rate 320 35
 xset m 3/2 6
 
 # setup DPMS
-xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF
+# xset dpms $DPMS_STANDBY $DPMS_SUSPEND $DPMS_OFF
 
 # disable screensaver
-xset s noblank
-xset s off
+# xset s noblank
+# xset s off
 
 # neutral pointer
 xsetroot -cursor_name left_ptr
 
-unclutter -noevents &
-pgrep -x mpd > /dev/null || mpd
+# unclutter -noevents &
+# pgrep -x mpd > /dev/null || mpd
 sxhkd -n &
-happy_fs &
+# happy_fs &
 
 exec wm
 # exec bspwm
