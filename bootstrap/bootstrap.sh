@@ -40,6 +40,8 @@ brew install tree pstree gifsicle libicns
 # brew install ghostscript
 # brew install pdfgrep
 
+npm install -g grunt-cli
+
 brew install python python3 ruby
 pip3 install numpy colormath Pillow PyYAML misaka Jinja2 beautifulsoup4 ephem
 pip install docutils PyPDF2
