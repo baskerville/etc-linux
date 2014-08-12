@@ -37,6 +37,7 @@ set smartcase
 
 let g:xdefaults_no_if0 = 1
 let g:is_posix = 1
+let g:seoul256_background = 256
 " let g:easytags_include_members = 0
 " let g:easytags_dynamic_files = 2
 " let g:easytags_events = ['BufEnter', 'BufWritePost']
@@ -81,6 +82,7 @@ Plugin 'tejr/vim-tmux'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'jnurmine/Zenburn'
 Plugin 'noahfrederick/hemisu'
+Plugin 'junegunn/seoul256.vim'
 Plugin 'baskerville/vim-sxhkdrc'
 Plugin 'baskerville/vim-quirks'
 call vundle#end()
@@ -94,7 +96,7 @@ if bgtype == "Dark"
 	colorscheme bubblegum
 else
 	set bg=light
-	colorscheme hemisu
+	colorscheme seoul256
 endif
 
 hi def link mailSubject Title
@@ -147,9 +149,9 @@ let mapleader = " "
 
 nmap j gj
 nmap k gk
-nmap <leader>s :%s/\v
-vmap <leader>s :s/\v
-nmap <leader>S :s/\v
+nmap <leader>s :%s/
+vmap <leader>s :s/
+nmap <leader>S :s/
 nnoremap / /\v
 vnoremap / /\v
 nmap <leader>o o<esc>k
