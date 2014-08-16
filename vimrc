@@ -79,6 +79,7 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'tejr/vim-tmux'
+Plugin 'groenewege/vim-less'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'jnurmine/Zenburn'
 Plugin 'noahfrederick/hemisu'
@@ -152,8 +153,6 @@ nmap k gk
 nmap <leader>s :%s/
 vmap <leader>s :s/
 nmap <leader>S :s/
-nnoremap / /\v
-vnoremap / /\v
 nmap <leader>o o<esc>k
 nmap <leader>O O<esc>j
 nmap <leader>j :bn<cr>
