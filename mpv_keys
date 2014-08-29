@@ -4,6 +4,8 @@ Q quit
 ESC cycle fullscreen
 ENTER show_progress
 Ctrl+1 cycle video-unscaled
+Alt+RIGHT no-osd vf add rotate=90
+Alt+LEFT no-osd vf add rotate=270
 
 F1 set aspect 1.3333
 F2 set aspect 1.6
