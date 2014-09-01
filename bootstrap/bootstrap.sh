@@ -69,6 +69,7 @@ brew cask install quicksilver caffeine spectacle
 brew cask install skim ichm djview
 brew cask install secrets karabiner
 brew cask install gimp inkscape burn
+brew cask install avidemux
 # sudo chown -R "$USER" /usr/local
 
 brew tap caskroom/fonts
