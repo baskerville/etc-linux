@@ -90,7 +90,7 @@ hi Title           ctermfg=109    guifg=#87AFAF
 hi SpecialKey      ctermfg=114    guifg=#87D787
 hi NonText         ctermfg=244    guifg=#808080
 hi Conceal         ctermfg=77     ctermbg=bg    guifg=#5FD75F    guibg=bg
-hi MatchParen      ctermfg=16     ctermbg=72    guifg=#000000    guibg=#5FAF87
+hi MatchParen      ctermfg=16     ctermbg=215    guifg=#000000    guibg=#FFAF5F
 hi Directory       ctermfg=103    guifg=#8787AF
 
 hi ErrorMsg        ctermfg=210    ctermbg=bg    guifg=#FF8787    guibg=bg
