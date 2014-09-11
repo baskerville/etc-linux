@@ -15,124 +15,124 @@ let g:colors_name="raven"
 " preferred groups
 " (:h w18)
 "
-hi Normal           guifg=#6C727E guibg=#FFF9EC  gui=none
-hi Comment          guifg=#9FA6B2  gui=none
+hi Normal           guifg=#6d727e guibg=#fef9ec  gui=none
+hi Comment          guifg=#a1a6b2  gui=none
 
-hi Constant        guifg=#765F00  gui=none
-hi String          guifg=#765F00  gui=none
-hi Character       guifg=#765F00  gui=none
-hi Number          guifg=#825809  gui=none
-hi Boolean         guifg=#765F00  gui=none
-hi Float           guifg=#825809  gui=none
+hi Constant        guifg=#715f00  gui=none
+hi String          guifg=#715f00  gui=none
+hi Character       guifg=#715f00  gui=none
+hi Number          guifg=#7e5906  gui=none
+hi Boolean         guifg=#715f00  gui=none
+hi Float           guifg=#7e5906  gui=none
 
-hi Identifier      guifg=#9D3595  gui=none
-hi Function        guifg=#5953BB  gui=none
+hi Identifier      guifg=#a03196  gui=none
+hi Function        guifg=#694fbc  gui=none
 
-hi Statement       guifg=#00775F  gui=none
-hi Conditional     guifg=#00775F  gui=none
-hi Repeat          guifg=#00775F  gui=none
-hi Label           guifg=#00775F  gui=none
-hi Operator        guifg=#007793  gui=none
-hi Keyword         guifg=#00775F  gui=none
-hi Exception       guifg=#00775F  gui=none
+hi Statement       guifg=#00775f  gui=none
+hi Conditional     guifg=#00775f  gui=none
+hi Repeat          guifg=#00775f  gui=none
+hi Label           guifg=#00775f  gui=none
+hi Operator        guifg=#007693  gui=none
+hi Keyword         guifg=#00775f  gui=none
+hi Exception       guifg=#00775f  gui=none
 
-hi PreProc         guifg=#0073BA  gui=none
-hi Include         guifg=#0073BA  gui=none
-hi Define          guifg=#0073BA  gui=none
-hi Macro           guifg=#0073BA  gui=none
-hi PreCondit       guifg=#0073BA  gui=none
+hi PreProc         guifg=#0071bb  gui=none
+hi Include         guifg=#0071bb  gui=none
+hi Define          guifg=#0071bb  gui=none
+hi Macro           guifg=#0071bb  gui=none
+hi PreCondit       guifg=#0071bb  gui=none
 
-hi Type            guifg=#9D4900  gui=none
-hi StorageClass    guifg=#9D4900  gui=none
-hi Structure       guifg=#9D4900  gui=none
-hi Typedef         guifg=#9D4900  gui=none
+hi Type            guifg=#994900  gui=none
+hi StorageClass    guifg=#994900  gui=none
+hi Structure       guifg=#994900  gui=none
+hi Typedef         guifg=#994900  gui=none
 
-hi Special         guifg=#B81B63  gui=none
-hi SpecialChar     guifg=#B81B63  gui=none
-hi Tag             guifg=#B81B63  gui=none
-hi Delimiter       guifg=#0067C9  gui=none
-hi SpecialComment  guifg=#B81B63  gui=none
-hi Debug           guifg=#B81B63  gui=none
+hi Special         guifg=#b71764  gui=none
+hi SpecialChar     guifg=#b71764  gui=none
+hi Tag             guifg=#b71764  gui=none
+hi Delimiter       guifg=#0065ca  gui=none
+hi SpecialComment  guifg=#b71764  gui=none
+hi Debug           guifg=#b71764  gui=none
 
 hi Underlined      guifg=fg  gui=none
 hi Ignore          guifg=bg  gui=none
-hi Error           guifg=bg  guibg=#B81B63  gui=none
-hi Todo            guifg=#007328  guibg=bg      gui=none
+hi Error           guifg=bg  guibg=#b71764  gui=none
+hi Todo            guifg=#007427  guibg=bg      gui=none
 
 "
 " minor groups
 "
-hi StatusLine       guifg=#3C434D   guibg=#E0D9CD  gui=none
-hi StatusLineNC     guifg=fg                 guibg=#C7C0B4  gui=none
+hi StatusLine       guifg=#3e424d   guibg=#dedacd  gui=none
+hi StatusLineNC     guifg=fg                 guibg=#c5c1b4  gui=none
 
-hi TabLine          guifg=fg                guibg=#C7C0B4  gui=none
-hi TabLineSel       guifg=#3C434D  guibg=#C7C0B4  gui=none
-hi TabLineFill      guibg=#C7C0B4  gui=none
+hi TabLine          guifg=fg                guibg=#c5c1b4  gui=none
+hi TabLineSel       guifg=#3e424d  guibg=#c5c1b4  gui=none
+hi TabLineFill      guibg=#c5c1b4  gui=none
 
-hi Pmenu           guifg=#262C36       guibg=#9FA6B2  gui=none
+hi Pmenu           guifg=#282c36       guibg=#a1a6b2  gui=none
 hi PmenuSel        guifg=bg       guibg=fg  gui=none
-hi PmenuSbar       guibg=#9FA6B2  gui=none
+hi PmenuSbar       guibg=#a1a6b2  gui=none
 hi PmenuThumb      guibg=fg  gui=none
 hi WildMenu        guifg=bg       guibg=fg      gui=none
 
-hi Visual           guifg=bg      guibg=#5953BB  gui=none
-hi VisualNOS        guifg=bg      guibg=#9D3595  gui=none
-hi VertSplit        guifg=#C7C0B4      guibg=#C7C0B4  gui=none
-hi LineNr          guifg=#9FA6B2   guibg=#F7F0E3  gui=none
-hi CursorLineNr    guifg=fg                 guibg=#F7F0E3  gui=none
+hi Visual           guifg=bg      guibg=#694fbc  gui=none
+hi VisualNOS        guifg=bg      guibg=#a03196  gui=none
+hi VertSplit        guifg=#c5c1b4      guibg=#c5c1b4  gui=none
+hi LineNr          guifg=#a1a6b2   guibg=#f5f0e3  gui=none
+hi CursorLineNr    guifg=fg                 guibg=#f5f0e3  gui=none
 
-hi Title           guifg=#0073BA  gui=bold
-hi SpecialKey      guifg=#007328  gui=none
-hi Conceal         guifg=#007328       guibg=bg  gui=none
-hi NonText         guifg=#9FA6B2  gui=none
-hi MatchParen      guifg=bg       guibg=#B81B63  gui=none
-hi Directory       guifg=#5953BB  gui=none
+hi Title           guifg=#0071bb  gui=bold
+hi SpecialKey      guifg=#007427  gui=none
+hi Conceal         guifg=#007427       guibg=bg  gui=none
+hi NonText         guifg=#a1a6b2  gui=none
+hi MatchParen      guifg=bg       guibg=#b71764  gui=none
+hi Directory       guifg=#694fbc  gui=none
 
-hi ErrorMsg        guifg=#B52C30      guibg=bg  gui=none
-hi WarningMsg      guifg=#9D4900   guibg=bg  gui=none
-hi MoreMsg         guifg=#00775F     guibg=bg  gui=none
-hi ModeMsg         guifg=#B81B63     guibg=bg  gui=none
+hi ErrorMsg        guifg=#b22b31      guibg=bg  gui=none
+hi WarningMsg      guifg=#994900   guibg=bg  gui=none
+hi MoreMsg         guifg=#00775f     guibg=bg  gui=none
+hi ModeMsg         guifg=#b71764     guibg=bg  gui=none
 
-hi Search          guifg=bg  guibg=#765F00  gui=none
-hi IncSearch         guifg=bg  guibg=#B81B63  gui=none
-hi Question        guifg=#0073BA  gui=none
+hi Search          guifg=bg  guibg=#715f00  gui=none
+hi IncSearch         guifg=bg  guibg=#b71764  gui=none
+hi Question        guifg=#0071bb  gui=none
 
-hi Folded          guifg=#9FA6B2     guibg=#FFFEF1  gui=none
-hi FoldColumn      guifg=#9FA6B2     guibg=#FFFEF1  gui=none
-hi SignColumn      guifg=#9FA6B2     guibg=#FFFEF1  gui=none
-hi ColorColumn     guifg=#9FA6B2     guibg=#FFFEF1  gui=none
+hi Folded          guifg=#a1a6b2     guibg=#fffff1  gui=none
+hi FoldColumn      guifg=#a1a6b2     guibg=#fffff1  gui=none
+hi SignColumn      guifg=#a1a6b2     guibg=#fffff1  gui=none
+hi ColorColumn     guifg=#a1a6b2     guibg=#fffff1  gui=none
 
-hi CursorColumn     guibg=#F7F0E3  gui=none
-hi CursorLine       guibg=#F7F0E3  gui=none
+hi CursorColumn     guibg=#f5f0e3  gui=none
+hi CursorLine       guibg=#f5f0e3  gui=none
 
-hi vimFold         guifg=#9FA6B2  gui=none
+hi vimFold         guifg=#a1a6b2  gui=none
 hi vimCommentTitle guifg=fg  gui=none
-hi helpHyperTextJump guifg=#0073BA  gui=none
+hi helpHyperTextJump guifg=#0071bb  gui=none
 
-hi htmlTag         guifg=#5953BB  gui=none
-hi htmlEndTag      guifg=#5953BB  gui=none
-hi htmlTagName     guifg=#B81B63  gui=none
-hi htmlString      guifg=#765F00  gui=none
+hi htmlTag         guifg=#694fbc  gui=none
+hi htmlEndTag      guifg=#694fbc  gui=none
+hi htmlTagName     guifg=#b71764  gui=none
+hi htmlString      guifg=#715f00  gui=none
 
-hi diffFile        guifg=#9FA6B2  gui=none
-hi diffLine        guifg=#9FA6B2  gui=none
-hi diffAdded       guifg=#007328  gui=none
-hi diffRemoved     guifg=#B81B63  gui=none
-hi diffChanged     guifg=#9D4900  gui=none
+hi diffFile        guifg=#a1a6b2  gui=none
+hi diffLine        guifg=#a1a6b2  gui=none
+hi diffAdded       guifg=#007427  gui=none
+hi diffRemoved     guifg=#b71764  gui=none
+hi diffChanged     guifg=#994900  gui=none
 
-hi diffAdd             guifg=bg    guibg=#007328  gui=none
-hi diffDelete          guifg=bg    guibg=#B52C30  gui=none
-hi diffChange          guifg=bg    guibg=#5953BB  gui=none
-hi diffText            guifg=bg    guibg=#765F00  gui=none
-hi diffOldLine         guifg=bg    guibg=#9FA6B2  gui=none
+hi diffAdd             guifg=bg    guibg=#007427  gui=none
+hi diffDelete          guifg=bg    guibg=#b22b31  gui=none
+hi diffChange          guifg=bg    guibg=#694fbc  gui=none
+hi diffText            guifg=bg    guibg=#715f00  gui=none
+hi diffOldLine         guifg=bg    guibg=#a1a6b2  gui=none
 
-hi SpellBad         guifg=#B52C30        guibg=bg  gui=underline
-hi SpellCap         guifg=#B81B63       guibg=bg  gui=underline
-hi SpellRare        guifg=#5953BB     guibg=bg  gui=underline
-hi SpellLocal       guifg=#9D4900     guibg=bg  gui=underline
+hi SpellBad         guifg=#b22b31        guibg=bg  gui=underline
+hi SpellCap         guifg=#b71764       guibg=bg  gui=underline
+hi SpellRare        guifg=#694fbc     guibg=bg  gui=underline
+hi SpellLocal       guifg=#994900     guibg=bg  gui=underline
 
-hi mkdCode         guifg=#9FA6B2  gui=none
-hi mkdURL          guifg=#0073BA  gui=none
-hi mkdLink         guifg=#9D3595  gui=none
+hi mkdCode         guifg=#a1a6b2  gui=none
+hi mkdURL          guifg=#0071bb  gui=none
+hi mkdLink         guifg=#a03196  gui=none
 
 " vim: set ft=vim

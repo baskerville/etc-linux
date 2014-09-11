@@ -3,81 +3,81 @@
 printf '\033[?47t'                                # toggle screen buffer
 printf '\033[2J'                                  # clear screen
 
-printf '\033]11;rgb:FF/F9/EC\007'    # background
-printf '\033]708;rgb:FF/F9/EC\007'   # border
-printf '\033]10;rgb:6C/72/7E\007'    # foreground
-printf '\033]706;rgb:3C/43/4D\007' # bold
-printf '\033]704;rgb:3C/43/4D\007' # italic
-printf '\033]707;rgb:3C/43/4D\007' # underline
-printf '\033]12;rgb:00/77/93\007'          # cursor
+printf '\033]11;rgb:fe/f9/ec\007'    # background
+printf '\033]708;rgb:fe/f9/ec\007'   # border
+printf '\033]10;rgb:6d/72/7e\007'    # foreground
+printf '\033]706;rgb:3e/42/4d\007' # bold
+printf '\033]704;rgb:3e/42/4d\007' # italic
+printf '\033]707;rgb:3e/42/4d\007' # underline
+printf '\033]12;rgb:00/76/93\007'          # cursor
 
-printf '\033]4;8;rgb:9F/A6/B2\007'   # dark grey
-printf '\033]4;0;rgb:C7/C0/B4\007'      # black
+printf '\033]4;8;rgb:a1/a6/b2\007'   # dark grey
+printf '\033]4;0;rgb:c5/c1/b4\007'      # black
 
-printf '\033]4;15;rgb:26/2C/36\007'     # white
-printf '\033]4;7;rgb:3C/43/4D\007' # light grey
+printf '\033]4;15;rgb:28/2c/36\007'     # white
+printf '\033]4;7;rgb:3e/42/4d\007' # light grey
 
-printf '\033]4;9;rgb:B5/2C/30\007'          # red
-printf '\033]4;1;rgb:EA/5C/58\007'      # dark red
+printf '\033]4;9;rgb:b2/2b/31\007'          # red
+printf '\033]4;1;rgb:e7/5c/58\007'      # dark red
 
-printf '\033]4;11;rgb:76/5F/00\007'      # yellow
-printf '\033]4;3;rgb:A6/89/00\007'   # dark yellow
+printf '\033]4;11;rgb:71/5f/00\007'      # yellow
+printf '\033]4;3;rgb:a0/8a/00\007'   # dark yellow
 
-printf '\033]4;10;rgb:00/73/28\007'       # green
-printf '\033]4;2;rgb:00/A1/51\007'    # dark green
+printf '\033]4;10;rgb:00/74/27\007'       # green
+printf '\033]4;2;rgb:00/a2/50\007'    # dark green
 
-printf '\033]4;14;rgb:00/77/93\007'        # cyan
-printf '\033]4;6;rgb:00/A4/C1\007'     # dark cyan
+printf '\033]4;14;rgb:00/76/93\007'        # cyan
+printf '\033]4;6;rgb:00/a4/c1\007'     # dark cyan
 
-printf '\033]4;12;rgb:00/67/C9\007'        # blue
-printf '\033]4;4;rgb:00/92/FA\007'     # dark blue
+printf '\033]4;12;rgb:00/65/ca\007'        # blue
+printf '\033]4;4;rgb:20/8f/fb\007'     # dark blue
 
-printf '\033]4;13;rgb:9D/35/95\007'     # magenta
-printf '\033]4;5;rgb:CD/63/C3\007'  # dark magenta
+printf '\033]4;13;rgb:a0/31/96\007'     # magenta
+printf '\033]4;5;rgb:d1/60/c4\007'  # dark magenta
 
-printf '\033]4;16;rgb:B5/2C/30\007'
-printf '\033]4;17;rgb:EA/5C/58\007'
+printf '\033]4;16;rgb:b2/2b/31\007'
+printf '\033]4;17;rgb:e7/5c/58\007'
 
-printf '\033]4;18;rgb:9D/49/00\007'
-printf '\033]4;19;rgb:D1/73/28\007'
+printf '\033]4;18;rgb:99/49/00\007'
+printf '\033]4;19;rgb:cc/74/28\007'
 
-printf '\033]4;20;rgb:76/5F/00\007'
-printf '\033]4;21;rgb:A6/89/00\007'
+printf '\033]4;20;rgb:71/5f/00\007'
+printf '\033]4;21;rgb:a0/8a/00\007'
 
-printf '\033]4;22;rgb:42/6C/00\007'
-printf '\033]4;23;rgb:6F/98/1E\007'
+printf '\033]4;22;rgb:39/6d/00\007'
+printf '\033]4;23;rgb:67/99/1a\007'
 
-printf '\033]4;24;rgb:00/73/28\007'
-printf '\033]4;25;rgb:00/A1/51\007'
+printf '\033]4;24;rgb:00/74/27\007'
+printf '\033]4;25;rgb:00/a2/50\007'
 
-printf '\033]4;26;rgb:00/77/5F\007'
-printf '\033]4;27;rgb:00/A5/8A\007'
+printf '\033]4;26;rgb:00/77/5f\007'
+printf '\033]4;27;rgb:00/a5/89\007'
 
-printf '\033]4;28;rgb:00/77/93\007'
-printf '\033]4;29;rgb:00/A4/C1\007'
+printf '\033]4;28;rgb:00/76/93\007'
+printf '\033]4;29;rgb:00/a4/c1\007'
 
-printf '\033]4;30;rgb:00/73/BA\007'
-printf '\033]4;31;rgb:00/9F/EA\007'
+printf '\033]4;30;rgb:00/71/bb\007'
+printf '\033]4;31;rgb:00/9d/eb\007'
 
-printf '\033]4;32;rgb:00/67/C9\007'
-printf '\033]4;33;rgb:00/92/FA\007'
+printf '\033]4;32;rgb:00/65/ca\007'
+printf '\033]4;33;rgb:20/8f/fb\007'
 
-printf '\033]4;34;rgb:59/53/BB\007'
-printf '\033]4;35;rgb:89/7D/EB\007'
+printf '\033]4;34;rgb:69/4f/bc\007'
+printf '\033]4;35;rgb:98/7a/ec\007'
 
-printf '\033]4;36;rgb:9D/35/95\007'
-printf '\033]4;37;rgb:CD/63/C3\007'
+printf '\033]4;36;rgb:a0/31/96\007'
+printf '\033]4;37;rgb:d1/60/c4\007'
 
-printf '\033]4;38;rgb:B8/1B/63\007'
-printf '\033]4;39;rgb:EB/54/8E\007'
+printf '\033]4;38;rgb:b7/17/64\007'
+printf '\033]4;39;rgb:ea/52/8e\007'
 
-printf '\033]4;40;rgb:FF/FE/F1\007'
-printf '\033]4;41;rgb:FF/F9/EC\007'
-printf '\033]4;42;rgb:F7/F0/E3\007'
-printf '\033]4;43;rgb:C7/C0/B4\007'
-printf '\033]4;44;rgb:9F/A6/B2\007'
-printf '\033]4;45;rgb:6C/72/7E\007'
-printf '\033]4;46;rgb:3C/43/4D\007'
-printf '\033]4;47;rgb:26/2C/36\007'
+printf '\033]4;40;rgb:ff/ff/f1\007'
+printf '\033]4;41;rgb:fe/f9/ec\007'
+printf '\033]4;42;rgb:f5/f0/e3\007'
+printf '\033]4;43;rgb:c5/c1/b4\007'
+printf '\033]4;44;rgb:a1/a6/b2\007'
+printf '\033]4;45;rgb:6d/72/7e\007'
+printf '\033]4;46;rgb:3e/42/4d\007'
+printf '\033]4;47;rgb:28/2c/36\007'
 
 printf '\033[?47t'                                # toggle screen buffer
