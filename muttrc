@@ -2,7 +2,7 @@ set realname = "Bastien Dejean"
 set from = "nihilhill@gmail.com"
 
 set mbox_type = Maildir
-set folder = /mnt/diskimage/pool/.maildir
+set folder = ~/.maildir
 set spoolfile = +/inbox
 set postponed = +/drafts
 set record = +/sent
