@@ -1,6 +1,7 @@
 text/html; elinks -dump -default-mime-type %t %s; copiousoutput
+application/msword; catdoc -s cp1252 %s; copiousoutput
 application/pdf; dr %s
+application/octet-stream; o %s
 image/*; iv %s
 video/*; vp %s
 audio/*; ap %s
-application/msword; catdoc -s cp1252 %s; copiousoutput
