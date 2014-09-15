@@ -94,11 +94,11 @@ filetype plugin indent on
 let bgtype = system("cat ~/.conditions")
 if bgtype == "Dark"
 	set bg=dark
-	colorscheme bubblegum
 else
 	set bg=light
-	colorscheme seoul256
 endif
+
+colorscheme bubblegum
 
 hi def link mailSubject Title
 hi def link mailSignature Comment

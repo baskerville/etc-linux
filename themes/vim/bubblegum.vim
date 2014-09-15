@@ -3,139 +3,258 @@
 " Version:    0.1
 " Maintainer: baskerville <nihilhill *at* gmail *dot* com>
 
-set background=dark
 hi clear
 
 if exists("syntax on")
-    syntax reset
+	syntax reset
 endif
 
 let g:colors_name="bubblegum"
 
-"
-" preferred groups
-" (see `:h w18`)
-"
-hi Normal          ctermfg=249    ctermbg=235    cterm=none    guifg=#B2B2B2    guibg=#303030    gui=none
-hi Comment         ctermfg=244    guifg=#808080
+" Cf. `:h w18`
 
-" yellow
-hi Constant        ctermfg=186    guifg=#D7D787
-hi String          ctermfg=187    guifg=#D7D7AF
-hi Character       ctermfg=187    guifg=#D7D7AF
-hi Number          ctermfg=179    guifg=#D7AF5F
-hi Boolean         ctermfg=187    guifg=#D7D7AF
-hi Float           ctermfg=179    guifg=#D7AF5F
+if &background == "dark"
+	" Main
+	hi Normal          ctermfg=249    ctermbg=235    cterm=none
+	hi Comment         ctermfg=244
 
-" pink
-hi Identifier      ctermfg=182    guifg=#D7AFD7
-hi Function        ctermfg=182    guifg=#D7AFD7
+	" Constant
+	hi Constant        ctermfg=186
+	hi String          ctermfg=187
+	hi Character       ctermfg=187
+	hi Number          ctermfg=179
+	hi Boolean         ctermfg=187
+	hi Float           ctermfg=179
 
-" blue
-hi Statement       ctermfg=110    guifg=#87AFD7
-hi Conditional     ctermfg=110    guifg=#87AFD7
-hi Repeat          ctermfg=110    guifg=#87AFD7
-hi Label           ctermfg=110    guifg=#87AFD7
-hi Operator        ctermfg=110    guifg=#87AFD7
-hi Keyword         ctermfg=110    guifg=#87AFD7
-hi Exception       ctermfg=110    guifg=#87AFD7
+	" Variable
+	hi Identifier      ctermfg=182
+	hi Function        ctermfg=182
 
-" green
-hi PreProc         ctermfg=150    guifg=#AFD787
-hi Include         ctermfg=150    guifg=#AFD787
-hi Define          ctermfg=150    guifg=#AFD787
-hi Macro           ctermfg=150    guifg=#AFD787
-hi PreCondit       ctermfg=150    guifg=#AFD787
+	" Keyword
+	hi Statement       ctermfg=110
+	hi Conditional     ctermfg=110
+	hi Repeat          ctermfg=110
+	hi Label           ctermfg=110
+	hi Operator        ctermfg=110
+	hi Keyword         ctermfg=110
+	hi Exception       ctermfg=110
 
-" purple
-hi Type            ctermfg=146    guifg=#AFAFD7
-hi StorageClass    ctermfg=146    guifg=#AFAFD7
-hi Structure       ctermfg=146    guifg=#AFAFD7
-hi Typedef         ctermfg=146    guifg=#AFAFD7
+	" Meta
+	hi PreProc         ctermfg=150
+	hi Include         ctermfg=150
+	hi Define          ctermfg=150
+	hi Macro           ctermfg=150
+	hi PreCondit       ctermfg=150
 
-" red
-hi Special         ctermfg=174    guifg=#D78787
-hi SpecialChar     ctermfg=174    guifg=#D78787
-hi Tag             ctermfg=174    guifg=#D78787
-hi Delimiter       ctermfg=174    guifg=#D78787
-hi SpecialComment  ctermfg=174    guifg=#D78787
-hi Debug           ctermfg=174    guifg=#D78787
+	" Type
+	hi Type            ctermfg=146
+	hi StorageClass    ctermfg=146
+	hi Structure       ctermfg=146
+	hi Typedef         ctermfg=146
 
-hi Underlined      ctermfg=fg    guifg=fg
-hi Ignore          ctermfg=bg    guifg=bg
-hi Error           ctermfg=231    ctermbg=167    guifg=#FFFFFF    guibg=#D75F5F
-hi Todo            ctermfg=189    ctermbg=bg     cterm=none    guifg=#D7D7FF    guibg=bg    gui=none
+	" Special
+	hi Special         ctermfg=174
+	hi SpecialChar     ctermfg=174
+	hi Tag             ctermfg=174
+	hi Delimiter       ctermfg=174
+	hi SpecialComment  ctermfg=174
+	hi Debug           ctermfg=174
+	hi Underlined      ctermfg=fg
+	hi Ignore          ctermfg=bg
+	hi Error           ctermfg=231    ctermbg=167
+	hi Todo            ctermfg=189    ctermbg=bg     cterm=none
 
-"
-" minor groups
-"
-hi StatusLine      ctermfg=fg     ctermbg=237    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
-hi StatusLineNC    ctermfg=244    ctermbg=237    cterm=none    guifg=#808080    guibg=#3A3A3A    gui=none
-hi TabLine         ctermfg=fg     ctermbg=237    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
-hi TabLineSel      ctermfg=253    ctermbg=238    cterm=none    guifg=#DADADA    guibg=#444444    gui=none
-hi TabLineFill     ctermfg=fg     ctermbg=237    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
+	" Misc
+	hi StatusLine      ctermfg=fg     ctermbg=237    cterm=none
+	hi StatusLineNC    ctermfg=244    ctermbg=237    cterm=none
+	hi TabLine         ctermfg=fg     ctermbg=237    cterm=none
+	hi TabLineSel      ctermfg=253    ctermbg=238    cterm=none
+	hi TabLineFill     ctermfg=fg     ctermbg=237    cterm=none
 
-hi Pmenu           ctermfg=fg     ctermbg=237    guifg=fg    guibg=#3A3A3A
-hi PmenuSel        ctermfg=231    ctermbg=244    guifg=#FFFFFF    guibg=#808080
-hi PmenuSbar       ctermfg=231    ctermbg=244    guifg=#FFFFFF    guibg=#808080
-hi PmenuThumb      ctermbg=187    ctermfg=187    guibg=#D7D7AF    guifg=#D7D7AF
-hi WildMenu        ctermfg=71     ctermbg=237    cterm=none    guifg=#5FAF5F    guibg=#3A3A3A    gui=none
+	hi Pmenu           ctermfg=fg     ctermbg=237
+	hi PmenuSel        ctermfg=231    ctermbg=244
+	hi PmenuSbar       ctermfg=231    ctermbg=244
+	hi PmenuThumb      ctermbg=187    ctermfg=187
+	hi WildMenu        ctermfg=71     ctermbg=237    cterm=none
 
-hi Visual          ctermfg=bg     ctermbg=117    guifg=bg    guibg=#87D7FF
-hi VisualNOS       ctermfg=bg     ctermbg=116    guifg=bg    guibg=#87D7D7
-hi VertSplit       ctermfg=237    ctermbg=237    cterm=none  guifg=#3A3A3A    guibg=#3A3A3A    gui=none
-hi LineNr          ctermfg=244    ctermbg=237    guifg=#808080    guibg=#3A3A3A
+	hi Visual          ctermfg=bg     ctermbg=117
+	hi VisualNOS       ctermfg=bg     ctermbg=116
+	hi VertSplit       ctermfg=237    ctermbg=237    cterm=none
+	hi LineNr          ctermfg=244    ctermbg=237
 
-hi Title           ctermfg=109    guifg=#87AFAF
-hi SpecialKey      ctermfg=114    guifg=#87D787
-hi NonText         ctermfg=244    guifg=#808080
-hi Conceal         ctermfg=77     ctermbg=bg    guifg=#5FD75F    guibg=bg
-hi MatchParen      ctermfg=16     ctermbg=215    guifg=#000000    guibg=#FFAF5F
-hi Directory       ctermfg=103    guifg=#8787AF
+	hi Title           ctermfg=109
+	hi SpecialKey      ctermfg=114
+	hi NonText         ctermfg=244
+	hi Conceal         ctermfg=77     ctermbg=bg
+	hi MatchParen      ctermfg=16     ctermbg=215
+	hi Directory       ctermfg=103
 
-hi ErrorMsg        ctermfg=210    ctermbg=bg    guifg=#FF8787    guibg=bg
-hi WarningMsg      ctermfg=140    guifg=#AF87D7
-hi MoreMsg         ctermfg=72    guifg=#5FAF87
-hi ModeMsg         ctermfg=222    guifg=#FFD787
+	hi ErrorMsg        ctermfg=210    ctermbg=bg
+	hi WarningMsg      ctermfg=140
+	hi MoreMsg         ctermfg=72
+	hi ModeMsg         ctermfg=222
 
-hi Search          ctermfg=16     ctermbg=179     cterm=none    guifg=#000000    guibg=#D7AF5F    gui=none
-hi IncSearch       ctermfg=231    ctermbg=168     cterm=none    guifg=#FFFFFF    guibg=#D75F87    gui=none
-hi Question        ctermfg=38    guifg=#00AFD7
+	hi Search          ctermfg=16     ctermbg=179     cterm=none
+	hi IncSearch       ctermfg=231    ctermbg=168     cterm=none
+	hi Question        ctermfg=38
 
-hi Folded          ctermfg=244    ctermbg=bg    guifg=#808080    guibg=bg
-hi FoldColumn      ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
-hi SignColumn      ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
-hi ColorColumn     ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
+	hi Folded          ctermfg=244    ctermbg=bg
+	hi FoldColumn      ctermfg=79     ctermbg=237
+	hi SignColumn      ctermfg=79     ctermbg=237
+	hi ColorColumn     ctermfg=79     ctermbg=237
 
-hi CursorColumn    ctermbg=237    cterm=none    guibg=#3A3A3A    gui=none
-hi CursorLine      ctermbg=237    cterm=none    guibg=#3A3A3A    gui=none
+	hi CursorColumn    ctermbg=237    cterm=none
+	hi CursorLine      ctermbg=237    cterm=none
 
-hi vimFold         ctermfg=244    guifg=#808080
-hi vimCommentTitle ctermfg=fg    guifg=fg
-hi helpHyperTextJump ctermfg=74    guifg=#5FAFD7
+	hi vimFold         ctermfg=244
+	hi vimCommentTitle ctermfg=fg
+	hi helpHyperTextJump ctermfg=74
 
-hi htmlTag         ctermfg=147    guifg=#AFAFFF
-hi htmlEndTag      ctermfg=147    guifg=#AFAFFF
-hi htmlTagName     ctermfg=175    guifg=#D787AF
-hi htmlString      ctermfg=144    guifg=#AFAF87
+	hi htmlTag         ctermfg=147
+	hi htmlEndTag      ctermfg=147
+	hi htmlTagName     ctermfg=175
+	hi htmlString      ctermfg=144
 
-hi diffFile        ctermfg=244    guifg=#808080
-hi diffLine        ctermfg=244    guifg=#808080
-hi diffAdded       ctermfg=107    guifg=#87AF5F
-hi diffRemoved     ctermfg=175    guifg=#D787AF
-hi diffChanged     ctermfg=179    guifg=#D7AF5F
+	hi diffFile        ctermfg=244
+	hi diffLine        ctermfg=244
+	hi diffAdded       ctermfg=107
+	hi diffRemoved     ctermfg=175
+	hi diffChanged     ctermfg=179
 
-hi diffAdd         ctermfg=16     ctermbg=149    guifg=#000000    guibg=#AFD75F
-hi diffDelete      ctermfg=231    ctermbg=fg     guifg=#FFFFFF    guibg=fg
-hi diffText        ctermfg=16     ctermbg=211    guifg=#000000    guibg=#FF87AF
-hi diffChange      ctermfg=16     ctermbg=217    guifg=#000000    guibg=#FFAFAF
-hi diffOldLine     ctermfg=104    guifg=#8787D7
+	hi diffAdd         ctermfg=16     ctermbg=149
+	hi diffDelete      ctermfg=231    ctermbg=fg
+	hi diffText        ctermfg=16     ctermbg=211
+	hi diffChange      ctermfg=16     ctermbg=217
+	hi diffOldLine     ctermfg=104
 
-hi SpellBad        ctermfg=210    ctermbg=bg    cterm=underline   guifg=#FF8787   guibg=bg    gui=underline   guisp=#FF8787
-hi SpellCap        ctermfg=174    ctermbg=bg    cterm=underline   guifg=#D78787   guibg=bg    gui=underline   guisp=#D78787
-hi SpellRare       ctermfg=181    ctermbg=bg    cterm=underline   guifg=#D7AFAF   guibg=bg    gui=underline   guisp=#D7AFAF
-hi SpellLocal      ctermfg=180    ctermbg=bg    cterm=underline   guifg=#D7AF87   guibg=bg    gui=underline   guisp=#D7AF87
+	hi SpellBad        ctermfg=210    ctermbg=bg    cterm=underline
+	hi SpellCap        ctermfg=174    ctermbg=bg    cterm=underline
+	hi SpellRare       ctermfg=181    ctermbg=bg    cterm=underline
+	hi SpellLocal      ctermfg=180    ctermbg=bg    cterm=underline
 
-hi mkdCode         ctermfg=244    guifg=#808080
-hi mkdURL          ctermfg=111    guifg=#87AFFF
-hi mkdLink         ctermfg=181    guifg=#D7AFAF
+	hi mkdCode         ctermfg=244
+	hi mkdURL          ctermfg=111
+	hi mkdLink         ctermfg=181
+else
+	" Main
+	hi Normal          ctermfg=241    ctermbg=231    cterm=none
+	hi Comment         ctermfg=246
+
+	" Constant
+	hi Constant        ctermfg=64
+	hi String          ctermfg=100
+	hi Character       ctermfg=100
+	hi Number          ctermfg=172
+	hi Boolean         ctermfg=100
+	hi Float           ctermfg=172
+
+	" Variable
+	hi Identifier      ctermfg=133
+	hi Function        ctermfg=133
+
+	" Keyword
+	hi Statement       ctermfg=32
+	hi Conditional     ctermfg=32
+	hi Repeat          ctermfg=32
+	hi Label           ctermfg=32
+	hi Operator        ctermfg=32
+	hi Keyword         ctermfg=32
+	hi Exception       ctermfg=32
+
+	" Meta
+	hi PreProc         ctermfg=28
+	hi Include         ctermfg=28
+	hi Define          ctermfg=28
+	hi Macro           ctermfg=28
+	hi PreCondit       ctermfg=28
+
+	" Type
+	hi Type            ctermfg=61
+	hi StorageClass    ctermfg=61
+	hi Structure       ctermfg=61
+	hi Typedef         ctermfg=61
+
+	" Special
+	hi Special         ctermfg=203
+	hi SpecialChar     ctermfg=203
+	hi Tag             ctermfg=203
+	hi Delimiter       ctermfg=203
+	hi SpecialComment  ctermfg=203
+	hi Debug           ctermfg=203
+	hi Underlined      ctermfg=fg
+	hi Ignore          ctermfg=bg
+	hi Error           ctermfg=235    ctermbg=196
+	hi Todo            ctermfg=25    ctermbg=bg     cterm=none
+
+	" Misc
+	hi StatusLine      ctermfg=fg     ctermbg=254    cterm=none
+	hi StatusLineNC    ctermfg=246    ctermbg=254    cterm=none
+	hi TabLine         ctermfg=fg     ctermbg=254    cterm=none
+	hi TabLineSel      ctermfg=238    ctermbg=188    cterm=none
+	hi TabLineFill     ctermfg=fg     ctermbg=254    cterm=none
+
+	hi Pmenu           ctermfg=fg     ctermbg=254
+	hi PmenuSel        ctermfg=235    ctermbg=246
+	hi PmenuSbar       ctermfg=235    ctermbg=246
+	hi PmenuThumb      ctermbg=100    ctermfg=100
+	hi WildMenu        ctermfg=76     ctermbg=254    cterm=none
+
+	hi Visual          ctermfg=bg     ctermbg=24
+	hi VisualNOS       ctermfg=bg     ctermbg=23
+	hi VertSplit       ctermfg=254    ctermbg=254    cterm=none
+	hi LineNr          ctermfg=246    ctermbg=254
+
+	hi Title           ctermfg=30
+	hi SpecialKey      ctermfg=70
+	hi NonText         ctermfg=246
+	hi Conceal         ctermfg=40     ctermbg=bg
+	hi MatchParen      ctermfg=255     ctermbg=202
+	hi Directory       ctermfg=104
+
+	hi ErrorMsg        ctermfg=160    ctermbg=bg
+	hi WarningMsg      ctermfg=135
+	hi MoreMsg         ctermfg=35
+	hi ModeMsg         ctermfg=130
+
+	hi Search          ctermfg=255     ctermbg=172     cterm=none
+	hi IncSearch       ctermfg=235    ctermbg=198     cterm=none
+	hi Question        ctermfg=38
+
+	hi Folded          ctermfg=246    ctermbg=bg
+	hi FoldColumn      ctermfg=22     ctermbg=254
+	hi SignColumn      ctermfg=22     ctermbg=254
+	hi ColorColumn     ctermfg=22     ctermbg=254
+
+	hi CursorColumn    ctermbg=254    cterm=none
+	hi CursorLine      ctermbg=254    cterm=none
+
+	hi vimFold         ctermfg=246
+	hi vimCommentTitle ctermfg=fg
+	hi helpHyperTextJump ctermfg=39
+
+	hi htmlTag         ctermfg=27
+	hi htmlEndTag      ctermfg=27
+	hi htmlTagName     ctermfg=162
+	hi htmlString      ctermfg=58
+
+	hi diffFile        ctermfg=246
+	hi diffLine        ctermfg=246
+	hi diffAdded       ctermfg=34
+	hi diffRemoved     ctermfg=162
+	hi diffChanged     ctermfg=172
+
+	hi diffAdd         ctermfg=255     ctermbg=112
+	hi diffDelete      ctermfg=235    ctermbg=fg
+	hi diffText        ctermfg=255     ctermbg=199
+	hi diffChange      ctermfg=255     ctermbg=88
+	hi diffOldLine     ctermfg=63
+
+	hi SpellBad        ctermfg=160    ctermbg=bg    cterm=underline
+	hi SpellCap        ctermfg=203    ctermbg=bg    cterm=underline
+	hi SpellRare       ctermfg=131    ctermbg=bg    cterm=underline
+	hi SpellLocal      ctermfg=94    ctermbg=bg    cterm=underline
+
+	hi mkdCode         ctermfg=246
+	hi mkdURL          ctermfg=26
+	hi mkdLink         ctermfg=131
+endif
