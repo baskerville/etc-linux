@@ -142,11 +142,11 @@ else
 
 	" Constant
 	hi Constant        ctermfg=64
-	hi String          ctermfg=100
-	hi Character       ctermfg=100
-	hi Number          ctermfg=172
-	hi Boolean         ctermfg=100
-	hi Float           ctermfg=172
+	hi String          ctermfg=101
+	hi Character       ctermfg=101
+	hi Number          ctermfg=136
+	hi Boolean         ctermfg=101
+	hi Float           ctermfg=136
 
 	" Variable
 	hi Identifier      ctermfg=133
@@ -162,11 +162,11 @@ else
 	hi Exception       ctermfg=32
 
 	" Meta
-	hi PreProc         ctermfg=28
-	hi Include         ctermfg=28
-	hi Define          ctermfg=28
-	hi Macro           ctermfg=28
-	hi PreCondit       ctermfg=28
+	hi PreProc         ctermfg=22
+	hi Include         ctermfg=22
+	hi Define          ctermfg=22
+	hi Macro           ctermfg=22
+	hi PreCondit       ctermfg=22
 
 	" Type
 	hi Type            ctermfg=61
@@ -175,16 +175,16 @@ else
 	hi Typedef         ctermfg=61
 
 	" Special
-	hi Special         ctermfg=203
-	hi SpecialChar     ctermfg=203
-	hi Tag             ctermfg=203
-	hi Delimiter       ctermfg=203
-	hi SpecialComment  ctermfg=203
-	hi Debug           ctermfg=203
+	hi Special         ctermfg=167
+	hi SpecialChar     ctermfg=167
+	hi Tag             ctermfg=167
+	hi Delimiter       ctermfg=167
+	hi SpecialComment  ctermfg=167
+	hi Debug           ctermfg=167
 	hi Underlined      ctermfg=fg
 	hi Ignore          ctermfg=bg
-	hi Error           ctermfg=235    ctermbg=196
-	hi Todo            ctermfg=25    ctermbg=bg     cterm=none
+	hi Error           ctermfg=235    ctermbg=160
+	hi Todo            ctermfg=60    ctermbg=bg     cterm=none
 
 	" Misc
 	hi StatusLine      ctermfg=fg     ctermbg=254    cterm=none
@@ -196,8 +196,8 @@ else
 	hi Pmenu           ctermfg=fg     ctermbg=254
 	hi PmenuSel        ctermfg=235    ctermbg=246
 	hi PmenuSbar       ctermfg=235    ctermbg=246
-	hi PmenuThumb      ctermbg=100    ctermfg=100
-	hi WildMenu        ctermfg=76     ctermbg=254    cterm=none
+	hi PmenuThumb      ctermbg=101    ctermfg=101
+	hi WildMenu        ctermfg=34     ctermbg=254    cterm=none
 
 	hi Visual          ctermfg=bg     ctermbg=24
 	hi VisualNOS       ctermfg=bg     ctermbg=23
@@ -205,56 +205,56 @@ else
 	hi LineNr          ctermfg=246    ctermbg=254
 
 	hi Title           ctermfg=30
-	hi SpecialKey      ctermfg=70
+	hi SpecialKey      ctermfg=41
 	hi NonText         ctermfg=246
 	hi Conceal         ctermfg=40     ctermbg=bg
-	hi MatchParen      ctermfg=255     ctermbg=202
+	hi MatchParen      ctermfg=255     ctermbg=166
 	hi Directory       ctermfg=104
 
-	hi ErrorMsg        ctermfg=160    ctermbg=bg
-	hi WarningMsg      ctermfg=135
+	hi ErrorMsg        ctermfg=197    ctermbg=bg
+	hi WarningMsg      ctermfg=134
 	hi MoreMsg         ctermfg=35
 	hi ModeMsg         ctermfg=130
 
-	hi Search          ctermfg=255     ctermbg=172     cterm=none
+	hi Search          ctermfg=255     ctermbg=136     cterm=none
 	hi IncSearch       ctermfg=235    ctermbg=198     cterm=none
 	hi Question        ctermfg=38
 
 	hi Folded          ctermfg=246    ctermbg=bg
-	hi FoldColumn      ctermfg=22     ctermbg=254
-	hi SignColumn      ctermfg=22     ctermbg=254
-	hi ColorColumn     ctermfg=22     ctermbg=254
+	hi FoldColumn      ctermfg=29     ctermbg=254
+	hi SignColumn      ctermfg=29     ctermbg=254
+	hi ColorColumn     ctermfg=29     ctermbg=254
 
 	hi CursorColumn    ctermbg=254    cterm=none
 	hi CursorLine      ctermbg=254    cterm=none
 
 	hi vimFold         ctermfg=246
 	hi vimCommentTitle ctermfg=fg
-	hi helpHyperTextJump ctermfg=39
+	hi helpHyperTextJump ctermfg=31
 
-	hi htmlTag         ctermfg=27
-	hi htmlEndTag      ctermfg=27
-	hi htmlTagName     ctermfg=162
+	hi htmlTag         ctermfg=26
+	hi htmlEndTag      ctermfg=26
+	hi htmlTagName     ctermfg=169
 	hi htmlString      ctermfg=58
 
 	hi diffFile        ctermfg=246
 	hi diffLine        ctermfg=246
-	hi diffAdded       ctermfg=34
-	hi diffRemoved     ctermfg=162
-	hi diffChanged     ctermfg=172
+	hi diffAdded       ctermfg=28
+	hi diffRemoved     ctermfg=169
+	hi diffChanged     ctermfg=136
 
-	hi diffAdd         ctermfg=255     ctermbg=112
+	hi diffAdd         ctermfg=255     ctermbg=70
 	hi diffDelete      ctermfg=235    ctermbg=fg
-	hi diffText        ctermfg=255     ctermbg=199
+	hi diffText        ctermfg=255     ctermbg=162
 	hi diffChange      ctermfg=255     ctermbg=88
-	hi diffOldLine     ctermfg=63
+	hi diffOldLine     ctermfg=69
 
-	hi SpellBad        ctermfg=160    ctermbg=bg    cterm=underline
-	hi SpellCap        ctermfg=203    ctermbg=bg    cterm=underline
-	hi SpellRare       ctermfg=131    ctermbg=bg    cterm=underline
+	hi SpellBad        ctermfg=197    ctermbg=bg    cterm=underline
+	hi SpellCap        ctermfg=167    ctermbg=bg    cterm=underline
+	hi SpellRare       ctermfg=95    ctermbg=bg    cterm=underline
 	hi SpellLocal      ctermfg=94    ctermbg=bg    cterm=underline
 
 	hi mkdCode         ctermfg=246
-	hi mkdURL          ctermfg=26
-	hi mkdLink         ctermfg=131
+	hi mkdURL          ctermfg=33
+	hi mkdLink         ctermfg=95
 endif
