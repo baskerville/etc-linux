@@ -48,16 +48,15 @@ pip install docutils PyPDF2
 gem install chronic gpgme sup
 
 brew tap baskerville/formulae
-brew install z-go paps-bskv unlzx ppsei stest
-brew install --with-minimal mldonkey-bskv
+brew install z-go
+brew install paps-bskv unlzx ppsei stest
+brew install mldonkey-bskv
 brew install --HEAD google-translate-cli spdf
 
 brew tap mpv-player/mpv
 brew install --HEAD --build-bottle libass-ct
-brew install --HEAD --with-bundle --with-bluray-support --with-libdvdread --with-libquvi --with-little-cms2 --with-lua --build-bottle mpv
+brew install --HEAD --with-libbluray --with-libdvdread --with-libquvi --build-bottle mpv
 brew linkapps
-
-brew bottle vim mutt slrn libass-ct mpv
 
 brew tap homebrew/science
 brew install maxima
@@ -77,6 +76,8 @@ brew cask install font-dejavu font-courier-prime
 
 brew tap telemachus/homebrew-desc
 brew install brew-desc
+
+brew bottle vim mutt slrn libass-ct mpv
 
 # open http://www.freesmug.org/chromium
 # open http://rapidshare.com/files/2591591009/Inkscape-r-10.7%2B-x86_64_RC5.dmg
