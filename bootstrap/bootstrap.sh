@@ -17,7 +17,7 @@ brew install reattach-to-user-namespace
 brew install bash zsh jshon
 brew install unrar p7zip
 brew install wget openssl lftp
-brew install --disable-nls --without-ruby --build-bottle vim
+brew install --disable-nls --with-client-server --without-ruby --build-bottle vim
 brew install deheader ctags
 brew install asciidoc docbook docbook-xsl
 brew install rename trash duti urlview rlwrap
