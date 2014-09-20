@@ -44,7 +44,8 @@ PROMPT2='%{$fg_bold[black]%}◾ %{$reset_color%}'
 
 setpanetitle() {
 	local pane_title=''
-	[ -d "$PWD"/.git ] && pane_title="#[fg=red]$(git rev-parse --abbrev-ref HEAD 2> /dev/null) "
+	local git_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+	[ -n "$git_branch" ] && pane_title="#[fg=red]${git_branch} "
 	pane_title="${pane_title}#[fg=brightyellow]$(from_home "$PWD")"
 	printf '\033]2;%s\a' "$pane_title"
 }
