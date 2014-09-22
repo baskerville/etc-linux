@@ -77,7 +77,9 @@ brew cask install font-dejavu font-courier-prime
 brew tap telemachus/homebrew-desc
 brew install brew-desc
 
-brew bottle vim mutt slrn libass-ct mpv
+brew install --HEAD --with-python --with-x --build-bottle fontforge
+brew bottle vim
+brew bottle --HEAD mutt slrn libass-ct mpv fontforge
 
 # open http://www.freesmug.org/chromium
 # open http://rapidshare.com/files/2591591009/Inkscape-r-10.7%2B-x86_64_RC5.dmg
