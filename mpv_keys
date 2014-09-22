@@ -7,11 +7,7 @@ Ctrl+1 cycle video-unscaled
 Alt+RIGHT no-osd vf add rotate=90
 Alt+LEFT no-osd vf add rotate=270
 
-F1 set aspect 1.3333
-F2 set aspect 1.6
-F3 set aspect 1.7777
-F4 set aspect 1.85
-F5 set aspect 0
+F1 cycle_values video-aspect "4:3" "16:9" "16:10" "2.35:1" "-1"
 
 0 seek 00 1
 1 seek 10 1
