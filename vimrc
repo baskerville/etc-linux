@@ -114,12 +114,13 @@ if has("autocmd")
 	autocmd FileType mail setlocal completefunc=CompleteMuttAliases
 	autocmd FileType mail setlocal commentstring=>%s
 	autocmd FileType xdefaults setlocal commentstring=!%s
-	autocmd FileType sxhkdrc setlocal commentstring=#%s
-	autocmd FileType lilypond setlocal commentstring=%%s
+	" autocmd FileType sxhkdrc setlocal commentstring=#%s
+	" autocmd FileType lilypond setlocal commentstring=%%s
 	autocmd FileType slrnrc setlocal commentstring=%%s
 	autocmd FileType slang setlocal commentstring=%%s
 	autocmd FileType perl setlocal keywordprg=perldoc
 	autocmd FileType ruby setlocal keywordprg=ri ts=2 sw=2 expandtab
+	autocmd Filetype python setlocal ts=4 sw=4 expandtab
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
 	" autocmd BufRead,BufEnter *.asd set filetype=lisp
