@@ -61,6 +61,9 @@ brew linkapps
 brew tap homebrew/science
 brew install maxima
 
+brew tap fernandotcl/homebrew-fernandotcl
+brew install monkeys-audio
+
 brew tap phinze/cask
 brew install brew-cask
 brew cask install iterm2 chromium flash
