@@ -1,0 +1,12 @@
+{
+	"Style": {
+		"Basic": ["default", "on_default"],
+		"SavedSelection": ["default", "on_black", "bold"],
+		"Selected": ["default", "on_default", "reverse"],
+		"Query": ["cyan", "bold"],
+		"Matched": ["yellow", "on_default", "reverse"]
+	},
+	"Keymap": {
+		"C-y": "peco.ToggleSelectionAndSelectNext"
+	}
+}
