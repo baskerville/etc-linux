@@ -9,7 +9,6 @@ set showmode
 set showcmd
 set wildmenu
 set wildignore=*.o,*.jpg,*.png,*.gif
-" set cursorline
 
 set backspace=indent,eol,start
 set foldmethod=marker
@@ -35,13 +34,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-let g:xdefaults_no_if0 = 1
 let g:is_posix = 1
-let g:seoul256_background = 256
-" let g:easytags_include_members = 0
-" let g:easytags_dynamic_files = 2
-" let g:easytags_events = ['BufEnter', 'BufWritePost']
-" let g:main_ff = substitute(&ffs, ',.*', '', '')
 
 set statusline=
 set statusline+=%F%m%r%h%w
@@ -52,7 +45,6 @@ set statusline+=\ %l,%v\ %p%%
 set laststatus=2
 set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
-digraphs ,: 8230
 
 if !exists('g:loaded_matchit')
 	runtime! macros/matchit.vim
@@ -124,20 +116,10 @@ if has("autocmd")
 	autocmd Filetype javascript setlocal makeprg=gulp errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
-	" autocmd BufRead,BufEnter *.asd set filetype=lisp
-	" autocmd BufRead,BufEnter *.as set filetype=actionscript
-	" autocmd BufRead,BufEnter *.mxml set filetype=mxml
-	" autocmd BufRead,BufEnter *.jsxinc set filetype=javascript
-	" autocmd BufRead,BufEnter *.nfo set filetype=nfo
-	" autocmd BufRead,BufEnter *.ck set filetype=ck
-	autocmd BufRead,BufEnter *Xmodmaprc set filetype=xmodmap
 	autocmd BufRead,BufEnter *.h set filetype=c
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
-	autocmd BufRead,BufEnter *.xinitrc set filetype=sh
-	autocmd BufRead,BufEnter *.j2 set filetype=htmljinja
-	" autocmd BufRead,BufEnter */.cache/dwb/edit* set filetype=mail
-	" autocmd BufRead,BufEnter *adblock* setlocal commentstring=!%s
 
+	" Jump to the last editing position
 	autocmd BufReadPost * exe "normal! '\""
 
 	if exists("+omnifunc")
@@ -202,7 +184,7 @@ vmap <silent> <leader>y y:call Yank()<cr>
 nmap <silent> <leader>y yiw:call Yank()<cr>
 nmap <silent> <leader>p :call Paste('after')<cr>
 nmap <silent> <leader>P :call Paste('before')<cr>
-" reverse string
+" Reverse string
 vmap <Leader>i c<C-o>:set ri<cr><C-r>"<esc>:set nori<cr>
 nmap <leader>r :source ~/.vimrc<cr>
 nmap <leader>e :e ~/.vimrc<cr>
@@ -217,6 +199,8 @@ nmap <leader>cp vip\\
 set t_F7=[31~
 " Map F17 to digraph input
 imap <F17> 
+" Ellipsis
+digraphs ,: 8230
 
 function! Define(word)
 	let response = system("wn " . a:word)
