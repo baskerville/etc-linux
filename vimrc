@@ -121,6 +121,7 @@ if has("autocmd")
 	autocmd FileType perl setlocal keywordprg=perldoc
 	autocmd FileType ruby setlocal keywordprg=ri ts=2 sw=2 expandtab
 	autocmd Filetype python setlocal ts=4 sw=4 expandtab
+	autocmd Filetype javascript setlocal makeprg=gulp errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
 	" autocmd BufRead,BufEnter *.asd set filetype=lisp
