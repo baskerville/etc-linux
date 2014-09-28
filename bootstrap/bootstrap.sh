@@ -84,6 +84,7 @@ brew install --HEAD --with-python --with-x --build-bottle fontforge
 brew bottle vim
 brew bottle --HEAD mutt slrn libass-ct mpv fontforge
 
+
 # open http://www.freesmug.org/chromium
 # open http://rapidshare.com/files/2591591009/Inkscape-r-10.7%2B-x86_64_RC5.dmg
 # sudo dseditgroup -o edit -a ice -t user operator
