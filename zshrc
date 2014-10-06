@@ -15,6 +15,7 @@ zstyle ':completion:most-recent-file:*' file-patterns '*:all\ files'
 zstyle ':completion:most-recent-file:*' hidden all
 zstyle ':completion:most-recent-file:*' completer _files
 zle -C most-recent-file menu-complete _generic
+zstyle ':completion:*' list-colors $LS_COLORS
 
 bindkey -e
 bindkey '^p' history-beginning-search-backward
