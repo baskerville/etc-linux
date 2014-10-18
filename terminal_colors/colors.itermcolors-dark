@@ -191,6 +191,15 @@
 		<key>Red Component</key>
 		<real>0.6431372549019608</real>
 	</dict>
+	<key>Link Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.984313725490196</real>
+		<key>Green Component</key>
+		<real>0.7333333333333333</real>
+		<key>Red Component</key>
+		<real>0.596078431372549</real>
+	</dict>
 	<key>Selected Text Color</key>
 	<dict>
 		<key>Blue Component</key>
