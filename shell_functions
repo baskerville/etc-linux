@@ -30,7 +30,7 @@ dehdr() {
 }
 
 dbs() {
-	grep -ri "$@" "$XDG_DATA_HOME/cds_collection/" | sed 's/.*\/\([^\.]\+\)\.txt:/\1 -- /'
+	grep -Ei "$@" "$XDG_DATA_HOME"/cddb/* | sed -E 's/.*\/([^.]+)\.txt:/\1 -- /'
 }
 
 bnd() {
@@ -49,13 +49,6 @@ mi() {
 
 msa() {
 	ms "$@" | ma
-}
-
-G() {
-	local pat=$1
-	local dir=${2:-.}
-	[ $# -gt 1 ] && shift 2 || shift
-	grep "$@" -r "$pat" "$dir"
 }
 
 g() {
