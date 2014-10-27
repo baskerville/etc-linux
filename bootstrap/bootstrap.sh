@@ -40,7 +40,7 @@ brew install tree pstree gifsicle libicns
 # brew install ghostscript
 # brew install pdfgrep
 
-npm install -g grunt-cli
+npm install -g gulp
 
 brew install python python3 ruby
 pip3 install numpy colormath Pillow PyYAML misaka Jinja2 beautifulsoup4 ephem
@@ -64,29 +64,11 @@ brew install maxima
 brew tap fernandotcl/homebrew-fernandotcl
 brew install monkeys-audio
 
-brew tap phinze/cask
-brew install brew-cask
-brew cask install iterm2 chromium flash
-brew cask install quicksilver caffeine spectacle
-brew cask install skim ichm djview
-brew cask install secrets karabiner
-brew cask install gimp inkscape burn
-brew cask install avidemux
-# sudo chown -R "$USER" /usr/local
-
-brew tap caskroom/fonts
-brew cask install font-dejavu font-courier-prime
-
-brew tap telemachus/homebrew-desc
-brew install brew-desc
-
 brew install --HEAD --with-python --with-x --build-bottle fontforge
 brew bottle vim
 brew bottle --HEAD mutt slrn libass-ct mpv fontforge
 
-
 # open http://www.freesmug.org/chromium
-# open http://rapidshare.com/files/2591591009/Inkscape-r-10.7%2B-x86_64_RC5.dmg
 # sudo dseditgroup -o edit -a ice -t user operator
 
 mkdir "$HOME"/Library/LaunchAgents
