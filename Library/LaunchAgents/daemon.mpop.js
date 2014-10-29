@@ -1,9 +1,9 @@
 {
-	"Label": "com.marlam.mpop",
+	"Label": "daemon.mpop",
 	"ProgramArguments": [
 		"/usr/local/bin/mpop",
 		"-a"
 	],
-	"StartInterval": 600,
+	"StartInterval": 300,
 	"ProcessType": "Background"
 }

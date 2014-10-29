@@ -13,7 +13,7 @@ metadata_to_use	    "artist,album,title,track,name,genre,date,composer,performer
 audio_output { 
     type            "osx"
     name            "Audio Output"
-    mixer_typs      "software"
+    mixer_type      "software"
 }
 
 audio_output {

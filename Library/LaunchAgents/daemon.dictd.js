@@ -1,5 +1,5 @@
 {
-	"Label": "org.dict.dictd",
+	"Label": "daemon.dictd",
 	"ProgramArguments": [
 		"/usr/local/sbin/dictd",
 		"-c",
