@@ -6,9 +6,6 @@
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
-# Disable startup chime
-sudo nvram SystemAudioVolume=" "
-
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write -g AppleFontSmoothing -int 2
 
@@ -95,9 +92,6 @@ defaults write com.apple.iTunes disablePing -bool true
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion"
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-
-# Remove the auto-hiding Dock delay
-# defaults write com.apple.dock autohide-delay -float 0
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
