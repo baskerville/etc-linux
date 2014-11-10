@@ -1,5 +1,5 @@
 {
-	"loopfunc": true
+	"loopfunc": true,
 	"camelcase": true,
 	"latedef": true,
 	"unused": "vars",
