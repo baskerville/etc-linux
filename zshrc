@@ -53,11 +53,6 @@ setpanetitle() {
 
 [ -n "$TMUX" ] && setpanetitle
 
-if [ -n "$ITERM_PROFILE" ] ; then
-	bgtype=$(cat "$HOME"/.conditions)
-	[ "$bgtype" != "$ITERM_PROFILE" ] && togglethm $bgtype
-fi
-
 precmd() {
     [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
     [ -n "$TMUX" ] && setpanetitle
