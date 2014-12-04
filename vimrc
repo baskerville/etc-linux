@@ -131,6 +131,7 @@ let mapleader = " "
 
 nmap j gj
 nmap k gk
+nmap <leader>b :windo setlocal scrollbind!<cr>
 nmap <leader>s :%s/
 vmap <leader>s :s/
 nmap <leader>S :s/
