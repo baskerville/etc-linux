@@ -202,7 +202,7 @@ imap <F17> 
 digraphs ,: 8230
 
 function! DumpColorScheme()
-	exec "redir > " . g:colors_name . "-" . g:bgtype . ".vimdump | silent hi | redir END"
+	exec "redir > " . g:colors_name . "-" . g:bgtype . ".vimTheme | silent hi | redir END"
 endfunction
 
 function! Define(word)
