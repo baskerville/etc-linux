@@ -80,8 +80,8 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
-let bgtype = system("cat ~/.conditions")
-if bgtype == "Dark"
+let g:bgtype = system("cat " . $BGTYPE)
+if g:bgtype == "dark"
 	set bg=dark
 else
 	set bg=light
@@ -131,6 +131,7 @@ let mapleader = " "
 
 nmap j gj
 nmap k gk
+nmap <leader>u :call DumpColorScheme()<cr>
 nmap <leader>b :windo setlocal scrollbind!<cr>
 nmap <leader>s :%s/
 vmap <leader>s :s/
@@ -200,6 +201,10 @@ imap <F17> 
 " Ellipsis
 digraphs ,: 8230
 
+function! DumpColorScheme()
+	exec "redir > " . g:colors_name . "-" . g:bgtype . ".vimdump | silent hi | redir END"
+endfunction
+
 function! Define(word)
 	let response = system("wn " . a:word)
 	echo response
@@ -207,7 +212,7 @@ endfunction
 
 function! TransparentlyExecute(command)
 	let w = winsaveview()
-	execute a:command
+	exec a:command
 	call winrestview(w)
 endfunction
 

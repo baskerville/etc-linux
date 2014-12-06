@@ -30,7 +30,3 @@ export PATH
 
 [ -e "$SHELL_ALIASES" ] && . "$SHELL_ALIASES"
 [ -e "$SHELL_FUNCTIONS" ] && . "$SHELL_FUNCTIONS"
-if [ -n "$ITERM_PROFILE" ] ; then
-	bgtype=$(cat "$HOME"/.conditions)
-	[ "$bgtype" != "$ITERM_PROFILE" ] && togglethm $bgtype
-fi
