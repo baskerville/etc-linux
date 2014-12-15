@@ -26,7 +26,7 @@ brew install mpop msmtp mpack
 brew install --HEAD --with-s-lang --build-bottle mutt
 brew install --HEAD --build-bottle slrn
 brew install newsbeuter
-brew install base64 hunspell
+brew install base64 bchunk hunspell
 brew install potrace graphviz lhasa
 brew install youtube-dl mediainfo 
 brew install imagemagick ffmpeg
