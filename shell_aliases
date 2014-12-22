@@ -33,6 +33,7 @@ alias ll='ls -l'
 alias lal='ls -al'
 alias lS='ls -LrksS'
 alias lr='ls -R'
+alias lsd='ls -d *(/)'
 
 alias n='ls -rtc'
 alias nn='n -1 | tail -n 1'
