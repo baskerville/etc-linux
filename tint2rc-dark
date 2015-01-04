@@ -25,7 +25,7 @@ wm_menu = 1
 autohide = 0
 
 # Taskbar
-taskbar_mode = single_desktop
+taskbar_mode = multi_desktop
 taskbar_padding = 5 0 0
 
 # Tasks
