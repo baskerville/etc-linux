@@ -27,7 +27,7 @@ set spool_nov_root   ".usenet/news"
 % Set your favourite editor.  Use %s for the file name and %d for the line
 % where the cursor should be placed (usually at the beginning of the body).
 %set editor_command "jed '%s' -g %d -tmp"
-set editor_command "editor -c %d '%s'"
+set editor_command "e -c %d '%s'"
 set abort_unmodified_edits 1
 
 %set non_Xbrowser "lynx '%s'"
