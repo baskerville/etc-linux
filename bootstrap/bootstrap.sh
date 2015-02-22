@@ -46,6 +46,7 @@ brew install python python3 ruby
 pip3 install numpy colormath Pillow PyYAML misaka Jinja2 beautifulsoup4 ephem husl
 pip install docutils PyPDF2
 gem install chronic gpgme sup
+go get github.com/ericchiang/pup
 
 brew tap baskerville/formulae
 brew install z-go
