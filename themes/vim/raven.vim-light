@@ -1,7 +1,7 @@
 " Vim Color File
 " Name:       raven.vim
 " Version:    0.1
-" Maintainer: baskerville@nihihill.com
+" Maintainer: baskerville <nihilhill *at* gmail *dot* com>
 
 hi clear
 
@@ -11,10 +11,8 @@ endif
 
 let g:colors_name="raven"
 
-"
-" preferred groups
-" (:h w18)
-"
+" Cf. `:h w18`
+
 hi Normal           guifg=#6d727e guibg=#fef9ec  gui=none
 hi Comment          guifg=#a1a6b2  gui=none
 
