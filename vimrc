@@ -123,6 +123,9 @@ if has("autocmd")
 	" Jump to the last editing position
 	autocmd BufReadPost * exe "normal! '\""
 
+	" Mark the current file as recently modified
+	autocmd BufWritePost * call system("Z -i " . $XDG_DATA_HOME . "/edit.z -a " . shellescape(expand("%:p")))
+
 	if exists("+omnifunc")
 		autocmd Filetype *
 		\	if &omnifunc == "" |
