@@ -183,7 +183,7 @@ else
 	hi Debug           ctermfg=167    guifg=#D75F5F
 	hi Underlined      ctermfg=fg    guifg=fg
 	hi Ignore          ctermfg=bg    guifg=bg
-	hi Error           ctermfg=235    ctermbg=160    guifg=#262626    guibg=#D70000
+	hi Error           ctermfg=231    ctermbg=160    guifg=#FFFFFF    guibg=#D70000
 	hi Todo            ctermfg=246    ctermbg=bg     cterm=none    guifg=#949494    guibg=bg    gui=none
 
 	" Misc

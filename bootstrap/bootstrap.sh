@@ -18,6 +18,7 @@ brew install bash zsh jshon
 brew install unrar p7zip
 brew install wget openssl lftp
 brew install --disable-nls --without-ruby --without-perl --build-bottle vim
+brew install --with-python3 --HEAD --build-bottle macvim
 brew install deheader ctags
 brew install asciidoc docbook docbook-xsl
 brew install rename trash duti urlview rlwrap
@@ -67,7 +68,7 @@ brew install monkeys-audio
 
 brew install --HEAD --with-python --with-x --build-bottle fontforge
 brew bottle vim
-brew bottle --HEAD mutt slrn libass-ct mpv fontforge
+brew bottle --HEAD macvim mutt slrn libass-ct mpv fontforge
 
 # open http://www.freesmug.org/chromium
 # sudo dseditgroup -o edit -a ice -t user operator
