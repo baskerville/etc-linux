@@ -169,13 +169,14 @@ nmap <leader>* :vimgrep =expand("<cword>")<cr> *
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :call Yank(expand("%"))<cr>
 nmap <silent> <leader>/ :call Yank(expand("%:p"))<cr>
+nmap <silent> <leader>H :call Yank(synIDattr(synID(line("."),col("."),1),"name"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
 nmap <silent> <leader>C :set cursorline!<cr>
 nmap <silent> <F1> :set number!<cr>
 nmap <silent> <F2> :set hlsearch!<cr>
-nmap <silent> <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " fg<" .  synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#") . ">" <cr>
+nmap <silent> <F3> :let sid=synID(line("."),col("."),1)\|echo synIDattr(sid,"name")." ".synIDattr(synIDtrans(sid),"name")." ".synIDattr(synIDtrans(sid),"fg#")<cr>
 nmap <silent> <F4> :set list!<cr>
 nmap <silent> <F5> :setlocal spell! spelllang=en<cr>
 nmap <silent> <F6> :setlocal spell! spelllang=fr<cr>
