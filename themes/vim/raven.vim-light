@@ -1,6 +1,6 @@
 " Vim Color File
-" Name:       raven.vim
-" Version:    0.1
+"       Name: raven.vim
+"    Version: 0.1
 " Maintainer: baskerville <nihilhill *at* gmail *dot* com>
 
 hi clear
@@ -57,9 +57,6 @@ hi Ignore          guifg=bg  gui=none
 hi Error           guifg=bg  guibg=#b71764  gui=none
 hi Todo            guifg=#007427  guibg=bg      gui=none
 
-"
-" minor groups
-"
 hi StatusLine       guifg=#3e424d   guibg=#dedacd  gui=none
 hi StatusLineNC     guifg=fg                 guibg=#c5c1b4  gui=none
 
@@ -112,25 +109,21 @@ hi htmlEndTag      guifg=#694fbc  gui=none
 hi htmlTagName     guifg=#b71764  gui=none
 hi htmlString      guifg=#715f00  gui=none
 
+hi DiffAdd             guifg=bg    guibg=#007427  gui=none
+hi DiffDelete          guifg=bg    guibg=#b22b31  gui=none
+hi DiffChange          guifg=bg    guibg=#694fbc  gui=none
+hi DiffText            guifg=bg    guibg=#715f00  gui=none
+
 hi diffFile        guifg=#a1a6b2  gui=none
 hi diffLine        guifg=#a1a6b2  gui=none
+hi diffOldLine         guifg=bg    guibg=#a1a6b2  gui=none
 hi diffAdded       guifg=#007427  gui=none
 hi diffRemoved     guifg=#b71764  gui=none
 hi diffChanged     guifg=#994900  gui=none
-
-hi diffAdd             guifg=bg    guibg=#007427  gui=none
-hi diffDelete          guifg=bg    guibg=#b22b31  gui=none
-hi diffChange          guifg=bg    guibg=#694fbc  gui=none
-hi diffText            guifg=bg    guibg=#715f00  gui=none
-hi diffOldLine         guifg=bg    guibg=#a1a6b2  gui=none
 
 hi SpellBad         guifg=#b22b31        guibg=bg  gui=underline
 hi SpellCap         guifg=#b71764       guibg=bg  gui=underline
 hi SpellRare        guifg=#694fbc     guibg=bg  gui=underline
 hi SpellLocal       guifg=#994900     guibg=bg  gui=underline
-
-hi mkdCode         guifg=#a1a6b2  gui=none
-hi mkdURL          guifg=#0071bb  gui=none
-hi mkdLink         guifg=#a03196  gui=none
 
 " vim: set ft=vim
