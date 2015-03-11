@@ -91,7 +91,7 @@ else
 	set bg=light
 endif
 
-exec "colorscheme bubblegum-256-" . g:bgtype
+exec "colorscheme bubblegum-256-" . &bg
 
 hi def link mailSubject Title
 hi def link mailSignature Comment
