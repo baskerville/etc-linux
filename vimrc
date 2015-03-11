@@ -57,7 +57,6 @@ set rtp+=/usr/local/opt/go/libexec/misc/vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'suy/vim-context-commentstring'
@@ -92,7 +91,7 @@ else
 	set bg=light
 endif
 
-colorscheme bubblegum
+exec "colorscheme bubblegum-256-" . g:bgtype
 
 hi def link mailSubject Title
 hi def link mailSignature Comment
@@ -117,6 +116,7 @@ if has("autocmd")
 	autocmd Filetype python setlocal ts=4 sw=4 expandtab
 	autocmd Filetype javascript setlocal makeprg=gulp\ jshint\ \\\|\ grep\ ^/ errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
+	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 	autocmd BufRead,BufEnter *.h set filetype=c
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
