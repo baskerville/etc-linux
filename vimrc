@@ -78,6 +78,7 @@ Plugin 'tejr/vim-tmux'
 Plugin 'groenewege/vim-less'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'jnurmine/Zenburn'
+Plugin 'baskerville/bubblegum'
 Plugin 'baskerville/vim-quirks'
 call vundle#end()
 
