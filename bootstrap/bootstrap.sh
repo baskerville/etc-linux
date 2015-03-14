@@ -57,7 +57,7 @@ brew install --HEAD google-translate-cli spdf
 
 brew tap mpv-player/mpv
 brew install --HEAD --build-bottle libass-ct
-brew install --HEAD --with-libbluray --with-libdvdread --with-libquvi --build-bottle mpv
+brew install --HEAD --with-libbluray --with-libdvdread --build-bottle mpv
 brew linkapps
 
 brew tap homebrew/science
