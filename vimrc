@@ -1,5 +1,5 @@
 set nocompatible
-set noerrorbells
+set visualbell
 set shortmess+=I
 
 set mouse=a
