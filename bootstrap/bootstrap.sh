@@ -38,6 +38,7 @@ brew install detox duff tofrodos catdoc ranger
 brew install surfraw w3m elinks
 brew install dict wordnet
 brew install tree pstree gifsicle libicns
+brew install screenbrightness
 # brew install ghostscript
 # brew install pdfgrep
 
