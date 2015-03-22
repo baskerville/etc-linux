@@ -10,6 +10,10 @@ bind-key j down
 bind-key h left
 bind-key l right
 bind-key m toggle-show-read-feeds
+bind-key s sort
+bind-key S rev-sort
+bind-key g home
+bind-key G end
 
 feedlist-title-format     " Feeds (%u unread) "
 articlelist-title-format  " %T (%u unread) "
