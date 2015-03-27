@@ -102,6 +102,7 @@ hi def link javaScriptNumber Number
 hi def link markdownCode Comment
 hi def link markdownCodeBlock Comment
 hi def link rubySharpBang Comment
+hi def link htmlString String
 
 if has("autocmd")
 	autocmd FileType mail silent! call CleanMuttHeader()
