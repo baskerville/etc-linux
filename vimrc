@@ -130,7 +130,7 @@ if has("autocmd")
 	autocmd BufWritePost * call system("Z -i " . $XDG_DATA_HOME . "/edit.z -a " . shellescape(expand("%:p")) . " &")
 
 	" Set tmux pane title
-	autocmd BufEnter * call system("settitle vim " . expand("%:p:t"))
+	autocmd BufEnter * call system("settitle " . expand("%:p:t"))
 
 	if exists("+omnifunc")
 		autocmd Filetype *
