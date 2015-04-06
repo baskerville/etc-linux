@@ -174,7 +174,7 @@ nmap <leader>* :vimgrep =expand("<cword>")<cr> *
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :call Yank(expand("%"))<cr>
 nmap <silent> <leader>/ :call Yank(expand("%:p"))<cr>
-nmap <silent> <leader>H :call Yank(synIDattr(synID(line("."),col("."),1),"name"))<cr>
+nmap <silent> <leader>I :call Yank(synIDattr(synID(line("."),col("."),1),"name"))<cr>
 nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
