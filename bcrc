@@ -1,0 +1,391 @@
+/********************************
+
+  bc program:	extensions.bc
+  author:	Steffen Brinkmann   
+  e-mail:	s.z.s@web.de
+  comments:	- published under the GPL
+		- contains functions of trigonometry, exponential functions,
+		  functions of number theory and some mathematical constants
+		  so far.
+
+*********************************/
+/*
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Library General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+/***********************************************
+--I--	constants
+1.-	pi			:	defined as 4*atan(1)
+2.-	e			:	defined as e(1)
+
+--II--	trigonometry:
+1.-	sin(x)			:	returns sine of x
+2.-	cos(x)  		:	returns cosine of x
+3.-	atan(x) 		:	returns arc tangent of x
+4.-	tan(x)  		:	returns tangent of x
+5.-	asin(x) 		:	returns arc sine of x
+6.-	acos(x) 		:	returns arc cosine of x
+7.-	cot(x)			:	returns cotangent of x
+8.-	acot(x)			:	returns arc cotangent of x
+9.-	sec(x)			:	returns secans of x	
+10.-	cosec(x),csc(x)		:	returns cosecans of x
+11.-	asec(x)			:	returns arc secans of x
+12.-	acosec(x),ascs(x)	:	returns arc cosecans of x
+13.-	sinh(x)			:	returns hyperbolical sine of x
+14.-	cosh(x)			:	returns hyperbolical cosine of x
+15.-	tanh(x)			:	returns hyperbolical tangent of x
+16.-	coth(x)			:	returns hyperbolical cotangent of x
+17.-	asinh(x)		:	returns arc hyperbolical sine of x
+18.-	acosh(x)		:	returns arc hyperbolical cosine of x
+19.-	atanh(x)		:	returns arc hyperbolical tangent of x
+20.-	acoth(x)		:	returns arc hyperbolical cotangent of x
+21.-	sech(x)			:	returns secans hyperbolicus of x
+22.-	cosech(x),csch(x)	:	returns cosecans hyperbolicus of x
+23.-	asech(x)		:	returns arc secans hyperbolicus of x
+24.-	acosech(x),acsch(x)	:	returns arc cosecans hyperbolicus of x
+	
+
+--II--	exponential functions:
+1.-	ln(x)			:	returns natural logarithm of x
+2.-	log(x)			:	returns logarithm (base 10) of x
+3.-	lb(x),ld(x)		:	returns logarithm (base 2) of x
+4.-	pow(x,y)		:	returns x to the power of y
+
+--III-- number theory:
+1.-	abs(n)			:	returns absolute value of n
+2.-	mod(a,b)		:	returns a modulo b
+3.-	factorize(n),fac(n)	:	prints primefactors of n,
+							returns number of primefactors
+							returns 0 if n is a prime number
+							returns -1 if n is +-1 or 0
+							CAUTION: 13-digit number may need 30 s
+4.-	factorial(n),f(n)	:	returns n factorial
+5.-	gcd(a,b)		:	returns the greatest common divisor of a and b
+6.-	lcm(a,b)		:	returns the least common multiple of a and b
+7.- bessel(n,x)		:	returns the Bessel function order n of x
+************************************************/
+
+pi=4*a(1)
+
+e=e(1)
+
+define sin(x)
+{
+	return (s(x))
+}
+
+define cos(x)
+{
+	return (c(x))
+}
+
+define atan(x)
+{
+	return (a(x))
+}
+
+define tan(x)
+{
+	return (s(x)/c(x))
+}
+
+define asin(x)
+{
+	if(x==1) return(pi/2)
+	if(x==-1) return(-pi/2)
+	return(a(x/sqrt(1-(x^2))))
+}
+
+define acos(x)
+{
+	if(x==1) return(0)
+	if(x==-1) return(pi)
+	return(pi/2-a(x/sqrt(1-(x^2))))
+}
+
+define cot(x)
+{
+	return(c(x)/s(x))
+}
+
+define acot(x)
+{
+	return(pi/2-a(x))
+}
+
+define sec(x)
+{
+	return(1/c(x))
+}
+
+define cosec(x)
+{
+	return(1/s(x))
+}
+
+define csc(x)
+{
+	return(1/s(x))
+}
+define asec(x)
+{
+	return(acos(1/x))
+}
+
+define acosec(x)
+{
+	return(asin(1/x))
+}
+
+define acsc(x)
+{
+	return(asin(1/x))
+}
+
+define sinh(x)
+{
+	return((e(x)-e(-x))/2)
+}
+
+define cosh(x)
+{
+	return((e(x)+e(-x))/2)
+}
+
+define tanh(x)
+{
+	return((e(x)-e(-x))/e(x)+e(-x))
+}
+
+define coth(x)
+{
+	return((e(x)+e(-x))/e(x)-e(-x))	
+}
+
+define asinh(x)
+{
+	return(l(x + sqrt(x^2 + 1)))
+}
+
+define acosh(x)
+{
+	return(l(x + sqrt(x^2 - 1)))
+}
+
+define atanh(x)
+{
+	return((l(1 + x) - l(1 - x))/2)
+}
+
+define acoth(x)
+{
+	return(atanh(1/x))
+}
+
+define sech(x)
+{
+	return(1/cosh(x))
+}
+
+define cosech(x) 
+{
+	return(1/sinh(x))
+}
+
+define csch(x)
+{
+	return(1/sinh(x))
+}
+
+define asech(x)
+{
+	return(acosh(1/x))
+}
+
+define acosech(x)
+{
+	return(asinh(1/x))
+}
+
+define acsch(x)
+{
+	return(asinh(1/x))
+}
+
+/************************/
+
+define ln(x)
+{
+	return(l(x))
+}
+
+define log(x)
+{
+	return(l(x)/l(10))
+}
+
+define lb(x)
+{
+	return(l(x)/l(2))
+}
+
+define ld(x)
+{
+	return(lb(x))
+}
+
+define pow(x,y)
+{
+	return(e(y*l(x)))
+}
+
+/************************/
+
+define abs(n){
+	if(n>=0) return(n)
+	return(-n)
+}
+
+define mod(a,b){
+	auto c,tmp_scale
+	tmp_scale=scale(sqrt(2))
+	scale=0
+	c=a%b
+	scale=tmp_scale
+	if(a>=0) return(c)
+	if(c==0) return(0)
+        return(c+b)	
+}
+
+define fac(n)
+{
+	auto tmp,i,factors
+	
+	if(abs(n)<=1) 
+	{
+	print abs(n),"\nnumber of factors: "
+	return(0)
+	}
+
+	if(abs(n)==2) 
+	{
+	print 2,"\nnumber of factors: "
+	return(1)
+	}
+
+	tmp=n
+	
+	while(mod(tmp,2)==0)
+	{
+		print 2," "
+		tmp/=2
+		factors+=1
+	}
+
+	if(prime[0]==2)		/*primenumbers.bc is loaded*/
+	{
+		i=0
+		
+		while((prime[i]*prime[i])<=(n+1))
+		{
+			if(mod(tmp,prime[i])==0)
+			{
+			print prime[i]," "
+ 			tmp/=prime[i]
+			factors+=1
+			}else{
+			i+=1
+			if(i>65535)
+			{
+				break
+			}
+			}
+		}
+	}
+	
+	if(i>65535)
+	{
+		i=prime[65535]
+	}else
+	{
+		i=3
+	}
+
+	while((i*i)<=(n+1))
+	{
+		if(mod(tmp,i)==0)
+		{
+		print i," "
+		tmp/=i
+		factors+=1
+		}else{
+		i+=2
+		}
+	}
+
+	if(tmp!=1) 
+	{
+		factors+=1
+		print tmp," " /*BUG: prints zeros after factor*/
+	}
+	print "\n"
+	print "number of factors: "
+
+	return(factors)
+}
+
+define factorize(n)
+{
+	return (fac(n))
+}
+
+define f(n)
+{
+	if (n <= 1) return (1);
+	return (f(n-1) * n);
+}
+
+define factorial(n)
+{
+	return(f(n))
+}
+
+define gcd(m,n){
+	auto a,b,c,tmp_scale
+	a=abs(m)         /* a=r[0] */ 
+	if(n==0) return(a)
+        b=abs(n)         /* b=r[1] */ 
+	/*tmp_scale=scale(sqrt(2))*/
+        /*c=a%b            /* c=r[2]=r[0] mod(r[1]) */ 
+	c=mod(a,b)
+        while(c>0){
+		a=b
+                b=c
+                /*(c=a%b    /* c=r[j]=r[j-2] mod(r[j-1]) */
+		c=mod(a,b)
+        }
+	/*scale=tmp_scale*/
+	return(b)
+}   
+
+define lcm(a,b){
+	auto g
+	g=gcd(a,b)
+	if(g==0) return(0)
+	return(abs(a*b)/g)
+}
+
+define bessel(n,x){
+	return(j(n,x))
+}
