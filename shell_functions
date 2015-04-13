@@ -104,6 +104,10 @@ R() {
 	done
 }
 
+bigfiles() {
+	du -m -d 0 "$@" | sort -n
+}
+
 dud() {
 	du -Lh -d 1 "$@"
 }
