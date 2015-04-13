@@ -46,7 +46,6 @@ alias rmnn='rm -iv -- "$(nn)"'
 alias rmrfnn='rmrf -v -- "$(nn)"'
 alias ded='find . -type d -empty -print -delete'
 # alias duffr='duff -f "%n" -r .'
-alias bcl='bc -ql ~/.bcrc'
 
 alias yd='youtube-dl -t'
 
