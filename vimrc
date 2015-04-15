@@ -85,7 +85,7 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
-let g:bgtype = system("cat " . $BGTYPE)
+let g:bgtype = system("cat $HOME/.bgtype")
 if g:bgtype == "dark"
 	set bg=dark
 else
