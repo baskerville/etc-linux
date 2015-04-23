@@ -62,6 +62,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'suy/vim-context-commentstring'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/applescript.vim'
+Plugin 'vale1410/vim-minizinc'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'godlygeek/tabular'
@@ -127,7 +128,7 @@ if has("autocmd")
 	autocmd BufReadPost * exe "normal! '\""
 
 	" Mark the current file as recently modified
-	autocmd BufWritePost * call system("Z -i " . $XDG_DATA_HOME . "/edit.z -a " . shellescape(expand("%:p")) . " &")
+	autocmd BufRead,BufEnter * call system("Z -i " . $XDG_DATA_HOME . "/edit.z -a " . shellescape(expand("%:p")) . " &")
 
 	" Set tmux pane title
 	autocmd BufEnter * call system("settitle " . expand("%:p:t"))
