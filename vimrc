@@ -109,6 +109,7 @@ if has("autocmd")
 	autocmd FileType mail silent! call CleanMuttHeader()
 	autocmd FileType mail setlocal completefunc=CompleteMuttAliases
 	autocmd FileType mail setlocal commentstring=>%s
+	autocmd FileType mail setlocal tw=0
 	autocmd FileType xdefaults setlocal commentstring=!%s
 	" autocmd FileType sxhkdrc setlocal commentstring=#%s
 	" autocmd FileType lilypond setlocal commentstring=%%s
