@@ -196,6 +196,7 @@ nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :call EditSyntax()<cr>
 nmap <silent> <F12> :make<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal ts=".v:count1." sw=".v:count1<cr>
+nmap <silent> <leader>v :call MakePreview()<cr>
 nmap <silent> <leader>V :call ToggleViewMode()<cr>
 vmap <silent> <leader>y y:call Yank()<cr>
 nmap <silent> <leader>y yiw:call Yank()<cr>
@@ -360,4 +361,43 @@ function! CompleteMuttAliases(findstart, base)
 		endif
 		return result
 	endif
+endfunction
+
+function! MakePreview()
+	let s:lnum = 1
+	let s:end = line("$")
+	let s:lines = []
+
+	while s:lnum <= s:end
+		let s:output = ""
+		let s:line = getline(s:lnum)
+		let s:len = strlen(s:line)
+		let s:col = 1
+		let s:lastcol = 1
+
+		while s:col <= s:len
+			let s:id = synID(s:lnum, s:col, 1)
+			let s:col = s:col + 1
+			while s:col <= s:len && s:id == synID(s:lnum, s:col, 1)
+				let s:col = s:col + 1
+			endwhile
+			let s:content = strpart(s:line, s:lastcol-1, s:col-s:lastcol)
+			let s:content = substitute(s:content, '{\({\+\)', '{\1{', "g")
+			let s:content = substitute(s:content, '\(}\+\)}', '}\1}', "g")
+			let s:name = synIDattr(synIDtrans(s:id), "name")
+			if s:name != ""
+				let s:output = s:output . "{{ " . s:name . "|" . s:content . " }}"
+			else
+				let s:output = s:output . s:content
+			endif
+			let s:lastcol = s:col
+		endwhile
+
+		let s:lines = add(s:lines, s:output)
+		let s:lnum = s:lnum + 1
+	endwhile
+
+	exec "new " . expand("%") . ".preview"
+	call append(0, s:lines)
+	normal dd
 endfunction
