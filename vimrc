@@ -65,7 +65,7 @@ Plugin 'vim-scripts/applescript.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
-Plugin 'godlygeek/tabular'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -212,6 +212,9 @@ nmap <leader>c \\
 nmap <leader>cc \\\
 nmap <leader>cu \\u
 nmap <leader>cp vip\\
+
+vmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " Enable F17
 set t_F7=[31~
