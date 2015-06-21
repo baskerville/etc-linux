@@ -53,7 +53,7 @@ go get github.com/ericchiang/pup
 brew tap baskerville/formulae
 brew install z-go
 brew install paps-bskv unlzx ppsei stest
-brew install mldonkey-bskv
+brew install --HEAD --build-bottle mldonkey-bskv
 brew install --ignore-dependencies http://www.soimort.org/translate-shell/translate-shell.rb
 
 brew tap mpv-player/mpv
