@@ -4,6 +4,5 @@ softvol=yes
 softvol-max=200
 # osd-font="sans-serif:style=Bold"
 keep-open=yes
-joystick=no
 
 # vim: ft=conf
