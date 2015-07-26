@@ -4,5 +4,6 @@ softvol=yes
 softvol-max=200
 # osd-font="sans-serif:style=Bold"
 keep-open=yes
+screenshot-format=png
 
 # vim: ft=conf
