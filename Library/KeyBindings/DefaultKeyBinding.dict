@@ -139,6 +139,7 @@ Key Modifiers
 		};
 		"F" = {
 			"*" = ("insertText:", "Φ");
+			"A" = ("insertText:", "∀");
 		};
 		"G" = {
 			"*" = ("insertText:", "Γ");
@@ -193,6 +194,7 @@ Key Modifiers
 		"T" = {
 			"r" = ("insertText:", "▷");
 			"l" = ("insertText:", "◁");
+			"E" = ("insertText:", "∃");
 			"M" = ("insertText:", "™");
 			"*" = ("insertText:", "Τ");
 		};
@@ -294,12 +296,19 @@ Key Modifiers
 		};
 		"!" = {
 			"I" = ("insertText:", "¡");
+			"=" = ("insertText:", "≠");
 		};
 		"." = {
 			"M" = ("insertText:", "·");
 		};
 		"%" = {
 			"0" = ("insertText:", "‰");
+		};
+		"(" = {
+			"-" = ("insertText:", "∈");
+		};
+		"/" = {
+			"0" = ("insertText:", "∅");
 		};
 	};
 }
