@@ -166,6 +166,7 @@ Key Modifiers
 			"?" = ("insertText:", "Ñ");
 			"*" = ("insertText:", "Ν");
 			"0" = ("insertText:", "№");
+			"B" = ("insertText:", "∇");
 			"O" = ("insertText:", "¬");
 			"S" = ("insertText:", " ");
 		};
