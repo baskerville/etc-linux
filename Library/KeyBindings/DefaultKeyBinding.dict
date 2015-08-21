@@ -172,6 +172,7 @@ Key Modifiers
 		};
 		"O" = {
 			"e" = ("insertText:", "Œ");
+			"b" = ("insertText:", "∘");
 			">" = ("insertText:", "Ô");
 			"*" = ("insertText:", "Ο");
 		};
