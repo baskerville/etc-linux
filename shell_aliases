@@ -1,6 +1,5 @@
 alias zt='z -s atime'
 alias zh='z -s hits'
-alias zb='z -b'
 
 alias x='tr "\n" "\0" | xargs -0'
 alias cp='cp -i'
