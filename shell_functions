@@ -8,6 +8,10 @@ zb() {
 	z "[^/]*${@}[^/]*\$"
 }
 
+zc() {
+	z "$PWD" "$@"
+}
+
 oz() {
 	local fp="$(Z -i "$XDG_DATA_HOME"/open.z "$@" | head -n 1)"
 	[ -e "$fp" ] && o "$fp"
