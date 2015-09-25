@@ -283,6 +283,7 @@ Key Modifiers
 			">" = ("insertText:", "→");
 			"N" = ("insertText:", "–");
 			"M" = ("insertText:", "—");
+			"S" = ("insertText:", "⁻");
 		};
 		">" = {
 			">" = ("insertText:", "»");

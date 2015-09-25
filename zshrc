@@ -54,6 +54,6 @@ setpanetitle() {
 [ -n "$TMUX" ] && setpanetitle
 
 precmd() {
-    [ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
-    [ -n "$TMUX" ] && setpanetitle
+	[ "$PWD" -ef "$HOME" ] || Z -a "$PWD"
+	[ -n "$TMUX" ] && setpanetitle
 }
