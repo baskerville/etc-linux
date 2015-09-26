@@ -1,6 +1,3 @@
-alias zt='z -s atime'
-alias zh='z -s hits'
-
 alias x='tr "\n" "\0" | xargs -0'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -10,11 +7,11 @@ alias i='type -a'
 alias y='file -b'
 alias mt='file -b --mime-type'
 alias me='file -b --mime-encoding'
-alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
-alias p="pbpaste | e -"
-alias h="xxd -l 256"
 alias ms='mpc search any'
 alias ma='mpc add'
+alias p="pbpaste | e -"
+alias h="xxd -l 256"
+alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
 
 alias chbin='chmod 755'
 alias chreg='chmod 644'

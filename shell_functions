@@ -1,7 +1,7 @@
 z() {
-	local dir="$(Z "$@" | head -n 1)"
+	local dir="$(fdb -q "(?i)$@" | head -n 1)"
 	[ -z "$dir" ] && return 1
-	cd "$dir" || Z -d "$dir"
+	cd "$dir" || fdb -d "$dir"
 }
 
 zb() {
@@ -13,12 +13,8 @@ zc() {
 }
 
 oz() {
-	local fp="$(Z -i "$XDG_DATA_HOME"/open.z "$@" | head -n 1)"
+	local fp="$(fdb -i "$XDG_DATA_HOME"/open.json -q "(?i)$@" | head -n 1)"
 	[ -e "$fp" ] && o "$fp"
-}
-
-zx() {
-	Z -d "$PWD"; z "$@"
 }
 
 lc() {
