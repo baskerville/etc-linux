@@ -151,26 +151,6 @@ mkmaildir() {
 	mkdir -p $maildir/$@/{cur,new,tmp}
 }
 
-wiktionary() {
-	curl -s "http://en.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
-}
-
-wiktionary_fr() {
-	curl -s "http://fr.wiktionary.org/w/index.php?action=raw&title=$(echo $@ | sed 's/ /+/g')"
-}
-
-def() {
-	wiktionary $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^{|]+ of)\|([^|}]+)[^}]*\}\}/*\U$1\E* $2/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
-}
-
-defr() {
-	wiktionary_fr $@ | grep "^# " | perl -pe 's/\[\[(?:[^\|\]]+\|)*([^\]]+)\]\]/$1/g' | perl -pe 's/\{\{([^|}]+)[^}]*\}\}/\U*$1*\E/g' | sed -E 's/]]//'
-}
-
-defr1() {
-	defr $@ | head -n 1
-}
-
 conj() {
 	w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@"
 }
