@@ -133,7 +133,7 @@ if has("autocmd")
 	autocmd BufReadPost * exe "normal! '\""
 
 	" Mark the current file as recently modified
-	autocmd BufRead,BufEnter * call system("Z -i " . $XDG_DATA_HOME . "/edit.z -a " . shellescape(expand("%:p")) . " &")
+	autocmd BufRead,BufEnter * call system("fdb -i " . $XDG_DATA_HOME . "/edit.json -a " . shellescape(expand("%:p")) . " &")
 
 	" Set tmux pane title
 	autocmd BufEnter * call system("settitle " . expand("%:p:t"))
