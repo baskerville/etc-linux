@@ -230,7 +230,7 @@ function! DumpColorScheme()
 endfunction
 
 function! Define(word)
-	let response = system("wn " . a:word)
+	let response = system("def " . a:word)
 	echo response
 endfunction
 
