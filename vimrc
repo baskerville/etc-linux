@@ -19,10 +19,11 @@ set preserveindent
 set copyindent
 
 set nobackup
-set directory^=$TMPDIR//
+set directory^=$HOME/tmp//
 set autoread
 set autochdir
 
+set hlsearch
 set incsearch
 set ignorecase
 set smartcase
