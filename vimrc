@@ -23,7 +23,7 @@ set directory^=$HOME/tmp//
 set autoread
 set autochdir
 
-set hlsearch
+set nohlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -31,7 +31,7 @@ set smartcase
 set statusline=
 set statusline+=%F%m%r%h%w
 set statusline+=\ %=%Y
-set statusline+=\ [%{strlen(&fenc)?&fenc:'n/a'}]
+set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
 set statusline+=\ [%{&ff}]
 set statusline+=\ %l,%v\ %p%%
 set laststatus=2
