@@ -1,11 +1,7 @@
-set nocompatible
-set visualbell
 set shortmess+=I
 
 set mouse=a
-set encoding=utf-8
 set hidden
-set showmode
 set showcmd
 set wildmenu
 set wildignore=*.o,*.jpg,*.png,*.gif
@@ -15,9 +11,7 @@ set foldmethod=marker
 set linebreak
 
 set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set shiftwidth=0
 set smarttab
 set autoindent
 set smartindent
@@ -25,17 +19,13 @@ set preserveindent
 set copyindent
 
 set nobackup
-set nowritebackup
-set noswapfile
+set directory^=$TMPDIR//
 set autoread
 set autochdir
 
-set nohlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-let g:is_posix = 1
 
 set statusline=
 set statusline+=%F%m%r%h%w
@@ -44,8 +34,11 @@ set statusline+=\ [%{strlen(&fenc)?&fenc:'n/a'}]
 set statusline+=\ [%{&ff}]
 set statusline+=\ %l,%v\ %p%%
 set laststatus=2
+
 set dictionary+=/usr/share/dict/words
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
+
+let g:is_posix = 1
 
 if !exists('g:loaded_matchit')
 	runtime! macros/matchit.vim

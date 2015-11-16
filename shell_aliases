@@ -40,7 +40,7 @@ alias gin='fileinfo "$(nn)"'
 alias rmrf='rm -rf'
 alias rmnn='rm -iv -- "$(nn)"'
 alias rmrfnn='rmrf -v -- "$(nn)"'
-alias ded='find . -type d -empty -print -delete'
+# alias ded='find . -type d -empty -print -delete'
 # alias duffr='duff -f "%n" -r .'
 
 alias yd='youtube-dl -t'
