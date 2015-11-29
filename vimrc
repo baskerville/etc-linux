@@ -310,11 +310,6 @@ function! ToggleViewMode()
 	endif
 endfunc
 
-" function! TerminalAt(path)
-"	  let response = system("fork termite -d " . a:path)
-"	  echo response
-" endfunction
-
 function! Yank(...)
 	if a:0
 		let response = system("pbcopy", a:1)
