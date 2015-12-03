@@ -1,4 +1,5 @@
 set shortmess+=I
+set belloff=all
 
 set mouse=a
 set hidden
