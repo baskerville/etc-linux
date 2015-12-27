@@ -17,6 +17,7 @@ alias chbin='chmod 755'
 alias chreg='chmod 644'
 alias operm='stat -f %p'
 alias lsync='rsync -vau --delete'
+alias xee='open -a xee'
 
 alias eal='e $SHELL_ALIASES'
 alias efu='e $SHELL_FUNCTIONS'
