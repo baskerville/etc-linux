@@ -210,7 +210,7 @@ nmap <leader>cc \\\
 nmap <leader>cu \\u
 nmap <leader>cp vip\\
 
-vmap <Enter> <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Enable F17
