@@ -59,6 +59,7 @@ Plugin 'suy/vim-context-commentstring'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/applescript.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
@@ -84,6 +85,8 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
+let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#syntax#codeblocks#embeds#langs = ["rust", "c", "sh"]
 let g:bgtype = system("cat $HOME/.bgtype")
 if g:bgtype == "dark"
 	set bg=dark
@@ -119,10 +122,10 @@ if has("autocmd")
 	autocmd Filetype python setlocal ts=4 sw=4 expandtab
 	autocmd Filetype javascript setlocal makeprg=gulp\ jshint\ \\\|\ grep\ ^/ errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
-	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 	autocmd BufRead,BufEnter *.h set filetype=c
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
+	autocmd BufNewFile,BufFilePRe,BufRead *.md set filetype=markdown.pandoc
 
 	" Jump to the last editing position
 	autocmd BufReadPost * exe "normal! '\""
