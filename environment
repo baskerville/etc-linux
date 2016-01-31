@@ -1,7 +1,7 @@
 . ~/.coordinates
 . ~/.github_api_token
 
-EDITOR=vim
+EDITOR=nvim
 PAGER=less
 BROWSER=open
 export EDITOR PAGER BROWSER
