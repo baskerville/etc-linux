@@ -40,20 +40,9 @@ setopt hist_find_no_dups hist_reduce_blanks
 setopt share_history
 setopt no_hup
 
-PROMPT='%(?.%{$fg_bold[magenta]%}▶.%{$fg[red]%}●) %{$reset_color%}'
+PROMPT='%(?.%{$fg_bold[yellow]%}▶.%{$fg[red]%}●) %{$reset_color%}'
 PROMPT2='%{$fg_bold[black]%}◾ %{$reset_color%}'
-
-# setpanetitle() {
-# 	local pane_title=''
-# 	local git_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-# 	[ -n "$git_branch" ] && pane_title="#[fg=red]${git_branch} "
-# 	pane_title="${pane_title}#[fg=brightyellow]$(from_home "$PWD")"
-# 	printf '\033]2;%s\a' "$pane_title"
-# }
-
-# [ -n "$TMUX" ] && setpanetitle
 
 precmd() {
 	[ "$PWD" -ef "$HOME" ] || fdb -a "$PWD"
-	# [ -n "$TMUX" ] && setpanetitle
 }
