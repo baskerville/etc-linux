@@ -198,10 +198,9 @@ nmap <leader>} :cnf<cr>
 nmap <leader>{ :cpf<cr>
 nmap <leader>* :vimgrep =expand("<cword>")<cr> *
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
-nmap <silent> <leader>. :call Yank(expand("%"))<cr>
-nmap <silent> <leader>/ :call Yank(expand("%:p"))<cr>
-nmap <silent> <leader>I :call Yank(synIDattr(synID(line("."),col("."),1),"name"))<cr>
-nmap <silent> <leader>gf :call TerminalAt(expand("%:p:h"))<cr>
+nmap <silent> <leader>. :let @*=expand("%")<cr>
+nmap <silent> <leader>/ :let @*=expand("%:p")<cr>
+nmap <silent> <leader>I :let @*=synIDattr(synID(line("."),col("."),1),"name")<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
 nmap <silent> <leader>C :set cursorline!<cr>
@@ -220,10 +219,6 @@ nmap <silent> <F12> :make<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal ts=".v:count1." sw=".v:count1<cr>
 nmap <silent> <leader>v :call MakePreview()<cr>
 nmap <silent> <leader>V :call ToggleViewMode()<cr>
-vmap <silent> <leader>y y:call Yank()<cr>
-nmap <silent> <leader>y yiw:call Yank()<cr>
-nmap <silent> <leader>p :call Paste('after')<cr>
-nmap <silent> <leader>P :call Paste('before')<cr>
 " Reverse string
 vmap <Leader>i c<C-o>:set ri<cr><C-r>"<esc>:set nori<cr>
 nmap <leader>r :source ~/.config/nvim/init.vim<cr>
@@ -328,25 +323,6 @@ function! ToggleViewMode()
 		execute 'colorscheme ' . g:colors_name
 	endif
 endfunc
-
-function! Yank(...)
-	if a:0
-		let response = system("pbcopy", a:1)
-	else
-		let response = system("pbcopy", @")
-	endif
-endfunction
-
-function! Paste(paste_where)
-	let at_q = @q
-	let @q = system("pbpaste")
-	if a:paste_where == 'after'
-		normal! "qp
-	elseif a:paste_where == 'before'
-		normal! "qP
-	endif
-	let @q = at_q
-endfunction
 
 function! CleanMuttHeader()
 	" remove signature
