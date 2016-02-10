@@ -90,7 +90,7 @@ Plug 'tejr/vim-tmux'
 Plug 'groenewege/vim-less'
 Plug 'nsf/gocode', {'rtp': 'vim'}
 Plug 'jnurmine/Zenburn'
-Plug 'baskerville/bubblegum'
+" Plug 'baskerville/bubblegum'
 Plug 'baskerville/vim-quirks'
 call plug#end()
 
@@ -203,7 +203,7 @@ nmap <silent> <leader>/ :let @*=expand("%:p")<cr>
 nmap <silent> <leader>I :let @*=synIDattr(synID(line("."),col("."),1),"name")<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
-nmap <silent> <leader>C :set cursorline!<cr>
+nmap <silent> <leader>C :call ToggleClipboard()<cr>
 nmap <silent> <F1> :set number!<cr>
 nmap <silent> <F2> :set hlsearch!<cr>
 nmap <silent> <F3> :let sid=synID(line("."),col("."),1)\|echo synIDattr(sid,"name")." ".synIDattr(synIDtrans(sid),"name")." ".synIDattr(synIDtrans(sid),"fg#")<cr>
@@ -265,6 +265,14 @@ function! ToggleSyntax()
 	endif
 endfunction
 
+function! ToggleClipboard()
+	if &clipboard =~ "unnamedplus"
+		set clipboard-=unnamedplus
+	else
+		set clipboard+=unnamedplus
+	endif
+endfunction
+
 function! ToggleColorColumn()
 	if &colorcolumn
 		set colorcolumn=0
@@ -284,8 +292,8 @@ function! ToggleConceal()
 endfunction
 
 function! ToggleWrap()
-	if (&wrap == 1)
-		if (&linebreak == 0)
+	if &wrap == 1
+		if &linebreak == 0
 			set linebreak
 		else
 			set nowrap
@@ -297,7 +305,7 @@ function! ToggleWrap()
 endfunction
 
 function! ToggleBar()
-	if (&laststatus == 0)
+	if &laststatus == 0
 		set laststatus=2
 	else
 		set laststatus=0
@@ -313,7 +321,7 @@ function! GetCharName()
 endfunction
 
 function! ToggleViewMode()
-	if (&foldcolumn != 12)
+	if &foldcolumn != 12
 		set foldcolumn=12
 		set laststatus=0
 		hi FoldColumn ctermbg=bg guibg=bg
