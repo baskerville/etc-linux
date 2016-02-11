@@ -16,11 +16,9 @@ set linebreak
 " a tab accounts for 4 spaces
 set tabstop=4
 " indent by one tab
-set shiftwidth=0
+set shiftwidth=4
 " try to infer the indentation of the next line
 set smartindent
-" try to preserve the indentation structure
-set preserveindent
 " copy the indenting structure of the current line in the next line
 set copyindent
 
@@ -51,6 +49,8 @@ set statusline+=\ [%{strlen(&fenc)?&fenc:'N/A'}]
 set statusline+=\ [%{&ff}]
 " line and column numbers, percentage through file
 set statusline+=\ %l,%v\ %p%%
+" custom tab pages line
+set tabline=%!GetTabLine()
 
 " list of words used for c-x c-k completion
 set dictionary+=/usr/share/dict/words
@@ -130,6 +130,7 @@ if has("autocmd")
 	autocmd FileType slang setlocal commentstring=%%s
 	autocmd FileType perl setlocal keywordprg=perldoc
 	autocmd FileType ruby setlocal keywordprg=ri ts=2 sw=2 expandtab
+	autocmd FileType vim setlocal keywordprg=:help
 	autocmd FileType coffee setlocal ts=2 sw=2 expandtab
 	autocmd Filetype python setlocal ts=4 sw=4 expandtab
 	autocmd Filetype javascript setlocal makeprg=gulp\ jshint\ \\\|\ grep\ ^/ errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
@@ -358,6 +359,65 @@ function! CompleteMuttAliases(findstart, base)
 		endif
 		return result
 	endif
+endfunction
+
+function GetTabLine()
+	let s = ''
+	" loop through each tab page
+	for t in range(tabpagenr('$'))
+		" set highlight
+		if t + 1 == tabpagenr()
+			let s .= '%#TabLineSel#'
+		else
+			let s .= '%#TabLine#'
+		endif
+		" set the tab page number (for mouse clicks)
+		let s .= '%' . (t + 1) . 'T'
+		let s .= ' '
+		" set page number string
+		let s .= t + 1 . ' '
+		" get buffer names and statuses
+		let n = ''
+		let bc = len(tabpagebuflist(t + 1))
+		" loop through each buffer in a tab
+		for b in tabpagebuflist(t + 1)
+			" handle the buffer label
+			if getbufvar( b, "&buftype" ) == 'help'
+				let n .= '[H]' . fnamemodify( bufname(b), ':t:s/.txt$//' )
+			elseif getbufvar( b, "&buftype" ) == 'quickfix'
+				let n .= '[Q]'
+			else
+				let n .= pathshorten(bufname(b))
+			endif
+			" append a modified flag if necessary
+			if getbufvar( b, "&modified" )
+				let n .= '[+]'
+			endif
+			" prevent trailing spaces
+			if bc > 1
+				let n .= ' '
+			endif
+			let bc -= 1
+		endfor
+		if t + 1 == tabpagenr()
+			let s .= '%#TabLineSel#'
+		else
+			let s .= '%#TabLine#'
+		endif
+		if n == ''
+			let s .= '[No Name]'
+		else
+			let s .= n
+		endif
+		let s .= ' '
+	endfor
+	" after the last tab fill with TabLineFill and reset tab page nr
+	let s .= '%#TabLineFill#%T'
+	" right-align the label to close the current tab page
+	if tabpagenr('$') > 1
+		let s .= '%=%#TabLineFill#%999XX'
+	endif
+	return s
 endfunction
 
 function! MakePreview()
