@@ -100,6 +100,22 @@ filetype plugin indent on
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#syntax#codeblocks#embeds#langs = ["rust", "c", "sh"]
 let g:bgtype = system("cat $HOME/.bgtype")
+let g:terminal_color_0 = '#5b5955'
+let g:terminal_color_1 = '#cc7b7b'
+let g:terminal_color_2 = '#55a884'
+let g:terminal_color_3 = '#b39212'
+let g:terminal_color_4 = '#5d9fcd'
+let g:terminal_color_5 = '#b780ba'
+let g:terminal_color_6 = '#26a9b7'
+let g:terminal_color_7 = '#f1ead9'
+let g:terminal_color_8 = '#767166'
+let g:terminal_color_9 = '#ffa4a4'
+let g:terminal_color_10 = '#86d8b2'
+let g:terminal_color_11 = '#d9c171'
+let g:terminal_color_12 = '#8ccefe'
+let g:terminal_color_13 = '#e9afeb'
+let g:terminal_color_14 = '#5bdbda'
+let g:terminal_color_15 = '#fffaf0'
 if g:bgtype == "dark"
 	set bg=dark
 else

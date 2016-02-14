@@ -155,6 +155,10 @@ conj() {
 	w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@"
 }
 
+9man () {
+	9 man "$@" | less
+}
+
 #swc() {
  #compc -include-sources . -output $@.swc
 #}
