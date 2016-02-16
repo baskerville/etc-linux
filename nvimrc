@@ -241,11 +241,6 @@ vmap <Leader>i c<C-o>:set ri<cr><C-r>"<esc>:set nori<cr>
 nmap <leader>r :source ~/.config/nvim/init.vim<cr>
 nmap <leader>e :e ~/.config/nvim/init.vim<cr>
 nmap <leader>! :w ! sudo tee %<cr>
-xmap <leader>c \\
-nmap <leader>c \\
-nmap <leader>cc \\\
-nmap <leader>cu \\u
-nmap <leader>cp vip\\
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
