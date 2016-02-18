@@ -68,6 +68,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'suy/vim-context-commentstring'
+Plug 'benekastah/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/applescript.vim'
 Plug 'rust-lang/rust.vim'
@@ -232,7 +233,7 @@ nmap <silent> <F8> :call ToggleSyntax()<cr>
 nmap <silent> <F9> :call ToggleConceal()<cr>
 nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :call EditSyntax()<cr>
-nmap <silent> <F12> :make<cr>
+nmap <silent> <F12> :Neomake!<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal ts=".v:count1." sw=".v:count1<cr>
 nmap <silent> <leader>v :call MakePreview()<cr>
 nmap <silent> <leader>V :call ToggleViewMode()<cr>
